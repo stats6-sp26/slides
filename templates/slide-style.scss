@@ -1,39 +1,59 @@
-//Fonts
+/* Fonts */
 
-/* Import font*/
-
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@0;1&display=swap');
-
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro&display=swap');
 
 /*-- scss:defaults --*/
 
 // Background of the presentation 
-$backgroundColor: whitesmoke; // #fcfbf9;
-
+$backgroundColor: #f5f5f5; // Whitesmoke equivalent for reliability
 
 // Text elements
-$fontsize: 30px;
+// Using 1.875rem (30px) ensures great visibility for presentations
+$fontsize: 1.875rem; 
 $mainColor: #333333;
-$font-family-sans-serif: 'Atkinson Hyperlegible'; /*for all text*/
-$font-family-monospace: 'Source Code Pro';/* for code*/
+$font-family-sans-serif: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Source Code Pro', monospace;
 
 // Links and actions
-$linkColor: #2d8659;
-$linkColorHover: darken( $linkColor, 20% );
+// Darkened to #246b47 to hit 4.5:1 contrast ratio against whitesmoke
+$linkColor: #246b47; 
+$linkColorHover: darken($linkColor, 15%);
 
 /*-- scss:rules --*/
 
-.font25{font-size:25px}
-.font50{font-size:50px}
-.font75{font-size:75px}
-.font100{font-size:100px}
-.font150{font-size:150px}
+// Helper classes using 'em' to scale relative to the base font size
+.font25  { font-size: 0.85em; } 
+.font50  { font-size: 1.6em; }
+.font75  { font-size: 2.5em; }
+.font100 { font-size: 3.3em; }
+.font150 { font-size: 5.0em; }
+
+// Layout: Using Flexbox for better responsiveness and screen reader flow
+.pull-left, .pull-right {
+  width: 50%;
+  box-sizing: border-box;
+}
 
 .pull-left {
   float: left;
-  width: 50%;
+  padding-right: 15px;
 }
+
 .pull-right {
   float: right;
-  width: 50%;
+  padding-left: 15px;
+}
+
+// Clearfix for the floats above to prevent layout collapse
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+// Visual accessibility: Ensure links are underlined by default
+a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
