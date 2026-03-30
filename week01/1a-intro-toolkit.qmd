@@ -65,7 +65,7 @@ The most important thing about this course
 
 ## Poll Everywhere
 
-:::{.font75}
+:::{.font50}
 
 [PollEv.com/minedogucu800](https://pollev.com/minedogucu800)
 
@@ -77,7 +77,7 @@ Think 💭 - Pair 👫🏽 - Share 💬
 
 What do you think data science is about and what will we learn in this course? There is no right or wrong answer.
 
-:::{.font75}
+:::{.font50}
 [PollEv.com/minedogucu800](https://pollev.com/minedogucu800)
 :::
 
@@ -136,9 +136,7 @@ knitr::include_graphics("img/student-example2.png")
 
 <center>
 
-<video width="80%" height="45%%" align = "center" controls>
-  <source src="screencast/01a-hello-world.mp4" type="video/mp4">
-</video>
+<iframe title='Embedded Media titled: 01a-r-rstudio-edited' aria-label='Embedded Media titled: 01a-r-rstudio-edited' width="560"  height="315"  src="https://uci.yuja.com/V/Video?v=15734636&node=67845604&a=67727935&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
 
 </center>
 
@@ -258,25 +256,13 @@ You can let RStudio do the indentation for your code.
 :::
     
 
-## RStudio Setup
-
-<center>
-
-<video width="80%" height="45%%" align = "center" controls>
-  <source src="screencast/01b-rstudio-setup.mp4" type="video/mp4">
-</video>
-
-</center>
-
 # Literate Programming 
 
 ## Quarto
 
 <center>
 
-<video width="80%" height="45%%" align = "center" controls>
-  <source src="screencast/01c-intro-quarto.mov" type="video/mp4">
-</video>
+<iframe title='Embedded Media titled: 01b-quarto-edited' aria-label='Embedded Media titled: 01b-quarto-edited' width="560"  height="315"  src="https://uci.yuja.com/V/Video?v=15735503&node=67847130&a=165278068&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
 
 </center>
 
@@ -628,13 +614,13 @@ knitr::include_graphics('img/github-illustration.007.jpeg')
 
 ## 
 
-::: {.font75}
 
-Demo
 
-:::
+<center>
 
-We have actually done something similar to this demo before [by cloning the test repo and committing, and pushing](https://uci.yuja.com/V/Video?v=8768277&node=37883581&a=136650542&autoplay=1). 
+<iframe title='Embedded Media titled: 01c-github-edited' aria-label='Embedded Media titled: 01c-github-edited' width="560"  height="315"  src="https://uci.yuja.com/V/Video?v=15735817&node=67847829&a=212432377&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+</center>
 
 ## 
 
