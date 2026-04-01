@@ -6,8 +6,8 @@
 <script src="1b-describe-data_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="1b-describe-data_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="1b-describe-data_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="1b-describe-data_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="1b-describe-data_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Describing Data with Numbers</title>
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="1b-describe-data_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="1b-describe-data_files/libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -98,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="1b-describe-data_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="1b-describe-data_files/libs/revealjs/dist/theme/quarto-143f1b7bcb5b6d498a055dba59add268.css">
   <link href="1b-describe-data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="1b-describe-data_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="1b-describe-data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -213,8 +210,9 @@ Dr.&nbsp;Mine Dogucu
 <p><a href="https://fivethirtyeight.com/features/which-state-has-the-worst-drivers/">Dear Mona, Which State Has the Worst Drivers?</a></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(fivethirtyeight)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href=""></a><span class="fu">data</span>(<span class="st">"bad_drivers"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href=""></a><span class="fu">library</span>(bayesrules)</span>
+<span id="cb1-3"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href=""></a><span class="fu">data</span>(<span class="st">"bad_drivers"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>When you are given some code like this one in your lecture notes or assignments, you should run it first before beginning to code.</p>
 </section>
@@ -222,23 +220,23 @@ Dr.&nbsp;Mine Dogucu
 <h2>Data Frames</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="koyuxidgjb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#koyuxidgjb table {
+<div id="hqmhdzcoww" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hqmhdzcoww table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#koyuxidgjb thead, #koyuxidgjb tbody, #koyuxidgjb tfoot, #koyuxidgjb tr, #koyuxidgjb td, #koyuxidgjb th {
+#hqmhdzcoww thead, #hqmhdzcoww tbody, #hqmhdzcoww tfoot, #hqmhdzcoww tr, #hqmhdzcoww td, #hqmhdzcoww th {
   border-style: none;
 }
 
-#koyuxidgjb p {
+#hqmhdzcoww p {
   margin: 0;
   padding: 0;
 }
 
-#koyuxidgjb .gt_table {
+#hqmhdzcoww .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -264,12 +262,12 @@ Dr.&nbsp;Mine Dogucu
   border-left-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_caption {
+#hqmhdzcoww .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#koyuxidgjb .gt_title {
+#hqmhdzcoww .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -281,7 +279,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-width: 0;
 }
 
-#koyuxidgjb .gt_subtitle {
+#hqmhdzcoww .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -293,7 +291,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-width: 0;
 }
 
-#koyuxidgjb .gt_heading {
+#hqmhdzcoww .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -305,13 +303,13 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_bottom_border {
+#hqmhdzcoww .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_col_headings {
+#hqmhdzcoww .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -326,7 +324,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_col_heading {
+#hqmhdzcoww .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -346,7 +344,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#koyuxidgjb .gt_column_spanner_outer {
+#hqmhdzcoww .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -358,15 +356,15 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 4px;
 }
 
-#koyuxidgjb .gt_column_spanner_outer:first-child {
+#hqmhdzcoww .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#koyuxidgjb .gt_column_spanner_outer:last-child {
+#hqmhdzcoww .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#koyuxidgjb .gt_column_spanner {
+#hqmhdzcoww .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -378,11 +376,11 @@ Dr.&nbsp;Mine Dogucu
   width: 100%;
 }
 
-#koyuxidgjb .gt_spanner_row {
+#hqmhdzcoww .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#koyuxidgjb .gt_group_heading {
+#hqmhdzcoww .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -408,7 +406,7 @@ Dr.&nbsp;Mine Dogucu
   text-align: left;
 }
 
-#koyuxidgjb .gt_empty_group_heading {
+#hqmhdzcoww .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -423,15 +421,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: middle;
 }
 
-#koyuxidgjb .gt_from_md > :first-child {
+#hqmhdzcoww .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#koyuxidgjb .gt_from_md > :last-child {
+#hqmhdzcoww .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#koyuxidgjb .gt_row {
+#hqmhdzcoww .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -450,7 +448,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#koyuxidgjb .gt_stub {
+#hqmhdzcoww .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -463,7 +461,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#koyuxidgjb .gt_stub_row_group {
+#hqmhdzcoww .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -477,15 +475,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: top;
 }
 
-#koyuxidgjb .gt_row_group_first td {
+#hqmhdzcoww .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#koyuxidgjb .gt_row_group_first th {
+#hqmhdzcoww .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#koyuxidgjb .gt_summary_row {
+#hqmhdzcoww .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -495,16 +493,16 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#koyuxidgjb .gt_first_summary_row {
+#hqmhdzcoww .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_first_summary_row.thick {
+#hqmhdzcoww .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#koyuxidgjb .gt_last_summary_row {
+#hqmhdzcoww .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -514,7 +512,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_grand_summary_row {
+#hqmhdzcoww .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -524,7 +522,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#koyuxidgjb .gt_first_grand_summary_row {
+#hqmhdzcoww .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -534,7 +532,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_last_grand_summary_row_top {
+#hqmhdzcoww .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -544,11 +542,11 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_striped {
+#hqmhdzcoww .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#koyuxidgjb .gt_table_body {
+#hqmhdzcoww .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -557,7 +555,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_footnotes {
+#hqmhdzcoww .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -571,7 +569,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_footnote {
+#hqmhdzcoww .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -580,7 +578,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#koyuxidgjb .gt_sourcenotes {
+#hqmhdzcoww .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -594,7 +592,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#koyuxidgjb .gt_sourcenote {
+#hqmhdzcoww .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -602,72 +600,72 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#koyuxidgjb .gt_left {
+#hqmhdzcoww .gt_left {
   text-align: left;
 }
 
-#koyuxidgjb .gt_center {
+#hqmhdzcoww .gt_center {
   text-align: center;
 }
 
-#koyuxidgjb .gt_right {
+#hqmhdzcoww .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#koyuxidgjb .gt_font_normal {
+#hqmhdzcoww .gt_font_normal {
   font-weight: normal;
 }
 
-#koyuxidgjb .gt_font_bold {
+#hqmhdzcoww .gt_font_bold {
   font-weight: bold;
 }
 
-#koyuxidgjb .gt_font_italic {
+#hqmhdzcoww .gt_font_italic {
   font-style: italic;
 }
 
-#koyuxidgjb .gt_super {
+#hqmhdzcoww .gt_super {
   font-size: 65%;
 }
 
-#koyuxidgjb .gt_footnote_marks {
+#hqmhdzcoww .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#koyuxidgjb .gt_asterisk {
+#hqmhdzcoww .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#koyuxidgjb .gt_indent_1 {
+#hqmhdzcoww .gt_indent_1 {
   text-indent: 5px;
 }
 
-#koyuxidgjb .gt_indent_2 {
+#hqmhdzcoww .gt_indent_2 {
   text-indent: 10px;
 }
 
-#koyuxidgjb .gt_indent_3 {
+#hqmhdzcoww .gt_indent_3 {
   text-indent: 15px;
 }
 
-#koyuxidgjb .gt_indent_4 {
+#hqmhdzcoww .gt_indent_4 {
   text-indent: 20px;
 }
 
-#koyuxidgjb .gt_indent_5 {
+#hqmhdzcoww .gt_indent_5 {
   text-indent: 25px;
 }
 
-#koyuxidgjb .katex-display {
+#hqmhdzcoww .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#koyuxidgjb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hqmhdzcoww div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -754,23 +752,23 @@ Dr.&nbsp;Mine Dogucu
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="yqahcfcjtv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yqahcfcjtv table {
+<div id="gzctlbdukf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gzctlbdukf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yqahcfcjtv thead, #yqahcfcjtv tbody, #yqahcfcjtv tfoot, #yqahcfcjtv tr, #yqahcfcjtv td, #yqahcfcjtv th {
+#gzctlbdukf thead, #gzctlbdukf tbody, #gzctlbdukf tfoot, #gzctlbdukf tr, #gzctlbdukf td, #gzctlbdukf th {
   border-style: none;
 }
 
-#yqahcfcjtv p {
+#gzctlbdukf p {
   margin: 0;
   padding: 0;
 }
 
-#yqahcfcjtv .gt_table {
+#gzctlbdukf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -796,12 +794,12 @@ Dr.&nbsp;Mine Dogucu
   border-left-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_caption {
+#gzctlbdukf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yqahcfcjtv .gt_title {
+#gzctlbdukf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -813,7 +811,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-width: 0;
 }
 
-#yqahcfcjtv .gt_subtitle {
+#gzctlbdukf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -825,7 +823,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-width: 0;
 }
 
-#yqahcfcjtv .gt_heading {
+#gzctlbdukf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -837,13 +835,13 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_bottom_border {
+#gzctlbdukf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_col_headings {
+#gzctlbdukf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -858,7 +856,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_col_heading {
+#gzctlbdukf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -878,7 +876,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#yqahcfcjtv .gt_column_spanner_outer {
+#gzctlbdukf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -890,15 +888,15 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 4px;
 }
 
-#yqahcfcjtv .gt_column_spanner_outer:first-child {
+#gzctlbdukf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yqahcfcjtv .gt_column_spanner_outer:last-child {
+#gzctlbdukf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yqahcfcjtv .gt_column_spanner {
+#gzctlbdukf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -910,11 +908,11 @@ Dr.&nbsp;Mine Dogucu
   width: 100%;
 }
 
-#yqahcfcjtv .gt_spanner_row {
+#gzctlbdukf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yqahcfcjtv .gt_group_heading {
+#gzctlbdukf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -940,7 +938,7 @@ Dr.&nbsp;Mine Dogucu
   text-align: left;
 }
 
-#yqahcfcjtv .gt_empty_group_heading {
+#gzctlbdukf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -955,15 +953,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: middle;
 }
 
-#yqahcfcjtv .gt_from_md > :first-child {
+#gzctlbdukf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yqahcfcjtv .gt_from_md > :last-child {
+#gzctlbdukf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yqahcfcjtv .gt_row {
+#gzctlbdukf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -982,7 +980,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#yqahcfcjtv .gt_stub {
+#gzctlbdukf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -995,7 +993,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#yqahcfcjtv .gt_stub_row_group {
+#gzctlbdukf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1009,15 +1007,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: top;
 }
 
-#yqahcfcjtv .gt_row_group_first td {
+#gzctlbdukf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yqahcfcjtv .gt_row_group_first th {
+#gzctlbdukf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yqahcfcjtv .gt_summary_row {
+#gzctlbdukf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1027,16 +1025,16 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#yqahcfcjtv .gt_first_summary_row {
+#gzctlbdukf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_first_summary_row.thick {
+#gzctlbdukf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yqahcfcjtv .gt_last_summary_row {
+#gzctlbdukf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1046,7 +1044,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_grand_summary_row {
+#gzctlbdukf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1056,7 +1054,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#yqahcfcjtv .gt_first_grand_summary_row {
+#gzctlbdukf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1066,7 +1064,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_last_grand_summary_row_top {
+#gzctlbdukf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1076,11 +1074,11 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_striped {
+#gzctlbdukf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yqahcfcjtv .gt_table_body {
+#gzctlbdukf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1089,7 +1087,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_footnotes {
+#gzctlbdukf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1103,7 +1101,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_footnote {
+#gzctlbdukf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1112,7 +1110,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#yqahcfcjtv .gt_sourcenotes {
+#gzctlbdukf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1126,7 +1124,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#yqahcfcjtv .gt_sourcenote {
+#gzctlbdukf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1134,72 +1132,72 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#yqahcfcjtv .gt_left {
+#gzctlbdukf .gt_left {
   text-align: left;
 }
 
-#yqahcfcjtv .gt_center {
+#gzctlbdukf .gt_center {
   text-align: center;
 }
 
-#yqahcfcjtv .gt_right {
+#gzctlbdukf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yqahcfcjtv .gt_font_normal {
+#gzctlbdukf .gt_font_normal {
   font-weight: normal;
 }
 
-#yqahcfcjtv .gt_font_bold {
+#gzctlbdukf .gt_font_bold {
   font-weight: bold;
 }
 
-#yqahcfcjtv .gt_font_italic {
+#gzctlbdukf .gt_font_italic {
   font-style: italic;
 }
 
-#yqahcfcjtv .gt_super {
+#gzctlbdukf .gt_super {
   font-size: 65%;
 }
 
-#yqahcfcjtv .gt_footnote_marks {
+#gzctlbdukf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yqahcfcjtv .gt_asterisk {
+#gzctlbdukf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yqahcfcjtv .gt_indent_1 {
+#gzctlbdukf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yqahcfcjtv .gt_indent_2 {
+#gzctlbdukf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yqahcfcjtv .gt_indent_3 {
+#gzctlbdukf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yqahcfcjtv .gt_indent_4 {
+#gzctlbdukf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yqahcfcjtv .gt_indent_5 {
+#gzctlbdukf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#yqahcfcjtv .katex-display {
+#gzctlbdukf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#yqahcfcjtv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gzctlbdukf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1512,23 +1510,23 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
 <h2>Variables</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="forcutkuej" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#forcutkuej table {
+<div id="swrefrwxkt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#swrefrwxkt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#forcutkuej thead, #forcutkuej tbody, #forcutkuej tfoot, #forcutkuej tr, #forcutkuej td, #forcutkuej th {
+#swrefrwxkt thead, #swrefrwxkt tbody, #swrefrwxkt tfoot, #swrefrwxkt tr, #swrefrwxkt td, #swrefrwxkt th {
   border-style: none;
 }
 
-#forcutkuej p {
+#swrefrwxkt p {
   margin: 0;
   padding: 0;
 }
 
-#forcutkuej .gt_table {
+#swrefrwxkt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1554,12 +1552,12 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-left-color: #D3D3D3;
 }
 
-#forcutkuej .gt_caption {
+#swrefrwxkt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#forcutkuej .gt_title {
+#swrefrwxkt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1571,7 +1569,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-width: 0;
 }
 
-#forcutkuej .gt_subtitle {
+#swrefrwxkt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1583,7 +1581,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-width: 0;
 }
 
-#forcutkuej .gt_heading {
+#swrefrwxkt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1595,13 +1593,13 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#forcutkuej .gt_bottom_border {
+#swrefrwxkt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#forcutkuej .gt_col_headings {
+#swrefrwxkt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1616,7 +1614,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#forcutkuej .gt_col_heading {
+#swrefrwxkt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1636,7 +1634,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#forcutkuej .gt_column_spanner_outer {
+#swrefrwxkt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1648,15 +1646,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 4px;
 }
 
-#forcutkuej .gt_column_spanner_outer:first-child {
+#swrefrwxkt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#forcutkuej .gt_column_spanner_outer:last-child {
+#swrefrwxkt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#forcutkuej .gt_column_spanner {
+#swrefrwxkt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1668,11 +1666,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   width: 100%;
 }
 
-#forcutkuej .gt_spanner_row {
+#swrefrwxkt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#forcutkuej .gt_group_heading {
+#swrefrwxkt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1698,7 +1696,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   text-align: left;
 }
 
-#forcutkuej .gt_empty_group_heading {
+#swrefrwxkt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1713,15 +1711,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: middle;
 }
 
-#forcutkuej .gt_from_md > :first-child {
+#swrefrwxkt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#forcutkuej .gt_from_md > :last-child {
+#swrefrwxkt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#forcutkuej .gt_row {
+#swrefrwxkt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1740,7 +1738,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#forcutkuej .gt_stub {
+#swrefrwxkt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1753,7 +1751,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#forcutkuej .gt_stub_row_group {
+#swrefrwxkt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1767,15 +1765,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: top;
 }
 
-#forcutkuej .gt_row_group_first td {
+#swrefrwxkt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#forcutkuej .gt_row_group_first th {
+#swrefrwxkt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#forcutkuej .gt_summary_row {
+#swrefrwxkt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1785,16 +1783,16 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#forcutkuej .gt_first_summary_row {
+#swrefrwxkt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#forcutkuej .gt_first_summary_row.thick {
+#swrefrwxkt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#forcutkuej .gt_last_summary_row {
+#swrefrwxkt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1804,7 +1802,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#forcutkuej .gt_grand_summary_row {
+#swrefrwxkt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1814,7 +1812,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#forcutkuej .gt_first_grand_summary_row {
+#swrefrwxkt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1824,7 +1822,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-color: #D3D3D3;
 }
 
-#forcutkuej .gt_last_grand_summary_row_top {
+#swrefrwxkt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1834,11 +1832,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#forcutkuej .gt_striped {
+#swrefrwxkt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#forcutkuej .gt_table_body {
+#swrefrwxkt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1847,7 +1845,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#forcutkuej .gt_footnotes {
+#swrefrwxkt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1861,7 +1859,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#forcutkuej .gt_footnote {
+#swrefrwxkt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1870,7 +1868,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#forcutkuej .gt_sourcenotes {
+#swrefrwxkt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1884,7 +1882,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#forcutkuej .gt_sourcenote {
+#swrefrwxkt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1892,72 +1890,72 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#forcutkuej .gt_left {
+#swrefrwxkt .gt_left {
   text-align: left;
 }
 
-#forcutkuej .gt_center {
+#swrefrwxkt .gt_center {
   text-align: center;
 }
 
-#forcutkuej .gt_right {
+#swrefrwxkt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#forcutkuej .gt_font_normal {
+#swrefrwxkt .gt_font_normal {
   font-weight: normal;
 }
 
-#forcutkuej .gt_font_bold {
+#swrefrwxkt .gt_font_bold {
   font-weight: bold;
 }
 
-#forcutkuej .gt_font_italic {
+#swrefrwxkt .gt_font_italic {
   font-style: italic;
 }
 
-#forcutkuej .gt_super {
+#swrefrwxkt .gt_super {
   font-size: 65%;
 }
 
-#forcutkuej .gt_footnote_marks {
+#swrefrwxkt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#forcutkuej .gt_asterisk {
+#swrefrwxkt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#forcutkuej .gt_indent_1 {
+#swrefrwxkt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#forcutkuej .gt_indent_2 {
+#swrefrwxkt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#forcutkuej .gt_indent_3 {
+#swrefrwxkt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#forcutkuej .gt_indent_4 {
+#swrefrwxkt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#forcutkuej .gt_indent_5 {
+#swrefrwxkt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#forcutkuej .katex-display {
+#swrefrwxkt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#forcutkuej div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#swrefrwxkt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2030,23 +2028,23 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tdusczuphi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tdusczuphi table {
+<div id="vuphvysyjf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vuphvysyjf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tdusczuphi thead, #tdusczuphi tbody, #tdusczuphi tfoot, #tdusczuphi tr, #tdusczuphi td, #tdusczuphi th {
+#vuphvysyjf thead, #vuphvysyjf tbody, #vuphvysyjf tfoot, #vuphvysyjf tr, #vuphvysyjf td, #vuphvysyjf th {
   border-style: none;
 }
 
-#tdusczuphi p {
+#vuphvysyjf p {
   margin: 0;
   padding: 0;
 }
 
-#tdusczuphi .gt_table {
+#vuphvysyjf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2072,12 +2070,12 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-left-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_caption {
+#vuphvysyjf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tdusczuphi .gt_title {
+#vuphvysyjf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2089,7 +2087,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-width: 0;
 }
 
-#tdusczuphi .gt_subtitle {
+#vuphvysyjf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2101,7 +2099,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-width: 0;
 }
 
-#tdusczuphi .gt_heading {
+#vuphvysyjf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2113,13 +2111,13 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_bottom_border {
+#vuphvysyjf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_col_headings {
+#vuphvysyjf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2134,7 +2132,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_col_heading {
+#vuphvysyjf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2154,7 +2152,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#tdusczuphi .gt_column_spanner_outer {
+#vuphvysyjf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2166,15 +2164,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 4px;
 }
 
-#tdusczuphi .gt_column_spanner_outer:first-child {
+#vuphvysyjf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tdusczuphi .gt_column_spanner_outer:last-child {
+#vuphvysyjf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tdusczuphi .gt_column_spanner {
+#vuphvysyjf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2186,11 +2184,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   width: 100%;
 }
 
-#tdusczuphi .gt_spanner_row {
+#vuphvysyjf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tdusczuphi .gt_group_heading {
+#vuphvysyjf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2216,7 +2214,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   text-align: left;
 }
 
-#tdusczuphi .gt_empty_group_heading {
+#vuphvysyjf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2231,15 +2229,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: middle;
 }
 
-#tdusczuphi .gt_from_md > :first-child {
+#vuphvysyjf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tdusczuphi .gt_from_md > :last-child {
+#vuphvysyjf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tdusczuphi .gt_row {
+#vuphvysyjf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2258,7 +2256,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#tdusczuphi .gt_stub {
+#vuphvysyjf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2271,7 +2269,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#tdusczuphi .gt_stub_row_group {
+#vuphvysyjf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2285,15 +2283,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: top;
 }
 
-#tdusczuphi .gt_row_group_first td {
+#vuphvysyjf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tdusczuphi .gt_row_group_first th {
+#vuphvysyjf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tdusczuphi .gt_summary_row {
+#vuphvysyjf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2303,16 +2301,16 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#tdusczuphi .gt_first_summary_row {
+#vuphvysyjf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_first_summary_row.thick {
+#vuphvysyjf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tdusczuphi .gt_last_summary_row {
+#vuphvysyjf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2322,7 +2320,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_grand_summary_row {
+#vuphvysyjf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2332,7 +2330,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#tdusczuphi .gt_first_grand_summary_row {
+#vuphvysyjf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2342,7 +2340,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_last_grand_summary_row_top {
+#vuphvysyjf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2352,11 +2350,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_striped {
+#vuphvysyjf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tdusczuphi .gt_table_body {
+#vuphvysyjf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2365,7 +2363,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_footnotes {
+#vuphvysyjf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2379,7 +2377,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_footnote {
+#vuphvysyjf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2388,7 +2386,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#tdusczuphi .gt_sourcenotes {
+#vuphvysyjf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2402,7 +2400,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#tdusczuphi .gt_sourcenote {
+#vuphvysyjf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2410,72 +2408,72 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#tdusczuphi .gt_left {
+#vuphvysyjf .gt_left {
   text-align: left;
 }
 
-#tdusczuphi .gt_center {
+#vuphvysyjf .gt_center {
   text-align: center;
 }
 
-#tdusczuphi .gt_right {
+#vuphvysyjf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tdusczuphi .gt_font_normal {
+#vuphvysyjf .gt_font_normal {
   font-weight: normal;
 }
 
-#tdusczuphi .gt_font_bold {
+#vuphvysyjf .gt_font_bold {
   font-weight: bold;
 }
 
-#tdusczuphi .gt_font_italic {
+#vuphvysyjf .gt_font_italic {
   font-style: italic;
 }
 
-#tdusczuphi .gt_super {
+#vuphvysyjf .gt_super {
   font-size: 65%;
 }
 
-#tdusczuphi .gt_footnote_marks {
+#vuphvysyjf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tdusczuphi .gt_asterisk {
+#vuphvysyjf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tdusczuphi .gt_indent_1 {
+#vuphvysyjf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tdusczuphi .gt_indent_2 {
+#vuphvysyjf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tdusczuphi .gt_indent_3 {
+#vuphvysyjf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tdusczuphi .gt_indent_4 {
+#vuphvysyjf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tdusczuphi .gt_indent_5 {
+#vuphvysyjf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tdusczuphi .katex-display {
+#vuphvysyjf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tdusczuphi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vuphvysyjf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3192,6 +3190,9 @@ Third quartile
 1           105.          69.5</code></pre>
 </div>
 </div>
+</section>
+<section id="missing-data" class="slide level2">
+<h2>Missing Data</h2>
 </section>
 <section id="learning-tip-of-the-day" class="slide level2">
 <h2>Learning Tip of the Day</h2>
