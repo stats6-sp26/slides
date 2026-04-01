@@ -46,13 +46,21 @@ library(tidyverse)
 data("bad_drivers")
 ```
 
-When you are given some code like this one in your lecture notes or assignments, you should run it first before beginning to code. As we progress in the course, you'll have a deeper understanding of what the starter codes do.
+When you are given some code like this one in your lecture notes or assignments, you should run it first before beginning to code. 
 
 ## Data Frames  
 
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('img/data-matrix.png')
-knitr::include_graphics('img/data-matrix-tail.png')
+```{r}
+#| echo: false
+head(bad_drivers) |> 
+  gt::gt()
+```
+
+
+```{r}
+#| echo: false
+tail(bad_drivers) |> 
+  gt::gt()
 ```
 
 ## Data Frame
@@ -119,29 +127,20 @@ ncol(bad_drivers)
 nrow(bad_drivers)
 ```
 
-## Getting to Know the Data Frame 
 
-
-```{r}
-#| echo: false
-#| out-width: 100%
-#| fig-align: center
-knitr::include_graphics('img/data-environment.png')
-```
-
-##
+## Additional Data Frame Example
 
 ```{r}
 glimpse(candy_rankings)
 ```
 
-##
+## Additional Data Frame Example
 
 ```{r}
 glimpse(bob_ross)
 ```
 
-##
+## Additional Data Frame Example
 
 ```{r}
 glimpse(mariokart)
@@ -149,10 +148,18 @@ glimpse(mariokart)
 
 ## Variables
 
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('img/data-candy.png')
-knitr::include_graphics('img/data-candy-tail.png')
+```{r}
+#| echo: false
+head(candy_rankings) |> 
+  gt::gt()
 ```
+
+```{r}
+#| echo: false
+tail(candy_rankings) |> 
+  gt::gt()
+```
+
 
 ## Variables
 
@@ -174,7 +181,10 @@ We cannot take averages or find maximum or minimum of these variables.
 Categorical variables have __levels__. For instance `chocolate` and `fruity` both have two levels as `TRUE` and `FALSE`. 
 
 
-```{r echo = FALSE, fig.align='center'}
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: 'A flowchart showing "Variables" branching into two types: "Categorical" and "Numeric".'
 diagram_small <- grViz("
     digraph {
         # graph aesthetics
@@ -225,10 +235,12 @@ Numeric variables that can take infinitely many numbers are said to be __continu
 
 ## In Statistics
 
-```{r echo = FALSE, fig.align='center'}
+```{r}
 #| echo: false
 #| fig-align: center
 #| out-width: 80%
+#| fig-alt: 'A flowchart illustrating the classification of variables: "Variables" branches into "Categorical" and "Numeric". "Categorical" further branches into "Nominal" and "Ordinal". "Numeric" further branches into "Discrete" and "Continuous".'
+
 diagram <- grViz("
     digraph {
         # graph aesthetics
@@ -288,7 +300,7 @@ knitr::include_graphics("img/diagram.png")
 
 ## 
 
-As a data scientist it is .font30[**your**] job to check the type(s) of data that you are working with. Do .font30[**not**]  assume you will work with clean data frames, with clean names, labels, and types.
+As a data scientist it is **YOUR** job to check the type(s) of data that you are working with. Do **NOT**  assume you will work with clean data frames, with clean names, labels, and types.
 
 # Describing Data with Numbers
 
@@ -330,7 +342,7 @@ count(hotel_bookings, reservation_status, sort = TRUE)
 ##
 
 ```{r}
-tabyl(hotel_bookings, reservation_status)
+janitor::tabyl(hotel_bookings, reservation_status)
 ```
 
 
