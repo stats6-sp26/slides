@@ -115,6 +115,8 @@ No
 #| echo: false
 #| out-width: 80%
 #| fig-align: center
+#| fig-alt: A presentation slide titled "Windmills in California Over Time" features two data visualizations. The left panel is a scatter plot titled  "Windmills Constructed in California Each Year," showing the annualnumber of turbines built from the late 1980s to the mid-2010s. It displays a sharp peak in construction around 2012 (nearly 800 turbines) and another significant peak in the late 1980s (over 400 turbines), with fluctuating, generally lower numbers throughout the 1990s and 2000s. The right panel is a map titled "Turbine Distribution in California," showing the outline of California with black dots representing wind turbine locations. These dots are heavily concentrated in specific regions, primarily around the San Francisco Bay Area (Altamont Pass region) and in Southern California (Tehachapi Pass and San Gorgonio Pass areas). A caption at the bottom states "4078 turbines in California."
+
 knitr::include_graphics("img/student-example2.png")
 ```
 
@@ -140,6 +142,37 @@ knitr::include_graphics("img/student-example2.png")
 
 </center>
 
+Code from this video is provided on the next few slides.
+
+## Code from previous video
+
+
+```{r}
+#| error: true
+print("hello woRld")
+my_apples <- 4
+my_apples
+my_apples - 1
+My_apples
+n_apples <- c(7, my_apples, 13)
+my_apples
+my_apples <- my_apples - 1
+n_apples
+
+```
+
+## Code from previous video 
+
+```{r}
+names <- c("Menglin", "Gloria", "Robert")
+data.frame(friends = names, apples = n_apples)
+people <- data.frame(friends = names, apples = n_apples)
+people[2, 1]
+people[3, ]
+people[ , 2]
+```
+
+
 ## Object assignment operator
 
 ```{r}
@@ -164,7 +197,7 @@ My_apples
 
 ##
 
-If something comes in quotes, it is not defined in R. 
+If something comes in quotes, it is not defined in R. Later in the quarter we will call these as strings. More on that later.
 
 
 ```{r}
@@ -266,8 +299,11 @@ You can let RStudio do the indentation for your code.
 
 </center>
 
+The file I create in the video similar to the [my-first-report.qmd](my-first-report.qmd) file provided here.
 
 ## markdown `r fontawesome::fa(name = "markdown")`
+
+markdown is a markup language. Markup languages instruct software on how to display or interpret text and data. We use markdown within a Quarto document.
 
 :::: {.columns}
 
@@ -293,54 +329,23 @@ __Hello world__
 
 ::::
 
-## Quarto parts
-
-```{r}
-#| echo: false
-knitr::include_graphics("img/quarto.001.png")
-```
+[markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 
 ## Quarto parts
 
-```{r}
-#| echo: false
-knitr::include_graphics("img/quarto.002.png")
-```
-
-## Quarto parts
 
 ```{r}
 #| echo: false
-knitr::include_graphics("img/quarto.003.png")
+#| fig-align: center
+#| fig-alt: 'A screenshot of the RStudio IDE displaying a Quarto document. The screen is divided into multiple panes. The left pane shows the Quarto source code, which includes YAML metadata (title, author, format: html), a text paragraph, and an R code chunk (`my_apples <- 2`). The bottom-left pane shows the R console and "Background Jobs" tab. The right pane displays the rendered output of the Quarto document, showing "My First Quarto File", the author, the descriptive text, and the result "my_apples <- 2" leading to "I have 2 apples in total". Pink labels and arrows highlight key RStudio features: top toolbar buttons for "Save", "Render", "Options", and "Insert a code chunk"; buttons next to a code chunk for "Run code chunk" and "Run all chunks above"; and the "Background Jobs" tab in the console.'
+
+knitr::include_graphics("img/quarto-example-full.png")
 ```
 
-## Quarto parts
 
-```{r}
-#| echo: false
-knitr::include_graphics("img/quarto.004.png")
-```
 
-## Quarto parts
+Quarto source file can be accessed here [my-first-report.qmd](my-first-report.qmd).
 
-```{r}
-#| echo: false
-knitr::include_graphics("img/quarto.005.png")
-```
-
-## Quarto parts
-
-```{r}
-#| echo: false
-knitr::include_graphics("img/quarto.007.png")
-```
-
-## Quarto parts
-
-```{r}
-#| echo: false
-knitr::include_graphics("img/quarto.006.png")
-```
 
 ## Slides for this course
 
@@ -412,35 +417,6 @@ We do this in the Console because we only need to do it once.
 
 
 
-## Using Packages pane
-
-```{r echo = FALSE, out.width="40%", fig.align='center'}
-knitr::include_graphics("img/packages-pane.png")
-```
-
-Packages Pane > Install 
-
-
-
-## Letting RStudio Install
-
-```{r echo = FALSE, out.width="80%", fig.align='center'}
-knitr::include_graphics("img/rstudio-install.png")
-```
-
-If you save your file and using a package RStudio will tell you that you have not installed the package.
-
-
-
-
-:::{.font75}
-
-Using packages
-
-:::
-
-
-
 ## Using beep() from beepr
 
 
@@ -466,11 +442,43 @@ beepr::beep()
 ```
 Useful when you are going to use a function once or few times. Also useful if there are any conflicts. For instance if there is some other package in your environment that has a beep() function that prints the word beep, you would want to distinguish the beep function from the beepr package and the beep function from the other imaginary package. 
 
-##
+## Reading the documentation 
 
-```{r echo=FALSE, fig.align='center', out.width="80%"}
-knitr::include_graphics("img/beep-help.png")
+```{r}
+#| eval: false
+?beep
 ```
+
+Running `?beep` in the Console opens the Help pane with the package documentation. We run this in the Console and not in Quarto so that we won't get the help every time we render the Quarto document.
+
+. . .
+
+beep {beepr} - indicates that the beep package is in the beepr package
+
+. . .
+
+Pay attention to parts of documentation: Description, Usage, Arguments, Details, Examples. At your stage Examples are a great resource.
+
+. . .
+
+## Reading the documentation 
+
+
+`beep(sound = 1, expr = NULL)` indicates that the default sound is set to be 1. 
+
+. . .
+
+Pay attention to argument options.
+
+## Usage example
+
+```{r}
+beepr::beep(sound = 8)
+```
+
+This should play the mariokart sound.
+
+
 
 
 ## Open Source
@@ -564,6 +572,7 @@ We will call the descriptions in italic **commit** messages.
 #| out.width: '40%'
 #| fig.align: 'center' 
 #| echo: false
+#| fig-alt: 'An orange box labeled "GitHub repo" next to a black document icon.'
 knitr::include_graphics('img/github-illustration.002.jpeg')
 ```
 
@@ -573,6 +582,8 @@ knitr::include_graphics('img/github-illustration.002.jpeg')
 #| out.width: '55%'
 #| fig.align: 'center'
 #| echo: false
+#| fig-alt: 'Diagram showing a GitHub repo with a document icon at the top, connected by a downward arrow labeled "Clone a repo" to a local repo with a document icon at the bottom.'
+
 knitr::include_graphics('img/github-illustration.003.jpeg')
 ```
 
@@ -582,6 +593,8 @@ knitr::include_graphics('img/github-illustration.003.jpeg')
 #| out.width: '55%'
 #| fig.align: 'center'
 #| echo: false
+#| fig-alt: 'A diagram with "GitHub repo" and a black document icon at the top. Below it, "Local repo" is shown with a blue document icon, implying a change  has been made locally. Text below reads "Commit: changed font color to blue".'
+
 knitr::include_graphics('img/github-illustration.004.jpeg')
 ```
 
@@ -591,6 +604,8 @@ knitr::include_graphics('img/github-illustration.004.jpeg')
 #| out.width: '55%'
 #| fig.align: 'center'
 #| echo: false
+#| fig-alt: 'A diagram showing a "GitHub repo" with a black document icon at the top. Below it, a "Local repo" is shown with a blue document icon, indicating a change. Text below the local repo says, "Commit: changed font size to 24".'
+
 knitr::include_graphics('img/github-illustration.005.jpeg')
 ```
 
@@ -600,6 +615,8 @@ knitr::include_graphics('img/github-illustration.005.jpeg')
 #| out.width: '55%'
 #| fig.align: 'center'
 #| echo: false
+#| fig-alt: 'A diagram depicting a "GitHub repo" with a black document icon at the top. Below it, a "Local repo" is shown with a sequence of three document icons representing commits: a gray icon, followed by a light blue icon with an arrow pointing to "changed font color to blue", and finally a larger, bright blue icon with an arrow pointing to "changed font size to 24".'
+
 knitr::include_graphics('img/github-illustration.006.jpeg')
 ```
 
@@ -609,6 +626,8 @@ knitr::include_graphics('img/github-illustration.006.jpeg')
 #| out.width: '55%'
 #| fig.align: 'center'
 #| echo: false
+#| fig-alt: 'A diagram illustrating the "Push" action in Git. A "Local repo" at the bottom shows a sequence of three commits represented by document icons: a gray one, a light blue one with text "changed font color to blue", and a bright blue one with text "changed font size to 24". An upward arrow labeled "Push" connects the "Local repo" to a "GitHub repo" at the top. The "GitHub repo" also displays the same sequence of three document icons representing the pushed commits.'
+
 knitr::include_graphics('img/github-illustration.007.jpeg')
 ```
 

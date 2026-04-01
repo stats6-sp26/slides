@@ -6,8 +6,8 @@
 <script src="1a-intro-toolkit_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="1a-intro-toolkit_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="1a-intro-toolkit_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="1a-intro-toolkit_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="1a-intro-toolkit_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Introduction to the Toolkit</title>
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="1a-intro-toolkit_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="1a-intro-toolkit_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -95,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="1a-intro-toolkit_files/libs/revealjs/dist/theme/quarto-143f1b7bcb5b6d498a055dba59add268.css">
+  <link rel="stylesheet" href="1a-intro-toolkit_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
   <link href="1a-intro-toolkit_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="1a-intro-toolkit_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="1a-intro-toolkit_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -287,7 +290,7 @@ One personal strength you have</p>
 <section id="example-work-by-students" class="slide level2">
 <h2>Example work by students</h2>
 
-<img data-src="img/student-example2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<img data-src="img/student-example2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%" alt="A presentation slide titled &quot;Windmills in California Over Time&quot; features two data visualizations. The left panel is a scatter plot titled  &quot;Windmills Constructed in California Each Year,&quot; showing the annualnumber of turbines built from the late 1980s to the mid-2010s. It displays a sharp peak in construction around 2012 (nearly 800 turbines) and another significant peak in the late 1980s (over 400 turbines), with fluctuating, generally lower numbers throughout the 1990s and 2000s. The right panel is a map titled &quot;Turbine Distribution in California,&quot; showing the outline of California with black dots representing wind turbine locations. These dots are heavily concentrated in specific regions, primarily around the San Francisco Bay Area (Altamont Pass region) and in Southern California (Tehachapi Pass and San Gorgonio Pass areas). A caption at the bottom states &quot;4078 turbines in California.&quot;"></section>
 <section id="how-to-be-successful-in-this-course" class="slide level2">
 <h2>How to be successful in this course</h2>
 <ul>
@@ -314,11 +317,72 @@ One personal strength you have</p>
 <iframe title="Embedded Media titled: 01a-r-rstudio-edited" aria-label="Embedded Media titled: 01a-r-rstudio-edited" width="560" height="315" src="https://uci.yuja.com/V/Video?v=15734636&amp;node=67845604&amp;a=67727935&amp;preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
 </iframe>
 </center>
+<p>Code from this video is provided on the next few slides.</p>
+</section>
+<section id="code-from-previous-video" class="slide level2">
+<h2>Code from previous video</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">print</span>(<span class="st">"hello woRld"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "hello woRld"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>my_apples <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb3-2"><a href=""></a>my_apples</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>my_apples <span class="sc">-</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>My_apples</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'My_apples' not found</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>n_apples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, my_apples, <span class="dv">13</span>)</span>
+<span id="cb9-2"><a href=""></a>my_apples</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>my_apples <span class="ot">&lt;-</span> my_apples <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb11-2"><a href=""></a>n_apples</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  7  4 13</code></pre>
+</div>
+</div>
+</section>
+<section id="code-from-previous-video-1" class="slide level2">
+<h2>Code from previous video</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Menglin"</span>, <span class="st">"Gloria"</span>, <span class="st">"Robert"</span>)</span>
+<span id="cb13-2"><a href=""></a><span class="fu">data.frame</span>(<span class="at">friends =</span> names, <span class="at">apples =</span> n_apples)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  friends apples
+1 Menglin      7
+2  Gloria      4
+3  Robert     13</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>people <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">friends =</span> names, <span class="at">apples =</span> n_apples)</span>
+<span id="cb15-2"><a href=""></a>people[<span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Gloria"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a>people[<span class="dv">3</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  friends apples
+3  Robert     13</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>people[ , <span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  7  4 13</code></pre>
+</div>
+</div>
 </section>
 <section id="object-assignment-operator" class="slide level2">
 <h2>Object assignment operator</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>my_apples <span class="ot">&lt;-</span> <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>my_apples <span class="ot">&lt;-</span> <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <table class="caption-top">
@@ -342,7 +406,7 @@ One personal strength you have</p>
 <section id="r-is-case-sensitive" class="slide level2">
 <h2>R is case-sensitive</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>My_apples</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a>My_apples</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error:
 ! object 'My_apples' not found</code></pre>
@@ -351,13 +415,13 @@ One personal strength you have</p>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
-<p>If something comes in quotes, it is not defined in R.</p>
+<p>If something comes in quotes, it is not defined in R. Later in the quarter we will call these as strings. More on that later.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>n_apples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, my_apples, <span class="dv">3</span>)</span>
-<span id="cb4-2"><a href=""></a></span>
-<span id="cb4-3"><a href=""></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Menglin"</span>, <span class="st">"Gloria"</span>, <span class="st">"Robert"</span>)</span>
-<span id="cb4-4"><a href=""></a></span>
-<span id="cb4-5"><a href=""></a><span class="fu">data.frame</span>(<span class="at">person =</span> names, <span class="at">apple_count =</span> n_apples)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a>n_apples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, my_apples, <span class="dv">3</span>)</span>
+<span id="cb24-2"><a href=""></a></span>
+<span id="cb24-3"><a href=""></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Menglin"</span>, <span class="st">"Gloria"</span>, <span class="st">"Robert"</span>)</span>
+<span id="cb24-4"><a href=""></a></span>
+<span id="cb24-5"><a href=""></a><span class="fu">data.frame</span>(<span class="at">person =</span> names, <span class="at">apple_count =</span> n_apples)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   person apple_count
 1 Menglin           7
@@ -369,13 +433,13 @@ One personal strength you have</p>
 <section id="vocabulary" class="slide level2">
 <h2>Vocabulary</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">do</span>(something)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="fu">do</span>(something)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>do()</code> is a function;<br>
 <code>something</code> is the argument of the function.</p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">do</span>(something, colorful)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="fu">do</span>(something, colorful)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>do()</code> is a function;<br>
 <code>something</code> is the first argument of the function;<br>
@@ -386,7 +450,7 @@ One personal strength you have</p>
 <h2>Getting Help</h2>
 <p>In order to get any help we can use <code>?</code> followed by function (or object) name.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>?c</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a>?c</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="section-4" class="slide level2">
@@ -416,14 +480,14 @@ One personal strength you have</p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>n_apples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, my_apples, <span class="dv">3</span>)</span>
-<span id="cb9-2"><a href=""></a></span>
-<span id="cb9-3"><a href=""></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Menglin"</span>, <span class="st">"Gloria"</span>, <span class="st">"Robert"</span>)</span>
-<span id="cb9-4"><a href=""></a></span>
-<span id="cb9-5"><a href=""></a><span class="fu">data.frame</span>(</span>
-<span id="cb9-6"><a href=""></a>  <span class="at">person =</span> names, </span>
-<span id="cb9-7"><a href=""></a>  <span class="at">apple_count =</span> n_apples</span>
-<span id="cb9-8"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a>n_apples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, my_apples, <span class="dv">3</span>)</span>
+<span id="cb29-2"><a href=""></a></span>
+<span id="cb29-3"><a href=""></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Menglin"</span>, <span class="st">"Gloria"</span>, <span class="st">"Robert"</span>)</span>
+<span id="cb29-4"><a href=""></a></span>
+<span id="cb29-5"><a href=""></a><span class="fu">data.frame</span>(</span>
+<span id="cb29-6"><a href=""></a>  <span class="at">person =</span> names, </span>
+<span id="cb29-7"><a href=""></a>  <span class="at">apple_count =</span> n_apples</span>
+<span id="cb29-8"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:60%;">
 <ul>
@@ -461,9 +525,11 @@ One personal strength you have</p>
 <iframe title="Embedded Media titled: 01b-quarto-edited" aria-label="Embedded Media titled: 01b-quarto-edited" width="560" height="315" src="https://uci.yuja.com/V/Video?v=15735503&amp;node=67847130&amp;a=165278068&amp;preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
 </iframe>
 </center>
+<p>The file I create in the video similar to the <a href="my-first-report.qmd">my-first-report.qmd</a> file provided here.</p>
 </section>
 <section id="markdown" class="slide level2">
 <h2>markdown <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M593.8 59.1H46.2C20.7 59.1 0 79.8 0 105.2v301.5c0 25.5 20.7 46.2 46.2 46.2h547.7c25.5 0 46.2-20.7 46.1-46.1V105.2c0-25.4-20.7-46.1-46.2-46.1zM338.5 360.6H277v-120l-61.5 76.9-61.5-76.9v120H92.3V151.4h61.5l61.5 76.9 61.5-76.9h61.5v209.2zm135.3 3.1L381.5 256H443V151.4h61.5V256H566z"></path></svg></h2>
+<p>markdown is a markup language. Markup languages instruct software on how to display or interpret text and data. We use markdown within a Quarto document.</p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <pre><code>
@@ -477,35 +543,13 @@ __Hello world__
 <p><strong>Hello world</strong></p>
 <p><del>Hello world</del></p>
 </div></div>
+<p><a href="https://www.markdownguide.org/cheat-sheet/">markdown cheatsheet</a></p>
 </section>
 <section id="quarto-parts" class="slide level2">
 <h2>Quarto parts</h2>
 
-<img data-src="img/quarto.001.png" width="960" class="r-stretch"></section>
-<section id="quarto-parts-1" class="slide level2">
-<h2>Quarto parts</h2>
-
-<img data-src="img/quarto.002.png" width="960" class="r-stretch"></section>
-<section id="quarto-parts-2" class="slide level2">
-<h2>Quarto parts</h2>
-
-<img data-src="img/quarto.003.png" width="960" class="r-stretch"></section>
-<section id="quarto-parts-3" class="slide level2">
-<h2>Quarto parts</h2>
-
-<img data-src="img/quarto.004.png" width="960" class="r-stretch"></section>
-<section id="quarto-parts-4" class="slide level2">
-<h2>Quarto parts</h2>
-
-<img data-src="img/quarto.005.png" width="960" class="r-stretch"></section>
-<section id="quarto-parts-5" class="slide level2">
-<h2>Quarto parts</h2>
-
-<img data-src="img/quarto.007.png" width="960" class="r-stretch"></section>
-<section id="quarto-parts-6" class="slide level2">
-<h2>Quarto parts</h2>
-
-<img data-src="img/quarto.006.png" width="960" class="r-stretch"></section>
+<img data-src="img/quarto-example-full.png" class="quarto-figure quarto-figure-center r-stretch" alt="A screenshot of the RStudio IDE displaying a Quarto document. The screen is divided into multiple panes. The left pane shows the Quarto source code, which includes YAML metadata (title, author, format: html), a text paragraph, and an R code chunk (`my_apples <- 2`). The bottom-left pane shows the R console and &quot;Background Jobs&quot; tab. The right pane displays the rendered output of the Quarto document, showing &quot;My First Quarto File&quot;, the author, the descriptive text, and the result &quot;my_apples <- 2&quot; leading to &quot;I have 2 apples in total&quot;. Pink labels and arrows highlight key RStudio features: top toolbar buttons for &quot;Save&quot;, &quot;Render&quot;, &quot;Options&quot;, and &quot;Insert a code chunk&quot;; buttons next to a code chunk for &quot;Run code chunk&quot; and &quot;Run all chunks above&quot;; and the &quot;Background Jobs&quot; tab in the console." width="1907"><p>Quarto source file can be accessed here <a href="my-first-report.qmd">my-first-report.qmd</a>.</p>
+</section>
 <section id="slides-for-this-course" class="slide level2">
 <h2>Slides for this course</h2>
 <p>Slides that you are currently looking at are also written in Quarto. You can take a look at them on our course’s <a href="https://github.com/stats6-sp26">GitHub organization</a> in the slides repo.</p>
@@ -547,7 +591,7 @@ __Hello world__
 <h2>R packages</h2>
 <p>Try running the following code:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">beep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="fu">beep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in `beep()`:
 ! could not find function "beep"</code></pre>
@@ -565,29 +609,16 @@ __Hello world__
 <h2>Using <code>install.packages()</code></h2>
 <p>In your <strong>Console</strong>, install the beepr package</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"beepr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"beepr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We do this in the Console because we only need to do it once.</p>
-</section>
-<section id="using-packages-pane" class="slide level2">
-<h2>Using Packages pane</h2>
-
-<img data-src="img/packages-pane.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"><p>Packages Pane &gt; Install</p>
-</section>
-<section id="letting-rstudio-install" class="slide level2">
-<h2>Letting RStudio Install</h2>
-
-<img data-src="img/rstudio-install.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p>If you save your file and using a package RStudio will tell you that you have not installed the package.</p>
-<div class="font75">
-<p>Using packages</p>
-</div>
 </section>
 <section id="using-beep-from-beepr" class="slide level2">
 <h2>Using beep() from beepr</h2>
 <p>Option 1</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="fu">library</span>(beepr)</span>
-<span id="cb14-2"><a href=""></a><span class="fu">beep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a><span class="fu">library</span>(beepr)</span>
+<span id="cb34-2"><a href=""></a><span class="fu">beep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>More common usage.</p>
 <p>Useful if you are going to use multiple functions from the same package. E.g. we have used many functions (ggplot, aes, geom_…) from the ggplot2 package. In such cases, usual practice is to put the library name in the first R chunk in the .qmd file.</p>
@@ -596,14 +627,37 @@ __Hello world__
 <h2>Using beep() from beepr</h2>
 <p>Option 2</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>beepr<span class="sc">::</span><span class="fu">beep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a>beepr<span class="sc">::</span><span class="fu">beep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Useful when you are going to use a function once or few times. Also useful if there are any conflicts. For instance if there is some other package in your environment that has a beep() function that prints the word beep, you would want to distinguish the beep function from the beepr package and the beep function from the other imaginary package.</p>
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-
-<img data-src="img/beep-help.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="reading-the-documentation" class="slide level2">
+<h2>Reading the documentation</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href=""></a>?beep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Running <code>?beep</code> in the Console opens the Help pane with the package documentation. We run this in the Console and not in Quarto so that we won’t get the help every time we render the Quarto document.</p>
+<div class="fragment">
+<p>beep {beepr} - indicates that the beep package is in the beepr package</p>
+</div>
+<div class="fragment">
+<p>Pay attention to parts of documentation: Description, Usage, Arguments, Details, Examples. At your stage Examples are a great resource.</p>
+</div>
+</section>
+<section id="reading-the-documentation-1" class="slide level2">
+<h2>Reading the documentation</h2>
+<p><code>beep(sound = 1, expr = NULL)</code> indicates that the default sound is set to be 1.</p>
+<div class="fragment">
+<p>Pay attention to argument options.</p>
+</div>
+</section>
+<section id="usage-example" class="slide level2">
+<h2>Usage example</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a>beepr<span class="sc">::</span><span class="fu">beep</span>(<span class="at">sound =</span> <span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This should play the mariokart sound.</p>
+</section>
 <section id="open-source" class="slide level2">
 <h2>Open Source</h2>
 <ul>
@@ -623,11 +677,11 @@ __Hello world__
 <h2>Tidyverse</h2>
 <p>In short, tidyverse is a family of packages. From practical stand point, you can install many tidyverse packages at once (and you did this).</p>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p>We can also load multiple tidyverse packages all at the same time.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.2.0     ✔ readr     2.1.5
@@ -647,7 +701,7 @@ __Hello world__
 <h1>Version Control</h1>
 
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p>Does this look familiar?</p>
 <ul>
@@ -659,7 +713,7 @@ __Hello world__
 <li class="fragment"><p>hw1_finalestfinal</p></li>
 </ul>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p>What if we tracked our file with better names for each version and have only 1 file <strong>hw1</strong>?</p>
 <ul>
@@ -676,38 +730,38 @@ __Hello world__
 <li><p>GitHub is a website where we can store (and share) different versions of the files.</p></li>
 </ul>
 </section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+
+<img data-src="img/github-illustration.002.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%" alt="An orange box labeled &quot;GitHub repo&quot; next to a black document icon."></section>
 <section id="section-11" class="slide level2">
 <h2></h2>
 
-<img data-src="img/github-illustration.002.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
+<img data-src="img/github-illustration.003.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="Diagram showing a GitHub repo with a document icon at the top, connected by a downward arrow labeled &quot;Clone a repo&quot; to a local repo with a document icon at the bottom."></section>
 <section id="section-12" class="slide level2">
 <h2></h2>
 
-<img data-src="img/github-illustration.003.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<img data-src="img/github-illustration.004.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram with &quot;GitHub repo&quot; and a black document icon at the top. Below it, &quot;Local repo&quot; is shown with a blue document icon, implying a change  has been made locally. Text below reads &quot;Commit: changed font color to blue&quot;."></section>
 <section id="section-13" class="slide level2">
 <h2></h2>
 
-<img data-src="img/github-illustration.004.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<img data-src="img/github-illustration.005.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram showing a &quot;GitHub repo&quot; with a black document icon at the top. Below it, a &quot;Local repo&quot; is shown with a blue document icon, indicating a change. Text below the local repo says, &quot;Commit: changed font size to 24&quot;."></section>
 <section id="section-14" class="slide level2">
 <h2></h2>
 
-<img data-src="img/github-illustration.005.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<img data-src="img/github-illustration.006.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram depicting a &quot;GitHub repo&quot; with a black document icon at the top. Below it, a &quot;Local repo&quot; is shown with a sequence of three document icons representing commits: a gray icon, followed by a light blue icon with an arrow pointing to &quot;changed font color to blue&quot;, and finally a larger, bright blue icon with an arrow pointing to &quot;changed font size to 24&quot;."></section>
 <section id="section-15" class="slide level2">
 <h2></h2>
 
-<img data-src="img/github-illustration.006.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<img data-src="img/github-illustration.007.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram illustrating the &quot;Push&quot; action in Git. A &quot;Local repo&quot; at the bottom shows a sequence of three commits represented by document icons: a gray one, a light blue one with text &quot;changed font color to blue&quot;, and a bright blue one with text &quot;changed font size to 24&quot;. An upward arrow labeled &quot;Push&quot; connects the &quot;Local repo&quot; to a &quot;GitHub repo&quot; at the top. The &quot;GitHub repo&quot; also displays the same sequence of three document icons representing the pushed commits."></section>
 <section id="section-16" class="slide level2">
-<h2></h2>
-
-<img data-src="img/github-illustration.007.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
-<section id="section-17" class="slide level2">
 <h2></h2>
 <center>
 <iframe title="Embedded Media titled: 01c-github-edited" aria-label="Embedded Media titled: 01c-github-edited" width="560" height="315" src="https://uci.yuja.com/V/Video?v=15735817&amp;node=67847829&amp;a=212432377&amp;preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
 </iframe>
 </center>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-17" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -750,7 +804,7 @@ __Hello world__
 <p><strong>commit:</strong> A snapshot of your repo at a specific point in time. We distinguish each commit with a <strong>commit message</strong>.</p>
 <p><strong>push:</strong> Uploads the latest “committed” state of your repo to GitHub.</p>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div class="font150">
 <p>Do you git it?</p>
