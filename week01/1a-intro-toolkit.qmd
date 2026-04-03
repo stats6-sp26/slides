@@ -55,7 +55,7 @@ One personal strength you have
 
 # Getting to Know the Course
 
-## 
+##  {visibility="uncounted"}
 
 ::: font100
 The most important thing about this course
@@ -96,7 +96,7 @@ What do you think data science is about and what will we learn in this course? T
 
 We will use a variety of datasets from biological studies to business answering questions serving different purposes in life. Data will come different size, shape, and form and will include numbers, categories, text etc.
 
-##
+## {visibility="uncounted"}
 
 **Is this a statistics course or a computing course?**
 
@@ -195,7 +195,7 @@ my_apples <- 4
 My_apples
 ```
 
-##
+## {visibility="uncounted"}
 
 If something comes in quotes, it is not defined in R. Later in the quarter we will call these as strings. More on that later.
 
@@ -239,7 +239,7 @@ In order to get any help we can use `?` followed by function (or object) name.
 ?c
 ```
 
-##
+## {visibility="uncounted"}
 
 ::: callout-tip
 You should not copy paste code from my slides or from the internet. 
@@ -280,7 +280,7 @@ data.frame(
 
 ::::
 
-##
+## {visibility="uncounted"}
 
 ::: callout-tip
 
@@ -396,7 +396,7 @@ beep()
 Why are we seeing this error? 
 
 
-##
+## {visibility="uncounted"}
 
 :::{.font75}
 
@@ -509,7 +509,7 @@ This should play the mariokart sound.
 In short, tidyverse is a family of packages. From practical stand point, you can install many tidyverse packages at once (and you did this). 
 
 
-##
+## {visibility="uncounted"}
 
 We can also load multiple tidyverse packages all at the same time.
 
@@ -520,7 +520,7 @@ library(tidyverse)
 
 # Version Control
 
-##
+## {visibility="uncounted"}
 
 ::: {.incremental}
 
@@ -541,7 +541,7 @@ Does this look familiar?
 :::
 
 
-##
+## {visibility="uncounted"}
 
 ::: {.incremental}
 
@@ -566,7 +566,7 @@ We will call the descriptions in italic **commit** messages.
 
 - GitHub is a website where we can store (and share) different versions of the files. 
 
-##
+## {visibility="uncounted"}
 
 ```{r}
 #| out.width: '40%'
@@ -576,7 +576,7 @@ We will call the descriptions in italic **commit** messages.
 knitr::include_graphics('img/github-illustration.002.jpeg')
 ```
 
-##
+## {visibility="uncounted"}
 
 ```{r}
 #| out.width: '55%'
@@ -587,7 +587,7 @@ knitr::include_graphics('img/github-illustration.002.jpeg')
 knitr::include_graphics('img/github-illustration.003.jpeg')
 ```
 
-##
+## {visibility="uncounted"}
 
 ```{r}
 #| out.width: '55%'
@@ -598,7 +598,7 @@ knitr::include_graphics('img/github-illustration.003.jpeg')
 knitr::include_graphics('img/github-illustration.004.jpeg')
 ```
 
-##
+## {visibility="uncounted"}
 
 ```{r}
 #| out.width: '55%'
@@ -609,7 +609,7 @@ knitr::include_graphics('img/github-illustration.004.jpeg')
 knitr::include_graphics('img/github-illustration.005.jpeg')
 ```
 
-##
+## {visibility="uncounted"}
 
 ```{r}
 #| out.width: '55%'
@@ -620,7 +620,7 @@ knitr::include_graphics('img/github-illustration.005.jpeg')
 knitr::include_graphics('img/github-illustration.006.jpeg')
 ```
 
-##
+## {visibility="uncounted"}
 
 ```{r}
 #| out.width: '55%'
@@ -631,7 +631,7 @@ knitr::include_graphics('img/github-illustration.006.jpeg')
 knitr::include_graphics('img/github-illustration.007.jpeg')
 ```
 
-## 
+##  {visibility="uncounted"}
 
 
 
@@ -641,7 +641,7 @@ knitr::include_graphics('img/github-illustration.007.jpeg')
 
 </center>
 
-## 
+## {visibility="uncounted"}
 
 
 ::: callout-tip
