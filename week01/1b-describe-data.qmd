@@ -30,7 +30,7 @@ library(janitor)
 library(rsvg)
 library(bayesrules)
 data(bad_drivers)
-candy_rankings <- candy_rankings %>% 
+candy_rankings <- candy_rankings |> 
   select(competitorname, chocolate, fruity, sugarpercent, pricepercent, winpercent)
 data(hotel_bookings)
 ```
@@ -42,6 +42,7 @@ data(hotel_bookings)
 
 ```{r}
 library(fivethirtyeight)
+library(bayesrules)
 library(tidyverse)
 data("bad_drivers")
 ```
@@ -314,8 +315,8 @@ glimpse(hotel_bookings)
 
 ```{r}
 #| echo: false
-hotel_bookings %>% 
-  select(lead_time, reservation_status) %>% 
+hotel_bookings |> 
+  select(lead_time, reservation_status) |> 
   glimpse()
 ```
 
@@ -717,7 +718,7 @@ summarize(hotel_bookings, quantile(lead_time, 0.25))
 ```
 
 ```{r echo = FALSE}
-q1 <- summarize(hotel_bookings, quantile(lead_time, c(0.25))) %>% 
+q1 <- summarize(hotel_bookings, quantile(lead_time, c(0.25))) |> 
   pull()
 ```
 
@@ -753,6 +754,13 @@ summarize(
   med_lead_time = median(lead_time)
   )
 ```
+
+## Missing Data
+
+```{r}
+
+```
+
 
 ## Learning Tip of the Day
 
