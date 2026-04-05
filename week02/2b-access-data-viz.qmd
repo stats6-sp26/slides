@@ -463,8 +463,8 @@ This auditory experience mirrors the visual experience of seeing the line go up 
 
 # Data Tactualization
 
-Data tactulization refers to making data visualization in a form so that it can be touchable. 
-The video shows printing of a tactile boxplot that one can touch.
+Data tactualization refers to making data visualization in a form so that it can be touchable. 
+The video shows printing of a tactile boxplot that one can touch using a Swell machine.
 
 <center>
 
