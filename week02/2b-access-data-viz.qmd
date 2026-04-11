@@ -457,7 +457,6 @@ sonify::sonify(x, y)
 
 If you were to listen to the output of the `sonify()` function, you would hear a series of ten tones, each one slightly higher in pitch than the last.
 The rising pitch directly corresponds to the rising `y` values as `x` increases.
-This auditory experience mirrors the visual experience of seeing the line go up and to the right, providing an alternative way to perceive the linear relationship between x and y.
 
 
 
