@@ -113,15 +113,10 @@ We will end up with too many objects in `Environment`.
 Shortcut: <br>Ctrl (Command) + Shift + M
 :::
 
-## 
+## RStudio settings
 
-```{r}
-#| echo: false
-#| fig-align: center
-knitr::include_graphics("img/base-r-setting.png")
-```
 
-Make sure to select `Use native pipe operator` under `Tools > Global Options > Code`
+Make sure to select `Use native pipe operator` under `Tools > Global Options > Code` in RStudio
 
 ##
 
@@ -219,7 +214,8 @@ The `clean_names()` function changes all variable names to tidyverse style.
 
 ```{r}
 #| echo: false
-knitr::include_graphics("img/subset-columns.jpeg")
+#| fig-alt: "Side-by-side schematic of a data frame and a subset of it. On the left, a table labeled data_frame shows four rows (1–4) and four columns named variable_1, variable_2, variable_3, and variable_4. The columns variable_2 and variable_3 are shaded in pink to indicate selection. On the right, a smaller table labeled select(data_frame, variable_2, variable_3) displays only the two shaded columns, variable_2 and variable_3, for the same four rows, illustrating how selecting columns reduces the data frame to those variables."
+knitr::include_graphics("img/subset-columns.png")
 ```
 
 . . .
@@ -230,10 +226,13 @@ Column-wise subsetting can be done using `select()`.
 
 ```{r}
 #| echo: false
-knitr::include_graphics("img/subset-rows.jpeg")
+#| fig-alt: "Side-by-side schematic illustrating row selection in a data frame. On the left, a table labeled data_frame shows four rows (1–4) and four columns (variable_1 to variable_4). Rows 2 and 3 are shaded in pink to indicate they are selected, while rows 1 and 4 are unshaded. On the right, a smaller table labeled filter(data_frame, condition) and slice(data_frame, row_indices) displays only the selected rows (rows 2 and 3) with all four columns preserved, demonstrating how filtering or slicing keeps rows that meet a condition."
+
+knitr::include_graphics("img/subset-rows.png")
 ```
 
 . . .
+
 Row-wise subsetting can be done with `slice()` and `filter()` 
 
 ##
@@ -416,9 +415,7 @@ Moving forward we are only going to focus on year 2018, and use `job_class_title
 ```{r}
 lapd |> 
   filter(year == 2018) |> 
-  select(job_class_title, 
-         employment_type, 
-         base_pay)
+  select(job_class_title, employment_type, base_pay)
 ```
 
 ##
@@ -427,9 +424,7 @@ lapd |>
 lapd <- 
   lapd |> 
   filter(year == 2018) |> 
-  select(job_class_title, 
-         employment_type, 
-         base_pay)
+  select(job_class_title, employment_type, base_pay)
 ```
 
 ##
@@ -458,7 +453,7 @@ lapd |>
 
 **Goal**: 
 
-Create a new variable called `base_pay_level` which has `Less Than 0`, `No Income`, `Between 0 and 100K` and `Greater than 100K`. 
+Create a new variable called `base_pay_class` which has two classifications: "Less than 100K", "More than 100K".
 
 
 ##
@@ -470,15 +465,48 @@ lapd |>
   filter(base_pay == 100000)
 ```
 
+## 
+
+```{r}
+lapd |> 
+  mutate(
+    base_pay_class = if_else(
+      base_pay < 100000, "Less than 100K", "More than 100K"
+    )
+  )
+```
+
+##
+
+```{r}
+#| label: fig-if-else
+#| echo: false
+#| fig-alt: "Flowchart illustrating an if–else decision. At the top is the text if_else(condition, do this, do that). A central pink rectangle labeled condition branches into two paths: to the left, labeled if TRUE, an arrow points down to a green circle labeled do this; to the right, labeled if FALSE, an arrow points down to a green circle labeled do that. The diagram shows how a condition determines which action is executed."
+#| out-width: 50%
+knitr::include_graphics("img/if-else.png")
+```
+
+##
+
+**Goal**: 
+
+Create a new variable called `base_pay_level` which has `Less Than 0`, `No Income`, `Between 0 and 100K` and `Greater than 100K`. 
+
+
+
+
 ##
 
 ```{r}
 lapd |> 
-  mutate(base_pay_level = case_when(
-    base_pay < 0 ~ "Less than 0", 
-    base_pay == 0 ~ "No Income",
-    base_pay < 100000 & base_pay > 0 ~ "Between 0 and 100K",
-    base_pay > 100000 ~ "Greater than 100K")) 
+  mutate(
+    base_pay_level = case_when(
+      base_pay < 0 ~ "Less than 0", 
+      base_pay == 0 ~ "No Income",
+      base_pay < 100000 & base_pay > 0 ~ "Between 0 and 100K",
+      base_pay > 100000 ~ "Greater than 100K"
+    )
+  ) 
 ```
 
 ## 
@@ -499,6 +527,16 @@ lapd |>
 
 ##
 
+```{r}
+#| label: fig-case-when
+#| echo: false
+#| fig-alt: "Flowchart illustrating case_when logic. At the top is the text case_when(condition1 ~ action1, condition2 ~ action2, condition3 ~ action3). A vertical sequence of pink rectangles labeled condition1, condition2, and condition3 represents conditions evaluated in order. For each condition, a rightward arrow labeled if TRUE leads to a green circle labeled action1, action2, or action3, respectively. If a condition is false, the flow continues downward to the next condition. If all conditions are false, a final arrow leads to a green circle labeled return NA. The diagram shows how the first true condition determines the returned action."
+#| out-width: 50%
+knitr::include_graphics("img/case-when.png")
+```
+
+##
+
 **Goal**: 
 
 Make `job_class_title` and `employment_type` factor variables.
@@ -507,8 +545,10 @@ Make `job_class_title` and `employment_type` factor variables.
 
 ```{r}
 lapd |> 
-  mutate(employment_type = as.factor(employment_type),
-         job_class_title = as.factor(job_class_title)) 
+  mutate(
+    employment_type = as.factor(employment_type),
+    job_class_title = as.factor(job_class_title)
+  ) 
 ```
 
 ##
@@ -538,17 +578,22 @@ lapd <-
   lapd |> 
   clean_names() |> 
   filter(year == 2018) |> 
-  select(job_class_title, 
-         employment_type, 
-         base_pay) |> 
-  mutate(employment_type = as.factor(employment_type),
-         job_class_title = as.factor(job_class_title),
-         base_pay_level = case_when(
-           base_pay < 0 ~ "Less than 0", 
-           base_pay == 0 ~ "No Income",
-           base_pay < 100000 & base_pay > 0 ~ "Between 0 and 100K",
-           base_pay > 100000 ~ "Greater than 100K")) 
+  select(job_class_title, employment_type, base_pay) |> 
+  mutate(
+    employment_type = as.factor(employment_type),
+    job_class_title = as.factor(job_class_title),
+    base_pay_class = if_else(
+      base_pay < 100000, "Less than 100K", "More than 100K"
+    ),
+    base_pay_level = case_when(
+      base_pay < 0 ~ "Less than 0", 
+      base_pay == 0 ~ "No Income",
+      base_pay < 100000 & base_pay > 0 ~ "Between 0 and 100K",
+      base_pay > 100000 ~ "Greater than 100K"
+    )
+  ) 
 ```
+
 
 ##
 

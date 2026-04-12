@@ -110,9 +110,11 @@ summarize(lapd,
 ## `group_by()`
 
 ```{r}
+#| label: fig-group-by
 #| echo: false
-#| fig-align: center
-knitr::include_graphics("img/group-by.jpeg")
+#| fig.cap: Grouping a data frame by a specific variable
+#| fig-alt: "Side-by-side schematic illustrating grouping in a data frame. On the left, a table labeled data_frame shows four rows (1–4) and four columns (variable_1 to variable_4). Values in variable_2 are highlighted with two colors, indicating two groups: rows 1 and 4 share one group, and rows 2 and 3 share another. On the right, a table labeled group_by(data_frame, variable_2) shows the same data with all columns present, but rows are visually grouped by variable_2, using the same colors across all columns to indicate group membership."
+knitr::include_graphics("img/group-by.png")
 ```
 
 `group_by()` separates the data frame by the groups. Any action following `group_by()` will be completed for each group separately.
@@ -163,6 +165,7 @@ Note that `n()` does not take any arguments.
 ```{r}
 #| echo: false
 #| fig-align: center
+#| fig-alt: "A diagram showing two tables, X and Y, being combined into a new table. Table X has columns 'key' and 'x_val', with keys 1, 2, 3. Table Y has 'key' and 'y_val', with keys 1, 2, 4. The new combined table includes all rows from Table X. For each key present in both tables (1 and 2), the matching 'y_val' from Table Y is added. For keys only in Table X (key 3), the 'y_val' column is filled with 'NA' (Not Applicable)"
 knitr::include_graphics("img/left-join.png")
 ```
 
@@ -173,6 +176,7 @@ knitr::include_graphics("img/left-join.png")
 #| echo: false
 #| fig-align: center
 #| out-width: 45% 
+#| fig-alt: "A diagram showing two tables, X and Y, being merged based on a shared 'key' column. Table X has keys 1, 2, 3; Table Y has keys 1, 2, 4. The resulting combined table contains all rows from Table Y. Where keys match in both tables (1 and 2), corresponding values from X are included. For keys only present in Y (key 4), the 'x_val' column shows 'NA' (Not Applicable)."
 knitr::include_graphics("img/right-join.png")
 ```
 
@@ -183,6 +187,7 @@ knitr::include_graphics("img/right-join.png")
 #| echo: false
 #| fig-align: center
 #| out-width: 45% 
+#| fig-alt: "A diagram showing two tables, X and Y, being merged based on a shared 'key' column into a new combined table. Table X has keys 1, 2, 3; Table Y has keys 1, 2, 4. The resulting table includes all keys present in either X or Y (keys 1, 2, 3, 4). For keys found in both tables (1 and 2), corresponding values from both X ('x_val') and Y ('y_val') are shown. For keys only in Table X (key 3), its 'x_val' is included, and 'y_val' is marked 'NA' (Not Applicable). For keys only in Table Y (key 4), its 'y_val' is included, and 'x_val' is marked 'NA'"
 knitr::include_graphics("img/full-join.png")
 ```
 
@@ -192,6 +197,7 @@ knitr::include_graphics("img/full-join.png")
 #| echo: false
 #| fig-align: center
 #| out-width: 45% 
+#| fig-alt: "A diagram showing two ways to process data from two tables, X and Y, based on a common 'key' column. Table X has keys 1, 2, 3, with an 'x_val' for each. Table Y has keys 1, 2, 4, with a 'y_val' for each. 1.  Inner Combine (labeled 'inner_join'): A new table is created that only includes rows where the 'key' is found in *both* Table X and Table Y (keys 1 and 2). For these matching keys, the new table displays the key, its 'x_val' from Table X, and its 'y_val' from Table Y. 2. Semi Combine (labeled 'semi_join'): A new table is created by taking only those rows from Table X whose 'key' also  appears in Table Y (keys 1 and 2). This new table only displays the 'key' and 'x_val' from Table X."
 knitr::include_graphics("img/inner-semi-join.png")
 ```
 
@@ -201,6 +207,7 @@ knitr::include_graphics("img/inner-semi-join.png")
 #| echo: false
 #| fig-align: center
 #| out-width: 45% 
+#| fig-alt: "A diagram showing two tables, X and Y, being processed to create a new table. Table X has keys 1, 2, 3, with corresponding 'x_val' values. Table Y has keys 1, 2, 4, with corresponding 'y_val' values. The new table, labeled 'anti_join(x, y)', is formed by taking only those rows from Table X whose 'key' is *not* found in Table Y. In this example, only the row with key 3 from Table X (and its 'x_val') is included in the final result."
 knitr::include_graphics("img/anti-join.png")
 ```
 
@@ -298,6 +305,7 @@ albums
 ```{r}
 #| echo: false
 #| fig-align: center
+#| fig-alt: "A diagram shows three related collections of music information: 'artist', 'songs', and 'albums'. The 'artist' collection includes the artist's name and their number of followers. The 'songs' collection lists the artist's name, the song's name, the album's name it's on, and its popularity. The 'albums' collection contains the album's name and its release date. Lines connect the artist's name from the 'artist' collection to the artist's name in the 'songs' collection, and similarly, album names link the 'songs' collection to the 'albums' collection. This structure connects song details to their respective artists and albums."
 knitr::include_graphics("img/data_joins_spotify.png")
 ```
 
