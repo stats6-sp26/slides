@@ -48,3 +48,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Target the specific empty anchors within line-numbered code blocks
+  var lineAnchors = document.querySelectorAll('pre.numberSource code > span > a[href=""]');
+  
+  lineAnchors.forEach(function(anchor) {
+    // 1. Remove the href so it's no longer considered a 'link' by auditors
+    anchor.removeAttribute('href');
+    
+    // 2. Add aria-hidden to ensure screen readers skip it
+    anchor.setAttribute('aria-hidden', 'true');
+    
+    // 3. Ensure it's not reachable via keyboard tabbing
+    anchor.setAttribute('tabindex', '-1');
+  });
+});
+</script>
