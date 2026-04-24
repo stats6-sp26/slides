@@ -1,79 +1,43 @@
-<!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-<script type="text/javascript">
-  Reveal.on('ready', event => {
-    if (event.indexh === 0) {
-      document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-    }
-  });
-  Reveal.addEventListener('slidechanged', (event) => {
-    if (event.indexh === 0) {
-      Reveal.configure({ slideNumber: null });
-      document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-    }
-    if (event.indexh === 1) { 
-      Reveal.configure({ slideNumber: 'c' });
-      document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-    }
-  });
-</script>
-
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // 1. Fix Empty Line Number Links
-  // Targets the anchor tags used for line numbering in Quarto/Pandoc
-  var lineLinks = document.querySelectorAll('pre.numberSource code > span > a:first-child');
-  lineLinks.forEach(function(link) {
-    link.setAttribute('aria-hidden', 'true');
-    link.setAttribute('tabindex', '-1'); // Prevents keyboard users from getting stuck tabbing through every line
+(function() {
+  const fixAccessibility = () => {
+    // 1. FIX HAMBURGER MENU
+    // The menu plugin usually adds this to the bottom-left
+    const menuBtn = document.querySelector('.slide-menu-button a');
+    if (menuBtn && !menuBtn.hasAttribute('aria-label')) {
+      menuBtn.setAttribute('aria-label', 'Open navigation menu');
+      menuBtn.setAttribute('role', 'button');
+    }
+
+    // 2. FIX R CODE EMPTY LINKS
+    const codeLinks = document.querySelectorAll('pre.numberSource code > span > a[href=""]');
+    codeLinks.forEach(link => {
+      link.setAttribute('aria-hidden', 'true');
+      link.setAttribute('tabindex', '-1');
+      link.removeAttribute('href');
+    });
+
+    // 3. FIX GLOBAL LOGO
+    const logo = document.querySelector('.reveal .slide-logo');
+    if (logo && !logo.hasAttribute('alt')) {
+      logo.setAttribute('alt', 'Course logo');
+      logo.setAttribute('role', 'img');
+    }
+  };
+
+  // Create an observer to catch the menu button when it's added to the DOM
+  const observer = new MutationObserver((mutations) => {
+    fixAccessibility();
   });
 
-  // 2. Fix Global Logo Alt Text (from our previous step)
-  var logo = document.querySelector('.reveal .slide-logo');
-  if (logo) {
-    logo.setAttribute('alt', 'Intro to Data Science course logo');
-    logo.setAttribute('role', 'img');
+  // Start observing the whole body for changes
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Also run on load and slide change just to be safe
+  window.addEventListener('load', fixAccessibility);
+  if (window.Reveal) {
+    Reveal.on('ready', fixAccessibility);
+    Reveal.on('slidechanged', fixAccessibility);
   }
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  
-  // FIX FOR NAVBAR/MENU ICON
-  var menuButton = document.querySelector('.slide-menu-button a');
-  if (menuButton) {
-    menuButton.setAttribute('aria-label', 'Open slide navigation menu');
-  }
-
-});
-</script>
-
-<script>
-/**
- * Accessibility Fix for Quarto/Revealjs Empty Code Links
- */
-const fixEmptyCodeLinks = () => {
-  // Find all anchors inside code line spans that have an empty href
-  const anchors = document.querySelectorAll('pre.numberSource code > span > a[href=""]');
-  
-  anchors.forEach(anchor => {
-    // Adding a role and aria-hidden effectively hides the 'emptiness' from auditors
-    anchor.setAttribute('aria-hidden', 'true');
-    anchor.setAttribute('tabindex', '-1');
-    // Remove the href to stop it being a 'link' at all
-    anchor.removeAttribute('href');
-    // Ensure it's not focusable
-    anchor.style.pointerEvents = 'none';
-  });
-};
-
-// Run once on load
-window.addEventListener('load', fixEmptyCodeLinks);
-
-// Also watch for slide changes, as Revealjs sometimes re-renders
-if (window.Reveal) {
-  Reveal.on('ready', fixEmptyCodeLinks);
-  Reveal.on('slidechanged', fixEmptyCodeLinks);
-}
+})();
 </script>
