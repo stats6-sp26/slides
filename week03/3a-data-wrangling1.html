@@ -726,8 +726,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <h2>Example 1</h2>
 <p>Q. How many LAPD staff members had a base pay higher than $100,000 in year 2018 according to this data?</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="example-1-1" class="slide level2">
+<h2>Example 1</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb37-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -755,7 +755,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="example-1-1" class="slide level2">
+<section id="example-1-2" class="slide level2">
 <h2>Example 1</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
@@ -1049,7 +1049,7 @@ Figure&nbsp;1
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="3a-data-wrangling1_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
+<p><img data-src="3a-data-wrangling1_files/figure-revealjs/unnamed-chunk-37-1.png" alt="a var plot of base_pay_level showing the newly created levels as Between 0 and 100K, Greater than 100K, Less than 0, and No Income" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1065,8 +1065,8 @@ Figure&nbsp;2
 <h2>Goal</h2>
 <p>Make <code>job_class_title</code> and <code>employment_type</code> factor variables.</p>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="as.factor" class="slide level2">
+<h2><code>as.factor()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb63-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>

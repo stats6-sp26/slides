@@ -348,7 +348,7 @@ filter(lapd, year == 2018)
 
 Q. How many LAPD staff members had a base pay higher than $100,000 in year 2018 according to this data?
 
-##
+## Example 1
 
 ```{r}
 lapd |> 
@@ -510,6 +510,7 @@ We can use pipes with ggplot too!
 
 ```{r}
 #| output-location: column
+#| fig-alt: a var plot of base_pay_level showing the newly created levels as Between 0 and 100K, Greater than 100K, Less than 0, and No Income
 lapd |> 
   mutate(base_pay_level = case_when(
     base_pay < 0 ~ "Less than 0", 
@@ -534,7 +535,7 @@ knitr::include_graphics("img/case-when.png")
 
 Make `job_class_title` and `employment_type` factor variables.
 
-##
+## `as.factor()`
 
 ```{r}
 lapd |> 
