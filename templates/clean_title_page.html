@@ -26,3 +26,22 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 1. Fix Empty Line Number Links
+  // Targets the anchor tags used for line numbering in Quarto/Pandoc
+  var lineLinks = document.querySelectorAll('pre.numberSource code > span > a:first-child');
+  lineLinks.forEach(function(link) {
+    link.setAttribute('aria-hidden', 'true');
+    link.setAttribute('tabindex', '-1'); // Prevents keyboard users from getting stuck tabbing through every line
+  });
+
+  // 2. Fix Global Logo Alt Text (from our previous step)
+  var logo = document.querySelector('.reveal .slide-logo');
+  if (logo) {
+    logo.setAttribute('alt', 'Intro to Data Science course logo');
+    logo.setAttribute('role', 'img');
+  }
+});
+</script>
