@@ -6,8 +6,8 @@
 <script src="slide-template_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slide-template_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slide-template_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slide-template_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="slide-template_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Template for All Slides</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slide-template_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="slide-template_files/libs/revealjs/dist/theme/quarto-ad86aaed0de026712e5a229b95e45687.css">
   <link href="slide-template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slide-template_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slide-template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="logo.png" data-background-position="50% 85%" data-background-size="12%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Template for All Slides</h1>
 
 <div class="quarto-title-authors">
@@ -226,15 +226,15 @@ Dr.&nbsp;Mine Dogucu
 <h2>Bullets</h2>
 <p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
 <ul>
-<li class="fragment">Content authored with markdown</li>
-<li class="fragment">Output from executable code</li>
+<li>Content authored with markdown</li>
+<li>Output from executable code</li>
 </ul>
 </section>
 <section id="code" class="slide level2">
 <h2>Code</h2>
 <p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -243,9 +243,9 @@ Dr.&nbsp;Mine Dogucu
 <section id="more-code" class="slide level2">
 <h2>More code</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb3-2"><a href=""></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-3"><a href=""></a>  broom<span class="sc">::</span><span class="fu">tidy</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>  broom<span class="sc">::</span><span class="fu">tidy</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic  p.value
@@ -269,17 +269,17 @@ Dr.&nbsp;Mine Dogucu
 <section id="code-annotation" class="slide level2">
 <h2>Code Annotation</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a><span class="fu">library</span>(beepr)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-4-2" class="code-annotation-target"><a href="#annotated-cell-4-2"></a><span class="fu">beep</span>()</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-4-3" class="code-annotation-target"><a href="#annotated-cell-4-3"></a><span class="co"># a comment</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(beepr)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-4-2" class="code-annotation-target"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">beep</span>()</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-4-3" class="code-annotation-target"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># a comment</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt class="fragment" data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
-<dd class="fragment">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
 <span data-code-cell="annotated-cell-4" data-code-lines="2" data-code-annotation="1">Here we can explain what that line of code is doing.</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
-<dd class="fragment">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
+<dd>
 <span data-code-cell="annotated-cell-4" data-code-lines="3" data-code-annotation="2">Here we can explain that the second line is just a comment.</span>
 </dd>
 </dl>
@@ -325,7 +325,7 @@ Dr.&nbsp;Mine Dogucu
 <h2>Code and Output in Two Columns</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">summary</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>      mpg             cyl             disp             hp       
@@ -355,7 +355,7 @@ Dr.&nbsp;Mine Dogucu
 <section id="code-and-output-in-deparate-slides" class="slide level2">
 <h2>Code and Output in Deparate Slides</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">summary</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 </section>
@@ -488,9 +488,8 @@ Dr.&nbsp;Mine Dogucu
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -522,7 +521,7 @@ Dr.&nbsp;Mine Dogucu
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -700,24 +699,6 @@ Dr.&nbsp;Mine Dogucu
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

@@ -6,8 +6,8 @@
 <script src="3a-data-wrangling1_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="3a-data-wrangling1_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="3a-data-wrangling1_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="3a-data-wrangling1_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="3a-data-wrangling1_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Data Wrangling   Part I</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="3a-data-wrangling1_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="3a-data-wrangling1_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
   <link href="3a-data-wrangling1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="3a-data-wrangling1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="3a-data-wrangling1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Data Wrangling <br> Part I</h1>
 
 <div class="quarto-title-authors">
@@ -225,7 +225,7 @@ Dr.&nbsp;Mine Dogucu
 <section id="solution-1-functions-within-functions" class="slide level2">
 <h2>Solution 1: Functions within Functions</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  4  8 16</code></pre>
 </div>
@@ -233,7 +233,7 @@ Dr.&nbsp;Mine Dogucu
 <div class="fragment">
 <hr>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9.333333</code></pre>
 </div>
@@ -242,7 +242,7 @@ Dr.&nbsp;Mine Dogucu
 <div class="fragment">
 <hr>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9</code></pre>
 </div>
@@ -257,8 +257,8 @@ Dr.&nbsp;Mine Dogucu
 <section id="solution-2-creating-objects" class="slide level2">
 <h2>Solution 2: Creating Objects</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>)</span>
-<span id="cb7-2"><a href=""></a>numbers</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>)</span>
+<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a>numbers</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  4  8 16</code></pre>
 </div>
@@ -266,8 +266,8 @@ Dr.&nbsp;Mine Dogucu
 <div class="fragment">
 <hr>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>avg_number <span class="ot">&lt;-</span> <span class="fu">mean</span>(numbers)</span>
-<span id="cb9-2"><a href=""></a>avg_number</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a>avg_number <span class="ot">&lt;-</span> <span class="fu">mean</span>(numbers)</span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a>avg_number</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9.333333</code></pre>
 </div>
@@ -276,7 +276,7 @@ Dr.&nbsp;Mine Dogucu
 <div class="fragment">
 <hr>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">round</span>(avg_number)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(avg_number)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9</code></pre>
 </div>
@@ -303,9 +303,9 @@ Dr.&nbsp;Mine Dogucu
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb13-2"><a href=""></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb13-3"><a href=""></a>  <span class="fu">round</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9</code></pre>
 </div>
@@ -329,15 +329,15 @@ or <code>round(mean(c(4, 8, 16)))</code></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">h</span>(x) <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a href=""></a>  <span class="fu">g</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb15-3"><a href=""></a>  <span class="fu">f</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">h</span>(x) <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">g</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">f</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a href=""></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb16-3"><a href=""></a>  <span class="fu">round</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">16</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </div>
@@ -345,7 +345,7 @@ or <code>round(mean(c(4, 8, 16)))</code></p>
 <section id="data" class="slide level2">
 <h2>Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 68,564
 Columns: 35
@@ -391,8 +391,8 @@ $ `Job Class Link`               &lt;chr&gt; "http://per.lacity.org/perspecs/222
 <section id="section-5" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>lapd <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(lapd)</span>
-<span id="cb19-2"><a href=""></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(lapd)</span>
+<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 68,564
 Columns: 35
@@ -460,7 +460,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <div class="columns">
 <div class="column" style="width:50%&quot;;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="fu">select</span>(lapd, year, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, year, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 68,564 × 2
     year base_pay
@@ -480,8 +480,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div><div class="column" style="width:50%&quot;;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb23-2"><a href=""></a>  <span class="fu">select</span>(year, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb23-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 68,564 × 2
     year base_pay
@@ -505,7 +505,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <h2></h2>
 <p><code>select</code> can also be used to drop certain variables if used with a negative sign.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="fu">select</span>(lapd, <span class="sc">-</span>row_id, <span class="sc">-</span>department_title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="sc">-</span>row_id, <span class="sc">-</span>department_title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 68,564 × 33
     year payroll_department record_number job_class_title        employment_type
@@ -539,7 +539,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-8" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="fu">select</span>(lapd, <span class="fu">starts_with</span>(<span class="st">"q"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="fu">starts_with</span>(<span class="st">"q"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 68,564 × 4
    q1_payments q2_payments q3_payments q4_payments
@@ -561,7 +561,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-9" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="fu">select</span>(lapd, <span class="fu">ends_with</span>(<span class="st">"pay"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="fu">ends_with</span>(<span class="st">"pay"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 68,564 × 8
    payments_over_base_pay percent_over_base_pay base_pay permanent_bonus_pay
@@ -585,7 +585,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-10" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="fu">select</span>(lapd, <span class="fu">contains</span>(<span class="st">"pay"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="fu">contains</span>(<span class="st">"pay"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 68,564 × 17
    payroll_department q1_payments q2_payments q3_payments q4_payments
@@ -615,7 +615,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <p><code>slice()</code> subsets rows based on a row number.</p>
 <p>The data below include all the rows from third to seventh, including the third and the seventh.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">slice</span>(lapd, <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(lapd, <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 35
   row_id  year department_title payroll_department record_number job_class_title
@@ -701,7 +701,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <p><code>filter()</code> subsets rows based on a condition.</p>
 <p>The data below includes rows when the recorded year is 2018.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">filter</span>(lapd, year <span class="sc">==</span> <span class="dv">2018</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(lapd, year <span class="sc">==</span> <span class="dv">2018</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14,824 × 35
    row_id            year department_title payroll_department record_number
@@ -733,8 +733,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-15" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb37-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb37-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6,499 × 35
    row_id            year department_title payroll_department record_number
@@ -762,9 +762,9 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-16" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb39-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">100000</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb39-3"><a href=""></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb39-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">100000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb39-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6499</code></pre>
 </div>
@@ -775,8 +775,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <p>Q. How many observations are available between 2013 and 2015 including 2013 and 2015?</p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb41-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2013</span> <span class="sc">&amp;</span> year <span class="sc">&lt;=</span> <span class="dv">2015</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb41-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2013</span> <span class="sc">&amp;</span> year <span class="sc">&lt;=</span> <span class="dv">2015</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 40,227 × 35
    row_id            year department_title payroll_department record_number
@@ -805,9 +805,9 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-18" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb43-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2013</span> <span class="sc">&amp;</span> year <span class="sc">&lt;=</span> <span class="dv">2015</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb43-3"><a href=""></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb43-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2013</span> <span class="sc">&amp;</span> year <span class="sc">&lt;=</span> <span class="dv">2015</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb43-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 40227</code></pre>
 </div>
@@ -817,9 +817,9 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <h2></h2>
 <p>Q. How many LAPD staff were employed full time in 2018?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb45-2"><a href=""></a>  <span class="fu">filter</span>(employment_type <span class="sc">==</span> <span class="st">"Full Time"</span> <span class="sc">&amp;</span> year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb45-3"><a href=""></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb45-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(employment_type <span class="sc">==</span> <span class="st">"Full Time"</span> <span class="sc">&amp;</span> year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb45-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 14664</code></pre>
 </div>
@@ -829,7 +829,7 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <h2></h2>
 <p>We have done all sorts of selections, slicing, filtering on <code>lapd</code> but it has not changed at all. Why do you think so?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 68,564
 Columns: 35
@@ -878,9 +878,9 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-22" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb49-2"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb49-3"><a href=""></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb49-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb49-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14,824 × 3
    job_class_title                  employment_type base_pay
@@ -902,16 +902,16 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <section id="section-23" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href=""></a>lapd <span class="ot">&lt;-</span> </span>
-<span id="cb51-2"><a href=""></a>  lapd <span class="sc">|&gt;</span> </span>
-<span id="cb51-3"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb51-4"><a href=""></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="ot">&lt;-</span> </span>
+<span id="cb51-2"><a href="" aria-hidden="true" tabindex="-1"></a>  lapd <span class="sc">|&gt;</span> </span>
+<span id="cb51-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb51-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="section-24" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href=""></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 14,824
 Columns: 3
@@ -934,8 +934,8 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 <section id="section-26" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb54-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">base_pay_k =</span> base_pay<span class="sc">/</span><span class="dv">1000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb54-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">base_pay_k =</span> base_pay<span class="sc">/</span><span class="dv">1000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14,824 × 4
    job_class_title                  employment_type base_pay base_pay_k
@@ -963,8 +963,8 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 <h2></h2>
 <p>Let’s first check to see there is anyone earning exactly 100K.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb56-2"><a href=""></a>  <span class="fu">filter</span>(base_pay <span class="sc">==</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb56-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(base_pay <span class="sc">==</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 0 × 3
 # ℹ 3 variables: job_class_title &lt;chr&gt;, employment_type &lt;chr&gt;, base_pay &lt;dbl&gt;</code></pre>
@@ -974,12 +974,12 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 <section id="section-29" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb58-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb58-3"><a href=""></a>    <span class="at">base_pay_class =</span> <span class="fu">if_else</span>(</span>
-<span id="cb58-4"><a href=""></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span>, <span class="st">"Less than 100K"</span>, <span class="st">"More than 100K"</span></span>
-<span id="cb58-5"><a href=""></a>    )</span>
-<span id="cb58-6"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb58-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb58-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_pay_class =</span> <span class="fu">if_else</span>(</span>
+<span id="cb58-4"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span>, <span class="st">"Less than 100K"</span>, <span class="st">"More than 100K"</span></span>
+<span id="cb58-5"><a href="" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb58-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14,824 × 4
    job_class_title                  employment_type base_pay base_pay_class
@@ -1012,15 +1012,15 @@ Figure&nbsp;1
 <section id="section-32" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb60-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb60-3"><a href=""></a>    <span class="at">base_pay_level =</span> <span class="fu">case_when</span>(</span>
-<span id="cb60-4"><a href=""></a>      base_pay <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Less than 0"</span>, </span>
-<span id="cb60-5"><a href=""></a>      base_pay <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No Income"</span>,</span>
-<span id="cb60-6"><a href=""></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Between 0 and 100K"</span>,</span>
-<span id="cb60-7"><a href=""></a>      base_pay <span class="sc">&gt;</span> <span class="dv">100000</span> <span class="sc">~</span> <span class="st">"Greater than 100K"</span></span>
-<span id="cb60-8"><a href=""></a>    )</span>
-<span id="cb60-9"><a href=""></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb60-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb60-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_pay_level =</span> <span class="fu">case_when</span>(</span>
+<span id="cb60-4"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Less than 0"</span>, </span>
+<span id="cb60-5"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No Income"</span>,</span>
+<span id="cb60-6"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Between 0 and 100K"</span>,</span>
+<span id="cb60-7"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&gt;</span> <span class="dv">100000</span> <span class="sc">~</span> <span class="st">"Greater than 100K"</span></span>
+<span id="cb60-8"><a href="" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb60-9"><a href="" aria-hidden="true" tabindex="-1"></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14,824 × 4
    job_class_title                  employment_type base_pay base_pay_level    
@@ -1044,14 +1044,14 @@ Figure&nbsp;1
 <p>We can use pipes with ggplot too!</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb62-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">base_pay_level =</span> <span class="fu">case_when</span>(</span>
-<span id="cb62-3"><a href=""></a>    base_pay <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Less than 0"</span>, </span>
-<span id="cb62-4"><a href=""></a>    base_pay <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No Income"</span>,</span>
-<span id="cb62-5"><a href=""></a>    base_pay <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Between 0 and 100K"</span>,</span>
-<span id="cb62-6"><a href=""></a>    base_pay <span class="sc">&gt;</span> <span class="dv">100000</span> <span class="sc">~</span> <span class="st">"Greater than 100K"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb62-7"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> base_pay_level)) <span class="sc">+</span></span>
-<span id="cb62-8"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb62-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">base_pay_level =</span> <span class="fu">case_when</span>(</span>
+<span id="cb62-3"><a href="" aria-hidden="true" tabindex="-1"></a>    base_pay <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Less than 0"</span>, </span>
+<span id="cb62-4"><a href="" aria-hidden="true" tabindex="-1"></a>    base_pay <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No Income"</span>,</span>
+<span id="cb62-5"><a href="" aria-hidden="true" tabindex="-1"></a>    base_pay <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Between 0 and 100K"</span>,</span>
+<span id="cb62-6"><a href="" aria-hidden="true" tabindex="-1"></a>    base_pay <span class="sc">&gt;</span> <span class="dv">100000</span> <span class="sc">~</span> <span class="st">"Greater than 100K"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb62-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> base_pay_level)) <span class="sc">+</span></span>
+<span id="cb62-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1076,11 +1076,11 @@ Figure&nbsp;2
 <section id="section-36" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb63-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb63-3"><a href=""></a>    <span class="at">employment_type =</span> <span class="fu">as.factor</span>(employment_type),</span>
-<span id="cb63-4"><a href=""></a>    <span class="at">job_class_title =</span> <span class="fu">as.factor</span>(job_class_title)</span>
-<span id="cb63-5"><a href=""></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb63-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb63-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">employment_type =</span> <span class="fu">as.factor</span>(employment_type),</span>
+<span id="cb63-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">job_class_title =</span> <span class="fu">as.factor</span>(job_class_title)</span>
+<span id="cb63-5"><a href="" aria-hidden="true" tabindex="-1"></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14,824 × 3
    job_class_title                  employment_type base_pay
@@ -1117,24 +1117,24 @@ Figure&nbsp;2
 <section id="section-39" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href=""></a>lapd <span class="ot">&lt;-</span> </span>
-<span id="cb65-2"><a href=""></a>  lapd <span class="sc">|&gt;</span> </span>
-<span id="cb65-3"><a href=""></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb65-4"><a href=""></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb65-5"><a href=""></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay) <span class="sc">|&gt;</span> </span>
-<span id="cb65-6"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb65-7"><a href=""></a>    <span class="at">employment_type =</span> <span class="fu">as.factor</span>(employment_type),</span>
-<span id="cb65-8"><a href=""></a>    <span class="at">job_class_title =</span> <span class="fu">as.factor</span>(job_class_title),</span>
-<span id="cb65-9"><a href=""></a>    <span class="at">base_pay_class =</span> <span class="fu">if_else</span>(</span>
-<span id="cb65-10"><a href=""></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span>, <span class="st">"Less than 100K"</span>, <span class="st">"More than 100K"</span></span>
-<span id="cb65-11"><a href=""></a>    ),</span>
-<span id="cb65-12"><a href=""></a>    <span class="at">base_pay_level =</span> <span class="fu">case_when</span>(</span>
-<span id="cb65-13"><a href=""></a>      base_pay <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Less than 0"</span>, </span>
-<span id="cb65-14"><a href=""></a>      base_pay <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No Income"</span>,</span>
-<span id="cb65-15"><a href=""></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Between 0 and 100K"</span>,</span>
-<span id="cb65-16"><a href=""></a>      base_pay <span class="sc">&gt;</span> <span class="dv">100000</span> <span class="sc">~</span> <span class="st">"Greater than 100K"</span></span>
-<span id="cb65-17"><a href=""></a>    )</span>
-<span id="cb65-18"><a href=""></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="ot">&lt;-</span> </span>
+<span id="cb65-2"><a href="" aria-hidden="true" tabindex="-1"></a>  lapd <span class="sc">|&gt;</span> </span>
+<span id="cb65-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb65-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb65-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay) <span class="sc">|&gt;</span> </span>
+<span id="cb65-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb65-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">employment_type =</span> <span class="fu">as.factor</span>(employment_type),</span>
+<span id="cb65-8"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">job_class_title =</span> <span class="fu">as.factor</span>(job_class_title),</span>
+<span id="cb65-9"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_pay_class =</span> <span class="fu">if_else</span>(</span>
+<span id="cb65-10"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span>, <span class="st">"Less than 100K"</span>, <span class="st">"More than 100K"</span></span>
+<span id="cb65-11"><a href="" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb65-12"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_pay_level =</span> <span class="fu">case_when</span>(</span>
+<span id="cb65-13"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Less than 0"</span>, </span>
+<span id="cb65-14"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"No Income"</span>,</span>
+<span id="cb65-15"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Between 0 and 100K"</span>,</span>
+<span id="cb65-16"><a href="" aria-hidden="true" tabindex="-1"></a>      base_pay <span class="sc">&gt;</span> <span class="dv">100000</span> <span class="sc">~</span> <span class="st">"Greater than 100K"</span></span>
+<span id="cb65-17"><a href="" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb65-18"><a href="" aria-hidden="true" tabindex="-1"></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="section-40" class="slide level2">
@@ -1153,13 +1153,13 @@ Figure&nbsp;2
 <div class="column" style="width:50%;">
 <p>Data frame is used as the first argument</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href=""></a><span class="fu">clean_names</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">clean_names</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p>Data frame is piped</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href=""></a>lapd <span class="sc">|&gt;</span> </span>
-<span id="cb67-2"><a href=""></a>  <span class="fu">clean_names</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
+<span id="cb67-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </div>
@@ -1173,9 +1173,8 @@ Figure&nbsp;2
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.introdata.science/img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -1207,7 +1206,7 @@ Figure&nbsp;2
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1385,24 +1384,6 @@ Figure&nbsp;2
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

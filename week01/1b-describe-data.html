@@ -6,8 +6,8 @@
 <script src="1b-describe-data_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="1b-describe-data_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="1b-describe-data_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="1b-describe-data_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="1b-describe-data_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Describing Data with Numbers</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="1b-describe-data_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="1b-describe-data_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
   <link href="1b-describe-data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="1b-describe-data_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="1b-describe-data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Describing Data with Numbers</h1>
 
 <div class="quarto-title-authors">
@@ -212,10 +212,10 @@ Dr.&nbsp;Mine Dogucu
 <h1>Getting to Know Data</h1>
 <p><a href="https://fivethirtyeight.com/features/which-state-has-the-worst-drivers/">Dear Mona, Which State Has the Worst Drivers?</a></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(fivethirtyeight)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(bayesrules)</span>
-<span id="cb1-3"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-4"><a href=""></a><span class="fu">data</span>(<span class="st">"bad_drivers"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fivethirtyeight)</span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bayesrules)</span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"bad_drivers"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>When you are given some code like this one in your lecture notes or assignments, you should run it first before beginning to code.</p>
 </section>
@@ -223,23 +223,23 @@ Dr.&nbsp;Mine Dogucu
 <h2>Data Frames</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="qikatktmpt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qikatktmpt table {
+<div id="ikhnuhuwhg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ikhnuhuwhg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qikatktmpt thead, #qikatktmpt tbody, #qikatktmpt tfoot, #qikatktmpt tr, #qikatktmpt td, #qikatktmpt th {
+#ikhnuhuwhg thead, #ikhnuhuwhg tbody, #ikhnuhuwhg tfoot, #ikhnuhuwhg tr, #ikhnuhuwhg td, #ikhnuhuwhg th {
   border-style: none;
 }
 
-#qikatktmpt p {
+#ikhnuhuwhg p {
   margin: 0;
   padding: 0;
 }
 
-#qikatktmpt .gt_table {
+#ikhnuhuwhg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -265,12 +265,12 @@ Dr.&nbsp;Mine Dogucu
   border-left-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_caption {
+#ikhnuhuwhg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qikatktmpt .gt_title {
+#ikhnuhuwhg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -282,7 +282,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-width: 0;
 }
 
-#qikatktmpt .gt_subtitle {
+#ikhnuhuwhg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -294,7 +294,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-width: 0;
 }
 
-#qikatktmpt .gt_heading {
+#ikhnuhuwhg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -306,13 +306,13 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_bottom_border {
+#ikhnuhuwhg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_col_headings {
+#ikhnuhuwhg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -327,7 +327,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_col_heading {
+#ikhnuhuwhg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -347,7 +347,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#qikatktmpt .gt_column_spanner_outer {
+#ikhnuhuwhg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -359,15 +359,15 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 4px;
 }
 
-#qikatktmpt .gt_column_spanner_outer:first-child {
+#ikhnuhuwhg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qikatktmpt .gt_column_spanner_outer:last-child {
+#ikhnuhuwhg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qikatktmpt .gt_column_spanner {
+#ikhnuhuwhg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -379,11 +379,11 @@ Dr.&nbsp;Mine Dogucu
   width: 100%;
 }
 
-#qikatktmpt .gt_spanner_row {
+#ikhnuhuwhg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qikatktmpt .gt_group_heading {
+#ikhnuhuwhg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -409,7 +409,7 @@ Dr.&nbsp;Mine Dogucu
   text-align: left;
 }
 
-#qikatktmpt .gt_empty_group_heading {
+#ikhnuhuwhg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -424,15 +424,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: middle;
 }
 
-#qikatktmpt .gt_from_md > :first-child {
+#ikhnuhuwhg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qikatktmpt .gt_from_md > :last-child {
+#ikhnuhuwhg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qikatktmpt .gt_row {
+#ikhnuhuwhg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -451,7 +451,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#qikatktmpt .gt_stub {
+#ikhnuhuwhg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -464,7 +464,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#qikatktmpt .gt_stub_row_group {
+#ikhnuhuwhg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -478,15 +478,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: top;
 }
 
-#qikatktmpt .gt_row_group_first td {
+#ikhnuhuwhg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qikatktmpt .gt_row_group_first th {
+#ikhnuhuwhg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qikatktmpt .gt_summary_row {
+#ikhnuhuwhg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -496,16 +496,16 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#qikatktmpt .gt_first_summary_row {
+#ikhnuhuwhg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_first_summary_row.thick {
+#ikhnuhuwhg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qikatktmpt .gt_last_summary_row {
+#ikhnuhuwhg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -515,7 +515,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_grand_summary_row {
+#ikhnuhuwhg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -525,7 +525,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#qikatktmpt .gt_first_grand_summary_row {
+#ikhnuhuwhg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -535,7 +535,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_last_grand_summary_row_top {
+#ikhnuhuwhg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -545,11 +545,11 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_striped {
+#ikhnuhuwhg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qikatktmpt .gt_table_body {
+#ikhnuhuwhg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -558,7 +558,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_footnotes {
+#ikhnuhuwhg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -572,7 +572,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_footnote {
+#ikhnuhuwhg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -581,7 +581,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#qikatktmpt .gt_sourcenotes {
+#ikhnuhuwhg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -595,7 +595,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#qikatktmpt .gt_sourcenote {
+#ikhnuhuwhg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -603,72 +603,72 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#qikatktmpt .gt_left {
+#ikhnuhuwhg .gt_left {
   text-align: left;
 }
 
-#qikatktmpt .gt_center {
+#ikhnuhuwhg .gt_center {
   text-align: center;
 }
 
-#qikatktmpt .gt_right {
+#ikhnuhuwhg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qikatktmpt .gt_font_normal {
+#ikhnuhuwhg .gt_font_normal {
   font-weight: normal;
 }
 
-#qikatktmpt .gt_font_bold {
+#ikhnuhuwhg .gt_font_bold {
   font-weight: bold;
 }
 
-#qikatktmpt .gt_font_italic {
+#ikhnuhuwhg .gt_font_italic {
   font-style: italic;
 }
 
-#qikatktmpt .gt_super {
+#ikhnuhuwhg .gt_super {
   font-size: 65%;
 }
 
-#qikatktmpt .gt_footnote_marks {
+#ikhnuhuwhg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qikatktmpt .gt_asterisk {
+#ikhnuhuwhg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qikatktmpt .gt_indent_1 {
+#ikhnuhuwhg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qikatktmpt .gt_indent_2 {
+#ikhnuhuwhg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qikatktmpt .gt_indent_3 {
+#ikhnuhuwhg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qikatktmpt .gt_indent_4 {
+#ikhnuhuwhg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qikatktmpt .gt_indent_5 {
+#ikhnuhuwhg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qikatktmpt .katex-display {
+#ikhnuhuwhg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qikatktmpt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ikhnuhuwhg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -755,23 +755,23 @@ Dr.&nbsp;Mine Dogucu
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="pgbvvljvjb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pgbvvljvjb table {
+<div id="gwkionqfaw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gwkionqfaw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pgbvvljvjb thead, #pgbvvljvjb tbody, #pgbvvljvjb tfoot, #pgbvvljvjb tr, #pgbvvljvjb td, #pgbvvljvjb th {
+#gwkionqfaw thead, #gwkionqfaw tbody, #gwkionqfaw tfoot, #gwkionqfaw tr, #gwkionqfaw td, #gwkionqfaw th {
   border-style: none;
 }
 
-#pgbvvljvjb p {
+#gwkionqfaw p {
   margin: 0;
   padding: 0;
 }
 
-#pgbvvljvjb .gt_table {
+#gwkionqfaw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -797,12 +797,12 @@ Dr.&nbsp;Mine Dogucu
   border-left-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_caption {
+#gwkionqfaw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pgbvvljvjb .gt_title {
+#gwkionqfaw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -814,7 +814,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-width: 0;
 }
 
-#pgbvvljvjb .gt_subtitle {
+#gwkionqfaw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -826,7 +826,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-width: 0;
 }
 
-#pgbvvljvjb .gt_heading {
+#gwkionqfaw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -838,13 +838,13 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_bottom_border {
+#gwkionqfaw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_col_headings {
+#gwkionqfaw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -859,7 +859,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_col_heading {
+#gwkionqfaw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -879,7 +879,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#pgbvvljvjb .gt_column_spanner_outer {
+#gwkionqfaw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -891,15 +891,15 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 4px;
 }
 
-#pgbvvljvjb .gt_column_spanner_outer:first-child {
+#gwkionqfaw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pgbvvljvjb .gt_column_spanner_outer:last-child {
+#gwkionqfaw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pgbvvljvjb .gt_column_spanner {
+#gwkionqfaw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -911,11 +911,11 @@ Dr.&nbsp;Mine Dogucu
   width: 100%;
 }
 
-#pgbvvljvjb .gt_spanner_row {
+#gwkionqfaw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pgbvvljvjb .gt_group_heading {
+#gwkionqfaw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -941,7 +941,7 @@ Dr.&nbsp;Mine Dogucu
   text-align: left;
 }
 
-#pgbvvljvjb .gt_empty_group_heading {
+#gwkionqfaw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -956,15 +956,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: middle;
 }
 
-#pgbvvljvjb .gt_from_md > :first-child {
+#gwkionqfaw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pgbvvljvjb .gt_from_md > :last-child {
+#gwkionqfaw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pgbvvljvjb .gt_row {
+#gwkionqfaw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -983,7 +983,7 @@ Dr.&nbsp;Mine Dogucu
   overflow-x: hidden;
 }
 
-#pgbvvljvjb .gt_stub {
+#gwkionqfaw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -996,7 +996,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#pgbvvljvjb .gt_stub_row_group {
+#gwkionqfaw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1010,15 +1010,15 @@ Dr.&nbsp;Mine Dogucu
   vertical-align: top;
 }
 
-#pgbvvljvjb .gt_row_group_first td {
+#gwkionqfaw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pgbvvljvjb .gt_row_group_first th {
+#gwkionqfaw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pgbvvljvjb .gt_summary_row {
+#gwkionqfaw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1028,16 +1028,16 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#pgbvvljvjb .gt_first_summary_row {
+#gwkionqfaw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_first_summary_row.thick {
+#gwkionqfaw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pgbvvljvjb .gt_last_summary_row {
+#gwkionqfaw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1047,7 +1047,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_grand_summary_row {
+#gwkionqfaw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1057,7 +1057,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#pgbvvljvjb .gt_first_grand_summary_row {
+#gwkionqfaw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1067,7 +1067,7 @@ Dr.&nbsp;Mine Dogucu
   border-top-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_last_grand_summary_row_top {
+#gwkionqfaw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1077,11 +1077,11 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_striped {
+#gwkionqfaw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pgbvvljvjb .gt_table_body {
+#gwkionqfaw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1090,7 +1090,7 @@ Dr.&nbsp;Mine Dogucu
   border-bottom-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_footnotes {
+#gwkionqfaw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1104,7 +1104,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_footnote {
+#gwkionqfaw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1113,7 +1113,7 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#pgbvvljvjb .gt_sourcenotes {
+#gwkionqfaw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1127,7 +1127,7 @@ Dr.&nbsp;Mine Dogucu
   border-right-color: #D3D3D3;
 }
 
-#pgbvvljvjb .gt_sourcenote {
+#gwkionqfaw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1135,72 +1135,72 @@ Dr.&nbsp;Mine Dogucu
   padding-right: 5px;
 }
 
-#pgbvvljvjb .gt_left {
+#gwkionqfaw .gt_left {
   text-align: left;
 }
 
-#pgbvvljvjb .gt_center {
+#gwkionqfaw .gt_center {
   text-align: center;
 }
 
-#pgbvvljvjb .gt_right {
+#gwkionqfaw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pgbvvljvjb .gt_font_normal {
+#gwkionqfaw .gt_font_normal {
   font-weight: normal;
 }
 
-#pgbvvljvjb .gt_font_bold {
+#gwkionqfaw .gt_font_bold {
   font-weight: bold;
 }
 
-#pgbvvljvjb .gt_font_italic {
+#gwkionqfaw .gt_font_italic {
   font-style: italic;
 }
 
-#pgbvvljvjb .gt_super {
+#gwkionqfaw .gt_super {
   font-size: 65%;
 }
 
-#pgbvvljvjb .gt_footnote_marks {
+#gwkionqfaw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pgbvvljvjb .gt_asterisk {
+#gwkionqfaw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pgbvvljvjb .gt_indent_1 {
+#gwkionqfaw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pgbvvljvjb .gt_indent_2 {
+#gwkionqfaw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pgbvvljvjb .gt_indent_3 {
+#gwkionqfaw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pgbvvljvjb .gt_indent_4 {
+#gwkionqfaw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pgbvvljvjb .gt_indent_5 {
+#gwkionqfaw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#pgbvvljvjb .katex-display {
+#gwkionqfaw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#pgbvvljvjb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gwkionqfaw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1289,14 +1289,14 @@ Dr.&nbsp;Mine Dogucu
 <section id="data-frame" class="slide level2">
 <h2>Data Frame</h2>
 <ul>
-<li class="fragment"><p>The data frame has 8 <strong>variables</strong> (state, num_drivers, perc_speeding, perc_not_distracted, perc_no_previous, insurance_premiums, losses).</p></li>
-<li class="fragment"><p>The data frame has 51 <strong>cases</strong> or <strong>observations</strong>. Each case represents a US state (or District of Columbia).</p></li>
+<li><p>The data frame has 8 <strong>variables</strong> (state, num_drivers, perc_speeding, perc_not_distracted, perc_no_previous, insurance_premiums, losses).</p></li>
+<li><p>The data frame has 51 <strong>cases</strong> or <strong>observations</strong>. Each case represents a US state (or District of Columbia).</p></li>
 </ul>
 </section>
 <section id="data-documentation" class="slide level2">
 <h2>Data documentation</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>?bad_drivers</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>?bad_drivers</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>state</code> State</p>
 <p><code>num_drivers</code> Number of drivers involved in fatal collisions per billion miles</p>
@@ -1319,7 +1319,7 @@ Dr.&nbsp;Mine Dogucu
 <section id="section-1" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">head</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 8
   state      num_drivers perc_speeding perc_alcohol perc_not_distracted
@@ -1338,7 +1338,7 @@ Dr.&nbsp;Mine Dogucu
 <section id="section-2" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">tail</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 8
   state         num_drivers perc_speeding perc_alcohol perc_not_distracted
@@ -1357,7 +1357,7 @@ Dr.&nbsp;Mine Dogucu
 <section id="section-3" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">glimpse</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 51
 Columns: 8
@@ -1375,7 +1375,7 @@ $ losses              &lt;dbl&gt; 145.08, 133.93, 110.35, 142.39, 165.63, 139.91
 <section id="section-4" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">ncol</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8</code></pre>
 </div>
@@ -1384,7 +1384,7 @@ $ losses              &lt;dbl&gt; 145.08, 133.93, 110.35, 142.39, 165.63, 139.91
 <section id="section-5" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">nrow</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(bad_drivers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 51</code></pre>
 </div>
@@ -1393,7 +1393,7 @@ $ losses              &lt;dbl&gt; 145.08, 133.93, 110.35, 142.39, 165.63, 139.91
 <section id="additional-data-frame-example" class="slide level2">
 <h2>Additional Data Frame Example</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">glimpse</span>(candy_rankings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(candy_rankings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 85
 Columns: 6
@@ -1409,7 +1409,7 @@ $ winpercent     &lt;dbl&gt; 66.97173, 67.60294, 32.26109, 46.11650, 52.34146, 5
 <section id="additional-data-frame-example-1" class="slide level2">
 <h2>Additional Data Frame Example</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">glimpse</span>(bob_ross)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bob_ross)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 403
 Columns: 71
@@ -1490,7 +1490,7 @@ $ wood_framed        &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 <section id="additional-data-frame-example-2" class="slide level2">
 <h2>Additional Data Frame Example</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="fu">glimpse</span>(mariokart)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(mariokart)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 143
 Columns: 12
@@ -1513,23 +1513,23 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
 <h2>Variables</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="mlrohlamoc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mlrohlamoc table {
+<div id="qdvwkollcv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qdvwkollcv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mlrohlamoc thead, #mlrohlamoc tbody, #mlrohlamoc tfoot, #mlrohlamoc tr, #mlrohlamoc td, #mlrohlamoc th {
+#qdvwkollcv thead, #qdvwkollcv tbody, #qdvwkollcv tfoot, #qdvwkollcv tr, #qdvwkollcv td, #qdvwkollcv th {
   border-style: none;
 }
 
-#mlrohlamoc p {
+#qdvwkollcv p {
   margin: 0;
   padding: 0;
 }
 
-#mlrohlamoc .gt_table {
+#qdvwkollcv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1555,12 +1555,12 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-left-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_caption {
+#qdvwkollcv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mlrohlamoc .gt_title {
+#qdvwkollcv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1572,7 +1572,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-width: 0;
 }
 
-#mlrohlamoc .gt_subtitle {
+#qdvwkollcv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1584,7 +1584,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-width: 0;
 }
 
-#mlrohlamoc .gt_heading {
+#qdvwkollcv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1596,13 +1596,13 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_bottom_border {
+#qdvwkollcv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_col_headings {
+#qdvwkollcv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1617,7 +1617,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_col_heading {
+#qdvwkollcv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1637,7 +1637,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#mlrohlamoc .gt_column_spanner_outer {
+#qdvwkollcv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1649,15 +1649,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 4px;
 }
 
-#mlrohlamoc .gt_column_spanner_outer:first-child {
+#qdvwkollcv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mlrohlamoc .gt_column_spanner_outer:last-child {
+#qdvwkollcv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mlrohlamoc .gt_column_spanner {
+#qdvwkollcv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1669,11 +1669,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   width: 100%;
 }
 
-#mlrohlamoc .gt_spanner_row {
+#qdvwkollcv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mlrohlamoc .gt_group_heading {
+#qdvwkollcv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1699,7 +1699,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   text-align: left;
 }
 
-#mlrohlamoc .gt_empty_group_heading {
+#qdvwkollcv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1714,15 +1714,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: middle;
 }
 
-#mlrohlamoc .gt_from_md > :first-child {
+#qdvwkollcv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mlrohlamoc .gt_from_md > :last-child {
+#qdvwkollcv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mlrohlamoc .gt_row {
+#qdvwkollcv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1741,7 +1741,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#mlrohlamoc .gt_stub {
+#qdvwkollcv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1754,7 +1754,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#mlrohlamoc .gt_stub_row_group {
+#qdvwkollcv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1768,15 +1768,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: top;
 }
 
-#mlrohlamoc .gt_row_group_first td {
+#qdvwkollcv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mlrohlamoc .gt_row_group_first th {
+#qdvwkollcv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mlrohlamoc .gt_summary_row {
+#qdvwkollcv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1786,16 +1786,16 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#mlrohlamoc .gt_first_summary_row {
+#qdvwkollcv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_first_summary_row.thick {
+#qdvwkollcv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mlrohlamoc .gt_last_summary_row {
+#qdvwkollcv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1805,7 +1805,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_grand_summary_row {
+#qdvwkollcv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1815,7 +1815,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#mlrohlamoc .gt_first_grand_summary_row {
+#qdvwkollcv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1825,7 +1825,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_last_grand_summary_row_top {
+#qdvwkollcv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1835,11 +1835,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_striped {
+#qdvwkollcv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mlrohlamoc .gt_table_body {
+#qdvwkollcv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1848,7 +1848,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_footnotes {
+#qdvwkollcv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1862,7 +1862,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_footnote {
+#qdvwkollcv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1871,7 +1871,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#mlrohlamoc .gt_sourcenotes {
+#qdvwkollcv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1885,7 +1885,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#mlrohlamoc .gt_sourcenote {
+#qdvwkollcv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1893,72 +1893,72 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#mlrohlamoc .gt_left {
+#qdvwkollcv .gt_left {
   text-align: left;
 }
 
-#mlrohlamoc .gt_center {
+#qdvwkollcv .gt_center {
   text-align: center;
 }
 
-#mlrohlamoc .gt_right {
+#qdvwkollcv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mlrohlamoc .gt_font_normal {
+#qdvwkollcv .gt_font_normal {
   font-weight: normal;
 }
 
-#mlrohlamoc .gt_font_bold {
+#qdvwkollcv .gt_font_bold {
   font-weight: bold;
 }
 
-#mlrohlamoc .gt_font_italic {
+#qdvwkollcv .gt_font_italic {
   font-style: italic;
 }
 
-#mlrohlamoc .gt_super {
+#qdvwkollcv .gt_super {
   font-size: 65%;
 }
 
-#mlrohlamoc .gt_footnote_marks {
+#qdvwkollcv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mlrohlamoc .gt_asterisk {
+#qdvwkollcv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mlrohlamoc .gt_indent_1 {
+#qdvwkollcv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mlrohlamoc .gt_indent_2 {
+#qdvwkollcv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mlrohlamoc .gt_indent_3 {
+#qdvwkollcv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mlrohlamoc .gt_indent_4 {
+#qdvwkollcv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mlrohlamoc .gt_indent_5 {
+#qdvwkollcv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mlrohlamoc .katex-display {
+#qdvwkollcv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mlrohlamoc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qdvwkollcv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2031,23 +2031,23 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="innschokgn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#innschokgn table {
+<div id="pgrhxqzjup" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pgrhxqzjup table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#innschokgn thead, #innschokgn tbody, #innschokgn tfoot, #innschokgn tr, #innschokgn td, #innschokgn th {
+#pgrhxqzjup thead, #pgrhxqzjup tbody, #pgrhxqzjup tfoot, #pgrhxqzjup tr, #pgrhxqzjup td, #pgrhxqzjup th {
   border-style: none;
 }
 
-#innschokgn p {
+#pgrhxqzjup p {
   margin: 0;
   padding: 0;
 }
 
-#innschokgn .gt_table {
+#pgrhxqzjup .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2073,12 +2073,12 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-left-color: #D3D3D3;
 }
 
-#innschokgn .gt_caption {
+#pgrhxqzjup .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#innschokgn .gt_title {
+#pgrhxqzjup .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2090,7 +2090,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-width: 0;
 }
 
-#innschokgn .gt_subtitle {
+#pgrhxqzjup .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2102,7 +2102,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-width: 0;
 }
 
-#innschokgn .gt_heading {
+#pgrhxqzjup .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2114,13 +2114,13 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#innschokgn .gt_bottom_border {
+#pgrhxqzjup .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#innschokgn .gt_col_headings {
+#pgrhxqzjup .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2135,7 +2135,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#innschokgn .gt_col_heading {
+#pgrhxqzjup .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2155,7 +2155,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#innschokgn .gt_column_spanner_outer {
+#pgrhxqzjup .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2167,15 +2167,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 4px;
 }
 
-#innschokgn .gt_column_spanner_outer:first-child {
+#pgrhxqzjup .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#innschokgn .gt_column_spanner_outer:last-child {
+#pgrhxqzjup .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#innschokgn .gt_column_spanner {
+#pgrhxqzjup .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2187,11 +2187,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   width: 100%;
 }
 
-#innschokgn .gt_spanner_row {
+#pgrhxqzjup .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#innschokgn .gt_group_heading {
+#pgrhxqzjup .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2217,7 +2217,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   text-align: left;
 }
 
-#innschokgn .gt_empty_group_heading {
+#pgrhxqzjup .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2232,15 +2232,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: middle;
 }
 
-#innschokgn .gt_from_md > :first-child {
+#pgrhxqzjup .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#innschokgn .gt_from_md > :last-child {
+#pgrhxqzjup .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#innschokgn .gt_row {
+#pgrhxqzjup .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2259,7 +2259,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   overflow-x: hidden;
 }
 
-#innschokgn .gt_stub {
+#pgrhxqzjup .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2272,7 +2272,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#innschokgn .gt_stub_row_group {
+#pgrhxqzjup .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2286,15 +2286,15 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   vertical-align: top;
 }
 
-#innschokgn .gt_row_group_first td {
+#pgrhxqzjup .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#innschokgn .gt_row_group_first th {
+#pgrhxqzjup .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#innschokgn .gt_summary_row {
+#pgrhxqzjup .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2304,16 +2304,16 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#innschokgn .gt_first_summary_row {
+#pgrhxqzjup .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#innschokgn .gt_first_summary_row.thick {
+#pgrhxqzjup .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#innschokgn .gt_last_summary_row {
+#pgrhxqzjup .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2323,7 +2323,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#innschokgn .gt_grand_summary_row {
+#pgrhxqzjup .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2333,7 +2333,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#innschokgn .gt_first_grand_summary_row {
+#pgrhxqzjup .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2343,7 +2343,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-top-color: #D3D3D3;
 }
 
-#innschokgn .gt_last_grand_summary_row_top {
+#pgrhxqzjup .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2353,11 +2353,11 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#innschokgn .gt_striped {
+#pgrhxqzjup .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#innschokgn .gt_table_body {
+#pgrhxqzjup .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2366,7 +2366,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-bottom-color: #D3D3D3;
 }
 
-#innschokgn .gt_footnotes {
+#pgrhxqzjup .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2380,7 +2380,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#innschokgn .gt_footnote {
+#pgrhxqzjup .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2389,7 +2389,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#innschokgn .gt_sourcenotes {
+#pgrhxqzjup .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2403,7 +2403,7 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   border-right-color: #D3D3D3;
 }
 
-#innschokgn .gt_sourcenote {
+#pgrhxqzjup .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2411,72 +2411,72 @@ $ title       &lt;fct&gt; "~~ Wii MARIO KART &amp;amp; WHEEL ~ NINTENDO Wii ~ BR
   padding-right: 5px;
 }
 
-#innschokgn .gt_left {
+#pgrhxqzjup .gt_left {
   text-align: left;
 }
 
-#innschokgn .gt_center {
+#pgrhxqzjup .gt_center {
   text-align: center;
 }
 
-#innschokgn .gt_right {
+#pgrhxqzjup .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#innschokgn .gt_font_normal {
+#pgrhxqzjup .gt_font_normal {
   font-weight: normal;
 }
 
-#innschokgn .gt_font_bold {
+#pgrhxqzjup .gt_font_bold {
   font-weight: bold;
 }
 
-#innschokgn .gt_font_italic {
+#pgrhxqzjup .gt_font_italic {
   font-style: italic;
 }
 
-#innschokgn .gt_super {
+#pgrhxqzjup .gt_super {
   font-size: 65%;
 }
 
-#innschokgn .gt_footnote_marks {
+#pgrhxqzjup .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#innschokgn .gt_asterisk {
+#pgrhxqzjup .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#innschokgn .gt_indent_1 {
+#pgrhxqzjup .gt_indent_1 {
   text-indent: 5px;
 }
 
-#innschokgn .gt_indent_2 {
+#pgrhxqzjup .gt_indent_2 {
   text-indent: 10px;
 }
 
-#innschokgn .gt_indent_3 {
+#pgrhxqzjup .gt_indent_3 {
   text-indent: 15px;
 }
 
-#innschokgn .gt_indent_4 {
+#pgrhxqzjup .gt_indent_4 {
   text-indent: 20px;
 }
 
-#innschokgn .gt_indent_5 {
+#pgrhxqzjup .gt_indent_5 {
   text-indent: 25px;
 }
 
-#innschokgn .katex-display {
+#pgrhxqzjup .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#innschokgn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pgrhxqzjup div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2614,7 +2614,7 @@ True - 1</p>
 <section id="data" class="slide level2">
 <h2>Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="fu">glimpse</span>(hotel_bookings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(hotel_bookings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,000
 Columns: 32
@@ -2672,7 +2672,7 @@ $ reservation_status &lt;fct&gt; Canceled, Canceled, Check-Out, Check-Out, Check
 <section id="section-8" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="fu">count</span>(hotel_bookings, reservation_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(hotel_bookings, reservation_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   reservation_status     n
@@ -2686,7 +2686,7 @@ $ reservation_status &lt;fct&gt; Canceled, Canceled, Check-Out, Check-Out, Check
 <section id="section-9" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="fu">count</span>(hotel_bookings, reservation_status, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(hotel_bookings, reservation_status, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   reservation_status     n
@@ -2700,7 +2700,7 @@ $ reservation_status &lt;fct&gt; Canceled, Canceled, Check-Out, Check-Out, Check
 <section id="section-10" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>janitor<span class="sc">::</span><span class="fu">tabyl</span>(hotel_bookings, reservation_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="" aria-hidden="true" tabindex="-1"></a>janitor<span class="sc">::</span><span class="fu">tabyl</span>(hotel_bookings, reservation_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> reservation_status   n percent
            Canceled 357   0.357
@@ -2963,10 +2963,10 @@ x<sub>i</sub>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb28-2"><a href=""></a>  hotel_bookings, </span>
-<span id="cb28-3"><a href=""></a>  <span class="fu">mean</span>(lead_time)</span>
-<span id="cb28-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb28-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings, </span>
+<span id="cb28-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(lead_time)</span>
+<span id="cb28-4"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `mean(lead_time)`
@@ -2976,7 +2976,7 @@ x<sub>i</sub>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">mean</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 105.065</code></pre>
 </div>
@@ -2988,10 +2988,10 @@ x<sub>i</sub>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb32-2"><a href=""></a>  hotel_bookings, </span>
-<span id="cb32-3"><a href=""></a>  <span class="fu">median</span>(lead_time)</span>
-<span id="cb32-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb32-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings, </span>
+<span id="cb32-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">median</span>(lead_time)</span>
+<span id="cb32-4"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `median(lead_time)`
@@ -3001,7 +3001,7 @@ x<sub>i</sub>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a><span class="fu">median</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 69.5</code></pre>
 </div>
@@ -3013,10 +3013,10 @@ x<sub>i</sub>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb36-2"><a href=""></a>  hotel_bookings, </span>
-<span id="cb36-3"><a href=""></a>  <span class="fu">min</span>(lead_time)</span>
-<span id="cb36-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb36-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings, </span>
+<span id="cb36-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>(lead_time)</span>
+<span id="cb36-4"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `min(lead_time)`
@@ -3026,7 +3026,7 @@ x<sub>i</sub>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">min</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
@@ -3039,10 +3039,10 @@ x<sub>i</sub>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb40-2"><a href=""></a>  hotel_bookings, </span>
-<span id="cb40-3"><a href=""></a>  <span class="fu">sd</span>(lead_time)</span>
-<span id="cb40-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb40-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings, </span>
+<span id="cb40-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sd</span>(lead_time)</span>
+<span id="cb40-4"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `sd(lead_time)`
@@ -3052,7 +3052,7 @@ x<sub>i</sub>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href=""></a><span class="fu">sd</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 106.4455</code></pre>
 </div>
@@ -3064,10 +3064,10 @@ x<sub>i</sub>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb44-2"><a href=""></a>  hotel_bookings, </span>
-<span id="cb44-3"><a href=""></a>  <span class="fu">var</span>(lead_time)</span>
-<span id="cb44-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb44-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings, </span>
+<span id="cb44-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">var</span>(lead_time)</span>
+<span id="cb44-4"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `var(lead_time)`
@@ -3077,7 +3077,7 @@ x<sub>i</sub>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="fu">var</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(hotel_bookings<span class="sc">$</span>lead_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11330.64</code></pre>
 </div>
@@ -3149,7 +3149,7 @@ Third quartile
 <section id="quantiles" class="slide level2">
 <h2>Quantiles</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a><span class="fu">summarize</span>(hotel_bookings, <span class="fu">quantile</span>(lead_time, <span class="fl">0.25</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(hotel_bookings, <span class="fu">quantile</span>(lead_time, <span class="fl">0.25</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `quantile(lead_time, 0.25)`
@@ -3163,11 +3163,11 @@ Third quartile
 <h2></h2>
 <p>We can get multiple summaries with one <code>summarize()</code> function.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb50-2"><a href=""></a>  hotel_bookings,</span>
-<span id="cb50-3"><a href=""></a>  <span class="fu">mean</span>(lead_time),</span>
-<span id="cb50-4"><a href=""></a>  <span class="fu">median</span>(lead_time)</span>
-<span id="cb50-5"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb50-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings,</span>
+<span id="cb50-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(lead_time),</span>
+<span id="cb50-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">median</span>(lead_time)</span>
+<span id="cb50-5"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   `mean(lead_time)` `median(lead_time)`
@@ -3181,11 +3181,11 @@ Third quartile
 <h2></h2>
 <p>In order to display the variable names more legibly in the output, we can assign variable names to numerical summaries (e.g.&nbsp;<code>mean_lead_time</code>).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href=""></a><span class="fu">summarize</span>(</span>
-<span id="cb52-2"><a href=""></a>  hotel_bookings,</span>
-<span id="cb52-3"><a href=""></a>  <span class="at">mean_lead_time =</span> <span class="fu">mean</span>(lead_time),</span>
-<span id="cb52-4"><a href=""></a>  <span class="at">med_lead_time =</span> <span class="fu">median</span>(lead_time)</span>
-<span id="cb52-5"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
+<span id="cb52-2"><a href="" aria-hidden="true" tabindex="-1"></a>  hotel_bookings,</span>
+<span id="cb52-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">mean_lead_time =</span> <span class="fu">mean</span>(lead_time),</span>
+<span id="cb52-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">med_lead_time =</span> <span class="fu">median</span>(lead_time)</span>
+<span id="cb52-5"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   mean_lead_time med_lead_time
@@ -3204,9 +3204,8 @@ Third quartile
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.introdata.science/img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -3238,7 +3237,7 @@ Third quartile
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -3416,24 +3415,6 @@ Third quartile
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

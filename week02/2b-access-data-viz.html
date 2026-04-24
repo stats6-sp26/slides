@@ -6,8 +6,8 @@
 <script src="2b-access-data-viz_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="2b-access-data-viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2b-access-data-viz_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2b-access-data-viz_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="2b-access-data-viz_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Accessible Data Visualizations</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="2b-access-data-viz_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="2b-access-data-viz_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
   <link href="2b-access-data-viz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="2b-access-data-viz_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="2b-access-data-viz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Accessible Data Visualizations</h1>
 
 <div class="quarto-title-authors">
@@ -215,25 +215,25 @@ Dr.&nbsp;Mine Dogucu
 <section id="packages-for-today" class="slide level2">
 <h2>Packages for Today</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(hellodatascience)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hellodatascience)</span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="saving-a-plot" class="slide level2">
 <h2>Saving a Plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>base_bar_plot <span class="ot">&lt;-</span></span>
-<span id="cb2-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb2-3"><a href=""></a>    <span class="at">data =</span> atus_college, </span>
-<span id="cb2-4"><a href=""></a>    <span class="fu">aes</span>(</span>
-<span id="cb2-5"><a href=""></a>      <span class="at">x =</span> employment, </span>
-<span id="cb2-6"><a href=""></a>      <span class="at">fill =</span> enrollment</span>
-<span id="cb2-7"><a href=""></a>    )</span>
-<span id="cb2-8"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb2-9"><a href=""></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
-<span id="cb2-10"><a href=""></a></span>
-<span id="cb2-11"><a href=""></a>base_bar_plot </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>base_bar_plot <span class="ot">&lt;-</span></span>
+<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> atus_college, </span>
+<span id="cb2-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb2-5"><a href="" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> employment, </span>
+<span id="cb2-6"><a href="" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> enrollment</span>
+<span id="cb2-7"><a href="" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-8"><a href="" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
+<span id="cb2-10"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="" aria-hidden="true" tabindex="-1"></a>base_bar_plot </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-base-bar-plot" class="quarto-float quarto-figure quarto-figure-center" alt="Grouped bar chart showing student counts by employment status and enrollment. The x-axis, labeled 'employment', lists employment categories (Full Time, Part Time, NA) and the y-axis, labeled 'count' shows count. Bars are colored by enrollment status (Full Time vs Part Time), allowing comparison of enrollment within each employment group.">
@@ -253,18 +253,18 @@ Figure&nbsp;1: Side-by-side bar plot of employment broken down by enrollment sta
 <h2>Labels</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a>improved_bar_plot <span class="ot">&lt;-</span> </span>
-<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a>  base_bar_plot <span class="sc">+</span></span>
-<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a>  <span class="fu">labs</span>(</span>
-<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a>    <span class="at">title =</span> <span class="st">"Student Count by Employment and Enrollment Status"</span>,</span>
-<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a>    <span class="at">subtitle =</span> <span class="st">"Most students work part-time while enrolled full-time"</span>,</span>
-<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a>    <span class="at">x =</span> <span class="st">"Employment Status"</span>,</span>
-<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a>    <span class="at">y =</span> <span class="st">"Number of Students"</span>,</span>
-<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a>    <span class="at">fill =</span> <span class="st">"Course Enrollment"</span>,</span>
-<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9"></a>    <span class="at">caption =</span> <span class="st">"Data source: American Time Use Survey 2024 (n = 312 students)"</span></span>
-<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10"></a>  )</span>
-<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11"></a></span>
-<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a>improved_bar_plot <span class="ot">&lt;-</span> </span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a>  base_bar_plot <span class="sc">+</span></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Student Count by Employment and Enrollment Status"</span>,</span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Most students work part-time while enrolled full-time"</span>,</span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Employment Status"</span>,</span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Students"</span>,</span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Course Enrollment"</span>,</span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Data source: American Time Use Survey 2024 (n = 312 students)"</span></span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12" aria-hidden="true" tabindex="-1"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-bar-plot-labs" class="quarto-float quarto-figure quarto-figure-center" alt="Same bar chart as previous with better labels. The main title is Student Count by Employment and Enrollment and the subtitle says that most students work part-time while enrolled full-time. Labels for the x-axis, y-axis, and legend are 'Employment Status', 'Number of Students' and 'Course Enrollment' respectively. Caption notes Data source: American Time Use Survey 2024 (n = 321 students). There are more students enrolled full time than part time for each level of employment status. The full time enrolled students with unknown employment status have the highest count at about 80 students. ">
@@ -284,11 +284,11 @@ Figure&nbsp;2: Bar plot of employment broken down by enrollment status with adde
 <h2>Themes</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>improved_bar_plot <span class="ot">&lt;-</span></span>
-<span id="cb3-2"><a href=""></a>  improved_bar_plot <span class="sc">+</span></span>
-<span id="cb3-3"><a href=""></a>  <span class="fu">theme_minimal</span>() </span>
-<span id="cb3-4"><a href=""></a></span>
-<span id="cb3-5"><a href=""></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>  improved_bar_plot <span class="sc">+</span></span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() </span>
+<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-bar-plot-themes" class="quarto-float quarto-figure quarto-figure-center" alt="Same bar chart as previous, with a white background instead of gray.">
@@ -309,20 +309,20 @@ Figure&nbsp;3: Bar plot of employment broken down by enrollment status with usin
 <h2>Using <code>theme()</code> function</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
-<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2"></a>  improved_bar_plot <span class="sc">+</span> </span>
-<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3"></a>  <span class="fu">theme</span>(</span>
-<span id="annotated-cell-5-4"><a href="#annotated-cell-5-4"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
-<span id="annotated-cell-5-5"><a href="#annotated-cell-5-5"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
-<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>), </span>
-<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>), </span>
-<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="annotated-cell-5-9"><a href="#annotated-cell-5-9"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>), </span>
-<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>)</span>
-<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11"></a>  ) <span class="sc">+</span></span>
-<span id="annotated-cell-5-12"><a href="#annotated-cell-5-12"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Student Count by Employment and </span><span class="sc">\n</span><span class="st"> Enrollment Status"</span>)</span>
-<span id="annotated-cell-5-13"><a href="#annotated-cell-5-13"></a></span>
-<span id="annotated-cell-5-14"><a href="#annotated-cell-5-14"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
+<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a>  improved_bar_plot <span class="sc">+</span> </span>
+<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="annotated-cell-5-4"><a href="#annotated-cell-5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="annotated-cell-5-5"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>), </span>
+<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>), </span>
+<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="annotated-cell-5-9"><a href="#annotated-cell-5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>), </span>
+<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>)</span>
+<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="annotated-cell-5-12"><a href="#annotated-cell-5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Student Count by Employment and </span><span class="sc">\n</span><span class="st"> Enrollment Status"</span>)</span>
+<span id="annotated-cell-5-13"><a href="#annotated-cell-5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-5-14"><a href="#annotated-cell-5-14" aria-hidden="true" tabindex="-1"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-bar-plot-font-size" class="quarto-float quarto-figure quarto-figure-center" alt="Same bar plot as previous with larger font size and title broken across two lines.">
@@ -342,11 +342,11 @@ Figure&nbsp;4: Bar plot of employment broken down by enrollment status with bigg
 <h2>Changing legend location</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
-<span id="annotated-cell-6-2"><a href="#annotated-cell-6-2"></a>  improved_bar_plot <span class="sc">+</span></span>
-<span id="annotated-cell-6-3"><a href="#annotated-cell-6-3"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="annotated-cell-6-4"><a href="#annotated-cell-6-4"></a></span>
-<span id="annotated-cell-6-5"><a href="#annotated-cell-6-5"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
+<span id="annotated-cell-6-2"><a href="#annotated-cell-6-2" aria-hidden="true" tabindex="-1"></a>  improved_bar_plot <span class="sc">+</span></span>
+<span id="annotated-cell-6-3"><a href="#annotated-cell-6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="annotated-cell-6-4"><a href="#annotated-cell-6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-6-5"><a href="#annotated-cell-6-5" aria-hidden="true" tabindex="-1"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-bar-plot-legend" class="quarto-float quarto-figure quarto-figure-center" alt="Same plot as previous with legend horizontally listed at bottom of plot instead of vertically listed on right side of plot.">
@@ -377,7 +377,7 @@ Figure&nbsp;7: Hex codes for the randomly selected nine colors
 <section id="okabe-ito-color-palette" class="slide level2">
 <h2>Okabe-Ito Color Palette</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">palette.colors</span>(<span class="at">palette =</span> <span class="st">"Okabe-Ito"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">palette.colors</span>(<span class="at">palette =</span> <span class="st">"Okabe-Ito"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "#000000" "#E69F00" "#56B4E9" "#009E73" "#F0E442" "#0072B2" "#D55E00"
 [8] "#CC79A7" "#999999"</code></pre>
@@ -394,16 +394,16 @@ Figure&nbsp;8: Hex codes of colors in the Okabe-Ito palette
 <h2>Changing Colors</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-8-1"><a href="#annotated-cell-8-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
-<span id="annotated-cell-8-2"><a href="#annotated-cell-8-2"></a>  improved_bar_plot <span class="sc">+</span></span>
-<span id="annotated-cell-8-3"><a href="#annotated-cell-8-3"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="annotated-cell-8-4"><a href="#annotated-cell-8-4"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="annotated-cell-8-5"><a href="#annotated-cell-8-5"></a>      <span class="st">"Full Time"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>,</span>
-<span id="annotated-cell-8-6"><a href="#annotated-cell-8-6"></a>      <span class="st">"Part Time"</span> <span class="ot">=</span> <span class="st">"#CC79A7"</span></span>
-<span id="annotated-cell-8-7"><a href="#annotated-cell-8-7"></a>    )</span>
-<span id="annotated-cell-8-8"><a href="#annotated-cell-8-8"></a>  )</span>
-<span id="annotated-cell-8-9"><a href="#annotated-cell-8-9"></a></span>
-<span id="annotated-cell-8-10"><a href="#annotated-cell-8-10"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-8-1"><a href="#annotated-cell-8-1" aria-hidden="true" tabindex="-1"></a>improved_bar_plot <span class="ot">&lt;-</span></span>
+<span id="annotated-cell-8-2"><a href="#annotated-cell-8-2" aria-hidden="true" tabindex="-1"></a>  improved_bar_plot <span class="sc">+</span></span>
+<span id="annotated-cell-8-3"><a href="#annotated-cell-8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="annotated-cell-8-4"><a href="#annotated-cell-8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-8-5"><a href="#annotated-cell-8-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Full Time"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>,</span>
+<span id="annotated-cell-8-6"><a href="#annotated-cell-8-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Part Time"</span> <span class="ot">=</span> <span class="st">"#CC79A7"</span></span>
+<span id="annotated-cell-8-7"><a href="#annotated-cell-8-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="annotated-cell-8-8"><a href="#annotated-cell-8-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-8-9"><a href="#annotated-cell-8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-10"><a href="#annotated-cell-8-10" aria-hidden="true" tabindex="-1"></a>improved_bar_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-bar-plot-okabe-colors" class="quarto-float quarto-figure quarto-figure-center" alt="Most recent bar plot with different colors chosen for the bars.">
@@ -435,22 +435,22 @@ Figure&nbsp;11: Improved Bar plot
 <h2>Customizing Scatterplots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>simple_scatterplot <span class="ot">&lt;-</span> </span>
-<span id="cb6-2"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb6-3"><a href=""></a>    <span class="at">data =</span> atus_college,</span>
-<span id="cb6-4"><a href=""></a>    <span class="fu">aes</span>(</span>
-<span id="cb6-5"><a href=""></a>      <span class="at">x =</span> time_alone,</span>
-<span id="cb6-6"><a href=""></a>      <span class="at">y =</span> weekly_earnings</span>
-<span id="cb6-7"><a href=""></a>    )</span>
-<span id="cb6-8"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb6-9"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-10"><a href=""></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-11"><a href=""></a>    <span class="at">x =</span> <span class="st">"Time Alone (minutes)"</span>,</span>
-<span id="cb6-12"><a href=""></a>    <span class="at">y =</span> <span class="st">"Weekly Earnings ($)"</span></span>
-<span id="cb6-13"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb6-14"><a href=""></a>  <span class="fu">theme_bw</span>()</span>
-<span id="cb6-15"><a href=""></a></span>
-<span id="cb6-16"><a href=""></a>simple_scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a>simple_scatterplot <span class="ot">&lt;-</span> </span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> atus_college,</span>
+<span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb6-5"><a href="" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> time_alone,</span>
+<span id="cb6-6"><a href="" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> weekly_earnings</span>
+<span id="cb6-7"><a href="" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-8"><a href="" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-10"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-11"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Time Alone (minutes)"</span>,</span>
+<span id="cb6-12"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Weekly Earnings ($)"</span></span>
+<span id="cb6-13"><a href="" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-14"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb6-15"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="" aria-hidden="true" tabindex="-1"></a>simple_scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot" class="quarto-float quarto-figure quarto-figure-center" alt="Scatter plot showing the relationship between time spent alone and weekly earnings. Each point represents an individual. Time alone (in minutes) is on the x-axis and weekly earnings are on the y-axis. Earnings vary widely at all levels of time alone, with no strong linear trend.">
@@ -470,15 +470,15 @@ Figure&nbsp;12: Scatterplot of time spent alone and weekly earnings
 <h2>Customizing Scatterplots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-10-1"><a href="#annotated-cell-10-1"></a>colored_scatterplot <span class="ot">&lt;-</span> </span>
-<span id="annotated-cell-10-2"><a href="#annotated-cell-10-2"></a>  simple_scatterplot <span class="sc">+</span></span>
-<span id="annotated-cell-10-3"><a href="#annotated-cell-10-3"></a>  <span class="fu">geom_point</span>(</span>
-<span id="annotated-cell-10-4"><a href="#annotated-cell-10-4"></a>    <span class="at">color =</span> <span class="st">"aquamarine4"</span>,</span>
-<span id="annotated-cell-10-5"><a href="#annotated-cell-10-5"></a>    <span class="at">size =</span> <span class="dv">4</span>,</span>
-<span id="annotated-cell-10-6"><a href="#annotated-cell-10-6"></a>    <span class="at">shape =</span> <span class="st">"square"</span></span>
-<span id="annotated-cell-10-7"><a href="#annotated-cell-10-7"></a>  )</span>
-<span id="annotated-cell-10-8"><a href="#annotated-cell-10-8"></a></span>
-<span id="annotated-cell-10-9"><a href="#annotated-cell-10-9"></a>colored_scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-10"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-10-1"><a href="#annotated-cell-10-1" aria-hidden="true" tabindex="-1"></a>colored_scatterplot <span class="ot">&lt;-</span> </span>
+<span id="annotated-cell-10-2"><a href="#annotated-cell-10-2" aria-hidden="true" tabindex="-1"></a>  simple_scatterplot <span class="sc">+</span></span>
+<span id="annotated-cell-10-3"><a href="#annotated-cell-10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="annotated-cell-10-4"><a href="#annotated-cell-10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"aquamarine4"</span>,</span>
+<span id="annotated-cell-10-5"><a href="#annotated-cell-10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">4</span>,</span>
+<span id="annotated-cell-10-6"><a href="#annotated-cell-10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> <span class="st">"square"</span></span>
+<span id="annotated-cell-10-7"><a href="#annotated-cell-10-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-10-8"><a href="#annotated-cell-10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-10-9"><a href="#annotated-cell-10-9" aria-hidden="true" tabindex="-1"></a>colored_scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot-look" class="quarto-float quarto-figure quarto-figure-center" alt="Same scatterplot as previous with points as green squares instead of black circles.">
@@ -497,8 +497,8 @@ Figure&nbsp;13: Scatterplot with customized appearance of points
 <section id="facets" class="slide level2">
 <h2>Facets</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-11-1"><a href="#annotated-cell-11-1"></a>simple_scatterplot <span class="sc">+</span></span>
-<span id="annotated-cell-11-2"><a href="#annotated-cell-11-2"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(employment), <span class="at">cols =</span> <span class="fu">vars</span>(enrollment))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-11-1"><a href="#annotated-cell-11-1" aria-hidden="true" tabindex="-1"></a>simple_scatterplot <span class="sc">+</span></span>
+<span id="annotated-cell-11-2"><a href="#annotated-cell-11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(employment), <span class="at">cols =</span> <span class="fu">vars</span>(enrollment))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2b-access-data-viz_files/figure-revealjs/fig-scatterplot-facet-1.png" alt="Faceted version of same scatter plot of weekly earnings versus time alone, split by employment status (Full Time, Part Time, and NA). Each panel shows individual data points, allowing comparison of earnings patterns within each employment group. There are no obvious trends in either Full Time Enrollment plot. The part time employment plots are mostly weekly earnings between 0 and 1000$. The NA employment plots are empty." width="960" class="r-stretch quarto-figure-center" id="fig-scatterplot-facet"><p class="caption">
@@ -507,8 +507,8 @@ Figure&nbsp;14: Time spent alone versus weekly earnings broken by employment and
 <section id="facets---rows-only" class="slide level2">
 <h2>Facets - Rows only</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-12-1"><a href="#annotated-cell-12-1"></a>simple_scatterplot <span class="sc">+</span></span>
-<span id="annotated-cell-12-2"><a href="#annotated-cell-12-2"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(employment))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-12-1"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a>simple_scatterplot <span class="sc">+</span></span>
+<span id="annotated-cell-12-2"><a href="#annotated-cell-12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(employment))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2b-access-data-viz_files/figure-revealjs/fig-scatterplot-facet-employ-1.png" alt="Vertical faceted scatter plot of same data showing weekly earnings versus time alone for three employment categories: Full Time, Part Time, and NA. Full-time workers tend to have higher earnings overall, while part-time workers cluster at lower earnings levels." width="960" class="r-stretch quarto-figure-center" id="fig-scatterplot-facet-employ"><p class="caption">
@@ -543,10 +543,10 @@ Figure&nbsp;15: Time spent alone versus weekly earnings broken by employment sta
 <section id="alt-text-in-ggplot" class="slide level2">
 <h2>Alt text in ggplot</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>improved_bar_plot <span class="sc">+</span></span>
-<span id="cb7-2"><a href=""></a>  <span class="fu">labs</span>(</span>
-<span id="cb7-3"><a href=""></a>    <span class="at">alt =</span> <span class="st">"Barplot showing student count by employment and enrollment status. The y-axis shows number of students from 0 to 80, and the x-axis shows employment status (Full Time, Part Time, NA). Each employment status is broken down by full time or part time enrollment status. The plot displays six bars: students enrolled full time with full time employment (approximately 70 students), part time employment (apprximately 75 students), and unknown employment (approximately 80 students) as well as students enrolled part time with full time employment (approxmately 60 students), part time employment (approximately 18 students), and unknown employment (approximately 15 students). Data source: American Time Use Survey 2024 (n = 312 students)."</span></span>
-<span id="cb7-4"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a>improved_bar_plot <span class="sc">+</span></span>
+<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">alt =</span> <span class="st">"Barplot showing student count by employment and enrollment status. The y-axis shows number of students from 0 to 80, and the x-axis shows employment status (Full Time, Part Time, NA). Each employment status is broken down by full time or part time enrollment status. The plot displays six bars: students enrolled full time with full time employment (approximately 70 students), part time employment (apprximately 75 students), and unknown employment (approximately 80 students) as well as students enrolled part time with full time employment (approxmately 60 students), part time employment (approximately 18 students), and unknown employment (approximately 15 students). Data source: American Time Use Survey 2024 (n = 312 students)."</span></span>
+<span id="cb7-4"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2b-access-data-viz_files/figure-revealjs/fig-bar-plot-alt-1.png" alt="Same well polished bar plot of employment status by course enrollment." width="960" class="r-stretch quarto-figure-center" id="fig-bar-plot-alt"><p class="caption">
@@ -584,16 +584,16 @@ Figure&nbsp;16: Bar plot of employment broken down by enrollment status with add
 <h2>Saving Simple Plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb8-2"><a href=""></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb8-3"><a href=""></a></span>
-<span id="cb8-4"><a href=""></a>simple_plot <span class="ot">&lt;-</span></span>
-<span id="cb8-5"><a href=""></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb8-6"><a href=""></a>    <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">y =</span> y),</span>
-<span id="cb8-7"><a href=""></a>    <span class="fu">aes</span>(<span class="at">x =</span> x,  <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb8-8"><a href=""></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb8-9"><a href=""></a></span>
-<span id="cb8-10"><a href=""></a>simple_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="" aria-hidden="true" tabindex="-1"></a>simple_plot <span class="ot">&lt;-</span></span>
+<span id="cb8-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb8-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">y =</span> y),</span>
+<span id="cb8-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> x,  <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb8-9"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="" aria-hidden="true" tabindex="-1"></a>simple_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-simple-scatterplot" class="quarto-float quarto-figure quarto-figure-center" alt="Simple scatter plot showing a perfectly positive linear relationship between x and y. Points increase steadily from lower left to upper right, indicating that y increases as x increases.">
@@ -612,7 +612,7 @@ Figure&nbsp;17: Simple scatterplot to show how <code>sonify()</code> function wo
 <section id="sonification" class="slide level2">
 <h2>Sonification</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>sonify<span class="sc">::</span><span class="fu">sonify</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a>sonify<span class="sc">::</span><span class="fu">sonify</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If you were to listen to the output of the <code>sonify()</code> function, you would hear a series of ten tones, each one slightly higher in pitch than the last. The rising pitch directly corresponds to the rising <code>y</code> values as <code>x</code> increases.</p>
 </section></section>
@@ -627,9 +627,8 @@ Figure&nbsp;17: Simple scatterplot to show how <code>sonify()</code> function wo
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.introdata.science/img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -661,7 +660,7 @@ Figure&nbsp;17: Simple scatterplot to show how <code>sonify()</code> function wo
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -839,24 +838,6 @@ Figure&nbsp;17: Simple scatterplot to show how <code>sonify()</code> function wo
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

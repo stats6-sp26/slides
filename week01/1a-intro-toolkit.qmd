@@ -6,7 +6,7 @@ execute:
 format: 
   revealjs:
     menu:
-      openButton: false # Keep the "empty" one off
+      openButton: false
     footer: |
       <span id="menu-toggle-box"></span> [introdata.science](https://introdata.science)
     code-line-numbers: false 

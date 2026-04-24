@@ -6,8 +6,8 @@
 <script src="4a-reproducible-workflow_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="4a-reproducible-workflow_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="4a-reproducible-workflow_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="4a-reproducible-workflow_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="4a-reproducible-workflow_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Good Workflow Practices for Reproducible Data Science</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="4a-reproducible-workflow_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="4a-reproducible-workflow_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
   <link href="4a-reproducible-workflow_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="4a-reproducible-workflow_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="4a-reproducible-workflow_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Good Workflow Practices for Reproducible Data Science</h1>
 
 <div class="quarto-title-authors">
@@ -215,9 +215,9 @@ Dr.&nbsp;Mine Dogucu
 <section id="be-descriptive-and-concise" class="slide level2">
 <h2>1. Be Descriptive and Concise</h2>
 <ul>
-<li class="fragment">Use names that clearly indicate the file’s content or purpose.</li>
-<li class="fragment">Avoid vague names like “Untitled.qmd” or “document.qmd”.</li>
-<li class="fragment">Example: “proposal.qmd” and <code>presentation.qmd</code></li>
+<li>Use names that clearly indicate the file’s content or purpose.</li>
+<li>Avoid vague names like “Untitled.qmd” or “document.qmd”.</li>
+<li>Example: “proposal.qmd” and <code>presentation.qmd</code></li>
 </ul>
 </section>
 <section id="use-consistent-naming-conventions" class="slide level2">
@@ -232,24 +232,24 @@ Dr.&nbsp;Mine Dogucu
 <section id="avoid-special-characters-and-spaces" class="slide level2">
 <h2>3. Avoid Special Characters and Spaces</h2>
 <ul>
-<li class="fragment">Do not use spaces, slashes (/), colons (:), asterisks (*), question marks (?), or quotes.</li>
-<li class="fragment">Spaces can cause issues in command-line tools and some systems. Use underscores or hyphens instead.</li>
+<li>Do not use spaces, slashes (/), colons (:), asterisks (*), question marks (?), or quotes.</li>
+<li>Spaces can cause issues in command-line tools and some systems. Use underscores or hyphens instead.</li>
 </ul>
 </section>
 <section id="include-dates-when-relevant" class="slide level2">
 <h2>4. Include Dates When Relevant</h2>
 <ul>
-<li class="fragment"><p>Use the ISO 8601 format (YYYY-MM-DD) for easy sorting.</p></li>
-<li class="fragment"><p>Example: “meeting_notes_2026-04-16.md”</p></li>
+<li><p>Use the ISO 8601 format (YYYY-MM-DD) for easy sorting.</p></li>
+<li><p>Example: “meeting_notes_2026-04-16.md”</p></li>
 </ul>
 </section>
 <section id="use-enumeration-andor-letters" class="slide level2">
 <h2>5. Use Enumeration and/or Letters</h2>
 <ul>
-<li class="fragment"><p>Use Enumeration and/or Letters for Easy Sorting</p></li>
-<li class="fragment"><p>Example: <code>lecture-01a-intro-toolkit.qmd</code>, <code>lecture-01b-intro-data.qmd</code></p></li>
-<li class="fragment"><p><code>01</code> represents the weekof the quarter</p></li>
-<li class="fragment"><p><code>a</code> represents Monday <code>b</code> represents Wednesday</p></li>
+<li><p>Use Enumeration and/or Letters for Easy Sorting</p></li>
+<li><p>Example: <code>lecture-01a-intro-toolkit.qmd</code>, <code>lecture-01b-intro-data.qmd</code></p></li>
+<li><p><code>01</code> represents the weekof the quarter</p></li>
+<li><p><code>a</code> represents Monday <code>b</code> represents Wednesday</p></li>
 </ul>
 </section>
 <section id="readme.md" class="slide level2">
@@ -282,38 +282,38 @@ Dr.&nbsp;Mine Dogucu
 <section id="importing-.csv-data" class="slide level2">
 <h2>Importing .csv Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="importing-excel-data" class="slide level2">
 <h2>Importing Excel Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"dataset.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"dataset.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="importing-excel-data-1" class="slide level2">
 <h2>Importing Excel Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"dataset.xlsx"</span>, <span class="at">sheet =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"dataset.xlsx"</span>, <span class="at">sheet =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="importing-sas-spss-stata-data" class="slide level2">
 <h2>Importing SAS, SPSS, Stata Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(haven)</span>
-<span id="cb4-2"><a href=""></a><span class="co"># SAS</span></span>
-<span id="cb4-3"><a href=""></a><span class="fu">read_sas</span>(<span class="st">"dataset.sas7bdat"</span>)</span>
-<span id="cb4-4"><a href=""></a><span class="co"># SPSS</span></span>
-<span id="cb4-5"><a href=""></a><span class="fu">read_sav</span>(<span class="st">"dataset.sav"</span>)</span>
-<span id="cb4-6"><a href=""></a><span class="co"># Stata</span></span>
-<span id="cb4-7"><a href=""></a><span class="fu">read_dta</span>(<span class="st">"dataset.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># SAS</span></span>
+<span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">read_sas</span>(<span class="st">"dataset.sas7bdat"</span>)</span>
+<span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># SPSS</span></span>
+<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">read_sav</span>(<span class="st">"dataset.sav"</span>)</span>
+<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Stata</span></span>
+<span id="cb4-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">read_dta</span>(<span class="st">"dataset.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="where-is-the-dataset-file" class="slide level2">
 <h2>Where is the dataset file?</h2>
 <p>Importing data will depend on where the dataset is on your computer. However we use the help of <code>here::here()</code> function. This function sets the working directory to the project folder (i.e.&nbsp;where the <code>.Rproj</code> file is).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/dataset.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/dataset.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="practice" class="slide level2">
@@ -419,11 +419,11 @@ Dr.&nbsp;Mine Dogucu
 <h2></h2>
 <p>It is also a good practice to save session information as package versions change, in order to be able to reproduce results from an analysis we need to know under what technical conditions the analysis was conducted.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.3 (2026-03-11)
 Platform: aarch64-apple-darwin20
-Running under: macOS Tahoe 26.3.1
+Running under: macOS Tahoe 26.4.1
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
@@ -450,9 +450,8 @@ loaded via a namespace (and not attached):
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.introdata.science/img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -484,7 +483,7 @@ loaded via a namespace (and not attached):
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -662,24 +661,6 @@ loaded via a namespace (and not attached):
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

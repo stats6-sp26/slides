@@ -5,16 +5,20 @@ execute:
   echo: true
 format: 
   revealjs:
-    footer: "[introdata.science](https://introdata.science)"
+    menu:
+      openButton: false
+    footer: |
+      <span id="menu-toggle-box"></span> [introdata.science](https://introdata.science)
+    code-line-numbers: false 
     slide-number: true
-    incremental: true
+    incremental: false
     theme: ["../templates/slide-style.scss"]
-    logo: "https://www.introdata.science/img/logo.png"
     title-slide-attributes: 
       data-background-image: "https://www.introdata.science/img/logo.png"
       data-background-size: 5%
       data-background-position: 50% 85%
-    include-after-body: "../templates/clean_title_page.html"
+      data-aria-label: "Intro to Data Science course logo"
+      include-after-body: "../templates/access.html"
 ---
 
 ## Goals

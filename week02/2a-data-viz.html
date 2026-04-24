@@ -6,8 +6,8 @@
 <script src="2a-data-viz_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="2a-data-viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2a-data-viz_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2a-data-viz_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="2a-data-viz_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Data Visualization</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="2a-data-viz_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="2a-data-viz_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
   <link href="2a-data-viz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="2a-data-viz_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="2a-data-viz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Data Visualization</h1>
 
 <div class="quarto-title-authors">
@@ -226,23 +226,23 @@ Dr.&nbsp;Mine Dogucu
 <h2></h2>
 <p>Data Visualizations</p>
 <ul>
-<li class="fragment"><p>are graphical representations of data</p></li>
-<li class="fragment"><p>use different colors, shapes, and the coordinate system to summarize data</p></li>
-<li class="fragment"><p>can tell a story or can be useful for exploring data</p></li>
+<li><p>are graphical representations of data</p></li>
+<li><p>use different colors, shapes, and the coordinate system to summarize data</p></li>
+<li><p>can tell a story or can be useful for exploring data</p></li>
 </ul>
 </section>
 <section id="packages-for-today" class="slide level2">
 <h2>Packages for Today</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(hellodatascience)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hellodatascience)</span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="data-context" class="slide level2">
 <h2>Data Context</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">data</span>(atus_college)</span>
-<span id="cb2-2"><a href=""></a><span class="fu">glimpse</span>(atus_college)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(atus_college)</span>
+<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(atus_college)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 312
 Columns: 13
@@ -265,7 +265,7 @@ $ religious_time    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 
 <section id="documentation-for-data" class="slide level2">
 <h2>Documentation for Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>?atus_college</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a>?atus_college</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
@@ -280,15 +280,15 @@ $ religious_time    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 
 Figure&nbsp;1: A bar plot of employment status
 </p><div class=".callout-note">
 <ol type="1">
-<li class="fragment">What do you notice about this graph?</li>
-<li class="fragment">If you could talk in English to R, how would you tell R to make this plot?</li>
+<li>What do you notice about this graph?</li>
+<li>If you could talk in English to R, how would you tell R to make this plot?</li>
 </ol>
 </div>
 </section>
 <section id="pick-your-data" class="slide level2">
 <h2>Pick your data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2a-data-viz_files/figure-revealjs/fig-bar-step1-1.png" alt="A blank rectangular space" width="960" class="r-stretch quarto-figure-center" id="fig-bar-step1"><p class="caption">
@@ -297,7 +297,7 @@ Figure&nbsp;2: Blank coordinate system
 <section id="map-your-variable" class="slide level2">
 <h2>Map your variable</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> employment))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> employment))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2a-data-viz_files/figure-revealjs/fig-bar-step2-1.png" alt="A blank rectangular space with only the x axis labeled emplyment with three categories Full Time, Part Time, and NA" width="960" class="r-stretch quarto-figure-center" id="fig-bar-step2"><p class="caption">
@@ -306,8 +306,8 @@ Figure&nbsp;3: Mapping <code>employment</code> variable to the x-axis
 <section id="pick-your-plot-type" class="slide level2">
 <h2>Pick your plot type</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span></span>
-<span id="cb7-2"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2a-data-viz_files/figure-revealjs/fig-bar-step3-1.png" alt="A bar plot of employment status. The x-axis is labeled 'employment status' with categories Full Time, Part Time, and NA. The y-axis is labeled 'count' and ranges from 0 to 140. Full Time has the tallest bar at about 130, Part Time is around 80, and NA is close to 100." width="960" class="r-stretch quarto-figure-center" id="fig-bar-step3"><p class="caption">
@@ -317,39 +317,39 @@ Figure&nbsp;4: Creating the bars by adding the geometric layer of a barplot
 <h2>Summary</h2>
 <p>The three main steps to make a plot are:</p>
 <ol type="1">
-<li class="fragment">Call the <code>ggplot()</code> function on the data we want to plot.</li>
-<li class="fragment">Map variables to plot aesthetics using the <code>aes()</code> function.</li>
-<li class="fragment">Add a layer to specify the plot type.</li>
+<li>Call the <code>ggplot()</code> function on the data we want to plot.</li>
+<li>Map variables to plot aesthetics using the <code>aes()</code> function.</li>
+<li>Add a layer to specify the plot type.</li>
 </ol>
 </section>
 <section id="code-style" class="slide level2">
 <h2>code style</h2>
 <p><a href="https://style.tidyverse.org/ggplot2.html">The tidyverse style guide</a> has the following convention for writing ggplot2 code.</p>
 <ol type="1">
-<li class="fragment"><p>The plus sign for adding layers <code>+</code> always has a space before it and is followed by a new line.</p></li>
-<li class="fragment"><p>The new line is indented by two spaces. RStudio does this automatically for you.</p></li>
+<li><p>The plus sign for adding layers <code>+</code> always has a space before it and is followed by a new line.</p></li>
+<li><p>The new line is indented by two spaces. RStudio does this automatically for you.</p></li>
 </ol>
 </section>
 <section id="code-style-1" class="slide level2">
 <h2>code style</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span></span>
-<span id="cb8-2"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Both the above and below code are correct styles of writing ggplot code.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb9-2"><a href=""></a>  <span class="at">data =</span> atus_college, </span>
-<span id="cb9-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> employment)</span>
-<span id="cb9-4"><a href=""></a>) <span class="sc">+</span></span>
-<span id="cb9-5"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college, </span>
+<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> employment)</span>
+<span id="cb9-4"><a href="" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="visualizing-a-numeric-variable---histogram" class="slide level2">
 <h2>Visualizing a Numeric Variable - Histogram</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
-<span id="cb10-2"><a href=""></a>  <span class="fu">geom_histogram</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 </div>
@@ -365,8 +365,8 @@ Figure&nbsp;5: A histogram of weekly earnings
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
-<span id="cb12-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">20</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">20</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -378,8 +378,8 @@ Figure&nbsp;5: A histogram of weekly earnings
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
-<span id="cb13-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -391,8 +391,8 @@ Figure&nbsp;5: A histogram of weekly earnings
 </div>
 <div id="tabset-1-3">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
-<span id="cb14-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">x =</span> weekly_earnings)) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -433,8 +433,8 @@ Figure&nbsp;6: Understanding skewness of a histogram
 <section id="visualizing-a-numeric-variable---boxplot" class="slide level2">
 <h2>Visualizing a Numeric Variable - Boxplot</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">y =</span> weekly_earnings)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href=""></a>  <span class="fu">geom_boxplot</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> atus_college, <span class="fu">aes</span>(<span class="at">y =</span> weekly_earnings)) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="2a-data-viz_files/figure-revealjs/fig-boxplot-example-1.png" alt="A vertical boxplot showing weekly earnings distribution. The x-axis has no label and its range from -0.4 to 0.4 has no real meaning. The y-axis is labeled weekly_earnings, ranging from 0 to 3000. The box spans approximately from 500 to 1250, with a median line near 750. The lower whisker extends from the lower end of the box down to 0, and the upper whisker extends from the upper end of the box up to about 2500. Several outliers appear above the upper whisker, ranging from about 2500 to 3000." width="960" class="r-stretch quarto-figure-center" id="fig-boxplot-example"><p class="caption">
@@ -461,14 +461,14 @@ Figure&nbsp;9: Boxplot overlayed with individual observation points
 <h2>Stacked Bar Plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb16-2"><a href=""></a>  <span class="at">data =</span> atus_college, </span>
-<span id="cb16-3"><a href=""></a>  <span class="fu">aes</span>(</span>
-<span id="cb16-4"><a href=""></a>    <span class="at">x =</span> employment,</span>
-<span id="cb16-5"><a href=""></a>    <span class="at">fill =</span> enrollment </span>
-<span id="cb16-6"><a href=""></a>  )</span>
-<span id="cb16-7"><a href=""></a>) <span class="sc">+</span></span>
-<span id="cb16-8"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb16-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college, </span>
+<span id="cb16-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb16-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> employment,</span>
+<span id="cb16-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> enrollment </span>
+<span id="cb16-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb16-7"><a href="" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-stacked-bar-example" class="quarto-float quarto-figure quarto-figure-center" alt="A stacked bar chart showing counts of enrollment status within employment categories. The x-axis is labeled employment with three categories: Full Time, Part Time, and NA. The y-axis is labeled 'count' and ranges from 0 to 150. Each bar is divided into two segments: red for Full Time enrollment and teal for Part Time enrollment. For Full Time employment, the total height is about 140, with roughly 60 teal and 80 red. For Part Time employment, the total is about 85, mostly red with a small teal segment near 10. For NA, the total is about 100, with a larger red segment around 80 and teal around 20. A legend on the right identifies colors for enrollment status: red for Full Time enrollment and teal for Part Time enrollment.">
@@ -488,14 +488,14 @@ Figure&nbsp;10: Stacked barplot of employment and enrollment status
 <h2>Standardardized stacked barplot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-12-1"><a href="#annotated-cell-12-1"></a><span class="fu">ggplot</span>(</span>
-<span id="annotated-cell-12-2"><a href="#annotated-cell-12-2"></a>  <span class="at">data =</span> atus_college, </span>
-<span id="annotated-cell-12-3"><a href="#annotated-cell-12-3"></a>  <span class="fu">aes</span>(</span>
-<span id="annotated-cell-12-4"><a href="#annotated-cell-12-4"></a>    <span class="at">x =</span> employment,</span>
-<span id="annotated-cell-12-5"><a href="#annotated-cell-12-5"></a>    <span class="at">fill =</span> enrollment</span>
-<span id="annotated-cell-12-6"><a href="#annotated-cell-12-6"></a>  )</span>
-<span id="annotated-cell-12-7"><a href="#annotated-cell-12-7"></a>) <span class="sc">+</span></span>
-<span id="annotated-cell-12-8"><a href="#annotated-cell-12-8"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-12-1"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="annotated-cell-12-2"><a href="#annotated-cell-12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college, </span>
+<span id="annotated-cell-12-3"><a href="#annotated-cell-12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="annotated-cell-12-4"><a href="#annotated-cell-12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> employment,</span>
+<span id="annotated-cell-12-5"><a href="#annotated-cell-12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> enrollment</span>
+<span id="annotated-cell-12-6"><a href="#annotated-cell-12-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-12-7"><a href="#annotated-cell-12-7" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="annotated-cell-12-8"><a href="#annotated-cell-12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-standardized-bar-example" class="quarto-float quarto-figure quarto-figure-center" alt="A stacked bar chart showing the proportion of enrollment status within employment categories. The x-axis is labeled 'employment' with three categories: Full Time, Part Time, and NA. The y-axis is labeled 'count' and ranges from 0 to 1, representing proportions. Each bar is divided into two segments: red for Full Time enrollment and teal for Part Time enrollment. For Full Time employment, the bar is about 45% teal and 55% red. For Part Time employment, the bar is mostly red (around 90%) with a small teal segment (about 10%). For NA, the bar is about 80% red and 20% teal. A legend on the right identifies colors for enrollment status: red for Full Time enrollment and teal for Part Time enrollment.">
@@ -515,14 +515,14 @@ Figure&nbsp;11: Standardardized stacked barplot of employment and enrollment
 <h2>Dodged barplot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb17-2"><a href=""></a>  <span class="at">data =</span> atus_college, </span>
-<span id="cb17-3"><a href=""></a>  <span class="fu">aes</span>(</span>
-<span id="cb17-4"><a href=""></a>    <span class="at">x =</span> employment,</span>
-<span id="cb17-5"><a href=""></a>    <span class="at">fill =</span> enrollment</span>
-<span id="cb17-6"><a href=""></a>  )</span>
-<span id="cb17-7"><a href=""></a>) <span class="sc">+</span></span>
-<span id="cb17-8"><a href=""></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb17-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college, </span>
+<span id="cb17-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb17-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> employment,</span>
+<span id="cb17-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> enrollment</span>
+<span id="cb17-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb17-7"><a href="" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb17-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-dodge-bar-example" class="quarto-float quarto-figure quarto-figure-center" alt="A grouped side-by-side bar plot showing counts of employment categories broken into enrollment status. The x-axis is labeled 'employment' with three categories: Full Time, Part Time, and NA. The y-axis is labeled 'count' and ranges from 0 to 90. Each emplyment category has two bars: red for Full Time enrollment and teal for Part Time enrollment. For Full Time employment, the red bar is about 70 and the teal bar about 60. For Part Time employment, the red bar is about 75 and the teal bar about 10. For NA, the red bar is about 85 and the teal bar about 15. A legend on the right identifies colors for enrollment status: red for Full Time enrollment and teal for Part Time enrollment.">
@@ -542,14 +542,14 @@ Figure&nbsp;12: Side-by-side (dodge) barplot of employment and enrollment status
 <h2>Scatterplot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb18-2"><a href=""></a>  <span class="at">data =</span> atus_college,</span>
-<span id="cb18-3"><a href=""></a>  <span class="fu">aes</span>(</span>
-<span id="cb18-4"><a href=""></a>    <span class="at">x =</span> time_alone, </span>
-<span id="cb18-5"><a href=""></a>    <span class="at">y =</span> weekly_earnings</span>
-<span id="cb18-6"><a href=""></a>  )</span>
-<span id="cb18-7"><a href=""></a>) <span class="sc">+</span></span>
-<span id="cb18-8"><a href=""></a>  <span class="fu">geom_point</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb18-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college,</span>
+<span id="cb18-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb18-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> time_alone, </span>
+<span id="cb18-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> weekly_earnings</span>
+<span id="cb18-6"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb18-7"><a href="" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb18-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot-example" class="quarto-float quarto-figure quarto-figure-center" alt="A scatterplot showing the relationship between time alone and weekly earnings. The x-axis is labeled time_alone and ranges from 0 to 1000. The y-axis is labeled weekly_earnings and ranges from 0 to 3000. Each point represents an observation. Most points are concentrated in the lower left quadrant, with time alone between 0 and 500 and weekly earnings below 1500. A few points extend toward higher earnings up to 3000 and higher time alone values up to 1000, but they are sparse. The overall pattern suggests no strong linear relationship, with data widely scattered.">
@@ -569,14 +569,14 @@ Figure&nbsp;13: Scatterplot of time spent alone and weekly earnings
 <h2>Side-by-side Boxplot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-15"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-15-1"><a href="#annotated-cell-15-1"></a><span class="fu">ggplot</span>(</span>
-<span id="annotated-cell-15-2"><a href="#annotated-cell-15-2"></a>  <span class="at">data =</span> atus_college, </span>
-<span id="annotated-cell-15-3"><a href="#annotated-cell-15-3"></a>  <span class="fu">aes</span>(</span>
-<span id="annotated-cell-15-4"><a href="#annotated-cell-15-4"></a>    <span class="at">x =</span> employment,</span>
-<span id="annotated-cell-15-5"><a href="#annotated-cell-15-5"></a>    <span class="at">y =</span> weekly_earnings</span>
-<span id="annotated-cell-15-6"><a href="#annotated-cell-15-6"></a>  )</span>
-<span id="annotated-cell-15-7"><a href="#annotated-cell-15-7"></a>) <span class="sc">+</span></span>
-<span id="annotated-cell-15-8"><a href="#annotated-cell-15-8"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-15"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-15-1"><a href="#annotated-cell-15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="annotated-cell-15-2"><a href="#annotated-cell-15-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college, </span>
+<span id="annotated-cell-15-3"><a href="#annotated-cell-15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="annotated-cell-15-4"><a href="#annotated-cell-15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> employment,</span>
+<span id="annotated-cell-15-5"><a href="#annotated-cell-15-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> weekly_earnings</span>
+<span id="annotated-cell-15-6"><a href="#annotated-cell-15-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-15-7"><a href="#annotated-cell-15-7" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="annotated-cell-15-8"><a href="#annotated-cell-15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-sidebyside-boxplot-example" class="quarto-float quarto-figure quarto-figure-center" alt="A side-by-side boxplot comparing weekly earnings across employment categories. The x-axis is labeled employment with three categories: Full Time, Part Time, and NA. The y-axis is labeled weekly_earnings and ranges from 0 to 3000. The Full Time boxplot shows a median near 1000, an interquartile range roughly from 750 to 1500, whiskers extending from the box down to about 25 and up to about 2500, and some outliers above 2500 up to 3000. The Part Time boxplot has a median around 400, an interquartile range from about 250 to 500, whiskers extending from the box down to 0 and up to about 1000, and a few outliers above 1000. The NA category has no visible box or data points">
@@ -601,15 +601,15 @@ Figure&nbsp;14: Side-by-side boxplots based on employment status
 <h2>Use of color</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb19-2"><a href=""></a>  <span class="at">data =</span> atus_college,</span>
-<span id="cb19-3"><a href=""></a>  <span class="fu">aes</span>(</span>
-<span id="cb19-4"><a href=""></a>    <span class="at">x =</span> time_alone,</span>
-<span id="cb19-5"><a href=""></a>    <span class="at">y =</span> weekly_earnings,</span>
-<span id="cb19-6"><a href=""></a>    <span class="at">color =</span> employment </span>
-<span id="cb19-7"><a href=""></a>  )</span>
-<span id="cb19-8"><a href=""></a>) <span class="sc">+</span></span>
-<span id="cb19-9"><a href=""></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college,</span>
+<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb19-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> time_alone,</span>
+<span id="cb19-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> weekly_earnings,</span>
+<span id="cb19-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> employment </span>
+<span id="cb19-7"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-8"><a href="" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb19-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot-color" class="quarto-float quarto-figure quarto-figure-center" alt="A scatterplot showing the relationship between time alone and weekly earnings, with points colored by employment category. The x-axis is labeled time_alone and ranges from 0 to 1000. The y-axis is labeled weekly_earnings and ranges from 0 to 3000. Each point represents an observation, with red for Full Time, teal for Part Time, and gray for NA. Most points are concentrated in the lower left quadrant, where time alone is below 500 and weekly earnings are below 1500. Full Time points (red) dominate across the range, including higher earnings up to 3000. Part Time points (teal) cluster mostly at lower earnings below 1000. NA points (gray) are sparse. A legend on the right identifies colors for employment categories: red for Full Time, teal for Part Time, and gray for NA.">
@@ -632,15 +632,15 @@ Figure&nbsp;15: Grouping points by color based on employment status
 <h2>Use of shape</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-17"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-17-1"><a href="#annotated-cell-17-1"></a><span class="fu">ggplot</span>(</span>
-<span id="annotated-cell-17-2"><a href="#annotated-cell-17-2"></a>  <span class="at">data =</span> atus_college,</span>
-<span id="annotated-cell-17-3"><a href="#annotated-cell-17-3"></a>  <span class="fu">aes</span>(</span>
-<span id="annotated-cell-17-4"><a href="#annotated-cell-17-4"></a>    <span class="at">x =</span> time_alone,</span>
-<span id="annotated-cell-17-5"><a href="#annotated-cell-17-5"></a>    <span class="at">y =</span> weekly_earnings,</span>
-<span id="annotated-cell-17-6"><a href="#annotated-cell-17-6"></a>    <span class="at">shape =</span> employment</span>
-<span id="annotated-cell-17-7"><a href="#annotated-cell-17-7"></a>  ) </span>
-<span id="annotated-cell-17-8"><a href="#annotated-cell-17-8"></a>) <span class="sc">+</span></span>
-<span id="annotated-cell-17-9"><a href="#annotated-cell-17-9"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-17"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-17-1"><a href="#annotated-cell-17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="annotated-cell-17-2"><a href="#annotated-cell-17-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college,</span>
+<span id="annotated-cell-17-3"><a href="#annotated-cell-17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="annotated-cell-17-4"><a href="#annotated-cell-17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> time_alone,</span>
+<span id="annotated-cell-17-5"><a href="#annotated-cell-17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> weekly_earnings,</span>
+<span id="annotated-cell-17-6"><a href="#annotated-cell-17-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> employment</span>
+<span id="annotated-cell-17-7"><a href="#annotated-cell-17-7" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="annotated-cell-17-8"><a href="#annotated-cell-17-8" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="annotated-cell-17-9"><a href="#annotated-cell-17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot-shape" class="quarto-float quarto-figure quarto-figure-center" alt="A scatterplot showing the relationship between time alone and weekly earnings, with point shapes indicating employment category. The x-axis is labeled time_alone and ranges from 0 to 1000. The y-axis is labeled weekly_earnings and ranges from 0 to 3000. Each point represents an observation: circles for Full Time, triangles for Part Time, and no shape for NA because there are no points with income and NA status for employment. Most points cluster in the lower left quadrant, where time alone is below 500 and weekly earnings are below 1500. Full Time points (circles) are spread across the range, including higher earnings up to 3000. Part Time points (triangles) are concentrated at lower earnings below 1000. There are no NA points. A legend on the right identifies shapes for employment categories: circles for Full Time, triangles for Part Time, and no shapte for NA.">
@@ -660,16 +660,16 @@ Figure&nbsp;16: Grouping points by shape based on employment status
 <h2>Use of color and shape</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="fu">ggplot</span>(</span>
-<span id="cb20-2"><a href=""></a>  <span class="at">data =</span> atus_college,</span>
-<span id="cb20-3"><a href=""></a>  <span class="fu">aes</span>(</span>
-<span id="cb20-4"><a href=""></a>    <span class="at">x =</span> time_alone,</span>
-<span id="cb20-5"><a href=""></a>    <span class="at">y =</span> weekly_earnings,</span>
-<span id="cb20-6"><a href=""></a>    <span class="at">color =</span> employment,</span>
-<span id="cb20-7"><a href=""></a>    <span class="at">shape =</span> employment</span>
-<span id="cb20-8"><a href=""></a>  )</span>
-<span id="cb20-9"><a href=""></a>) <span class="sc">+</span></span>
-<span id="cb20-10"><a href=""></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb20-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college,</span>
+<span id="cb20-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb20-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> time_alone,</span>
+<span id="cb20-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> weekly_earnings,</span>
+<span id="cb20-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> employment,</span>
+<span id="cb20-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> employment</span>
+<span id="cb20-8"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb20-9"><a href="" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb20-10"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot-color-shape" class="quarto-float quarto-figure quarto-figure-center" alt="A scatterplot showing the relationship between time alone and weekly earnings, with point shapes indicating employment category. The x-axis is labeled time_alone and ranges from 0 to 1000. The y-axis is labeled weekly_earnings and ranges from 0 to 3000. Each point represents an observation: red circles for Full Time, teal triangles for Part Time, and no shape or color for NA because there are no points with income and NA status for employment. Most points cluster in the lower left quadrant, where time alone is below 500 and weekly earnings are below 1500. Full Time points (red circles) are spread across the range, including higher earnings up to 3000. Part Time points (teal triangles) are concentrated at lower earnings below 1000. There are no NA points. A legend on the right identifies shapes for employment categories: red circles for Full Time, teal triangles for Part Time, and no shapte or color for NA.">
@@ -689,16 +689,16 @@ Figure&nbsp;17: Using both color and shape to group points
 <h2>Use of size</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-19"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-19-1"><a href="#annotated-cell-19-1"></a><span class="fu">ggplot</span>(</span>
-<span id="annotated-cell-19-2"><a href="#annotated-cell-19-2"></a>  <span class="at">data =</span> atus_college,</span>
-<span id="annotated-cell-19-3"><a href="#annotated-cell-19-3"></a>  <span class="fu">aes</span>(</span>
-<span id="annotated-cell-19-4"><a href="#annotated-cell-19-4"></a>    <span class="at">x =</span> time_alone,</span>
-<span id="annotated-cell-19-5"><a href="#annotated-cell-19-5"></a>    <span class="at">y =</span> weekly_earnings,</span>
-<span id="annotated-cell-19-6"><a href="#annotated-cell-19-6"></a>    <span class="at">color =</span> employment,</span>
-<span id="annotated-cell-19-7"><a href="#annotated-cell-19-7"></a>    <span class="at">size =</span> work_time</span>
-<span id="annotated-cell-19-8"><a href="#annotated-cell-19-8"></a>  ) </span>
-<span id="annotated-cell-19-9"><a href="#annotated-cell-19-9"></a>) <span class="sc">+</span></span>
-<span id="annotated-cell-19-10"><a href="#annotated-cell-19-10"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-19"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-19-1"><a href="#annotated-cell-19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="annotated-cell-19-2"><a href="#annotated-cell-19-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> atus_college,</span>
+<span id="annotated-cell-19-3"><a href="#annotated-cell-19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="annotated-cell-19-4"><a href="#annotated-cell-19-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> time_alone,</span>
+<span id="annotated-cell-19-5"><a href="#annotated-cell-19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> weekly_earnings,</span>
+<span id="annotated-cell-19-6"><a href="#annotated-cell-19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> employment,</span>
+<span id="annotated-cell-19-7"><a href="#annotated-cell-19-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> work_time</span>
+<span id="annotated-cell-19-8"><a href="#annotated-cell-19-8" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="annotated-cell-19-9"><a href="#annotated-cell-19-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="annotated-cell-19-10"><a href="#annotated-cell-19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div id="fig-scatterplot-color-size" class="quarto-float quarto-figure quarto-figure-center" alt="A scatterplot showing the relationship between time alone and weekly earnings, with points varying in color and size to represent employment category and work time. The x-axis is labeled time_alone and ranges from 0 to 1000. The y-axis is labeled weekly_earnings and ranges from 0 to 3000. Each point represents an observation: red circles for Full Time, teal circles for Part Time, and gray circles for NA. Point size indicates work time, with larger circles representing more work time (up to 800) and smaller circles representing less. Most points cluster in the lower left quadrant, where time alone is below 500 and weekly earnings are below 1500. Full Time points (red) dominate across the range, including higher earnings up to 3000, while Part Time points (teal) are concentrated at lower earnings below 1000. A legend on the right shows color for employment and size scale for work time.">
@@ -725,9 +725,8 @@ Figure&nbsp;18: Adding a numerical variable to differentiate points based on siz
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.introdata.science/img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -759,7 +758,7 @@ Figure&nbsp;18: Adding a numerical variable to differentiate points based on siz
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -937,24 +936,6 @@ Figure&nbsp;18: Adding a numerical variable to differentiate points based on siz
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

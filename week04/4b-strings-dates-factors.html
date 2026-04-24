@@ -6,8 +6,8 @@
 <script src="4b-strings-dates-factors_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="4b-strings-dates-factors_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="4b-strings-dates-factors_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="4b-strings-dates-factors_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="4b-strings-dates-factors_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
   <title>Working with Strings, Dates, and Factors</title>
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="4b-strings-dates-factors_files/libs/revealjs/dist/theme/quarto-8c6f538c32da089d892d288d5a27c259.css">
+  <link rel="stylesheet" href="4b-strings-dates-factors_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
   <link href="4b-strings-dates-factors_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="4b-strings-dates-factors_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="4b-strings-dates-factors_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
   <h1 class="title">Working with Strings, Dates, and Factors</h1>
 
 <div class="quarto-title-authors">
@@ -210,21 +210,21 @@ Dr.&nbsp;Mine Dogucu
 <section id="packages" class="slide level2">
 <h2>Packages</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1"></a><span class="fu">library</span>(stringr)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-1-2" class="code-annotation-target"><a href="#annotated-cell-1-2"></a><span class="fu">library</span>(lubridate)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3"></a><span class="fu">library</span>(forcats)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-1-2" class="code-annotation-target"><a href="#annotated-cell-1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
-<dd class="fragment">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
 <span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">We will use the stringr package for handling strings.</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd class="fragment">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
 <span data-code-cell="annotated-cell-1" data-code-lines="2" data-code-annotation="2">We will use the lubridate package for handling dates.</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
-<dd class="fragment">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
 <span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="3">We will use the forcats package for handling factors. You can think of forcats as for cat egorical variable s or as an anagram of factors.</span>
 </dd>
 </dl>
@@ -235,7 +235,7 @@ Dr.&nbsp;Mine Dogucu
 <h2>Packages</h2>
 <p>All these packages are part of tidyverse</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr   1.2.1     ✔ readr   2.2.0
@@ -251,16 +251,16 @@ Dr.&nbsp;Mine Dogucu
 <section id="data" class="slide level2">
 <h2>Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>sf911 <span class="ot">&lt;-</span> </span>
-<span id="cb3-2"><a href=""></a>  <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/Fire_Department_and_Emergency_Medical_Services_Dispatched_Calls_for_Service_20260419.csv"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-3"><a href=""></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb3-4"><a href=""></a>  <span class="fu">rename</span>(<span class="at">neighborhoods_boundaries =</span> neighborhooods_analysis_boundaries)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span> </span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/Fire_Department_and_Emergency_Medical_Services_Dispatched_Calls_for_Service_20260419.csv"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">neighborhoods_boundaries =</span> neighborhooods_analysis_boundaries)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="glimpse" class="slide level2">
 <h2>glimpse</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">glimpse</span>(sf911)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(sf911)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 369,089
 Columns: 36
@@ -311,10 +311,10 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="replace-a-string" class="slide level2">
 <h2>Replace a string</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">address_long =</span> <span class="fu">str_replace</span>(address, <span class="st">"ST"</span>, <span class="st">"STREET"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a href=""></a>  <span class="fu">select</span>(address_long) <span class="sc">|&gt;</span> </span>
-<span id="cb6-4"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">address_long =</span> <span class="fu">str_replace</span>(address, <span class="st">"ST"</span>, <span class="st">"STREET"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(address_long) <span class="sc">|&gt;</span> </span>
+<span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   address_long          
@@ -328,9 +328,9 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="replace-a-string-1" class="slide level2">
 <h2>Replace a string</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">address_long =</span> <span class="fu">str_replace_all</span>(address, <span class="st">"ST"</span>, <span class="st">"STREET"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb8-3"><a href=""></a>  <span class="fu">select</span>(address_long) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">address_long =</span> <span class="fu">str_replace_all</span>(address, <span class="st">"ST"</span>, <span class="st">"STREET"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(address_long) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 369,089 × 1
    address_long                                
@@ -352,21 +352,21 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="replace-a-string-2" class="slide level2">
 <h2>Replace a string</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>address_key <span class="ot">&lt;-</span> </span>
-<span id="cb10-2"><a href=""></a>  <span class="fu">c</span>(</span>
-<span id="cb10-3"><a href=""></a>  <span class="st">"ST"</span>   <span class="ot">=</span> <span class="st">"STREET"</span>, </span>
-<span id="cb10-4"><a href=""></a>  <span class="st">"AVE"</span>  <span class="ot">=</span> <span class="st">"AVENUE"</span>, </span>
-<span id="cb10-5"><a href=""></a>  <span class="st">"PL"</span>   <span class="ot">=</span> <span class="st">"PLACE"</span>, </span>
-<span id="cb10-6"><a href=""></a>  <span class="st">"TER"</span>  <span class="ot">=</span> <span class="st">"TERRACE"</span></span>
-<span id="cb10-7"><a href=""></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a>address_key <span class="ot">&lt;-</span> </span>
+<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb10-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ST"</span>   <span class="ot">=</span> <span class="st">"STREET"</span>, </span>
+<span id="cb10-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="st">"AVE"</span>  <span class="ot">=</span> <span class="st">"AVENUE"</span>, </span>
+<span id="cb10-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PL"</span>   <span class="ot">=</span> <span class="st">"PLACE"</span>, </span>
+<span id="cb10-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="st">"TER"</span>  <span class="ot">=</span> <span class="st">"TERRACE"</span></span>
+<span id="cb10-7"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="replace-a-string-3" class="slide level2">
 <h2>Replace a string</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb11-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">address_long =</span> <span class="fu">str_replace_all</span>(address, address_key)) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href=""></a>  <span class="fu">select</span>(address_long)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">address_long =</span> <span class="fu">str_replace_all</span>(address, address_key)) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(address_long)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 369,089 × 1
    address_long                                   
@@ -388,10 +388,10 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="change-letter-types" class="slide level2">
 <h2>Change letter types</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb13-2"><a href=""></a>  <span class="fu">select</span>(address) <span class="sc">|&gt;</span> </span>
-<span id="cb13-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">address =</span> <span class="fu">str_to_title</span>(address)) <span class="sc">|&gt;</span></span>
-<span id="cb13-4"><a href=""></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(address) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">address =</span> <span class="fu">str_to_title</span>(address)) <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 1
   address                             
@@ -409,14 +409,14 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="glue" class="slide level2">
 <h2>glue</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb15-3"><a href=""></a>    <span class="at">description =</span> <span class="fu">str_glue</span>(</span>
-<span id="cb15-4"><a href=""></a>      <span class="st">"Incident {call_number} occurred in {neighborhoods_boundaries}"</span></span>
-<span id="cb15-5"><a href=""></a>      )</span>
-<span id="cb15-6"><a href=""></a>    ) <span class="sc">|&gt;</span> </span>
-<span id="cb15-7"><a href=""></a>  <span class="fu">select</span>(description) <span class="sc">|&gt;</span> </span>
-<span id="cb15-8"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">description =</span> <span class="fu">str_glue</span>(</span>
+<span id="cb15-4"><a href="" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Incident {call_number} occurred in {neighborhoods_boundaries}"</span></span>
+<span id="cb15-5"><a href="" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-6"><a href="" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb15-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(description) <span class="sc">|&gt;</span> </span>
+<span id="cb15-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   description                                       
@@ -430,10 +430,10 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="detect" class="slide level2">
 <h2>detect</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a>sf911 <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">is_fire_related =</span> <span class="fu">str_detect</span>(call_type, <span class="st">"Fire|Smoke"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a href=""></a>  <span class="fu">select</span>(call_type, is_fire_related) <span class="sc">|&gt;</span> </span>
-<span id="cb17-4"><a href=""></a>  <span class="fu">slice</span>(<span class="dv">705</span><span class="sc">:</span><span class="dv">714</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_fire_related =</span> <span class="fu">str_detect</span>(call_type, <span class="st">"Fire|Smoke"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(call_type, is_fire_related) <span class="sc">|&gt;</span> </span>
+<span id="cb17-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">705</span><span class="sc">:</span><span class="dv">714</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 2
    call_type                          is_fire_related
@@ -475,18 +475,18 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="utc-and-timezones" class="slide level2">
 <h2>UTC and Timezones</h2>
 <ul>
-<li class="fragment"><p>UTC stands for Coordinated Universal Time. Think of it as the world’s main clock.</p></li>
-<li class="fragment"><p>UTC is not a timezone but a high-precision time standard that all time zones use to stay synchronized.</p></li>
-<li class="fragment"><p>UTC never observes Daylight Saving Time, it never skips or repeats hours, making it the safest format for storing data and performing math.</p></li>
-<li class="fragment"><p>Irvine is UTC-8 (8 hours behind UTC) between first Sunday of November and second Sunday of March which is specified as Pacific Standard Time (PST) and UTC-7 during rest of the year which is specified as Pacific Daylight Time (PDT).</p></li>
+<li><p>UTC stands for Coordinated Universal Time. Think of it as the world’s main clock.</p></li>
+<li><p>UTC is not a timezone but a high-precision time standard that all time zones use to stay synchronized.</p></li>
+<li><p>UTC never observes Daylight Saving Time, it never skips or repeats hours, making it the safest format for storing data and performing math.</p></li>
+<li><p>Irvine is UTC-8 (8 hours behind UTC) between first Sunday of November and second Sunday of March which is specified as Pacific Standard Time (PST) and UTC-7 during rest of the year which is specified as Pacific Daylight Time (PDT).</p></li>
 </ul>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb19-2"><a href=""></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
-<span id="cb19-3"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
+<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   received_dt_tm         
@@ -500,11 +500,11 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-1" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>sf911 <span class="ot">&lt;-</span></span>
-<span id="cb21-2"><a href=""></a>  sf911 <span class="sc">|&gt;</span></span>
-<span id="cb21-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">received_dt_tm =</span> <span class="fu">ymd_hms</span>(received_dt_tm))</span>
-<span id="cb21-4"><a href=""></a></span>
-<span id="cb21-5"><a href=""></a><span class="fu">str</span>(sf911<span class="sc">$</span>received_dt_tm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span></span>
+<span id="cb21-2"><a href="" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span></span>
+<span id="cb21-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">received_dt_tm =</span> <span class="fu">ymd_hms</span>(received_dt_tm))</span>
+<span id="cb21-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sf911<span class="sc">$</span>received_dt_tm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> POSIXct[1:369089], format: "2025-01-01 02:18:24" "2025-01-01 00:20:36" "2025-01-01 03:00:07" ...</code></pre>
 </div>
@@ -513,9 +513,9 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-2" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb23-2"><a href=""></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
-<span id="cb23-3"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb23-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
+<span id="cb23-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   received_dt_tm     
@@ -529,15 +529,15 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-3" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a>sf911 <span class="ot">&lt;-</span></span>
-<span id="cb25-2"><a href=""></a>  sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb25-3"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb25-4"><a href=""></a>    <span class="at">received_dt_tm =</span> <span class="fu">with_tz</span>(received_dt_tm, <span class="at">tzone =</span> <span class="st">"America/Los_Angeles"</span>)</span>
-<span id="cb25-5"><a href=""></a>    )</span>
-<span id="cb25-6"><a href=""></a></span>
-<span id="cb25-7"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb25-8"><a href=""></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
-<span id="cb25-9"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span></span>
+<span id="cb25-2"><a href="" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb25-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">received_dt_tm =</span> <span class="fu">with_tz</span>(received_dt_tm, <span class="at">tzone =</span> <span class="st">"America/Los_Angeles"</span>)</span>
+<span id="cb25-5"><a href="" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb25-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb25-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
+<span id="cb25-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   received_dt_tm     
@@ -552,14 +552,14 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-4" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a>sf911 <span class="sc">|&gt;</span> </span>
-<span id="cb27-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb27-3"><a href=""></a>    <span class="at">hour_val =</span> <span class="fu">hour</span>(received_dt_tm),</span>
-<span id="cb27-4"><a href=""></a>    <span class="at">month_val =</span> <span class="fu">month</span>(received_dt_tm, <span class="at">label =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb27-5"><a href=""></a>    <span class="at">day_name =</span> <span class="fu">wday</span>(received_dt_tm, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb27-6"><a href=""></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb27-7"><a href=""></a>  <span class="fu">select</span>(received_dt_tm, hour_val, month_val, day_name) <span class="sc">|&gt;</span> </span>
-<span id="cb27-8"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
+<span id="cb27-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb27-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">hour_val =</span> <span class="fu">hour</span>(received_dt_tm),</span>
+<span id="cb27-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">month_val =</span> <span class="fu">month</span>(received_dt_tm, <span class="at">label =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb27-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">day_name =</span> <span class="fu">wday</span>(received_dt_tm, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-6"><a href="" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb27-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm, hour_val, month_val, day_name) <span class="sc">|&gt;</span> </span>
+<span id="cb27-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
   received_dt_tm      hour_val month_val day_name
@@ -573,12 +573,12 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-5" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a>sf911 <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb29-3"><a href=""></a>    <span class="at">goal_arrival_time =</span> received_dt_tm <span class="sc">+</span> <span class="fu">dseconds</span>(<span class="dv">480</span>)</span>
-<span id="cb29-4"><a href=""></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb29-5"><a href=""></a>  <span class="fu">select</span>(received_dt_tm, goal_arrival_time) <span class="sc">|&gt;</span></span>
-<span id="cb29-6"><a href=""></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">goal_arrival_time =</span> received_dt_tm <span class="sc">+</span> <span class="fu">dseconds</span>(<span class="dv">480</span>)</span>
+<span id="cb29-4"><a href="" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb29-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm, goal_arrival_time) <span class="sc">|&gt;</span></span>
+<span id="cb29-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   received_dt_tm      goal_arrival_time  
@@ -592,14 +592,14 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-6" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a>event_start <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2026-03-07 05:00:00"</span>, </span>
-<span id="cb31-2"><a href=""></a>                     <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
-<span id="cb31-3"><a href=""></a></span>
-<span id="cb31-4"><a href=""></a>event_start <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="" aria-hidden="true" tabindex="-1"></a>event_start <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2026-03-07 05:00:00"</span>, </span>
+<span id="cb31-2"><a href="" aria-hidden="true" tabindex="-1"></a>                     <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
+<span id="cb31-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="" aria-hidden="true" tabindex="-1"></a>event_start <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2026-03-08 06:00:00 PDT"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a>event_start <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="" aria-hidden="true" tabindex="-1"></a>event_start <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2026-03-08 05:00:00 PDT"</code></pre>
 </div>
@@ -621,14 +621,14 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="difftime" class="slide level2">
 <h2>difftime</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-20"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-20-1"><a href="#annotated-cell-20-1"></a>sf911 <span class="ot">&lt;-</span> </span>
-<span id="annotated-cell-20-2"><a href="#annotated-cell-20-2"></a>  sf911 <span class="sc">|&gt;</span> </span>
-<span id="annotated-cell-20-3"><a href="#annotated-cell-20-3"></a>  <span class="fu">mutate</span>(</span>
-<span id="annotated-cell-20-4"><a href="#annotated-cell-20-4"></a>    <span class="at">on_scene_dt_tm =</span> <span class="fu">ymd_hms</span>(on_scene_dt_tm),</span>
-<span id="annotated-cell-20-5"><a href="#annotated-cell-20-5"></a>    <span class="at">response_time =</span> on_scene_dt_tm <span class="sc">-</span> received_dt_tm</span>
-<span id="annotated-cell-20-6"><a href="#annotated-cell-20-6"></a>  )</span>
-<span id="annotated-cell-20-7"><a href="#annotated-cell-20-7"></a></span>
-<span id="annotated-cell-20-8"><a href="#annotated-cell-20-8"></a><span class="fu">str</span>(sf911<span class="sc">$</span>response_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-20"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-20-1"><a href="#annotated-cell-20-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span> </span>
+<span id="annotated-cell-20-2"><a href="#annotated-cell-20-2" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span> </span>
+<span id="annotated-cell-20-3"><a href="#annotated-cell-20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="annotated-cell-20-4"><a href="#annotated-cell-20-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">on_scene_dt_tm =</span> <span class="fu">ymd_hms</span>(on_scene_dt_tm),</span>
+<span id="annotated-cell-20-5"><a href="#annotated-cell-20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">response_time =</span> on_scene_dt_tm <span class="sc">-</span> received_dt_tm</span>
+<span id="annotated-cell-20-6"><a href="#annotated-cell-20-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-20-7"><a href="#annotated-cell-20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-20-8"><a href="#annotated-cell-20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sf911<span class="sc">$</span>response_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> 'difftime' num [1:369089] 609 364 NA 381 ...
  - attr(*, "units")= chr "secs"</code></pre>
@@ -638,13 +638,13 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="today-and-now" class="slide level2">
 <h2>today and now</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href=""></a><span class="fu">today</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-04-19"</code></pre>
+<pre><code>[1] "2026-04-24"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-04-19 10:12:47 PDT"</code></pre>
+<pre><code>[1] "2026-04-24 13:30:20 PDT"</code></pre>
 </div>
 </div>
 </section></section>
@@ -656,11 +656,11 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-7" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href=""></a>sf911 <span class="ot">&lt;-</span></span>
-<span id="cb40-2"><a href=""></a>  sf911 <span class="sc">|&gt;</span></span>
-<span id="cb40-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">as.factor</span>(unit_type)) </span>
-<span id="cb40-4"><a href=""></a>  </span>
-<span id="cb40-5"><a href=""></a><span class="fu">str</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span></span>
+<span id="cb40-2"><a href="" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span></span>
+<span id="cb40-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">as.factor</span>(unit_type)) </span>
+<span id="cb40-4"><a href="" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb40-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Factor w/ 12 levels "AIRPORT","BLS",..: 12 12 3 5 7 3 5 5 5 3 ...</code></pre>
 </div>
@@ -669,7 +669,7 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-8" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href=""></a><span class="fu">levels</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "AIRPORT"        "BLS"            "CHIEF"          "CP"            
  [5] "ENGINE"         "INVESTIGATION"  "MEDIC"          "PRIVATE"       
@@ -680,8 +680,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <section id="section-9" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href=""></a><span class="fu">ggplot</span>(sf911, <span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
-<span id="cb44-2"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sf911, <span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-alpha-1.png" id="fig-unit-alpha" alt="A horizontal bar chart titled by unit type, showing the count of various emergency service unit types. From bottom to top, the Y-axis lists unit categories including: AIRPORT, BLS, CHIEF, CP, ENGINE, INVESTIGATION, MEDIC, PRIVATE, RESCUE CAPTAIN, RESCUE SQUAD, SUPPORT, and TRUCK. The X-axis represents counts ranging from 0 to 90,000+ (in increments of 30,000). ENGINE appears to have the highest count, exceeding 90,000, while unit types such as AIRPORT, and INVESTIGATION appear to have the lowest counts, close to zero. The chart provides a comparative view of how frequently each unit type appears in the dataset." width="960" class="r-stretch quarto-figure-center"><p class="caption">
@@ -690,11 +690,11 @@ Figure&nbsp;1
 <section id="section-10" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-26-1"><a href="#annotated-cell-26-1"></a>sf911 <span class="ot">&lt;-</span> </span>
-<span id="annotated-cell-26-2"><a href="#annotated-cell-26-2"></a>  sf911 <span class="sc">|&gt;</span> </span>
-<span id="annotated-cell-26-3"><a href="#annotated-cell-26-3"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_infreq</span>(unit_type))</span>
-<span id="annotated-cell-26-4"><a href="#annotated-cell-26-4"></a></span>
-<span id="annotated-cell-26-5"><a href="#annotated-cell-26-5"></a><span class="fu">str</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-26-1"><a href="#annotated-cell-26-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span> </span>
+<span id="annotated-cell-26-2"><a href="#annotated-cell-26-2" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span> </span>
+<span id="annotated-cell-26-3"><a href="#annotated-cell-26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_infreq</span>(unit_type))</span>
+<span id="annotated-cell-26-4"><a href="#annotated-cell-26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-26-5"><a href="#annotated-cell-26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Factor w/ 12 levels "ENGINE","MEDIC",..: 3 3 5 1 2 5 1 1 1 5 ...</code></pre>
 </div>
@@ -703,8 +703,8 @@ Figure&nbsp;1
 <section id="section-11" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="fu">ggplot</span>(sf911, <span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
-<span id="cb46-2"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sf911, <span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
+<span id="cb46-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-freq-1.png" id="fig-unit-freq" alt="A horizontal bar chart showing the count of emergency service unit types, ordered from least to most frequent. The Y-axis lists unit types from lowest (on top) to highest frequency (in the bottom): AIRPORT, INVESTIGATION, RESCUE SQUAD, SUPPORT, BLS, RESCUE, CAPTAIN, CP, CHIEF, PRIVATE, TRUCK, MEDIC, and ENGINE. The X-axis represents counts from 0 to 90,000+ (in increments of 30,000). ENGINE has the highest count, exceeding 90,000, followed by MEDIC and TRUCK. AIRPORT and INVESTIGATION have the lowest counts, close to zero. This frequency-sorted view makes it easy to identify the most and least common unit types in the dataset." width="960" class="r-stretch quarto-figure-center"><p class="caption">
@@ -713,10 +713,10 @@ Figure&nbsp;2
 <section id="section-12" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a>sf911 <span class="sc">|&gt;</span></span>
-<span id="cb47-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_rev</span>(unit_type)) <span class="sc">|&gt;</span> </span>
-<span id="cb47-3"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
-<span id="cb47-4"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
+<span id="cb47-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_rev</span>(unit_type)) <span class="sc">|&gt;</span> </span>
+<span id="cb47-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
+<span id="cb47-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-rev-1.png" id="fig-unit-rev" alt="A horizontal bar chart showing the count of emergency service unit types, ordered from most frequent to least. The Y-axis lists unit types from lowest (in the bottom) to highest frequency (on top): AIRPORT, INVESTIGATION, RESCUE SQUAD, SUPPORT, BLS, RESCUE, CAPTAIN, CP, CHIEF, PRIVATE, TRUCK, MEDIC, and ENGINE. The X-axis represents counts from 0 to 90,000+ (in increments of 30,000). ENGINE has the highest count, exceeding 90,000, followed by MEDIC and TRUCK. AIRPORT and INVESTIGATION have the lowest counts, close to zero. This frequency-sorted view makes it easy to identify the most and least common unit types in the dataset with the most frequent bar on top." width="960" class="r-stretch quarto-figure-center"><p class="caption">
@@ -725,10 +725,10 @@ Figure&nbsp;3
 <section id="section-13" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a>sf911 <span class="sc">|&gt;</span></span>
-<span id="cb48-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_lump_n</span>(unit_type, <span class="at">n =</span> <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb48-3"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
-<span id="cb48-4"><a href=""></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_lump_n</span>(unit_type, <span class="at">n =</span> <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb48-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
+<span id="cb48-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-lump-1.png" id="fig-unit-lump" alt="A horizontal bar chart titled unit_type on the y-axis and count on the x-axis. The chart displays the frequency of four categories: Other: The most frequent category, with a count of nearly 120,000. ENGINE: The second most frequent, with a count of approximately 110,000. MEDIC: Slightly lower than ENGINE, with a count of approximately 100,000. TRUCK: The least frequent, with a count of approximately 40,000. The order of the categories go as Other, TRUCK, MEDIC, and ENGINE from top to bottom." width="960" class="r-stretch quarto-figure-center"><p class="caption">
@@ -737,10 +737,10 @@ Figure&nbsp;4
 <section id="section-14" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-30-1"><a href="#annotated-cell-30-1"></a>sf911 <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-30-2"><a href="#annotated-cell-30-2"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_relevel</span>(unit_type, <span class="st">"ENGINE"</span>)) <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-30-3"><a href="#annotated-cell-30-3"></a>  <span class="fu">group_by</span>(unit_type) <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-30-4"><a href="#annotated-cell-30-4"></a>  <span class="fu">summarize</span>(<span class="at">total_als_unit =</span> <span class="fu">sum</span>(als_unit))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-30-1"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-30-2"><a href="#annotated-cell-30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_relevel</span>(unit_type, <span class="st">"ENGINE"</span>)) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-30-3"><a href="#annotated-cell-30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(unit_type) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-30-4"><a href="#annotated-cell-30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_als_unit =</span> <span class="fu">sum</span>(als_unit))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 2
    unit_type      total_als_unit
@@ -763,10 +763,10 @@ Figure&nbsp;4
 <section id="section-15" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-31-1"><a href="#annotated-cell-31-1"></a>sf911 <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-31-2"><a href="#annotated-cell-31-2"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_relevel</span>(unit_type, <span class="st">"ENGINE"</span>, <span class="st">"TRUCK"</span>)) <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-31-3"><a href="#annotated-cell-31-3"></a>  <span class="fu">group_by</span>(unit_type) <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-31-4"><a href="#annotated-cell-31-4"></a>  <span class="fu">summarize</span>(<span class="at">total_als_unit =</span> <span class="fu">sum</span>(als_unit))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-31-1"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-31-2"><a href="#annotated-cell-31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_relevel</span>(unit_type, <span class="st">"ENGINE"</span>, <span class="st">"TRUCK"</span>)) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-31-3"><a href="#annotated-cell-31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(unit_type) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-31-4"><a href="#annotated-cell-31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_als_unit =</span> <span class="fu">sum</span>(als_unit))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 2
    unit_type      total_als_unit
@@ -789,14 +789,14 @@ Figure&nbsp;4
 <section id="section-16" class="slide level2">
 <h2></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy"><code class="sourceCode r"><span id="annotated-cell-32-1"><a href="#annotated-cell-32-1"></a>sf911 <span class="ot">&lt;-</span> sf911 <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-32-2"><a href="#annotated-cell-32-2"></a>  <span class="fu">mutate</span>(</span>
-<span id="annotated-cell-32-3"><a href="#annotated-cell-32-3"></a>    <span class="at">neighborhoods_boundaries =</span> <span class="fu">as.factor</span>(neighborhoods_boundaries),</span>
-<span id="annotated-cell-32-4"><a href="#annotated-cell-32-4"></a>    <span class="at">neighborhoods =</span> <span class="fu">fct_reorder</span>(neighborhoods_boundaries, response_time)</span>
-<span id="annotated-cell-32-5"><a href="#annotated-cell-32-5"></a>    ) </span>
-<span id="annotated-cell-32-6"><a href="#annotated-cell-32-6"></a></span>
-<span id="annotated-cell-32-7"><a href="#annotated-cell-32-7"></a><span class="fu">str</span>(sf911<span class="sc">$</span>neighborhoods_boundaries)</span>
-<span id="annotated-cell-32-8"><a href="#annotated-cell-32-8"></a><span class="fu">str</span>(sf911<span class="sc">$</span>neighborhoods)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-32-1"><a href="#annotated-cell-32-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span> sf911 <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-32-2"><a href="#annotated-cell-32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="annotated-cell-32-3"><a href="#annotated-cell-32-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">neighborhoods_boundaries =</span> <span class="fu">as.factor</span>(neighborhoods_boundaries),</span>
+<span id="annotated-cell-32-4"><a href="#annotated-cell-32-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">neighborhoods =</span> <span class="fu">fct_reorder</span>(neighborhoods_boundaries, response_time)</span>
+<span id="annotated-cell-32-5"><a href="#annotated-cell-32-5" aria-hidden="true" tabindex="-1"></a>    ) </span>
+<span id="annotated-cell-32-6"><a href="#annotated-cell-32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-32-7"><a href="#annotated-cell-32-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sf911<span class="sc">$</span>neighborhoods_boundaries)</span>
+<span id="annotated-cell-32-8"><a href="#annotated-cell-32-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sf911<span class="sc">$</span>neighborhoods)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Factor w/ 42 levels "Bayview Hunters Point",..: 3 19 4 37 20 27 35 37 35 37 ...
  Factor w/ 42 levels "Nob Hill","Western Addition",..: 15 10 8 12 22 16 24 12 24 12 ...</code></pre>
@@ -806,9 +806,8 @@ Figure&nbsp;4
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.introdata.science/img/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://introdata.science">introdata.science</a></p>
+<p><span id="menu-toggle-box"></span> <a href="https://introdata.science">introdata.science</a></p>
 </div>
 </div></div>
 
@@ -840,7 +839,7 @@ Figure&nbsp;4
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1018,24 +1017,6 @@ Figure&nbsp;4
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     
