@@ -191,8 +191,6 @@ Windows:  Alt + -
 Mac: Option + - 
 
 
-
-
 ## R is case-sensitive
 
 

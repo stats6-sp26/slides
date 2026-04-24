@@ -36,3 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // FIX FOR NAVBAR/MENU ICON
+  var menuButton = document.querySelector('.slide-menu-button a');
+  if (menuButton) {
+    menuButton.setAttribute('aria-label', 'Open slide navigation menu');
+  }
+
+});
+</script>
