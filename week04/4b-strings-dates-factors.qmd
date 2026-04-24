@@ -163,7 +163,7 @@ While there are many ways to write a date for humans, there is only one universa
 
 - Irvine is UTC-8 (8 hours behind UTC) between first Sunday of November and second Sunday of March which is specified as Pacific Standard Time (PST) and UTC-7 during rest of the year which is specified as Pacific Daylight Time (PDT). 
 
-## 
+## `received_dt_tm`
 
 ```{r}
 sf911 |> 
@@ -172,7 +172,7 @@ sf911 |>
 ```
 
 
-##
+## `ymd_hms()`
 
 ```{r}
 sf911 <-
@@ -182,7 +182,7 @@ sf911 <-
 str(sf911$received_dt_tm)
 ```
 
-##
+## `received_dt_tm`
 
 ```{r}
 sf911 |> 
@@ -190,7 +190,7 @@ sf911 |>
   head(3)
 ```
 
-##
+## with time zone
 
 ```{r}
 sf911 <-
@@ -206,7 +206,7 @@ sf911 |>
 
 `OlsonNames()` function lists different names of timezones.
 
-##
+## hour, month and week day
 
 ```{r}
 sf911 |> 
@@ -219,7 +219,7 @@ sf911 |>
   head(3)
 ```
 
-##
+## duration
 
 ```{r}
 sf911 |>
@@ -229,8 +229,8 @@ sf911 |>
   select(received_dt_tm, goal_arrival_time) |>
   head(3)
 ```
-
-##
+ 
+## duration
 
 ```{r}
 #| label: ddays-days
@@ -281,7 +281,7 @@ now()
 
 # Factors
 
-##
+## `as.factor()`
 
 ```{r}
 sf911 <-
@@ -291,13 +291,13 @@ sf911 <-
 str(sf911$unit_type)
 ```
 
-##
+## `levels()`
 
 ```{r}
 levels(sf911$unit_type)
 ```
 
-##
+## `levels()` as seen in ggplot
 
 ```{r}
 #| label: fig-unit-alpha
@@ -307,7 +307,7 @@ ggplot(sf911, aes(y = unit_type)) +
   geom_bar()
 ```
 
-##
+## `fct_infreq()`
 
 ```{r}
 #| label: fct-infreq
@@ -318,7 +318,7 @@ sf911 <-
 str(sf911$unit_type) #<2>
 ```
 
-## 
+## `levels()` as seen in ggplot
 
 ```{r}
 #| label: fig-unit-freq
@@ -328,7 +328,7 @@ ggplot(sf911, aes(y = unit_type)) +
   geom_bar()
 ```
 
-##
+## `levels()` as seen in ggplot with `fct_rev()`
 
 ```{r}
 #| label: fig-unit-rev
@@ -340,7 +340,7 @@ sf911 |>
   geom_bar()
 ```
 
-##
+## `levels()` as seen in ggplot with `fct_lump_n()`
 
 ```{r}
 #| label: fig-unit-lump
@@ -353,7 +353,7 @@ sf911 |>
 ```
 
 
-## 
+## `fct_relevel()`
 
 ```{r}
 #| label: fct-relevel
@@ -365,7 +365,7 @@ sf911 |>
 ```
 
 
-##
+## `fct_relevel()`
 
 ```{r}
 #| label: fct-relevel2
@@ -377,7 +377,7 @@ sf911 |>
 ```
 
 
-##
+## `fct_reorder()`
 
 
 ```{r}

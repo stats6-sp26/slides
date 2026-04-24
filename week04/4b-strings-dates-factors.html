@@ -481,8 +481,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <li><p>Irvine is UTC-8 (8 hours behind UTC) between first Sunday of November and second Sunday of March which is specified as Pacific Standard Time (PST) and UTC-7 during rest of the year which is specified as Pacific Daylight Time (PDT).</p></li>
 </ul>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="received_dt_tm" class="slide level2">
+<h2><code>received_dt_tm</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
 <span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
@@ -497,8 +497,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="ymd_hms" class="slide level2">
+<h2><code>ymd_hms()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span></span>
 <span id="cb21-2"><a href="" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span></span>
@@ -510,8 +510,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="received_dt_tm-1" class="slide level2">
+<h2><code>received_dt_tm</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
 <span id="cb23-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(received_dt_tm) <span class="sc">|&gt;</span> </span>
@@ -526,8 +526,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="with-time-zone" class="slide level2">
+<h2>with time zone</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span></span>
 <span id="cb25-2"><a href="" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span> </span>
@@ -549,8 +549,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 <p><code>OlsonNames()</code> function lists different names of timezones.</p>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
+<section id="hour-month-and-week-day" class="slide level2">
+<h2>hour, month and week day</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span> </span>
 <span id="cb27-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -570,8 +570,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
+<section id="duration" class="slide level2">
+<h2>duration</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
 <span id="cb29-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -589,8 +589,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
+<section id="duration-1" class="slide level2">
+<h2>duration</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="" aria-hidden="true" tabindex="-1"></a>event_start <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2026-03-07 05:00:00"</span>, </span>
 <span id="cb31-2"><a href="" aria-hidden="true" tabindex="-1"></a>                     <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
@@ -644,7 +644,7 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-04-24 13:30:20 PDT"</code></pre>
+<pre><code>[1] "2026-04-24 14:21:08 PDT"</code></pre>
 </div>
 </div>
 </section></section>
@@ -653,8 +653,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <h1>Factors</h1>
 
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
+<section id="as.factor" class="slide level2">
+<h2><code>as.factor()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span></span>
 <span id="cb40-2"><a href="" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span></span>
@@ -666,8 +666,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
+<section id="levels" class="slide level2">
+<h2><code>levels()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sf911<span class="sc">$</span>unit_type)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -677,8 +677,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
-<h2></h2>
+<section id="levels-as-seen-in-ggplot" class="slide level2">
+<h2><code>levels()</code> as seen in ggplot</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sf911, <span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
 <span id="cb44-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -687,8 +687,8 @@ $ data_loaded_at                 &lt;chr&gt; "2025 Jan 08 04:18:30 AM", "2025 Ja
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-alpha-1.png" id="fig-unit-alpha" alt="A horizontal bar chart titled by unit type, showing the count of various emergency service unit types. From bottom to top, the Y-axis lists unit categories including: AIRPORT, BLS, CHIEF, CP, ENGINE, INVESTIGATION, MEDIC, PRIVATE, RESCUE CAPTAIN, RESCUE SQUAD, SUPPORT, and TRUCK. The X-axis represents counts ranging from 0 to 90,000+ (in increments of 30,000). ENGINE appears to have the highest count, exceeding 90,000, while unit types such as AIRPORT, and INVESTIGATION appear to have the lowest counts, close to zero. The chart provides a comparative view of how frequently each unit type appears in the dataset." width="960" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;1
 </p></section>
-<section id="section-10" class="slide level2">
-<h2></h2>
+<section id="fct_infreq" class="slide level2">
+<h2><code>fct_infreq()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-26"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-26-1"><a href="#annotated-cell-26-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span> </span>
 <span id="annotated-cell-26-2"><a href="#annotated-cell-26-2" aria-hidden="true" tabindex="-1"></a>  sf911 <span class="sc">|&gt;</span> </span>
@@ -700,8 +700,8 @@ Figure&nbsp;1
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2">
-<h2></h2>
+<section id="levels-as-seen-in-ggplot-1" class="slide level2">
+<h2><code>levels()</code> as seen in ggplot</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sf911, <span class="fu">aes</span>(<span class="at">y =</span> unit_type)) <span class="sc">+</span></span>
 <span id="cb46-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -710,8 +710,8 @@ Figure&nbsp;1
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-freq-1.png" id="fig-unit-freq" alt="A horizontal bar chart showing the count of emergency service unit types, ordered from least to most frequent. The Y-axis lists unit types from lowest (on top) to highest frequency (in the bottom): AIRPORT, INVESTIGATION, RESCUE SQUAD, SUPPORT, BLS, RESCUE, CAPTAIN, CP, CHIEF, PRIVATE, TRUCK, MEDIC, and ENGINE. The X-axis represents counts from 0 to 90,000+ (in increments of 30,000). ENGINE has the highest count, exceeding 90,000, followed by MEDIC and TRUCK. AIRPORT and INVESTIGATION have the lowest counts, close to zero. This frequency-sorted view makes it easy to identify the most and least common unit types in the dataset." width="960" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;2
 </p></section>
-<section id="section-12" class="slide level2">
-<h2></h2>
+<section id="levels-as-seen-in-ggplot-with-fct_rev" class="slide level2">
+<h2><code>levels()</code> as seen in ggplot with <code>fct_rev()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
 <span id="cb47-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_rev</span>(unit_type)) <span class="sc">|&gt;</span> </span>
@@ -722,8 +722,8 @@ Figure&nbsp;2
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-rev-1.png" id="fig-unit-rev" alt="A horizontal bar chart showing the count of emergency service unit types, ordered from most frequent to least. The Y-axis lists unit types from lowest (in the bottom) to highest frequency (on top): AIRPORT, INVESTIGATION, RESCUE SQUAD, SUPPORT, BLS, RESCUE, CAPTAIN, CP, CHIEF, PRIVATE, TRUCK, MEDIC, and ENGINE. The X-axis represents counts from 0 to 90,000+ (in increments of 30,000). ENGINE has the highest count, exceeding 90,000, followed by MEDIC and TRUCK. AIRPORT and INVESTIGATION have the lowest counts, close to zero. This frequency-sorted view makes it easy to identify the most and least common unit types in the dataset with the most frequent bar on top." width="960" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;3
 </p></section>
-<section id="section-13" class="slide level2">
-<h2></h2>
+<section id="levels-as-seen-in-ggplot-with-fct_lump_n" class="slide level2">
+<h2><code>levels()</code> as seen in ggplot with <code>fct_lump_n()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
 <span id="cb48-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_lump_n</span>(unit_type, <span class="at">n =</span> <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
@@ -734,8 +734,8 @@ Figure&nbsp;3
 <img data-src="4b-strings-dates-factors_files/figure-revealjs/fig-unit-lump-1.png" id="fig-unit-lump" alt="A horizontal bar chart titled unit_type on the y-axis and count on the x-axis. The chart displays the frequency of four categories: Other: The most frequent category, with a count of nearly 120,000. ENGINE: The second most frequent, with a count of approximately 110,000. MEDIC: Slightly lower than ENGINE, with a count of approximately 100,000. TRUCK: The least frequent, with a count of approximately 40,000. The order of the categories go as Other, TRUCK, MEDIC, and ENGINE from top to bottom." width="960" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;4
 </p></section>
-<section id="section-14" class="slide level2">
-<h2></h2>
+<section id="fct_relevel" class="slide level2">
+<h2><code>fct_relevel()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-30"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-30-1"><a href="#annotated-cell-30-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-30-2"><a href="#annotated-cell-30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_relevel</span>(unit_type, <span class="st">"ENGINE"</span>)) <span class="sc">|&gt;</span></span>
@@ -760,8 +760,8 @@ Figure&nbsp;4
 </div>
 </div>
 </section>
-<section id="section-15" class="slide level2">
-<h2></h2>
+<section id="fct_relevel-1" class="slide level2">
+<h2><code>fct_relevel()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-31"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-31-1"><a href="#annotated-cell-31-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-31-2"><a href="#annotated-cell-31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">unit_type =</span> <span class="fu">fct_relevel</span>(unit_type, <span class="st">"ENGINE"</span>, <span class="st">"TRUCK"</span>)) <span class="sc">|&gt;</span></span>
@@ -786,8 +786,8 @@ Figure&nbsp;4
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2">
-<h2></h2>
+<section id="fct_reorder" class="slide level2">
+<h2><code>fct_reorder()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-32"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-32-1"><a href="#annotated-cell-32-1" aria-hidden="true" tabindex="-1"></a>sf911 <span class="ot">&lt;-</span> sf911 <span class="sc">|&gt;</span></span>
 <span id="annotated-cell-32-2"><a href="#annotated-cell-32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
