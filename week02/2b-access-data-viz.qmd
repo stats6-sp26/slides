@@ -422,7 +422,8 @@ You should always write alt text for all images (ggplot or not), whether you use
 
 An effective alt text communicates the labels of the axes, the variables represented, ranges and values for each variable and group as seen in the visualization.
 
-. . .
+## Good alt text practice
+
 
 Most importantly alt text should convey the overall message of the visualization.
 
