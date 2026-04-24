@@ -46,9 +46,7 @@ library(fGarch) # for simulating skewed data
 We will only touch the surface of data visualization in this class. 
 Visualization is a rich field on its own, in case some of you would consider it as a career option.
 
-##
-
-Data Visualizations
+## Data Visualizations
 
 - are graphical representations of data
 
