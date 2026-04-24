@@ -187,13 +187,16 @@ ggplot(data = atus_college, aes(x = weekly_earnings)) +
   geom_histogram() 
 ```
 
-## 
+## Comparing binwidth
 
 ::: {.panel-tabset}
 
 ### `binwidth = 20`
 
 ```{r}
+#| out-width: 90%
+#| fig-align: center
+#| fig-alt: the same weekly earnings histogram with thinner bin widths set at 20
 ggplot(data = atus_college, aes(x = weekly_earnings)) +
   geom_histogram(binwidth = 20) 
 ```
@@ -201,6 +204,9 @@ ggplot(data = atus_college, aes(x = weekly_earnings)) +
 ### `binwidth = 100`
 
 ```{r}
+#| out-width: 90%
+#| fig-align: center
+#| fig-alt: the same weekly earnings histogram with medium bin widths set at 100
 ggplot(data = atus_college, aes(x = weekly_earnings)) +
   geom_histogram(binwidth = 100) 
 ```
@@ -208,6 +214,9 @@ ggplot(data = atus_college, aes(x = weekly_earnings)) +
 ### `binwidth = 500`
 
 ```{r}
+#| out-width: 90%
+#| fig-align: center
+#| fig-alt: the same weekly earnings histogram with thick bin widths set at 500
 ggplot(data = atus_college, aes(x = weekly_earnings)) +
   geom_histogram(binwidth = 500) 
 ```
