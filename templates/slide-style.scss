@@ -62,3 +62,25 @@ a {
   color: $brand-dark;
 }
 
+/* Create a counter for line numbers */
+code.sourceCode {
+  counter-reset: sourceline;
+}
+
+/* Add numbers to each line of code */
+code.sourceCode > span {
+  counter-increment: sourceline;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Style the numbers in the gutter */
+code.sourceCode > span::before {
+  content: counter(sourceline);
+  display: inline-block;
+  width: 2em;
+  margin-right: 1em;
+  text-align: right;
+  color: #888; /* Grey color for numbers */
+  user-select: none; /* Prevents numbers from being copied */
+}

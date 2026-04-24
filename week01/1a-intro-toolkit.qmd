@@ -5,6 +5,7 @@ execute:
   echo: true
 format: 
   revealjs:
+    code-line-numbers: false 
     footer: "[introdata.science](https://introdata.science)"
     slide-number: true
     incremental: false
