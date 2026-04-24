@@ -90,7 +90,7 @@ tail(bad_drivers) |>
 
 `perc_not_distracted` Percentage of drivers involved in fatal collisions who were not distracted
 
-##
+## Data documentation
 
 `perc_no_previous` Percentage of drivers involved in fatal collisions who had not been involved in any previous accidents
 
@@ -102,31 +102,31 @@ tail(bad_drivers) |>
 
 # Functions for Data Frames
 
-##
+## `head()`
 
 ```{r}
 head(bad_drivers)
 ```
 
-## 
+## `tail()`
 
 ```{r}
 tail(bad_drivers)
 ```
 
-##
+## `glimpse()`
 
 ```{r}
 glimpse(bad_drivers)
 ```
 
-##
+## `ncol()`
 
 ```{r}
 ncol(bad_drivers)
 ```
 
-##
+## `nrow()`
 
 ```{r}
 nrow(bad_drivers)
@@ -277,7 +277,7 @@ knitr::include_graphics("img/diagram.png")
 
 ```
 
-## (Some) Variable Types in R
+## (Some) Storage Types in R
 
 `character`: takes string values (e.g. a person's name, address)  
 
@@ -303,7 +303,7 @@ knitr::include_graphics("img/diagram.png")
 
 
 
-## 
+## Clean data
 
 As a data scientist it is **YOUR** job to check the type(s) of data that you are working with. Do **NOT**  assume you will work with clean data frames, with clean names, labels, and types.
 
@@ -326,25 +326,25 @@ hotel_bookings |>
 
 What kind of variables are these two?
 
-##
+## Categorical Variables
 
 Categorical data are summarized with **counts** or **proportions**
 
 
-##
+## Count
 
 ```{r}
 count(hotel_bookings, reservation_status)
 ```
 
 
-##
+## Count sorted
 
 ```{r}
 count(hotel_bookings, reservation_status, sort = TRUE)
 ```
 
-##
+## Proportion
 
 ```{r}
 janitor::tabyl(hotel_bookings, reservation_status)
@@ -428,7 +428,7 @@ In this case, we have two numbers in the middle 7.5 and 8. The average of these 
 
 $$\frac{7.5 + 8}{2} = 7.75$$
 
-##
+## Median
 
 Median is also the 50th percentile indicating that 50% of the data fall below this value.
 
@@ -730,7 +730,7 @@ q1 <- summarize(hotel_bookings, quantile(lead_time, c(0.25))) |>
 We would expect 25% of the data to be less than `r q1`. 
 
 
-##
+## Multiple summaries
 
 We can get multiple summaries with one `summarize()` function.
 
@@ -745,8 +745,7 @@ summarize(
 
 Note how the variables names in this table is not easy to read. 
 
-##
-
+## Naming output variables
 
 
 In order to display the variable names more legibly in the output, we can assign variable names to numerical summaries (e.g. `mean_lead_time`).
@@ -761,8 +760,16 @@ summarize(
 
 ## Missing Data
 
-```{r}
+`NA` stands for Not Available and represents missing values in the data frame. You would not be able to directly calculate numerical statistics for a variable in R with missing data. 
 
+An in-depth understanding of missing data will be important in your data science career. At this stage, it is important to know that you cannot simply delete rows that have missing data. This might possibly introduce bias into the analysis. You need to dig deeper into the data context and try to understand why data might be missing.
+
+## Missing Data
+
+If you were sure that deleting a row with missing data would not introduce bias then you can set `na.rm` argument to `TRUE`.
+
+```{r}
+summarize(hotel_bookings, mean_lead_time = mean(lead_time, na.rm = TRUE))
 ```
 
 
