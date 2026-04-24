@@ -116,7 +116,7 @@ No
 #| echo: false
 #| out-width: 80%
 #| fig-align: center
-#| fig-alt: A presentation slide titled "Windmills in California Over Time" features two data visualizations. The left panel is a scatter plot titled  "Windmills Constructed in California Each Year," showing the annualnumber of turbines built from the late 1980s to the mid-2010s. It displays a sharp peak in construction around 2012 (nearly 800 turbines) and another significant peak in the late 1980s (over 400 turbines), with fluctuating, generally lower numbers throughout the 1990s and 2000s. The right panel is a map titled "Turbine Distribution in California," showing the outline of California with black dots representing wind turbine locations. These dots are heavily concentrated in specific regions, primarily around the San Francisco Bay Area (Altamont Pass region) and in Southern California (Tehachapi Pass and San Gorgonio Pass areas). A caption at the bottom states "4078 turbines in California."
+#| fig-alt: 'A presentation slide titled "Windmills in California Over Time" features two data visualizations. The left panel is a scatter plot titled  "Windmills Constructed in California Each Year," showing the annualnumber of turbines built from the late 1980s to the mid-2010s. It displays a sharp peak in construction around 2012 (nearly 800 turbines) and another significant peak in the late 1980s (over 400 turbines), with fluctuating, generally lower numbers throughout the 1990s and 2000s. The right panel is a map titled "Turbine Distribution in California," showing the outline of California with black dots representing wind turbine locations. These dots are heavily concentrated in specific regions, primarily around the San Francisco Bay Area (Altamont Pass region) and in Southern California (Tehachapi Pass and San Gorgonio Pass areas). A caption at the bottom states "4078 turbines in California.'
 
 knitr::include_graphics("img/student-example2.png")
 ```
@@ -571,7 +571,7 @@ We will call the descriptions in italic **commit** messages.
 
 ```{r}
 #| out.width: '40%'
-#| fig.align: 'center' 
+#| fig-align: 'center' 
 #| echo: false
 #| fig-alt: 'An orange box labeled "GitHub repo" next to a black document icon.'
 knitr::include_graphics('img/github-illustration.002.jpeg')
@@ -581,7 +581,7 @@ knitr::include_graphics('img/github-illustration.002.jpeg')
 
 ```{r}
 #| out.width: '55%'
-#| fig.align: 'center'
+#| fig-align: 'center'
 #| echo: false
 #| fig-alt: 'Diagram showing a GitHub repo with a document icon at the top, connected by a downward arrow labeled "Clone a repo" to a local repo with a document icon at the bottom.'
 
@@ -592,7 +592,7 @@ knitr::include_graphics('img/github-illustration.003.jpeg')
 
 ```{r}
 #| out.width: '55%'
-#| fig.align: 'center'
+#| fig-align: 'center'
 #| echo: false
 #| fig-alt: 'A diagram with "GitHub repo" and a black document icon at the top. Below it, "Local repo" is shown with a blue document icon, implying a change  has been made locally. Text below reads "Commit: changed font color to blue".'
 
@@ -603,7 +603,7 @@ knitr::include_graphics('img/github-illustration.004.jpeg')
 
 ```{r}
 #| out.width: '55%'
-#| fig.align: 'center'
+#| fig-align: 'center'
 #| echo: false
 #| fig-alt: 'A diagram showing a "GitHub repo" with a black document icon at the top. Below it, a "Local repo" is shown with a blue document icon, indicating a change. Text below the local repo says, "Commit: changed font size to 24".'
 
@@ -614,7 +614,7 @@ knitr::include_graphics('img/github-illustration.005.jpeg')
 
 ```{r}
 #| out.width: '55%'
-#| fig.align: 'center'
+#| fig-align: 'center'
 #| echo: false
 #| fig-alt: 'A diagram depicting a "GitHub repo" with a black document icon at the top. Below it, a "Local repo" is shown with a sequence of three document icons representing commits: a gray icon, followed by a light blue icon with an arrow pointing to "changed font color to blue", and finally a larger, bright blue icon with an arrow pointing to "changed font size to 24".'
 
@@ -625,7 +625,7 @@ knitr::include_graphics('img/github-illustration.006.jpeg')
 
 ```{r}
 #| out.width: '55%'
-#| fig.align: 'center'
+#| fig-align: 'center'
 #| echo: false
 #| fig-alt: 'A diagram illustrating the "Push" action in Git. A "Local repo" at the bottom shows a sequence of three commits represented by document icons: a gray one, a light blue one with text "changed font color to blue", and a bright blue one with text "changed font size to 24". An upward arrow labeled "Push" connects the "Local repo" to a "GitHub repo" at the top. The "GitHub repo" also displays the same sequence of three document icons representing the pushed commits.'
 
