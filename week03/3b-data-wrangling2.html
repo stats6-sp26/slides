@@ -392,36 +392,38 @@ Figure&nbsp;1: Grouping a data frame by a specific variable
 <img data-src="img/anti-join.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%" alt="A diagram showing two tables, X and Y, being processed to create a new table. Table X has keys 1, 2, 3, with corresponding 'x_val' values. Table Y has keys 1, 2, 4, with corresponding 'y_val' values. The new table, labeled 'anti_join(x, y)', is formed by taking only those rows from Table X whose 'key' is *not* found in Table Y. In this example, only the row with key 3 from Table X (and its 'x_val') is included in the final result."></section>
 <section id="something_joinx-y" class="slide level2">
 <h2><code>something_join(x, y)</code></h2>
-<table>
+<table aria-label="Comparison of dplyr join functions by row and column retention">
 <thead>
 <tr>
-<th>
+<th scope="col">
+Function
 </th>
-<th colspan="2" style="text-align: center">
+<th colspan="2" scope="colgroup" style="text-align: center">
 x
 </th>
-<th colspan="2" style="text-align: center">
+<th colspan="2" scope="colgroup" style="text-align: center">
 y
+</th>
+</tr>
+<tr>
+<th scope="col">
+Type
+</th>
+<th scope="col">
+rows
+</th>
+<th scope="col">
+columns
+</th>
+<th scope="col">
+rows
+</th>
+<th scope="col">
+columns
 </th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-</td>
-<td>
-rows
-</td>
-<td>
-columns
-</td>
-<td>
-rows
-</td>
-<td>
-columns
-</td>
-</tr>
 <tr>
 <td>
 <code>left_join()</code>
@@ -645,8 +647,8 @@ none
 </div>
 </div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
 <p>Complete the questions provided to you in the lecture notes.</p>
 </section>
 <section id="learning-tip-of-the-day" class="slide level2">
