@@ -342,6 +342,8 @@ We can create an **issue** to keep a list of mistakes to be fixed, ideas to chec
 ```{r}
 #| echo: false
 #| out-width: "90%"
+#| fig-align: center
+#| fig-alt: "The image shows a GitHub issue titled Week 4 slides and has text that reads #4 opened 1 minute ago by mdogucu"
 knitr::include_graphics("img/issue-number.png")
 ```
 
