@@ -32,7 +32,7 @@ options(scipen = 999)
 
 What is the average of 4, 8, 16 approximately?
 
-##
+## Breaking down the question
 
 1.What is the average of <u>4, 8, 16</u> approximately?
 
@@ -70,7 +70,7 @@ round(mean(c(4, 8, 16)))
 ```
 
 
-##
+## Problem!
 
 **Problem with writing functions within functions**
 
@@ -104,7 +104,7 @@ avg_number
 round(avg_number)
 ```
 
-##
+## Problem!
 
 **Problem with creating many objects**
 
@@ -122,7 +122,7 @@ Shortcut: <br>Ctrl (Command) + Shift + M
 
 Make sure to select `Use native pipe operator` under `Tools > Global Options > Code` in RStudio
 
-##
+## Reading the pipe operator
 
 ::::{.columns}
 
@@ -148,10 +148,8 @@ Round the output
 
 The output of the first function is the first argument of the second function.
 
-##
+## Recall functions from algebra
 
-
-. . .
 
 Now we have $f \circ g \circ h (x)$  
 or `round(mean(c(4, 8, 16)))`
@@ -201,7 +199,7 @@ glimpse(lapd)
 
 Note that this data does not have documentation in R but the [documentation](https://controllerdata.lacity.org/Payroll/Police-Payroll/sxpf-rh6t) can be found online. 
 
-##
+## Tidy style names
 
 
 ```{r}
@@ -239,10 +237,10 @@ knitr::include_graphics("img/subset-rows.png")
 
 Row-wise subsetting can be done with `slice()` and `filter()` 
 
-##
+## `select()`
 
 
-`select` is used to select certain variables in the data frame. 
+`select()` is used to select certain variables in the data frame. 
 
 ::::{.columns}
 :::{.column width=50%"}
@@ -262,9 +260,9 @@ lapd |>
 :::
 ::::
 
-##
+## `select()`
 
-`select` can also be used to drop certain variables if used with a negative sign.
+`select()` can also be used to drop certain variables if used with a negative sign.
 
 ```{r}
 select(lapd, -row_id, -department_title)
@@ -276,25 +274,25 @@ select(lapd, -row_id, -department_title)
 `ends_with()`  
 `contains()`  
 
-##
+## `starts_with)`
 
 ```{r}
 select(lapd, starts_with("q"))
 ```
 
-##
+## `ends_with()`
 
 ```{r}
 select(lapd, ends_with("pay"))
 ```
 
-##
+## `contains()`
 
 ```{r}
 select(lapd, contains("pay"))
 ```
 
-##
+## `slice()`
 
 `slice()` subsets rows based on a row number.
 
@@ -304,14 +302,12 @@ The data below include all the rows from third to seventh, including the third a
 slice(lapd, 3:7)
 ```
 
-## 
+## Relational and Logical Operators
 
 ::::{.columns}
 
 
 :::{.column width="50%"}
-
-### Relational Operators in R
 
 
 | Operator | Description              |
@@ -327,8 +323,6 @@ slice(lapd, 3:7)
 
 :::{.column width="50%"}
 
-### Logical Operators in R
-
 | Operator | Description |
 |----------|-------------|
 | &        | and         |
@@ -340,7 +334,7 @@ slice(lapd, 3:7)
 
 
 
-##
+## `filter()`
 
 `filter()` subsets rows based on a condition.
 
@@ -350,7 +344,7 @@ The data below includes rows when the recorded year is 2018.
 filter(lapd, year == 2018)
 ```
 
-##
+## Example 1
 
 Q. How many LAPD staff members had a base pay higher than $100,000 in year 2018 according to this data?
 
@@ -361,7 +355,8 @@ lapd |>
   filter(year == 2018 & base_pay > 100000)
 ```
 
-##
+## Example 1
+
 
 ```{r}
 lapd |> 
@@ -369,7 +364,7 @@ lapd |>
   nrow()
 ```
 
-##
+## Example 2
 
 Q. How many observations are available between 2013 and 2015 including 2013 and 2015?
 
@@ -380,7 +375,8 @@ lapd |>
   filter(year >= 2013 & year <= 2015) 
 ```
 
-##
+## Example 2
+
 
 ```{r}
 lapd |> 
@@ -388,7 +384,7 @@ lapd |>
   nrow()
 ```
 
-##
+## Example 3
 
 Q. How many LAPD staff were employed full time in 2018?
 
@@ -400,7 +396,7 @@ lapd |>
   nrow()
 ```
 
-##
+## Data frame is unchanged
 
 
 We have done all sorts of selections, slicing, filtering on `lapd` but it has not changed at all. Why do you think so?
@@ -409,12 +405,12 @@ We have done all sorts of selections, slicing, filtering on `lapd` but it has no
 glimpse(lapd)
 ```
 
-##
+## Moving forward
 
 
 Moving forward we are only going to focus on year 2018, and use `job_class_title`, `employment_type`, and `base_pay`. Let's clean our data accordingly and move on with the smaller `lapd` data that we need.
 
-##
+## Moving forward
 
 ```{r}
 lapd |> 
@@ -422,7 +418,7 @@ lapd |>
   select(job_class_title, employment_type, base_pay)
 ```
 
-##
+## Moving forward
 
 ```{r}
 lapd <- 
@@ -431,7 +427,7 @@ lapd <-
   select(job_class_title, employment_type, base_pay)
 ```
 
-##
+## Moving forward
 
 ```{r}
 glimpse(lapd)
@@ -439,13 +435,11 @@ glimpse(lapd)
 
 # Changing Variables
 
-##
-
-**Goal**: 
+## Goal
 
 Create a new variable called `base_pay_k` that represents `base_pay` in thousand dollars.
 
-## 
+## `mutate()`
 
 
 ```{r}
@@ -453,14 +447,13 @@ lapd |>
   mutate(base_pay_k = base_pay/1000)
 ```
 
-##
+## Goal
 
-**Goal**: 
 
 Create a new variable called `base_pay_class` which has two classifications: "Less than 100K", "More than 100K".
 
 
-##
+## Side question
 
 Let's first check to see there is anyone earning exactly 100K.
 
@@ -469,7 +462,7 @@ lapd |>
   filter(base_pay == 100000)
 ```
 
-## 
+## `if_else()`
 
 ```{r}
 lapd |> 
@@ -480,7 +473,7 @@ lapd |>
   )
 ```
 
-##
+## `if_else()` summary
 
 ```{r}
 #| label: fig-if-else
@@ -490,16 +483,14 @@ lapd |>
 knitr::include_graphics("img/if-else.png")
 ```
 
-##
-
-**Goal**: 
+## Goal
 
 Create a new variable called `base_pay_level` which has `Less Than 0`, `No Income`, `Between 0 and 100K` and `Greater than 100K`. 
 
 
 
 
-##
+## `case_when()`
 
 ```{r}
 lapd |> 
@@ -513,7 +504,7 @@ lapd |>
   ) 
 ```
 
-## 
+## Pipes
 
 We can use pipes with ggplot too! 
 
@@ -529,7 +520,7 @@ lapd |>
   geom_bar()
 ```
 
-##
+## `case_when()` summary
 
 ```{r}
 #| label: fig-case-when
@@ -539,9 +530,7 @@ lapd |>
 knitr::include_graphics("img/case-when.png")
 ```
 
-##
-
-**Goal**: 
+## Goal
 
 Make `job_class_title` and `employment_type` factor variables.
 
@@ -555,7 +544,7 @@ lapd |>
   ) 
 ```
 
-##
+## Changing variable types
 
 
 `as.factor()` - makes a vector factor  
@@ -564,7 +553,7 @@ lapd |>
 `as.double()` - makes a vector double  
 `as.character()` - makes a vector character  
 
-##
+## Writing data
 
 Once again we did not "save"
 anything into `lapd`. As we work on data cleaning it makes sense not to "save" the data frames. Once we see the final data frame we want then we can "save" (i.e. overwrite) it.
@@ -574,7 +563,7 @@ anything into `lapd`. As we work on data cleaning it makes sense not to "save" t
 In your lecture notes, you can do all the changes in this lecture in one long set of piped code. That's the beauty of piping!
 
 
-##
+## Cleaning in one long chain
 
 ```{r}
 #| eval: false
@@ -599,7 +588,7 @@ lapd <-
 ```
 
 
-##
+## Pay attention to first argument
 
 ::: callout-warning
 

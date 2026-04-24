@@ -212,8 +212,8 @@ Dr.&nbsp;Mine Dogucu
 <h1>Three solutions to a single problem</h1>
 <p>What is the average of 4, 8, 16 approximately?</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="breaking-down-the-question" class="slide level2">
+<h2>Breaking down the question</h2>
 <p>1.What is the average of <u>4, 8, 16</u> approximately?</p>
 <div class="fragment">
 <p>2.What is the <u>average</u> of 4, 8, 16 approximately?</p>
@@ -249,8 +249,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="problem" class="slide level2">
+<h2>Problem!</h2>
 <p><strong>Problem with writing functions within functions</strong></p>
 <p>Things will get messy and more difficult to read and debug as we deal with more complex operations on data.</p>
 </section>
@@ -283,8 +283,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="problem-1" class="slide level2">
+<h2>Problem!</h2>
 <p><strong>Problem with creating many objects</strong></p>
 <p>We will end up with too many objects in <code>Environment</code>.</p>
 </section>
@@ -298,8 +298,8 @@ Dr.&nbsp;Mine Dogucu
 <h2>RStudio settings</h2>
 <p>Make sure to select <code>Use native pipe operator</code> under <code>Tools &gt; Global Options &gt; Code</code> in RStudio</p>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="reading-the-pipe-operator" class="slide level2">
+<h2>Reading the pipe operator</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
@@ -319,12 +319,10 @@ Round the output</p>
 <p>The output of the first function is the first argument of the second function.</p>
 </div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="fragment">
+<section id="recall-functions-from-algebra" class="slide level2">
+<h2>Recall functions from algebra</h2>
 <p>Now we have <span class="math inline">\(f \circ g \circ h (x)\)</span><br>
 or <code>round(mean(c(4, 8, 16)))</code></p>
-</div>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -388,8 +386,8 @@ $ `Job Class Link`               &lt;chr&gt; "http://per.lacity.org/perspecs/222
 </div>
 <p>Note that this data does not have documentation in R but the <a href="https://controllerdata.lacity.org/Payroll/Police-Payroll/sxpf-rh6t">documentation</a> can be found online.</p>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
+<section id="tidy-style-names" class="slide level2">
+<h2>Tidy style names</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(lapd)</span>
 <span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -454,9 +452,9 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <p>Row-wise subsetting can be done with <code>slice()</code> and <code>filter()</code></p>
 </div>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<p><code>select</code> is used to select certain variables in the data frame.</p>
+<section id="select" class="slide level2">
+<h2><code>select()</code></h2>
+<p><code>select()</code> is used to select certain variables in the data frame.</p>
 <div class="columns">
 <div class="column" style="width:50%&quot;;">
 <div class="cell">
@@ -501,9 +499,9 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div></div>
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<p><code>select</code> can also be used to drop certain variables if used with a negative sign.</p>
+<section id="select-1" class="slide level2">
+<h2><code>select()</code></h2>
+<p><code>select()</code> can also be used to drop certain variables if used with a negative sign.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="sc">-</span>row_id, <span class="sc">-</span>department_title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -536,8 +534,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <code>ends_with()</code><br>
 <code>contains()</code></p>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
+<section id="starts_with" class="slide level2">
+<h2><code>starts_with)</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="fu">starts_with</span>(<span class="st">"q"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -558,8 +556,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
-<h2></h2>
+<section id="ends_with" class="slide level2">
+<h2><code>ends_with()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="fu">ends_with</span>(<span class="st">"pay"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -582,8 +580,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2">
-<h2></h2>
+<section id="contains" class="slide level2">
+<h2><code>contains()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(lapd, <span class="fu">contains</span>(<span class="st">"pay"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -610,8 +608,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2">
-<h2></h2>
+<section id="slice" class="slide level2">
+<h2><code>slice()</code></h2>
 <p><code>slice()</code> subsets rows based on a row number.</p>
 <p>The data below include all the rows from third to seventh, including the third and the seventh.</p>
 <div class="cell">
@@ -635,11 +633,10 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2">
-<h2></h2>
+<section id="relational-and-logical-operators" class="slide level2">
+<h2>Relational and Logical Operators</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="relational-operators-in-r">Relational Operators in R</h3>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -675,7 +672,6 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </tbody>
 </table>
 </div><div class="column" style="width:50%;">
-<h3 id="logical-operators-in-r">Logical Operators in R</h3>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -696,8 +692,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </table>
 </div></div>
 </section>
-<section id="section-13" class="slide level2">
-<h2></h2>
+<section id="filter" class="slide level2">
+<h2><code>filter()</code></h2>
 <p><code>filter()</code> subsets rows based on a condition.</p>
 <p>The data below includes rows when the recorded year is 2018.</p>
 <div class="cell">
@@ -726,11 +722,11 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-14" class="slide level2">
-<h2></h2>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
 <p>Q. How many LAPD staff members had a base pay higher than $100,000 in year 2018 according to this data?</p>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
@@ -759,8 +755,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2">
-<h2></h2>
+<section id="example-1-1" class="slide level2">
+<h2>Example 1</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb39-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span> <span class="sc">&amp;</span> base_pay <span class="sc">&gt;</span> <span class="dv">100000</span>) <span class="sc">|&gt;</span> </span>
@@ -770,8 +766,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-17" class="slide level2">
-<h2></h2>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
 <p>Q. How many observations are available between 2013 and 2015 including 2013 and 2015?</p>
 <div class="fragment">
 <div class="cell">
@@ -802,8 +798,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-18" class="slide level2">
-<h2></h2>
+<section id="example-2-1" class="slide level2">
+<h2>Example 2</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb43-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2013</span> <span class="sc">&amp;</span> year <span class="sc">&lt;=</span> <span class="dv">2015</span>) <span class="sc">|&gt;</span> </span>
@@ -813,8 +809,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2">
-<h2></h2>
+<section id="example-3" class="slide level2">
+<h2>Example 3</h2>
 <p>Q. How many LAPD staff were employed full time in 2018?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
@@ -825,8 +821,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2">
-<h2></h2>
+<section id="data-frame-is-unchanged" class="slide level2">
+<h2>Data frame is unchanged</h2>
 <p>We have done all sorts of selections, slicing, filtering on <code>lapd</code> but it has not changed at all. Why do you think so?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -871,12 +867,12 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-21" class="slide level2">
-<h2></h2>
+<section id="moving-forward" class="slide level2">
+<h2>Moving forward</h2>
 <p>Moving forward we are only going to focus on year 2018, and use <code>job_class_title</code>, <code>employment_type</code>, and <code>base_pay</code>. Let’s clean our data accordingly and move on with the smaller <code>lapd</code> data that we need.</p>
 </section>
-<section id="section-22" class="slide level2">
-<h2></h2>
+<section id="moving-forward-1" class="slide level2">
+<h2>Moving forward</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb49-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2018</span>) <span class="sc">|&gt;</span> </span>
@@ -899,8 +895,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 </div>
 </div>
 </section>
-<section id="section-23" class="slide level2">
-<h2></h2>
+<section id="moving-forward-2" class="slide level2">
+<h2>Moving forward</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="ot">&lt;-</span> </span>
 <span id="cb51-2"><a href="" aria-hidden="true" tabindex="-1"></a>  lapd <span class="sc">|&gt;</span> </span>
@@ -908,8 +904,8 @@ $ job_class_link             &lt;chr&gt; "http://per.lacity.org/perspecs/2223.pd
 <span id="cb51-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(job_class_title, employment_type, base_pay)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="section-24" class="slide level2">
-<h2></h2>
+<section id="moving-forward-3" class="slide level2">
+<h2>Moving forward</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lapd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -926,13 +922,12 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 <h1>Changing Variables</h1>
 
 </section>
-<section id="section-25" class="slide level2">
-<h2></h2>
-<p><strong>Goal</strong>:</p>
+<section id="goal" class="slide level2">
+<h2>Goal</h2>
 <p>Create a new variable called <code>base_pay_k</code> that represents <code>base_pay</code> in thousand dollars.</p>
 </section>
-<section id="section-26" class="slide level2">
-<h2></h2>
+<section id="mutate" class="slide level2">
+<h2><code>mutate()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb54-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">base_pay_k =</span> base_pay<span class="sc">/</span><span class="dv">1000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -954,13 +949,12 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 </div>
 </div>
 </section>
-<section id="section-27" class="slide level2">
-<h2></h2>
-<p><strong>Goal</strong>:</p>
+<section id="goal-1" class="slide level2">
+<h2>Goal</h2>
 <p>Create a new variable called <code>base_pay_class</code> which has two classifications: “Less than 100K”, “More than 100K”.</p>
 </section>
-<section id="section-28" class="slide level2">
-<h2></h2>
+<section id="side-question" class="slide level2">
+<h2>Side question</h2>
 <p>Let’s first check to see there is anyone earning exactly 100K.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
@@ -971,8 +965,8 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 </div>
 </div>
 </section>
-<section id="section-29" class="slide level2">
-<h2></h2>
+<section id="if_else" class="slide level2">
+<h2><code>if_else()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb58-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -998,19 +992,18 @@ $ base_pay        &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.
 </div>
 </div>
 </section>
-<section id="section-30" class="slide level2">
-<h2></h2>
+<section id="if_else-summary" class="slide level2">
+<h2><code>if_else()</code> summary</h2>
 
 <img data-src="img/if-else.png" id="fig-if-else" style="width:50.0%" alt="Flowchart illustrating an if–else decision. At the top is the text if_else(condition, do this, do that). A central pink rectangle labeled condition branches into two paths: to the left, labeled if TRUE, an arrow points down to a green circle labeled do this; to the right, labeled if FALSE, an arrow points down to a green circle labeled do that. The diagram shows how a condition determines which action is executed." class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;1
 </p></section>
-<section id="section-31" class="slide level2">
-<h2></h2>
-<p><strong>Goal</strong>:</p>
+<section id="goal-2" class="slide level2">
+<h2>Goal</h2>
 <p>Create a new variable called <code>base_pay_level</code> which has <code>Less Than 0</code>, <code>No Income</code>, <code>Between 0 and 100K</code> and <code>Greater than 100K</code>.</p>
 </section>
-<section id="section-32" class="slide level2">
-<h2></h2>
+<section id="case_when" class="slide level2">
+<h2><code>case_when()</code></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
 <span id="cb60-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -1039,8 +1032,8 @@ Figure&nbsp;1
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2">
-<h2></h2>
+<section id="pipes" class="slide level2">
+<h2>Pipes</h2>
 <p>We can use pipes with ggplot too!</p>
 <div class="cell columns column-output-location">
 <div class="column">
@@ -1062,18 +1055,17 @@ Figure&nbsp;1
 </div>
 </div></div>
 </section>
-<section id="section-34" class="slide level2">
-<h2></h2>
+<section id="case_when-summary" class="slide level2">
+<h2><code>case_when()</code> summary</h2>
 
 <img data-src="img/case-when.png" id="fig-case-when" style="width:50.0%" alt="Flowchart illustrating case_when logic. At the top is the text case_when(condition1 ~ action1, condition2 ~ action2, condition3 ~ action3). A vertical sequence of pink rectangles labeled condition1, condition2, and condition3 represents conditions evaluated in order. For each condition, a rightward arrow labeled if TRUE leads to a green circle labeled action1, action2, or action3, respectively. If a condition is false, the flow continues downward to the next condition. If all conditions are false, a final arrow leads to a green circle labeled return NA. The diagram shows how the first true condition determines the returned action." class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;2
 </p></section>
-<section id="section-35" class="slide level2">
-<h2></h2>
-<p><strong>Goal</strong>:</p>
+<section id="goal-3" class="slide level2">
+<h2>Goal</h2>
 <p>Make <code>job_class_title</code> and <code>employment_type</code> factor variables.</p>
 </section>
-<section id="section-36" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="sc">|&gt;</span> </span>
@@ -1099,23 +1091,23 @@ Figure&nbsp;2
 </div>
 </div>
 </section>
-<section id="section-37" class="slide level2">
-<h2></h2>
+<section id="changing-variable-types" class="slide level2">
+<h2>Changing variable types</h2>
 <p><code>as.factor()</code> - makes a vector factor<br>
 <code>as.numeric()</code> - makes a vector numeric<br>
 <code>as.integer()</code> - makes a vector integer<br>
 <code>as.double()</code> - makes a vector double<br>
 <code>as.character()</code> - makes a vector character</p>
 </section>
-<section id="section-38" class="slide level2">
-<h2></h2>
+<section id="writing-data" class="slide level2">
+<h2>Writing data</h2>
 <p>Once again we did not “save” anything into <code>lapd</code>. As we work on data cleaning it makes sense not to “save” the data frames. Once we see the final data frame we want then we can “save” (i.e.&nbsp;overwrite) it.</p>
 <div class="fragment">
 <p>In your lecture notes, you can do all the changes in this lecture in one long set of piped code. That’s the beauty of piping!</p>
 </div>
 </section>
-<section id="section-39" class="slide level2">
-<h2></h2>
+<section id="cleaning-in-one-long-chain" class="slide level2">
+<h2>Cleaning in one long chain</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="" aria-hidden="true" tabindex="-1"></a>lapd <span class="ot">&lt;-</span> </span>
 <span id="cb65-2"><a href="" aria-hidden="true" tabindex="-1"></a>  lapd <span class="sc">|&gt;</span> </span>
@@ -1137,8 +1129,8 @@ Figure&nbsp;2
 <span id="cb65-18"><a href="" aria-hidden="true" tabindex="-1"></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="section-40" class="slide level2">
-<h2></h2>
+<section id="pay-attention-to-first-argument" class="slide level2">
+<h2>Pay attention to first argument</h2>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
