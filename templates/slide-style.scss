@@ -1,62 +1,62 @@
-/* Fonts */
-
-/* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro&display=swap');
+/* --- Okabe-Ito Palette Colors --- */
+$oi-pink: #CC79A7;    // Reddish Purple
+$oi-green: #009E73;   // Bluish Green
+$oi-yellow: #F0E442;  // Yellow
+$oi-blue: #0072B2;    // Blue
+$brand-dark: #333333;
+$brand-whitesmoke: #f5f5f5;
 
 /*-- scss:defaults --*/
 
-// Background of the presentation 
-$backgroundColor: #f5f5f5; // Whitesmoke equivalent for reliability
+// Background & Text
+$backgroundColor: $brand-whitesmoke;
+$mainColor: $brand-dark;
+$fontsize: 1.875rem;
 
-
-// Text elements
-// Using 1.875rem (30px) ensures great visibility for presentations
-$fontsize: 1.875rem; 
-$mainColor: #333333;
-$font-family-sans-serif: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+// Fonts
+$font-family-sans-serif: 'Atkinson Hyperlegible', sans-serif;
 $font-family-monospace: 'Source Code Pro', monospace;
 
-// Links and actions
-// Darkened to #246b47 to hit 4.5:1 contrast ratio against whitesmoke
-$linkColor: #246b47; 
-$linkColorHover: darken($linkColor, 15%);
+// Slide Titles
+// Pink provides a high-contrast, distinct heading
+$presentation-heading-color: $oi-pink;
+$presentation-heading-font-weight: 700;
+
+// Links
+// The Okabe-Ito Green darkened slightly to ensure 4.5:1 contrast
+$linkColor: #006b4e; 
+$linkColorHover: #004d38;
 
 /*-- scss:rules --*/
 
-// Helper classes using 'em' to scale relative to the base font size
-.font25  { font-size: 0.85em; } 
-.font50  { font-size: 1.6em; }
-.font75  { font-size: 2.5em; }
-.font100 { font-size: 3.3em; }
-.font150 { font-size: 5.0em; }
-
-// Layout: Using Flexbox for better responsiveness and screen reader flow
-.pull-left, .pull-right {
-  width: 50%;
-  box-sizing: border-box;
+// Blockquotes: Using Okabe-Ito Yellow as a highlight border
+blockquote {
+  border-left: 8px solid $oi-yellow !important;
+  color: $brand-dark !important;
+  background-color: rgba(240, 228, 66, 0.1); // Very light yellow tint
+  padding: 0.5em 1em;
 }
 
-.pull-left {
-  float: left;
-  padding-right: 15px;
+// Title Slide Customization
+.title-slide {
+  h1 {
+    color: $oi-pink;
+  }
+  
+  .subtitle {
+    color: $oi-blue; // Using the Blue for subtitles for clear distinction
+    font-weight: 400;
+  }
 }
 
-.pull-right {
-  float: right;
-  padding-left: 15px;
-}
-
-// Clearfix for the floats above to prevent layout collapse
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-// Visual accessibility: Ensure links are underlined by default
+// Visual accessibility for links
 a {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
 }
 
-
+// Selection highlight
+::selection {
+  background: $oi-yellow;
+  color: $brand-dark;
+}
