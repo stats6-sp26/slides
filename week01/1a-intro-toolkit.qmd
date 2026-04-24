@@ -5,9 +5,6 @@ execute:
   echo: true
 format: 
   revealjs:
-    menu:
-      side: left
-      title: "Course Navigation"
     footer: "[introdata.science](https://introdata.science)"
     slide-number: true
     incremental: false
