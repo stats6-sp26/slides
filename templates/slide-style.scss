@@ -62,16 +62,3 @@ a {
   color: $brand-dark;
 }
 
-/* Provide a label for the hamburger menu link that is 'visible' to screen readers */
-.slide-menu-button a::after {
-    content: "Open Navigation Menu";
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    color: transparent;
-}
-
-/* Ensure the icon itself is hidden from screen readers to avoid 'double noise' */
-.slide-menu-button a i.fa-bars {
-    aria-hidden: true;
-}
