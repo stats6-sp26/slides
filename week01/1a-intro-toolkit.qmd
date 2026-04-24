@@ -184,9 +184,13 @@ my_apples <- 4
 
 . . .
 
-|                            | Windows        | Mac              |
-|----------------------------|----------------|------------------|
-| Shortcut     | Alt + -        | Option + -       |
+Keyboard Shortcut
+
+Windows:  Alt + -
+
+Mac: Option + - 
+
+
 
 
 ## R is case-sensitive
