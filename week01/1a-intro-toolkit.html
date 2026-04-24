@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" class="quarto-title-block center">
+<section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/clean_title_page.html" class="quarto-title-block center">
   <h1 class="title">Introduction to the Toolkit</h1>
 
 <div class="quarto-title-authors">
@@ -1020,24 +1020,6 @@ __Hello world__
           RevealSearch,
           RevealZoom
         ]
-      });
-    </script>
-    <!-- From: https://github.com/quarto-dev/quarto-cli/discussions/557 -->
-    <script type="text/javascript">
-      Reveal.on('ready', event => {
-        if (event.indexh === 0) {
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-      });
-      Reveal.addEventListener('slidechanged', (event) => {
-        if (event.indexh === 0) {
-          Reveal.configure({ slideNumber: null });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
-        }
-        if (event.indexh === 1) { 
-          Reveal.configure({ slideNumber: 'c' });
-          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
-        }
       });
     </script>
     

@@ -15,7 +15,7 @@ format:
       data-background-size: 5%
       data-background-position: 50% 85%
       data-aria-label: "Intro to Data Science course logo"
-    include-after-body: "../templates/clean_title_page.html"
+      include-after-body: "../templates/clean_title_page.html"
 ---
 
 ```{r}
