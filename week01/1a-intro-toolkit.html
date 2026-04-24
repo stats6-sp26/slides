@@ -240,12 +240,13 @@ One personal strength you have</p>
 <h1>Getting to Know the Course</h1>
 
 </section>
-<section id="section" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="course-website" class="slide level2">
+<h2>Course website</h2>
 <div class="font100">
-<p>The most important thing about this course</p>
+<p>The most important thing about this course:</p>
 </div>
 <p><a href="https://introdata.science">The course website</a></p>
+<p>Make sure to bookmark it.</p>
 </section>
 <section id="poll-everywhere" class="slide level2">
 <h2>Poll Everywhere</h2>
@@ -273,13 +274,13 @@ One personal strength you have</p>
 <p>Data science also integrates domain knowledge from the underlying application domain (e.g., natural sciences, information technology, and medicine). Data science is multifaceted and can be described as a science, a research paradigm, a research method, a discipline, a workflow, and a profession. Wikipedia</p>
 </blockquote>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="data-context" class="slide level2">
+<h2>Data Context</h2>
 <p><strong>What types of data will we use in this course</strong></p>
 <p>We will use a variety of datasets from biological studies to business answering questions serving different purposes in life. Data will come different size, shape, and form and will include numbers, categories, text etc.</p>
 </section>
-<section id="section-2" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="course-context" class="slide level2">
+<h2>Course Context</h2>
 <p><strong>Is this a statistics course or a computing course?</strong></p>
 <p>A little bit of both.</p>
 <div class="fragment">
@@ -413,9 +414,9 @@ One personal strength you have</p>
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2" data-visibility="uncounted">
-<h2></h2>
-<p>If something comes in quotes, it is not defined in R. Later in the quarter we will call these as strings. More on that later.</p>
+<section id="characters" class="slide level2">
+<h2>Characters</h2>
+<p>If something comes in quotes, it is not defined in R. Later in the quarter we will call these as characters. More on that later.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a>n_apples <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, my_apples, <span class="dv">3</span>)</span>
 <span id="cb24-2"><a href=""></a></span>
@@ -453,8 +454,8 @@ One personal strength you have</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a>?c</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="section-4" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="do-not-copy-paste" class="slide level2">
+<h2>Do not copy paste</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -498,8 +499,8 @@ One personal strength you have</p>
 </ul>
 </div></div>
 </section>
-<section id="section-5" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="indentation" class="slide level2">
+<h2>Indentation</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -599,19 +600,13 @@ __Hello world__
 </div>
 <p>Why are we seeing this error?</p>
 </section>
-<section id="section-6" class="slide level2" data-visibility="uncounted">
-<h2></h2>
-<div class="font75">
-<p>Installing packages</p>
-</div>
-</section>
-<section id="using-install.packages" class="slide level2">
-<h2>Using <code>install.packages()</code></h2>
+<section id="installing-packages" class="slide level2">
+<h2>Installing packages</h2>
 <p>In your <strong>Console</strong>, install the beepr package</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"beepr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>We do this in the Console because we only need to do it once.</p>
+<p>We do this in the Console because we only need to do it once. If we add this code in Quarto, we will be installing the package again and again each time we render the document.</p>
 </section>
 <section id="using-beep-from-beepr" class="slide level2">
 <h2>Using beep() from beepr</h2>
@@ -677,8 +672,8 @@ __Hello world__
 <h2>Tidyverse</h2>
 <p>In short, tidyverse is a family of packages. From practical stand point, you can install many tidyverse packages at once (and you did this).</p>
 </section>
-<section id="section-7" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="load-tidyverse-packages" class="slide level2">
+<h2>Load tidyverse packages</h2>
 <p>We can also load multiple tidyverse packages all at the same time.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -701,8 +696,8 @@ __Hello world__
 <h1>Version Control</h1>
 
 </section>
-<section id="section-8" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="bad-version-control" class="slide level2">
+<h2>Bad version control</h2>
 <p>Does this look familiar?</p>
 <ul>
 <li class="fragment"><p>hw1</p></li>
@@ -713,15 +708,17 @@ __Hello world__
 <li class="fragment"><p>hw1_finalestfinal</p></li>
 </ul>
 </section>
-<section id="section-9" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="good-version-control" class="slide level2">
+<h2>Good version control</h2>
 <p>What if we tracked our file with better names for each version and have only 1 file <strong>hw1</strong>?</p>
 <ul>
 <li class="fragment"><p>hw1 <strong><em>added questions 1 through 5</em></strong></p></li>
 <li class="fragment"><p>hw1 <strong><em>changed question 1 image</em></strong></p></li>
 <li class="fragment"><p>hw1 <strong><em>fixed typos</em></strong></p></li>
 </ul>
+<div class="fragment">
 <p>We will call the descriptions in italic <strong>commit</strong> messages.</p>
+</div>
 </section>
 <section id="git-vs.-github" class="slide level2">
 <h2>git vs.&nbsp;GitHub</h2>
@@ -730,39 +727,39 @@ __Hello world__
 <li><p>GitHub is a website where we can store (and share) different versions of the files.</p></li>
 </ul>
 </section>
-<section id="section-10" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="github-repo" class="slide level2">
+<h2>GitHub repo</h2>
 
 <img data-src="img/github-illustration.002.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%" alt="An orange box labeled &quot;GitHub repo&quot; next to a black document icon."></section>
-<section id="section-11" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="cloning-a-repo" class="slide level2">
+<h2>Cloning a repo</h2>
 
 <img data-src="img/github-illustration.003.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="Diagram showing a GitHub repo with a document icon at the top, connected by a downward arrow labeled &quot;Clone a repo&quot; to a local repo with a document icon at the bottom."></section>
-<section id="section-12" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="commiting-a-change-1" class="slide level2">
+<h2>Commiting a change 1</h2>
 
 <img data-src="img/github-illustration.004.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram with &quot;GitHub repo&quot; and a black document icon at the top. Below it, &quot;Local repo&quot; is shown with a blue document icon, implying a change  has been made locally. Text below reads &quot;Commit: changed font color to blue&quot;."></section>
-<section id="section-13" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="commiting-a-change-2" class="slide level2">
+<h2>Commiting a change 2</h2>
 
 <img data-src="img/github-illustration.005.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram showing a &quot;GitHub repo&quot; with a black document icon at the top. Below it, a &quot;Local repo&quot; is shown with a blue document icon, indicating a change. Text below the local repo says, &quot;Commit: changed font size to 24&quot;."></section>
-<section id="section-14" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="commiting-a-change-3" class="slide level2">
+<h2>Commiting a change 3</h2>
 
 <img data-src="img/github-illustration.006.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram depicting a &quot;GitHub repo&quot; with a black document icon at the top. Below it, a &quot;Local repo&quot; is shown with a sequence of three document icons representing commits: a gray icon, followed by a light blue icon with an arrow pointing to &quot;changed font color to blue&quot;, and finally a larger, bright blue icon with an arrow pointing to &quot;changed font size to 24&quot;."></section>
-<section id="section-15" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="push" class="slide level2">
+<h2>Push</h2>
 
 <img data-src="img/github-illustration.007.jpeg" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%" alt="A diagram illustrating the &quot;Push&quot; action in Git. A &quot;Local repo&quot; at the bottom shows a sequence of three commits represented by document icons: a gray one, a light blue one with text &quot;changed font color to blue&quot;, and a bright blue one with text &quot;changed font size to 24&quot;. An upward arrow labeled &quot;Push&quot; connects the &quot;Local repo&quot; to a &quot;GitHub repo&quot; at the top. The &quot;GitHub repo&quot; also displays the same sequence of three document icons representing the pushed commits."></section>
-<section id="section-16" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="git-and-github-demo" class="slide level2">
+<h2>Git and GitHub demo</h2>
 <center>
 <iframe title="Embedded Media titled: 01c-github-edited" aria-label="Embedded Media titled: 01c-github-edited" width="560" height="315" src="https://uci.yuja.com/V/Video?v=15735817&amp;node=67847829&amp;a=212432377&amp;preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
 </iframe>
 </center>
 </section>
-<section id="section-17" class="slide level2" data-visibility="uncounted">
-<h2></h2>
+<section id="r-project-files" class="slide level2">
+<h2>R Project files</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -777,7 +774,7 @@ __Hello world__
 </div>
 </div>
 </section>
-<section id="cloning-a-repo" class="slide level2">
+<section id="cloning-a-repo-1" class="slide level2">
 <h2>Cloning a repo</h2>
 <p><strong>repo</strong> is a short form of repository. Repositories contain all of your project’s files as well as each file’s revision history.</p>
 <p>For this course our weekly repos (lecture code, activity etc.) are hosted on Github.</p>
@@ -790,7 +787,7 @@ __Hello world__
 <p>This way if you ever have to go back in version history you have your older commits to get back to.</p>
 <p>This is especially useful, for instance, if you want to go back to an earlier solution you have committed.</p>
 </section>
-<section id="push" class="slide level2">
+<section id="push-1" class="slide level2">
 <h2>Push</h2>
 <p>All the commits you make will initially be local (i.e.&nbsp;on your own computer).</p>
 <p>In order for us to see your commits and your final submission on any file, you have to <strong>push</strong> your commits. In other words upload your files at the stage in that specific time.</p>
@@ -803,12 +800,6 @@ __Hello world__
 <p><strong>clone:</strong> Cloning a repo <strong>pulls</strong> (downloads) all the elements of a repo available at that specific time.</p>
 <p><strong>commit:</strong> A snapshot of your repo at a specific point in time. We distinguish each commit with a <strong>commit message</strong>.</p>
 <p><strong>push:</strong> Uploads the latest “committed” state of your repo to GitHub.</p>
-</section>
-<section id="section-18" class="slide level2">
-<h2></h2>
-<div class="font150">
-<p>Do you git it?</p>
-</div>
 </section>
 <section id="learning-tip-of-the-day" class="slide level2">
 <h2>Learning Tip of the Day</h2>

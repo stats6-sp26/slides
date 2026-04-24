@@ -56,13 +56,15 @@ One personal strength you have
 
 # Getting to Know the Course
 
-##  {visibility="uncounted"}
+##  Course website
 
 ::: font100
-The most important thing about this course
+The most important thing about this course:
 :::
 
 [The course website](https://introdata.science)
+
+Make sure to bookmark it.
 
 ## Poll Everywhere
 
@@ -91,13 +93,13 @@ What do you think data science is about and what will we learn in this course? T
 
 > Data science also integrates domain knowledge from the underlying application domain (e.g., natural sciences, information technology, and medicine). Data science is multifaceted and can be described as a science, a research paradigm, a research method, a discipline, a workflow, and a profession. Wikipedia
 
-##
+## Data Context
 
 **What types of data will we use in this course** 
 
 We will use a variety of datasets from biological studies to business answering questions serving different purposes in life. Data will come different size, shape, and form and will include numbers, categories, text etc.
 
-## {visibility="uncounted"}
+## Course Context
 
 **Is this a statistics course or a computing course?**
 
@@ -196,9 +198,9 @@ my_apples <- 4
 My_apples
 ```
 
-## {visibility="uncounted"}
+## Characters
 
-If something comes in quotes, it is not defined in R. Later in the quarter we will call these as strings. More on that later.
+If something comes in quotes, it is not defined in R. Later in the quarter we will call these as characters. More on that later.
 
 
 ```{r}
@@ -240,7 +242,7 @@ In order to get any help we can use `?` followed by function (or object) name.
 ?c
 ```
 
-## {visibility="uncounted"}
+## Do not copy paste
 
 ::: callout-tip
 You should not copy paste code from my slides or from the internet. 
@@ -281,7 +283,7 @@ data.frame(
 
 ::::
 
-## {visibility="uncounted"}
+## Indentation
 
 ::: callout-tip
 
@@ -397,16 +399,10 @@ beep()
 Why are we seeing this error? 
 
 
-## {visibility="uncounted"}
-
-:::{.font75}
-
-Installing packages
-
-:::
 
 
-## Using `install.packages()`
+
+## Installing packages
 
 In your **Console**, install the beepr package
 
@@ -414,7 +410,7 @@ In your **Console**, install the beepr package
 install.packages("beepr")
 ```
 
-We do this in the Console because we only need to do it once.
+We do this in the Console because we only need to do it once. If we add this code in Quarto, we will be installing the package again and again each time we render the document.
 
 
 
@@ -510,7 +506,7 @@ This should play the mariokart sound.
 In short, tidyverse is a family of packages. From practical stand point, you can install many tidyverse packages at once (and you did this). 
 
 
-## {visibility="uncounted"}
+## Load tidyverse packages
 
 We can also load multiple tidyverse packages all at the same time.
 
@@ -521,7 +517,7 @@ library(tidyverse)
 
 # Version Control
 
-## {visibility="uncounted"}
+## Bad version control
 
 ::: {.incremental}
 
@@ -542,12 +538,12 @@ Does this look familiar?
 :::
 
 
-## {visibility="uncounted"}
+## Good version control
 
-::: {.incremental}
 
 What if we tracked our file with better names for each version and have only 1 file **hw1**?
 
+::: {.incremental}
 
 - hw1 ***added questions 1 through 5***
 
@@ -555,10 +551,12 @@ What if we tracked our file with better names for each version and have only 1 f
 
 - hw1 ***fixed typos***
 
+:::
+
+. . .
 
 We will call the descriptions in italic **commit** messages.
 
-:::
 
 
 ## git vs. GitHub
@@ -567,7 +565,7 @@ We will call the descriptions in italic **commit** messages.
 
 - GitHub is a website where we can store (and share) different versions of the files. 
 
-## {visibility="uncounted"}
+## GitHub repo
 
 ```{r}
 #| out.width: '40%'
@@ -577,7 +575,7 @@ We will call the descriptions in italic **commit** messages.
 knitr::include_graphics('img/github-illustration.002.jpeg')
 ```
 
-## {visibility="uncounted"}
+## Cloning a repo
 
 ```{r}
 #| out.width: '55%'
@@ -588,7 +586,7 @@ knitr::include_graphics('img/github-illustration.002.jpeg')
 knitr::include_graphics('img/github-illustration.003.jpeg')
 ```
 
-## {visibility="uncounted"}
+## Commiting a change 1
 
 ```{r}
 #| out.width: '55%'
@@ -599,7 +597,7 @@ knitr::include_graphics('img/github-illustration.003.jpeg')
 knitr::include_graphics('img/github-illustration.004.jpeg')
 ```
 
-## {visibility="uncounted"}
+## Commiting a change 2
 
 ```{r}
 #| out.width: '55%'
@@ -610,7 +608,7 @@ knitr::include_graphics('img/github-illustration.004.jpeg')
 knitr::include_graphics('img/github-illustration.005.jpeg')
 ```
 
-## {visibility="uncounted"}
+## Commiting a change 3
 
 ```{r}
 #| out.width: '55%'
@@ -621,7 +619,7 @@ knitr::include_graphics('img/github-illustration.005.jpeg')
 knitr::include_graphics('img/github-illustration.006.jpeg')
 ```
 
-## {visibility="uncounted"}
+## Push
 
 ```{r}
 #| out.width: '55%'
@@ -632,7 +630,7 @@ knitr::include_graphics('img/github-illustration.006.jpeg')
 knitr::include_graphics('img/github-illustration.007.jpeg')
 ```
 
-##  {visibility="uncounted"}
+##  Git and GitHub demo
 
 
 
@@ -642,7 +640,7 @@ knitr::include_graphics('img/github-illustration.007.jpeg')
 
 </center>
 
-## {visibility="uncounted"}
+## R Project files
 
 
 ::: callout-tip
@@ -697,13 +695,7 @@ In order for us to see your commits and your final submission on any file, you h
 
 **push:** Uploads the latest "committed" state of your repo to GitHub.
 
-##
 
-::: {.font150} 
-
-Do you git it?
-
-::: 
 
 ## Learning Tip of the Day
 
