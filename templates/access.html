@@ -1,0 +1,28 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuBox = document.getElementById('menu-toggle-box');
+  
+  if (menuBox) {
+    // Create the anchor element
+    const menuBtn = document.createElement('a');
+    menuBtn.href = "#";
+    menuBtn.className = "menu-toggle-link";
+    menuBtn.setAttribute('aria-label', 'Open navigation menu');
+    menuBtn.innerHTML = '<i class="fas fa-bars"></i> Menu';
+    
+    // Add the click function
+    menuBtn.onclick = function(e) {
+      e.preventDefault();
+      RevealMenu.toggle();
+    };
+    
+    // Style it to match your Okabe-Ito Pink (#9E4A75)
+    menuBtn.style.color = "#9E4A75";
+    menuBtn.style.textDecoration = "none";
+    menuBtn.style.marginRight = "15px";
+    menuBtn.style.fontWeight = "bold";
+    
+    menuBox.appendChild(menuBtn);
+  }
+});
+</script>

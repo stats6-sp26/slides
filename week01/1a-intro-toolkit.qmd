@@ -5,8 +5,11 @@ execute:
   echo: true
 format: 
   revealjs:
+    menu:
+      openButton: false # Keep the "empty" one off
+    footer: |
+      <span id="menu-toggle-box"></span> [introdata.science](https://introdata.science)
     code-line-numbers: false 
-    footer: "[introdata.science](https://introdata.science)"
     slide-number: true
     incremental: false
     theme: ["../templates/slide-style.scss"]
