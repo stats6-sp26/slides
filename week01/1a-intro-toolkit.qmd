@@ -9,7 +9,6 @@ format:
     slide-number: true
     incremental: false
     theme: ["../templates/slide-style.scss"]
-    logo: "https://www.introdata.science/img/logo.png"
     title-slide-attributes: 
       data-background-image: "https://www.introdata.science/img/logo.png"
       data-background-size: 5%
