@@ -32,6 +32,7 @@ format:
 ```{r}
 #| echo: false
 #| fig-align: center
+#| fig-alt: 'A screenshot of a web browser window displaying a simple webpage with a light gray background. The text is rendered in a large, 40px sans-serif font. It features two paragraphs: the first contains a blue hyperlinked "R" followed by text stating it appeared in 1994 (highlighted in red) and the sentence "My favorite language is R" in italics. The second paragraph contains a blue hyperlinked "Python" followed by text stating it appeared in 1990 (highlighted in red).'
 knitr::include_graphics("img/ugly-website.png")
 ```
 
