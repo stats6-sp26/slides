@@ -25,12 +25,14 @@ format:
 ## 
 
 ```{r}
+#| label: packages
 library(bayesrules)
 library(tidyverse)
 ```
 
 ```{r}
 #| echo: false
+#| label: theme-set
 theme_set(theme_gray(base_size = 18))
 ```
 
@@ -74,6 +76,7 @@ We will utilize functions from `library(bayesrules)` to examine different people
 
 ```{r}
 #| fig-align: center
+#| label: beta-14-1
 summarize_beta(14, 1)
 
 plot_beta(14, 1) 
@@ -83,6 +86,7 @@ plot_beta(14, 1)
 
 ```{r}
 #| fig-align: center
+#| label: beta-1-1
 summarize_beta(1, 1)
 
 plot_beta(1, 1) 
@@ -92,6 +96,7 @@ plot_beta(1, 1)
 
 ```{r}
 #| fig-align: center
+#| label: beta-5-11
 summarize_beta(5, 11)
 
 plot_beta(5, 11) 
@@ -122,6 +127,7 @@ Which of these people are more certain (i.e. have a highly informative prior)?
 #| echo: false
 #| message: false
 #| fig-align: center
+#| label: beta-prior
 
 library(tidyverse)
 # Set up beta data
@@ -135,7 +141,7 @@ betas <- data.frame(setting = factor(rep(1:9,
                     alpha = rep(alpha, each = 500),
                     beta = rep(beta, each = 500))
 
-betas <- betas %>% 
+betas <- betas |> 
   mutate(y = dbeta(x, shape1 = alpha, shape2 = beta))
 
 levels(betas$setting) <-
@@ -146,10 +152,10 @@ trend_data <- data.frame(alpha, beta,
                                              beta)),
                          modes = 
                            ((alpha - 1) / 
-                              (alpha + beta - 2))) %>% 
+                              (alpha + beta - 2))) |> 
   mutate(Parameter = 
-           paste0("Beta(",alpha,",",beta,")")) %>% 
-  mutate(setting = Parameter) %>% 
+           paste0("Beta(",alpha,",",beta,")")) |> 
+  mutate(setting = Parameter) |> 
   mutate(means_d = dbeta(means, alpha, beta), 
          modes_d = dbeta(modes, alpha, beta))
 
@@ -188,6 +194,7 @@ We will keep referring to this quite a lot.
 ## Data
 
 ```{r}
+#| label: bechdel-sample
 set.seed(84735)
 bechdel_sample <- sample_n(bechdel, 20)
 
@@ -206,12 +213,14 @@ The number `84735` has no significance other than that it closely resembles BAYE
 ## Data
 
 ```{r}
+#| label: glimpse-data
 glimpse(bechdel_sample)
 ```
 
 . . .
 
 ```{r}
+#| label: count-data
 count(bechdel_sample, binary)
 
 ```
@@ -219,6 +228,7 @@ count(bechdel_sample, binary)
 ## The Optimist 
 
 ```{r}
+#| label: summarize-beta-binom
 summarize_beta_binomial(14, 1, y = 9, n = 20)
 ```
 
@@ -228,12 +238,15 @@ summarize_beta_binomial(14, 1, y = 9, n = 20)
 ```{r}
 #| fig-align: center
 #| fig-height: 5
+#| label: plot-beta-binom
 plot_beta_binomial(14, 1, y = 9, n = 20)
 ```
 
 ## The Clueless 
 
 ```{r}
+#| label: summarize-beta-binom2
+
 summarize_beta_binomial(1, 1, y = 9, n = 20)
 ```
 
@@ -244,12 +257,16 @@ summarize_beta_binomial(1, 1, y = 9, n = 20)
 ```{r}
 #| fig-align: center
 #| fig-height: 5
+#| label: plot-beta-binom2
+
 plot_beta_binomial(1, 1, y = 9, n = 20)
 ```
 
 ## The Feminist 
 
 ```{r}
+#| label: summarize-beta-binom3
+
 summarize_beta_binomial(5, 11, y = 9, n = 20)
 ```
 
@@ -258,8 +275,10 @@ summarize_beta_binomial(5, 11, y = 9, n = 20)
 
 
 ```{r}
+#| label: plot-beta-binom3
 #| fig-align: center
 #| fig-height: 5
+
 plot_beta_binomial(5, 11, y = 9, n = 20)
 ```
 
@@ -267,6 +286,7 @@ plot_beta_binomial(5, 11, y = 9, n = 20)
 
 
 ```{r}
+#| label: comparison
 #| fig-align: center
 #| fig-width: 15
 #| echo: false
@@ -298,6 +318,7 @@ Utilize `summarize_beta_binomial()` and `plot_beta_binomial()` functions to exam
 #| echo: false
 #| out-width: 70%
 #| fig-align: center
+#| label: bayes-balance
 knitr::include_graphics("img/bayes-balance-1.png")
 ```
 
@@ -312,6 +333,7 @@ Morteza, Nadide, and Ursula –  all share the optimistic Beta(14,1) prior for $
 ## Morteza's analysis
 
 ```{r}
+#| label: bechdel-1991
 bechdel_1991 <- filter(bechdel, year == 1991)
 count(bechdel_1991, binary)
 
@@ -322,6 +344,7 @@ count(bechdel_1991, binary)
 . . .
 
 ```{r}
+#| label: summary-1991
 summarize_beta_binomial(14, 1, y = 6, n = 13)
 ```
 
@@ -330,12 +353,14 @@ summarize_beta_binomial(14, 1, y = 6, n = 13)
 ```{r}
 #| fig-height: 5
 #| fig-align: center
+#| label: morteza-plot
 plot_beta_binomial(14, 1, y = 6, n = 13)
 ```
 
 ## Nadide's analysis
 
 ```{r}
+#| label: bechdel-2000
 bechdel_2000 <- filter(bechdel, year == 2000)
 count(bechdel_2000, binary)
 
@@ -345,6 +370,7 @@ count(bechdel_2000, binary)
 . . .
 
 ```{r}
+#| label: summary-2000
 summarize_beta_binomial(14, 1, y = 29, n = 63)
 ```
 
@@ -353,12 +379,14 @@ summarize_beta_binomial(14, 1, y = 29, n = 63)
 ```{r}
 #| fig-height: 5
 #| fig-align: center
+#| label: plot-nadide
 plot_beta_binomial(14, 1, y = 29, n = 63)
 ```
 
 ## Ursula's analysis
 
 ```{r}
+#| label: bechdel-2013
 bechdel_2013 <- filter(bechdel, year == 2013)
 count(bechdel_2013, binary)
 
@@ -368,6 +396,7 @@ count(bechdel_2013, binary)
 . . .
 
 ```{r}
+#| label: summary-2013
 summarize_beta_binomial(14, 1, y = 46, n = 99)
 ```
 
@@ -377,6 +406,7 @@ summarize_beta_binomial(14, 1, y = 46, n = 99)
 ```{r}
 #| fig-height: 5
 #| fig-align: center
+#| label: plot-ursula
 plot_beta_binomial(14, 1, y = 46, n = 99)
 
 ```
@@ -385,12 +415,8 @@ plot_beta_binomial(14, 1, y = 46, n = 99)
 
 ```{r}
 #| echo: false
-theme_set(theme_gray(base_size = 12))
-```
-
-```{r}
-#| echo: false
 #| message: false
+#| label: summary-beta-binomial-function
 ## Remove
 ## Code for facet_wrapped Beta-Binomial plots
 ### Plotting function
@@ -460,7 +486,8 @@ plot_dat <- make_plot_data(
 ```{r}
 #| echo: false
 #| fig-align: center
-plot_dat_new <- plot_dat %>% 
+#| label: summary-beta-binomial
+plot_dat_new <- plot_dat |> 
   mutate(setting_prior = factor(setting_prior, 
                                 levels = c("prior: Beta(14,1)", "prior: Beta(5,11)", "prior: Beta(1,1)")))
 beta_binom_grid_plot(plot_dat_new, posterior = TRUE, likelihood = TRUE) + 
