@@ -1,0 +1,738 @@
+---
+title: "Foundations for Statistical Inference"
+author: "Dr. Mine Dogucu"
+execute:
+  echo: true
+format: 
+  revealjs:
+    menu:
+      openButton: false
+    footer: |
+      <span id="menu-toggle-box"></span> [introdata.science](https://introdata.science)
+    code-line-numbers: false 
+    slide-number: true
+    incremental: false
+    theme: ["../templates/slide-style.scss"]
+    title-slide-attributes: 
+      data-background-image: "https://www.introdata.science/img/logo.png"
+      data-background-size: 5%
+      data-background-position: 50% 85%
+      data-aria-label: "Intro to Data Science course logo"
+      include-after-body: "../templates/access.html"
+---
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+theme_set(theme_grey(base_size = 18))
+
+plot_beta_prob <- function(value, alpha, beta, direction = "lower"){
+  
+  
+  data <- data.frame(x = c(0, 1))
+  
+  p <- ggplot(data = data,
+              aes(x)) +
+    stat_function(fun = stats::dbeta,
+                  n = 101,
+                  args = list(shape1 = alpha,
+                              shape2= beta)) +
+    labs(x = expression(pi),
+         y = expression(paste("f(",pi,")")))
+  
+  if(direction == "lower"){
+    
+  p <- p +
+      stat_function(fun = dbeta, args = list(alpha, beta), 
+                    geom = "area", 
+                    fill = "#D55E00", alpha = 0.8, 
+                    xlim = c(0, value)) +
+    labs(caption = paste0("The area under the curve is ", 
+                          round(pbeta(value, alpha, beta), digits = 4)*100, "%.", 
+                          " In other words, P(", "\U03C0", " < ", value, ") = ", 
+                          round(pbeta(value, alpha, beta), digits = 4),"."))
+  }
+  
+  
+  if(direction == "upper"){
+    
+  p <- p +
+      stat_function(fun = dbeta, args = list(alpha, beta), geom = "area", 
+                    fill = "#D55E00", alpha = 0.8, xlim = c(value, 1)) +
+    labs(caption = paste0("The area under the curve is ", 
+                          round(pbeta(value, alpha, beta, lower.tail = FALSE), digits = 4)*100, "%.", 
+                          " In other words, P(", "\U03C0", " > ", value, ") = ", 
+                          round(pbeta(value, alpha, beta, lower.tail = FALSE), digits = 4),"."))
+  }
+  
+p
+
+}
+
+
+plot_normal_prob <- function(value, mean, sd, end = 3, direction = "lower"){
+  
+  
+  x <- seq(mean - (end*sd) , mean + (end * sd), 0.01)
+  
+  y <- dnorm(x, mean = mean, sd = sd)
+  
+  data <- data.frame(x = x, y = y)
+  
+  p <- ggplot(data = data,
+              aes(x)) +
+    stat_function(fun = stats::dnorm,
+                  n = 101,
+                  args = list(mean = mean,
+                              sd= sd)) 
+  
+  if(direction == "lower"){
+    
+    p <- p +
+      stat_function(fun = dnorm, args = list(mean, sd), 
+                    geom = "area", 
+                    fill = "#D55E00", alpha = 0.8, 
+                    xlim = c(mean - (end*sd), value)) +
+      labs(caption = paste0("The area under the curve is ", 
+                            round(pnorm(value, mean, sd), digits = 4)*100, "%."))
+  }
+  
+  
+  if(direction == "upper"){
+    
+    p <- p +
+      stat_function(fun = dnorm, args = list(mean, sd), geom = "area", 
+                    fill = "#D55E00", alpha = 0.8, xlim = c(value, mean+(end*sd))) +
+      labs(caption = paste0("The area under the curve is ", 
+                            round(pnorm(value, mean, sd, lower.tail = FALSE), digits = 4)*100, "%."))
+  }
+  
+  p
+  
+}
+```
+
+
+# Statistical Inference
+
+## Making meaning of data
+
+- In the first half of the quarter, we retrieved data (by downloading or scraping), opened data, joined data, wrangled data, described data. 
+
+- In the second half of the quarter we will make meaning of data using statistical inference and modeling.
+
+
+
+## Research question
+
+Every research project aims to answer a research question (or multiple questions).
+
+::: {.callout-tip icon=false}
+## Example
+Do UCI students who exercise regularly have higher GPA?
+::: 
+
+
+## Population
+
+Each research question aims to examine a __population__. 
+
+::: {.callout-tip icon=false}
+## Example
+
+Population for this research question is UCI students.
+
+:::
+
+## Sampling
+
+A population is a collection of elements which the research question aims to study. 
+However it is often costly and sometimes impossible to study the whole population. 
+Often a subset of the population is selected to be studied. Sample is the subset of the population that is studied. 
+
+. . .
+
+::: {.callout-tip icon=false}
+
+## Example
+
+Since it would be almost impossible to study ALL UCI students, we can study a sample of students.
+
+:::
+
+## Note
+
+The goal is to have a sample that is __representative__ of the population so that the findings of the study can generalize to the population.
+
+
+## Descriptive Statistics vs. Inferential Statistics
+
+- In descriptive statistics, we use **sample statistics** such as the sample mean or proportion to understand the observed data. 
+
+- In inferential statistics we use the observed data to make an inference about the **population parameters** using probabilistic models.
+
+## Bayesian vs. Frequentist Inference
+
+- These are two major paradigms that define probability and thus two major paradigms to making statistical inference. 
+
+- We will make statistical inference using Bayesian methods and next week we will use frequentist methods. Both these methods are valid and used in research.
+
+
+## Bayesian vs. Frequentist Inference - Projects
+
+- Which of these methods you will choose to utilize in your final projects will depend on your understanding of your research topic, your philosophical approach to science, and a few statistical considerations. 
+
+# Probability
+
+
+## Probability definition
+
+A numeric outcome of a random process is called a **random variable**. 
+Let $X$ represent the number shown on the top surface of the die after a roll. 
+We might wonder, for instance, what the probability of X being 3 is or using notation we can write this as $P(X = 3) = ?$ Even though many people might say that this probability is $\frac{1}{6}$ there might be many different reasons why they say that. 
+
+
+## Classical probability
+
+A person who uses **classical definition of probability** might realize that there are six possible outcomes. Number 3 is one of the six possible outcomes. The die is fair indicating 3 is as probable as 1, 2, 4, 5, and 6. Thus, they would state that the probability in this case is $\frac{1}{6}$. 
+
+## Frequentist probability
+
+A person who uses **frequentist definition of probability** would be concerned about how the random processes would behave in the long-term. They can roll the die many times, let's say 10,000 times. If they observe the number 3 show up 1600 times, they can state that the probability is $\frac{1600}{10,000} = 0.16$ which is close to $\frac{1}{6} = 0.1\overline{6}$. In absolute frequentist definition, we would assume that the number of die rolls does not stop at 10,000 and approaches infinity. In that instant, then the probability would be  $\frac{1}{6} = 0.1\overline{6}$.
+
+## Bayesian probability
+
+A person who uses **Bayesian definition of probability** can possibly state the probability as $\frac{1}{6} = 0.1\overline{6}$ based on a reasonable expectation or based on their previous observations of fair die rolls. Perhaps their past experiences might have shown that no die manufacturer produces a perfectly "fair" die and thus they might even state that the probability is actually $0.15$. Two Bayesians can even disagree what the corresponding probability value is!
+
+## Note
+
+Important things to note about probability:
+
+- Probability must be between 0 and 1. This is inclusive of 0 an 1.
+- Probabilities of all possible outcomes must total 1.
+
+These rules hold true regardless of whether one uses classical, frequentist, or Bayesian definitions of probability.
+
+
+# Probability vs. Likelihood
+
+
+## Probability vs. Likelihood Language
+
+
+In every day conversations, many people use probability and likelihood interchangeably.
+You might hear a news reporter saying "How likely is it for a candidate to win an election?" instead of saying "How probable is it for a candidate to win an election?".
+From a mathematical point of view probability and likelihood differ.
+
+## Probability Example
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+#| fig-alt: A vase like rectangular plot with 7 blue dots and 3 yellow dots
+#| fig-align: center
+
+# Define Okabe-Ito colors
+oi_blue <- "#0072B2"
+oi_yellow <- "#F0E442"
+
+# --- IMAGE 1: PROBABILITY (The "Forward" Problem) ---
+# Scenario: Known population (7 Blue, 3 Yellow), Predict Outcome.
+
+# Generate coordinates for marbles inside the bag
+set.seed(123)
+marbles_known <- data.frame(
+  x = runif(10, 0.2, 0.8),
+  y = runif(10, 0.1, 0.6),
+  color = c(rep(oi_blue, 7), rep(oi_yellow, 3))
+)
+
+plot_probability <- ggplot() +
+  # Draw the "Transparent" Bag
+  annotate("path", 
+           x = c(0.1, 0.1, 0.9, 0.9), 
+           y = c(0.8, 0.05, 0.05, 0.8), 
+           size = 2, color = "grey40") +
+  # Draw the Marbles inside
+  geom_point(data = marbles_known, aes(x, y), 
+             color = marbles_known$color, size = 12) +
+  # Labeling
+  labs(x = NULL, y = NULL) +
+  xlim(0, 1) + ylim(0, 1) +
+  theme_void() +
+  theme(plot.title = element_text(face = "bold", size = 16),
+        plot.subtitle = element_text(size = 12))
+
+# --- IMAGE 2: LIKELIHOOD (The "Backward" Problem) ---
+# Scenario: Unknown population, Observed Outcome (1 Blue).
+
+# Coordinates for the "Drawn" marble
+drawn_marble <- data.frame(x = 0.5, y = 0.85)
+
+plot_likelihood <- ggplot() +
+  # Draw the "Opaque" Bag (Solid Fill)
+  annotate("polygon", 
+           x = c(0.1, 0.1, 0.9, 0.9), 
+           y = c(0.7, 0.05, 0.05, 0.7), 
+           fill = "grey30") +
+  # Draw the Hand/Action: A Blue marble being held above the bag
+  geom_point(data = drawn_marble, aes(x, y), 
+             color = oi_blue, size = 15) +
+  # Visual indicator of drawing (an arrow)
+  annotate("segment", x = 0.5, y = 0.2, xend = 0.5, yend = 0.75, 
+           arrow = arrow(length = unit(0.3, "cm")), size = 1, color = "white") +
+  # Labeling
+  labs(x = NULL, y = NULL) +
+  xlim(0, 1) + ylim(0, 1) +
+  theme_void() +
+  theme(plot.title = element_text(face = "bold", size = 16),
+        plot.subtitle = element_text(size = 12))
+
+# Display the plots
+print(plot_probability)
+
+```
+
+:::
+
+
+::: {.column width="60%"}
+
+I have a bag with 10 marbles - 7 blue and 3 yellow marbles.
+
+
+
+I randomly select a marble. What is the probability that I select a blue marble?
+
+
+:::
+::::
+
+## Probability Example
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+#| fig-alt: A vase like rectangular plot with 7 blue dots and 3 yellow dots
+#| fig-align: center
+
+# Define Okabe-Ito colors
+oi_blue <- "#0072B2"
+oi_yellow <- "#F0E442"
+
+# --- IMAGE 1: PROBABILITY (The "Forward" Problem) ---
+# Scenario: Known population (7 Blue, 3 Yellow), Predict Outcome.
+
+# Generate coordinates for marbles inside the bag
+set.seed(123)
+marbles_known <- data.frame(
+  x = runif(10, 0.2, 0.8),
+  y = runif(10, 0.1, 0.6),
+  color = c(rep(oi_blue, 7), rep(oi_yellow, 3))
+)
+
+plot_probability <- ggplot() +
+  # Draw the "Transparent" Bag
+  annotate("path", 
+           x = c(0.1, 0.1, 0.9, 0.9), 
+           y = c(0.8, 0.05, 0.05, 0.8), 
+           size = 2, color = "grey40") +
+  # Draw the Marbles inside
+  geom_point(data = marbles_known, aes(x, y), 
+             color = marbles_known$color, size = 12) +
+  # Labeling
+  labs(x = NULL, y = NULL) +
+  xlim(0, 1) + ylim(0, 1) +
+  theme_void() +
+  theme(plot.title = element_text(face = "bold", size = 16),
+        plot.subtitle = element_text(size = 12))
+
+# --- IMAGE 2: LIKELIHOOD (The "Backward" Problem) ---
+# Scenario: Unknown population, Observed Outcome (1 Blue).
+
+# Coordinates for the "Drawn" marble
+drawn_marble <- data.frame(x = 0.5, y = 0.85)
+
+plot_likelihood <- ggplot() +
+  # Draw the "Opaque" Bag (Solid Fill)
+  annotate("polygon", 
+           x = c(0.1, 0.1, 0.9, 0.9), 
+           y = c(0.7, 0.05, 0.05, 0.7), 
+           fill = "grey30") +
+  # Draw the Hand/Action: A Blue marble being held above the bag
+  geom_point(data = drawn_marble, aes(x, y), 
+             color = oi_blue, size = 15) +
+  # Visual indicator of drawing (an arrow)
+  annotate("segment", x = 0.5, y = 0.2, xend = 0.5, yend = 0.75, 
+           arrow = arrow(length = unit(0.3, "cm")), size = 1, color = "white") +
+  # Labeling
+  labs(x = NULL, y = NULL) +
+  xlim(0, 1) + ylim(0, 1) +
+  theme_void() +
+  theme(plot.title = element_text(face = "bold", size = 16),
+        plot.subtitle = element_text(size = 12))
+
+# Display the plots
+print(plot_probability)
+
+```
+
+:::
+
+
+::: {.column width="60%"}
+
+I have a bag with 10 marbles - 7 blue and 3 yellow marbles.
+
+
+
+I randomly select a marble. What is the probability that I select a blue marble?
+
+$\pi = \frac{7}{10}$
+
+
+:::
+::::
+
+## Likelihood Example
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+#| fig-alt: There is a dark gray vase like figure with contents invisible. Above the "bag" there is a blue ball drawn
+#| 
+print(plot_likelihood)
+```
+:::
+
+
+::: {.column width="60%"}
+Now we have a bag with an unknown number of marbles with unknown proportion of blue and yellow marbles. 
+
+What is the likelihood that half of the marbles are blue? (i.e., $\pi = 0.5$)
+
+What is the likelihood that three quarters of the marbles are blue? (i.e., $\pi = 0.75$)
+
+:::
+
+::::
+
+## Probability vs. Likelihood example
+
+
+Consider an unfair coin that is designed in a way to favor heads. 
+The proportion of heads is favored about $\frac{2}{3}$ of the time as opposed to tails that is favored about $\frac{1}{3}$ of the time.
+We let the parameter $\pi$ represent the proportion of heads that this coin is expected to show after flipping.
+By design of this coin, $\pi = \frac{2}{3}$.
+
+## Probability
+
+```{r}
+#| echo: false
+#| fig-alt: "There are two ovals. The one on the left is titled as Population Pi? and the smaller one on the right is titled as Sample X. There is a curved arrow that goes from Population to Sample with a tag Probability"
+#| fig-align: center
+knitr::include_graphics(here::here("week06/img/probability.png"))
+```
+
+When a population parameter is known (i.e., $\pi = \frac{2}{3}$) and the sample observations are unknown, then we can ask **probabilistic questions** about what we can possibly observe in the sample.
+
+## Define X
+
+Let $X$ represent the number of heads in three coin flips.
+We can possibly have 0, 1, 2, or 3 head(s) in three coin flips. 
+We can ask questions like what is the probability that we observe 1 head in three coin flips.
+
+## Probability Distribution
+
+| X | Scenario | Calculation | $P(X$) |
+|---------|---------|---------|---------|
+| 0 | TTT        |    $\frac{1}{3} \times \frac{1}{3} \times \frac{1}{3}$ |   $\frac{1}{27}$   |
+| 1 | HTT, THT or TTH  |   $\frac{2}{3} \times \frac{1}{3} \times \frac{1}{3}+ \frac{1}{3} \times \frac{2}{3} \times \frac{1}{3} + \frac{1}{3} \times \frac{1}{3} \times \frac{2}{3}$ |  $\frac{6}{27}$    |
+| 2 | HHT, THH or HTH       |    $\frac{2}{3} \times \frac{2}{3} \times \frac{1}{3}+ \frac{1}{3} \times \frac{2}{3} \times \frac{2}{3} + \frac{2}{3} \times \frac{1}{3} \times \frac{2}{3}$     | $\frac{12}{27}$   |
+| 3 | HHH|    $\frac{2}{3} \times \frac{2}{3} \times \frac{2}{3}$ |   $\frac{8}{27}$   |
+
+## Probability Distribution
+
+
+Notice that the last column of the table adds up to 1 and all the values are between 0 and 1. 
+
+## Likelihood
+
+Now let's consider the opposite case when $\pi$ is unknown, in other words we don't know if the coin is unfair or not, if unfair we don't know how unfair it is but we do know $X$, in other words we have observed data based on three coin flips.
+We know that $x = 1$ after having observed three coin flips. 
+In other words, we observed one head after three coin flips.
+
+## Likelihood
+
+Likelihood problems deal with an unknown parameter (e.g., $\pi$) and estimation of the unknown parameter based on observed data from the sample.
+
+```{r}
+#| echo: false
+#| fig-alt: "There are two ovals. The one on the left is titled as Population Pi? and the smaller one on the right is titled as Sample X. There is a curved arrow that goes from Sample to Population with a tag Likelihood"
+#| fig-align: center
+knitr::include_graphics(here::here("week06/img/likelihood.png"))
+```
+
+## Likelihood
+
+In this case, $\pi$ is unknown. 
+We don't know how unfair the coin is. 
+$\pi$ can take any value between 0 and 1, including a value such as 0.325382. 
+To simplify the problem, we will assume that 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 and 1 are the only possible values of $\pi$. 
+For now, we will first focus on $\pi$ possibly being 0.6. 
+
+
+## Likelihood
+
+Our main question then is: 
+
+```{r}
+#| echo: false
+pi <- 0.6
+```
+
+
+What is the **likelihood** that $\pi$ is `r pi` if we observed only one head in three coin flips?
+
+## Likelihood
+
+We have observed the scenario HTT, THT, or TTH in the sample. 
+If $\pi$ were to be `r pi` then probability of heads is `r pi` and probability of tails `r 1-pi`. 
+Then probability of observing HTT is `r pi` $\times$ `r 1 - pi` $\times$ `r 1-pi` = `r pi*(1-pi)*(1-pi)`. 
+The probability of observing THT is `r 1-pi` $\times$ `r pi` $\times$ `r 1-pi` = `r pi*(1-pi)*(1-pi)`.
+Similarly, the probability of observing TTH is `r 1-pi` $\times$ `r 1-pi` $\times$ `r pi` = `r pi*(1-pi)*(1-pi)`.
+Then likelihood of $\pi$ being 0.6 is `r pi*(1-pi)*(1-pi)` $+$ `r pi*(1-pi)*(1-pi)` $+$ `r pi*(1-pi)*(1-pi)` = `r (pi*(1-pi)*(1-pi))*3`
+
+## Likelihood Calculation
+
+<div style="height:550px;overflow:auto;">
+
+
+| $\pi$ | Likelihood Calculation| Likelihood
+|---------|---------|---------|
+| 0.0 | [`r 0` $\times$ `r 1 - 0` $\times$ `r 1-0`] + [`r 1-0` $\times$ `r 0` $\times$ `r 1-0`] + [`r 1-0` $\times$ `r 1 - 0` $\times$ `r 0`] | `r 0*(1-0)*(1-0)*3`|
+| 0.1 | [`r 0.1` $\times$ `r 1 - 0.1` $\times$ `r 1-0.1`] + [`r 1-0.1` $\times$ `r 0.1` $\times$ `r 1-0.1`] + [`r 1-0.1` $\times$ `r 1 - 0.1` $\times$ `r 0.1`] | `r 0.1*(1-0.1)*(1-0.1)*3`
+| 0.2 | [`r 0.2` $\times$ `r 1 - 0.2` $\times$ `r 1-0.2`] + [`r 1-0.2` $\times$ `r 0.2` $\times$ `r 1-0.2`] + [`r 1-0.2` $\times$ `r 1 - 0.2` $\times$ `r 0.2`] | `r 0.2*(1-0.2)*(1-0.2)*3`|
+| 0.3 | [`r 0.3` $\times$ `r 1 - 0.3` $\times$ `r 1-0.3`] + [`r 1-0.3` $\times$ `r 0.3` $\times$ `r 1-0.3`] + [`r 1-0.3` $\times$ `r 1 - 0.3` $\times$ `r 0.3`] | `r 0.3*(1-0.3)*(1-0.3)*3`|
+| 0.4 | [`r 0.4` $\times$ `r 1 - 0.4` $\times$ `r 1-0.4`] + [`r 1-0.4` $\times$ `r 0.4` $\times$ `r 1-0.4`] + [`r 1-0.4` $\times$ `r 1 - 0.4` $\times$ `r 0.4`] | `r 0.4*(1-0.4)*(1-0.4)*3`|
+| 0.5 | [`r 0.5` $\times$ `r 1 - 0.5` $\times$ `r 1-0.5`] + [`r 1-0.5` $\times$ `r 0.5` $\times$ `r 1-0.5`] + [`r 1-0.5` $\times$ `r 1 - 0.5` $\times$ `r 0.5`] | `r 0.5*(1-0.5)*(1-0.5)*3`|
+| 0.6 | [`r 0.6` $\times$ `r 1 - 0.6` $\times$ `r 1-0.6`] + [`r 1-0.6` $\times$ `r 0.6` $\times$ `r 1-0.6`] + [`r 1-0.6` $\times$ `r 1 - 0.6` $\times$ `r 0.6`] | `r 0.6*(1-0.6)*(1-0.6)*3`|
+| 0.7 | [`r 0.7` $\times$ `r 1 - 0.7` $\times$ `r 1-0.7`] + [`r 1-0.7` $\times$ `r 0.7` $\times$ `r 1-0.7`] + [`r 1-0.7` $\times$ `r 1 - 0.7` $\times$ `r 0.7`] | `r 0.7*(1-0.7)*(1-0.7)*3`|
+| 0.8 | [`r 0.8` $\times$ `r 1 - 0.8` $\times$ `r 1-0.8`] + [`r 1-0.8` $\times$ `r 0.8` $\times$ `r 1-0.8`] + [`r 1-0.8` $\times$ `r 1 - 0.8` $\times$ `r 0.8`] | `r 0.8*(1-0.8)*(1-0.8)*3`|
+| 0.9 | [`r 0.9` $\times$ `r 1 - 0.9` $\times$ `r 1-0.9`] + [`r 1-0.9` $\times$ `r 0.9` $\times$ `r 1-0.9`] + [`r 1-0.9` $\times$ `r 1 - 0.9` $\times$ `r 0.9`] | `r 0.9*(1-0.9)*(1-0.9)*3`|
+| 1.0 | [`r 1` $\times$ `r 1 - 1` $\times$ `r 1-1`] + [`r 1-1` $\times$ `r 1` $\times$ `r 1-1`] + [`r 1-1` $\times$ `r 1 - 1` $\times$ `r 1`] | `r 1*(1-1)*(1-1)*3`|
+
+</div>
+
+
+## Likelihood is Not Probability
+
+Note that the last column of likelihood calculations do not add up to 1.
+
+
+# Normal and Beta Distributions
+
+## Normal distribution
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: A line graph showing a single, smooth, bell-shaped curve. The curve starts low on the left, rises to a rounded peak in the center, and slopes back down to the right. The entire area under the curve to the left of the center peak is shaded in solid orange. A caption at the bottom right reads, "The area under the curve is 50%."
+
+plot_normal_prob(value = 100, mean = 100, sd = 15) +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+
+```
+
+
+This is a symmetric distribution with mean, mode, and median falling exactly in the middle. The shaded region thus shows that the area under the curve is 50% indicating that if any data follows a normal distribution, we would expect 50% of the data to fall below the mean. 
+
+## Normal distribution - example
+
+For instance SAT scores are normally distributed with a mean of 1500 which means about 50% of test takers score below 1500. 
+
+## Normal distribution - notation
+
+The shape of the distribution is controlled by two parameters: mean ($\mu$) and variance ($\sigma^2$).
+Using notation a normal distribution is shown as $N(\mu, \sigma^2)$
+
+
+## Comparison of parameters
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A 2x2 grid of four line graphs, each showing a bell-shaped curve with different centers and widths.Top-left graph: Titled N(100, 15^2). The curve is tall and narrow, centered exactly at 100 on the x-axis. The y-axis goes up to 0.02.Top-right graph: Titled N(100, 30^2). The curve is also centered at 100, but it is much wider and shorter than the first graph. The y-axis peak is just above 0.010.Bottom-left graph: Titled N(90, 15^2). This curve has the same tall, narrow shape as the top-left graph but is shifted to the left, centered at 90 on the x-axis.Bottom-right graph: Titled N(90, 30^2). This curve is wide and short, centered at 90 on the x-axis"
+p1 <- 
+  ggplot(data = data.frame(x = c(0, 200)), 
+         aes(x)) +
+  stat_function(fun = dnorm, n = 1001, args = list(mean = 100, sd = 15)) + 
+  ylab("") +
+  labs(title = bquote(N(100, 15^2)))
+
+p2 <- 
+  ggplot(data = data.frame(x = c(0, 200)), 
+         aes(x)) +
+  stat_function(fun = dnorm, n = 1001, args = list(mean = 100, sd = 30)) + 
+  ylab("") +
+  labs(title = bquote(N(100, 30^2)))
+
+p3 <- 
+  ggplot(data = data.frame(x = c(0, 200)), 
+         aes(x)) +
+  stat_function(fun = dnorm, n = 1001, args = list(mean = 90, sd = 15)) + 
+  ylab("") +
+  labs(title = bquote(N(90, 15^2)))
+
+
+p4 <- 
+  ggplot(data = data.frame(x = c(0, 200)), 
+         aes(x)) +
+  stat_function(fun = dnorm, n = 1001, args = list(mean = 90, sd = 30)) + 
+  ylab("") +
+  labs(title = bquote(N(90, 30^2)))
+
+gridExtra::grid.arrange(p1, p2, p3, p4, ncol = 2, nrow = 2)
+```
+
+## Probability Calculation
+
+```{r}
+#| fig-alt: A line graph showing a smooth, bell-shaped curve on a gray grid. The x-axis is labeled "x" with major markers at 1000, 1500, and 2000. The curve reaches its peak at 1500. A portion of the area under the curve on the far right side is shaded solid orange, beginning at approximately 1800 and extending to the end of the curve. A caption at the bottom right reads, "The area under the curve is 15.87%.
+plot_normal_prob(value = 1800, mean = 1500, sd = 300, direction = "upper")
+```
+
+## Probability Calculation
+
+Let's consider the SAT example again. SAT scores are normally distributed with a mean of 1500 and a standard deviation of 300. 
+We can see in the previous figure that the area under the curve where SAT scores are greater than 1800 is `r paste(round(pnorm(1800, 1500, 300, lower.tail = FALSE), digits = 4)*100, "%.")` 
+Thus the probability an SAT score being greater than 1800 is `r round(pnorm(1800, 1500, 300, lower.tail = FALSE), digits = 4)`.
+
+## Probability Calculation
+
+```{r}
+#| fig-alt: A line graph showing a smooth, bell-shaped curve on a light gray grid. The x-axis is labeled "x" with tick marks at 4, 6, 8, and 10. The curve reaches its peak at approximately 7.5. A small portion of the area under the curve on the far left side is shaded solid orange, covering the region from the start of the curve up to approximately 5.5. A caption at the bottom right reads, "The area under the curve is 3.45%.
+plot_normal_prob(value = 5.5, mean = 7.5, sd = 1.1, direction = "lower")
+```
+
+## Probability Calculation
+
+Birth weight of babies are known to be normally distributed with a mean of 7.5 pounds and a standard deviation of 1.1 pounds. 
+If a baby is born less than 5.5 pounds then the baby is considered to be low weight. 
+We can see in the previous plot that the probability a baby is born low weight is `r round(pnorm(5.5, 7.5, 1.1, lower.tail = TRUE), digits = 4)`.
+
+
+## Beta distribution
+
+We use Beta distribution to model random variables that can take values 0 and 1.
+Next class we will use the Beta distribution to model the parameter $\pi$.
+Beta distribution has two parameters $\alpha$ and $\beta$.
+Let random variable, $\pi$ represent the proportion of bike owners on campus.
+The Beta distribution takes two shape parameters as $\alpha$ and $\beta$. 
+
+## Beta ($\alpha, \beta$) 
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-align: center 
+#| fig-alt: "A 3x3 grid of nine line graphs, each illustrating a different shape of a distribution curve. The x-axis is labeled pi and ranges from 0 to 1. The y-axis is labeled f(pi) and ranges from 0 to 5. Each graph has a unique title indicating its specific parameters.Top Row:Beta(1,5): A curve that starts high at the top left (y=5) and slopes downward, flattening out as it approaches 1 on the x-axis.Beta(1,2): A straight line starting at y=2 on the far left and sloping downward to y=0 on the far right.Beta(3,7): A rounded curve that peaks early (around 0.25) and has a long tail stretching to the right.Middle Row:Beta(1,1): A perfectly horizontal flat line at y=1 across the entire graph.Beta(5,5): A symmetric, bell-shaped curve centered exactly at 0.5.Beta(20,20): A much taller and narrower symmetric bell-shaped curve, also centered at 0.5, peaking near $y=5$.Bottom Row:Beta(7,3): A rounded curve that peaks late (around 0.75) with a long tail stretching to the left.Beta(2,1): A straight line starting at y=0 on the far left and sloping upward to y=2 on the far right.Beta(5,1): A curve that starts at 0 and curves upward sharply, reaching its highest point at the far right (y=5)."
+# Set up beta data
+
+alpha <- c(1,1,3,1,5,20,7,2,5)
+beta  <- c(5,2,7,1,5,20,3,1,1)
+betas <- data.frame(setting = factor(rep(1:9, 
+                                         each = 500)), 
+                    x = rep(seq(0, 1, 
+                                length = 500), 9),
+                    alpha = rep(alpha, each = 500),
+                    beta = rep(beta, each = 500))
+
+betas <- betas %>% 
+  mutate(y = dbeta(x, shape1 = alpha, shape2 = beta))
+
+levels(betas$setting) <-
+  paste0("Beta(",alpha,",",beta,")")
+
+trend_data <- data.frame(alpha, beta,
+                         means = (alpha / (alpha +
+                                             beta)),
+                         modes = 
+                           ((alpha - 1) / 
+                              (alpha + beta - 2))) %>% 
+  mutate(Parameter = 
+           paste0("Beta(",alpha,",",beta,")")) %>% 
+  mutate(setting = Parameter) %>% 
+  mutate(means_d = dbeta(means, alpha, beta), 
+         modes_d = dbeta(modes, alpha, beta))
+
+trend_data$setting <- factor(trend_data$setting, 
+                             levels = c("Beta(1,5)",
+                                        "Beta(1,2)",
+                                        "Beta(3,7)",
+                                        "Beta(1,1)",
+                                        "Beta(5,5)",
+                                        "Beta(20,20)",
+                                        "Beta(7,3)",
+                                        "Beta(2,1)",
+                                        "Beta(5,1)"))
+  
+ggplot(betas, aes(x = x, y = y)) + 
+  lims(x = c(0,1), y = c(0,5.5)) + 
+  geom_line() + 
+  facet_wrap(~ setting) + 
+  labs(x = expression(pi), y =
+         expression(paste("f(",pi,")"))) + 
+  scale_x_continuous(breaks = c(0,0.25,0.5,0.75,1),
+                     labels =
+                       c("0","0.25","0.50","0.75","1")) +
+  theme(text = element_text(size=20)) 
+
+```
+
+## Probability Calculation
+
+```{r}
+#| fig-alt: 'A line graph on a light gray grid showing a curve that starts very high on the left and slopes downward to the right. The x-axis is labeled $\pi$ and ranges from 0.00 to 1.00. The y-axis is labeled $f(\pi)$ and ranges from 0.0 to 12.5. The curve begins at a peak of approximately 12 on the far left and rapidly curves down, flattening out completely by the time it reaches 0.50 on the x-axis. The region under the curve from $\pi = 0$ to $\pi = 0.25$ is shaded in solid orange. A caption at the bottom reads: "The area under the curve is 96.83%. In other words, $P(\pi < 0.25) = 0.9683$.'
+plot_beta_prob( value = 0.25, alpha = 1, beta = 12)
+```
+
+## Probability Calculation
+
+
+```{r}
+#| fig-alt: 'A line graph on a light gray grid showing a curve that starts at its highest point on the left and slopes downward to the right. The x-axis is labeled $\pi$ and ranges from 0.00 to 1.00. The y-axis is labeled $f(\pi)$ and ranges from 0.0 to 12.5. The curve begins at a peak of approximately 12 at $\pi = 0$ and quickly drops, flattening out as it moves toward the right side of the graph. A very small portion of the area under the curve—starting at $\pi = 0.25$ and continuing to the right—is shaded in solid orange. A caption at the bottom reads: "The area under the curve is 3.17%. In other words, $P(\pi > 0.25) = 0.0317$."'
+plot_beta_prob( value = 0.25, alpha = 1, beta = 12, direction = "upper")
+```
+
+## Probability Calculation
+
+```{r}
+#| fig-alt: 'A line graph on a light gray grid showing a symmetric, bell-shaped curve. The x-axis is labeled $\pi$ and ranges from 0.00 to 1.00. The y-axis is labeled $f(\pi)$ and ranges from 0 to 4. The curve reaches its peak at approximately 0.46 on the x-axis. A portion of the area under the curve on the left side is shaded in solid orange, starting from the beginning of the curve and ending at $\pi = 0.4$. A caption at the bottom reads: "The area under the curve is 26.77%. In other words, $P(\pi < 0.4) = 0.2677$."'
+plot_beta_prob(value = 0.4, alpha = 12, beta = 14)
+```
+
+## Probability Calculation
+
+```{r}
+#| fig-alt: 'A line graph on a light gray grid showing a symmetric, bell-shaped curve. The x-axis is labeled $\pi$ and ranges from 0.00 to 1.00. The y-axis is labeled $f(\pi)$ and ranges from 0 to 4. The curve reaches its peak just before the 0.50 mark. A large portion of the area under the curve is shaded in solid orange, starting at $\pi = 0.4$ and continuing all the way to the right end of the curve. A caption at the bottom reads: "The area under the curve is 73.23%. In other words, $P(\pi > 0.4) = 0.7323$."'
+plot_beta_prob(value = 0.4, alpha = 12, beta = 14, direction = "upper")
+```
+
+
+
