@@ -118,7 +118,11 @@ Which of these people are more certain (i.e. have a highly informative prior)?
 
 ## Plotting Beta Prior
 
-```{r echo = FALSE, message = FALSE, fig.align='center'}
+```{r}
+#| echo: FALSE
+#| message: FALSE
+#| fig-align: center
+
 library(tidyverse)
 # Set up beta data
 
@@ -221,7 +225,9 @@ summarize_beta_binomial(14, 1, y = 9, n = 20)
 ## The Optimist 
 
 
-```{r fig.align = "center", fig.height = 5}
+```{r}
+#| fig-align: center
+#| fig-height: 5
 plot_beta_binomial(14, 1, y = 9, n = 20)
 ```
 
@@ -235,7 +241,9 @@ summarize_beta_binomial(1, 1, y = 9, n = 20)
 ## The Clueless 
 
 
-```{r fig.align = "center", fig.height = 5}
+```{r}
+#| fig-align: center
+#| fig-height: 5
 plot_beta_binomial(1, 1, y = 9, n = 20)
 ```
 
@@ -249,14 +257,20 @@ summarize_beta_binomial(5, 11, y = 9, n = 20)
 ## The Feminist
 
 
-```{r fig.align = "center", fig.height = 5}
+```{r}
+#| fig-align: center
+#| fig-height: 5
 plot_beta_binomial(5, 11, y = 9, n = 20)
 ```
 
 ## Comparison 
 
 
-```{r fig.align = "center", fig.width = 15, echo = FALSE, fig.height=5}
+```{r}
+#| fig-align: center
+#| fig-width: 15
+#| echo: false
+#| fig-height: 5
 library(patchwork)
 optimist <- plot_beta_binomial(14, 1, y = 9, n = 20) +
   labs(title = "Optimist")
@@ -313,7 +327,9 @@ summarize_beta_binomial(14, 1, y = 6, n = 13)
 
 ## Morteza's analysis
 
-```{r fig.height=5, fig.align="center"}
+```{r}
+#| fig-height: 5
+#| fig-align: center
 plot_beta_binomial(14, 1, y = 6, n = 13)
 ```
 
@@ -334,7 +350,9 @@ summarize_beta_binomial(14, 1, y = 29, n = 63)
 
 ## Nadide's analysis
 
-```{r fig.height=5, fig.align="center"}
+```{r}
+#| fig-height: 5
+#| fig-align: center
 plot_beta_binomial(14, 1, y = 29, n = 63)
 ```
 
@@ -356,7 +374,9 @@ summarize_beta_binomial(14, 1, y = 46, n = 99)
 
 ## Ursula's analysis
 
-```{r fig.height=5, fig.align="center"}
+```{r}
+#| fig-height: 5
+#| fig-align: center
 plot_beta_binomial(14, 1, y = 46, n = 99)
 
 ```
@@ -368,7 +388,9 @@ plot_beta_binomial(14, 1, y = 46, n = 99)
 theme_set(theme_gray(base_size = 12))
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r}
+#| echo: false
+#| message: false
 ## Remove
 ## Code for facet_wrapped Beta-Binomial plots
 ### Plotting function
@@ -435,7 +457,9 @@ plot_dat <- make_plot_data(
 ```
 
 
-```{r echo = FALSE, fig.align='center'}
+```{r}
+#| echo: false
+#| fig-align: center
 plot_dat_new <- plot_dat %>% 
   mutate(setting_prior = factor(setting_prior, 
                                 levels = c("prior: Beta(14,1)", "prior: Beta(5,11)", "prior: Beta(1,1)")))
