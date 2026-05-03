@@ -119,8 +119,8 @@ Which of these people are more certain (i.e. have a highly informative prior)?
 ## Plotting Beta Prior
 
 ```{r}
-#| echo: FALSE
-#| message: FALSE
+#| echo: false
+#| message: false
 #| fig-align: center
 
 library(tidyverse)
@@ -394,7 +394,7 @@ theme_set(theme_gray(base_size = 12))
 ## Remove
 ## Code for facet_wrapped Beta-Binomial plots
 ### Plotting function
-beta_binom_grid_plot <- function(data, likelihood = FALSE, posterior = FALSE){
+beta_binom_grid_plot <- function(data, likelihood = false, posterior = false){
   g <- ggplot(data, aes(x = pi, y = prior)) + 
     geom_line() + 
     geom_area(alpha = 0.5, aes(fill = "prior", x = pi, y = prior)) + 
