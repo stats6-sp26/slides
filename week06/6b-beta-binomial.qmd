@@ -76,7 +76,7 @@ We will utilize functions from `library(bayesrules)` to examine different people
 
 ```{r}
 #| fig-align: center
-#| label: beta-14-1
+#| label: beta141
 summarize_beta(14, 1)
 
 plot_beta(14, 1) 
@@ -86,7 +86,7 @@ plot_beta(14, 1)
 
 ```{r}
 #| fig-align: center
-#| label: beta-1-1
+#| label: beta11
 summarize_beta(1, 1)
 
 plot_beta(1, 1) 
@@ -96,7 +96,7 @@ plot_beta(1, 1)
 
 ```{r}
 #| fig-align: center
-#| label: beta-5-11
+#| label: beta511
 summarize_beta(5, 11)
 
 plot_beta(5, 11) 
