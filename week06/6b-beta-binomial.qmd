@@ -22,7 +22,7 @@ format:
       include-after-body: "../templates/access.html"
 ---
 
-## 
+## Packages
 
 ```{r}
 #| label: packages
@@ -60,7 +60,7 @@ following three rules:
 
 This test is used for assessing movies in terms of representation of women. Even though there are three criteria, a movie either fails or passes the Bechdel test.
 
-##
+## Unknown
 
 Let $\pi$ be the the proportion of movies that pass the Bechdel test.
 
@@ -77,6 +77,7 @@ We will utilize functions from `library(bayesrules)` to examine different people
 ```{r}
 #| fig-align: center
 #| label: beta141
+#| fig-alt: 'Curve showing how plausible different values of π are, with the highest point around 1. Values close to 0 are much less plausible. The curve starts rising from near 0.75, peaks around 1.'
 summarize_beta(14, 1)
 
 plot_beta(14, 1) 
@@ -87,6 +88,7 @@ plot_beta(14, 1)
 ```{r}
 #| fig-align: center
 #| label: beta11
+#| fig-alt: 'A flat line showing how plausible different values of π are at exactly f(pi) equalling 1 for all values of pi.'
 summarize_beta(1, 1)
 
 plot_beta(1, 1) 
@@ -97,6 +99,7 @@ plot_beta(1, 1)
 ```{r}
 #| fig-align: center
 #| label: beta511
+#| fig-alt: 'Curve showing how plausible different values of π are, with the highest point around 0.3. Values near 0.3 are most likely, while values close to 0 or 1 are much less plausible. The curve rises from near 0, peaks around 0.3, and then gradually decreases toward 1.'
 summarize_beta(5, 11)
 
 plot_beta(5, 11) 
@@ -128,6 +131,7 @@ Which of these people are more certain (i.e. have a highly informative prior)?
 #| message: false
 #| fig-align: center
 #| label: beta-prior
+#| fig-alt: 'A 3×3 grid of line plots showing probability density functions for different Beta distributions on the interval 0 to 1 (x-axis labeled π, y-axis labeled f(π)). Each panel is titled with its parameter values: Beta(1,5), Beta(1,2), Beta(3,7), Beta(1,1), Beta(5,5), Beta(20,20), Beta(7,3), Beta(2,1), and Beta(5,1). The shapes vary across panels: Beta(1,1) is flat (uniform); Beta(1,5) and Beta(1,2) decrease from left to right (mass near 0); Beta(2,1) and Beta(5,1) increase toward 1 (mass near 1); Beta(3,7) peaks left of center; Beta(7,3) peaks right of center; Beta(5,5) is symmetric and moderately peaked at 0.5; and Beta(20,20) is sharply peaked around 0.5.'
 
 library(tidyverse)
 # Set up beta data
@@ -239,6 +243,7 @@ summarize_beta_binomial(14, 1, y = 9, n = 20)
 #| fig-align: center
 #| fig-height: 5
 #| label: plot-beta-binom
+#| fig-alt: 'A single plot showing three overlaid curves on the interval 0 to 1 (x-axis labeled π, y-axis labeled density). A yellow curve labeled “prior” is heavily skewed toward 1, rising sharply near π = 1. A blue curve labeled “(scaled) likelihood” is centered around π ≈ 0.5 with a moderate spread. A green curve labeled “posterior” is shifted to the right of the likelihood, peaking around π ≈ 0.65 and narrower than the likelihood. The posterior lies between the prior and likelihood, reflecting an update toward higher values of π.'
 plot_beta_binomial(14, 1, y = 9, n = 20)
 ```
 
@@ -258,7 +263,7 @@ summarize_beta_binomial(1, 1, y = 9, n = 20)
 #| fig-align: center
 #| fig-height: 5
 #| label: plot-beta-binom2
-
+#| fig-alt: 'A single plot of two curves and a line on the interval 0 to 1 (x-axis labeled π, y-axis labeled density). The yellow “prior” is flat across the entire range, indicating a uniform distribution. The blue “(scaled) likelihood” and green “posterior” curves overlap almost perfectly, both symmetric and centered at π ≈ 0.5 with a bell-shaped peak. The posterior matches the likelihood closely, showing that the uniform prior has little influence on the updated distribution.'
 plot_beta_binomial(1, 1, y = 9, n = 20)
 ```
 
@@ -278,7 +283,7 @@ summarize_beta_binomial(5, 11, y = 9, n = 20)
 #| label: plot-beta-binom3
 #| fig-align: center
 #| fig-height: 5
-
+#| fig-alt: A single plot of three curves. Prior peaks around when pi is 0.3, likelihood peaks around when pi is 0.45 and posterior is between the prior and likelihood and is more peaked than both.
 plot_beta_binomial(5, 11, y = 9, n = 20)
 ```
 
@@ -291,6 +296,7 @@ plot_beta_binomial(5, 11, y = 9, n = 20)
 #| fig-width: 15
 #| echo: false
 #| fig-height: 5
+#| fig-alt: The last three plots provided next to one another
 library(patchwork)
 optimist <- plot_beta_binomial(14, 1, y = 9, n = 20) +
   labs(title = "Optimist")
@@ -319,6 +325,7 @@ Utilize `summarize_beta_binomial()` and `plot_beta_binomial()` functions to exam
 #| out-width: 70%
 #| fig-align: center
 #| label: bayes-balance
+#| fig-alt: Three weighing scales, each holding the prior on one side and data on the other. The left scale is tipped toward the prior, the middle is balanced, and the right is tipped toward the data.
 knitr::include_graphics("img/bayes-balance-1.png")
 ```
 
@@ -354,6 +361,7 @@ summarize_beta_binomial(14, 1, y = 6, n = 13)
 #| fig-height: 5
 #| fig-align: center
 #| label: morteza-plot
+#| fig-alt: The prior curve mostly has high values of pi as highly plausible with a peak at pi at 1. The likelihood has a wide range with a peak near 0.46. Posterior is in the middle with a peak around 0.72.
 plot_beta_binomial(14, 1, y = 6, n = 13)
 ```
 
@@ -380,6 +388,7 @@ summarize_beta_binomial(14, 1, y = 29, n = 63)
 #| fig-height: 5
 #| fig-align: center
 #| label: plot-nadide
+#| fig-alt: The prior curve mostly has high values of pi as highly plausible with a peak at pi at 1. The likelihood has a narrower range compared to Morteza's plot with a peak near 0.46. Posterior is in the middle but this time closer to the likelihood with a peak around 0.55.
 plot_beta_binomial(14, 1, y = 29, n = 63)
 ```
 
@@ -407,6 +416,7 @@ summarize_beta_binomial(14, 1, y = 46, n = 99)
 #| fig-height: 5
 #| fig-align: center
 #| label: plot-ursula
+#| fig-alt: The prior curve mostly has high values of pi as highly plausible with a peak at pi at 1. The likelihood has even a narrower range compared to Nadide's plot with a peak near 0.46. Posterior is in the middle but this time much closer to the likelihood with a peak around 0.52.
 plot_beta_binomial(14, 1, y = 46, n = 99)
 
 ```
@@ -417,6 +427,7 @@ plot_beta_binomial(14, 1, y = 46, n = 99)
 #| echo: false
 #| message: false
 #| label: summary-beta-binomial-function
+#| fig-alt: A summary plot with 3 by 3 totaling 9 plots. Columns represent three different data scenarios previously shown on these slides as Y=6 of n = 13, Y=29 of n=63, and Y=46 of n=99. Rows represent three different priors from top to bottom Beta(14,1), Beta(5,11), and Beta(1,1). When the number of observations increase for data then posterior is closer to the likelihood. When the prior is highly informative (extreme) then posterior is also more influenced by the prior compared to a less informative prior. In fact for a flat prior there is no impact of the prior.
 ## Remove
 ## Code for facet_wrapped Beta-Binomial plots
 ### Plotting function

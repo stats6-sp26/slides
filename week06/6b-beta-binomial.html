@@ -208,8 +208,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="packages" class="slide level2">
+<h2>Packages</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bayesrules)</span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -233,8 +233,8 @@ Dr.&nbsp;Mine Dogucu
 <p>This test is used for assessing movies in terms of representation of women. Even though there are three criteria, a movie either fails or passes the Bechdel test.</p>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="unknown" class="slide level2">
+<h2>Unknown</h2>
 <p>Let <span class="math inline">\(\pi\)</span> be the the proportion of movies that pass the Bechdel test.</p>
 <div class="fragment">
 <p>The Beta distribution is a good fit for modeling our prior understanding about <span class="math inline">\(\pi\)</span>.</p>
@@ -254,7 +254,7 @@ Dr.&nbsp;Mine Dogucu
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta</span>(<span class="dv">14</span>, <span class="dv">1</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/beta141-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/beta141-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="Curve showing how plausible different values of π are, with the highest point around 1. Values close to 0 are much less plausible. The curve starts rising from near 0.75, peaks around 1." width="960"></section>
 <section id="the-clueless" class="slide level2">
 <h2>The Clueless</h2>
 <div class="cell" data-layout-align="center">
@@ -266,7 +266,7 @@ Dr.&nbsp;Mine Dogucu
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta</span>(<span class="dv">1</span>, <span class="dv">1</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/beta11-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/beta11-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A flat line showing how plausible different values of π are at exactly f(pi) equalling 1 for all values of pi." width="960"></section>
 <section id="the-feminist" class="slide level2">
 <h2>The Feminist</h2>
 <div class="cell" data-layout-align="center">
@@ -278,7 +278,7 @@ Dr.&nbsp;Mine Dogucu
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta</span>(<span class="dv">5</span>, <span class="dv">11</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/beta511-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/beta511-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="Curve showing how plausible different values of π are, with the highest point around 0.3. Values near 0.3 are most likely, while values close to 0 or 1 are much less plausible. The curve rises from near 0, peaks around 0.3, and then gradually decreases toward 1." width="960"></section>
 <section id="vocabulary" class="slide level2">
 <h2>Vocabulary</h2>
 <p><strong>Informative prior:</strong> An informative prior reflects specific information about the unknown variable with high certainty (ie. low variability).</p>
@@ -297,7 +297,7 @@ Dr.&nbsp;Mine Dogucu
 <section id="plotting-beta-prior" class="slide level2">
 <h2>Plotting Beta Prior</h2>
 
-<img data-src="6b-beta-binomial_files/figure-revealjs/beta-prior-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/beta-prior-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A 3×3 grid of line plots showing probability density functions for different Beta distributions on the interval 0 to 1 (x-axis labeled π, y-axis labeled f(π)). Each panel is titled with its parameter values: Beta(1,5), Beta(1,2), Beta(3,7), Beta(1,1), Beta(5,5), Beta(20,20), Beta(7,3), Beta(2,1), and Beta(5,1). The shapes vary across panels: Beta(1,1) is flat (uniform); Beta(1,5) and Beta(1,2) decrease from left to right (mass near 0); Beta(2,1) and Beta(5,1) increase toward 1 (mass near 1); Beta(3,7) peaks left of center; Beta(7,3) peaks right of center; Beta(5,5) is symmetric and moderately peaked at 0.5; and Beta(20,20) is sharply peaked around 0.5." width="960"></section>
 <section id="your-prior" class="slide level2">
 <h2>Your prior</h2>
 <p>What is your prior model of <span class="math inline">\(\pi\)</span>?</p>
@@ -356,7 +356,7 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">9</span>, <span class="at">n =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/plot-beta-binom-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/plot-beta-binom-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A single plot showing three overlaid curves on the interval 0 to 1 (x-axis labeled π, y-axis labeled density). A yellow curve labeled “prior” is heavily skewed toward 1, rising sharply near π = 1. A blue curve labeled “(scaled) likelihood” is centered around π ≈ 0.5 with a moderate spread. A green curve labeled “posterior” is shifted to the right of the likelihood, peaking around π ≈ 0.65 and narrower than the likelihood. The posterior lies between the prior and likelihood, reflecting an update toward higher values of π." width="960"></section>
 <section id="the-clueless-1" class="slide level2">
 <h2>The Clueless</h2>
 <div class="cell">
@@ -374,7 +374,7 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">9</span>, <span class="at">n =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/plot-beta-binom2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/plot-beta-binom2-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A single plot of two curves and a line on the interval 0 to 1 (x-axis labeled π, y-axis labeled density). The yellow “prior” is flat across the entire range, indicating a uniform distribution. The blue “(scaled) likelihood” and green “posterior” curves overlap almost perfectly, both symmetric and centered at π ≈ 0.5 with a bell-shaped peak. The posterior matches the likelihood closely, showing that the uniform prior has little influence on the updated distribution." width="960"></section>
 <section id="the-feminist-1" class="slide level2">
 <h2>The Feminist</h2>
 <div class="cell">
@@ -392,11 +392,11 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">5</span>, <span class="dv">11</span>, <span class="at">y =</span> <span class="dv">9</span>, <span class="at">n =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/plot-beta-binom3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/plot-beta-binom3-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A single plot of three curves. Prior peaks around when pi is 0.3, likelihood peaks around when pi is 0.45 and posterior is between the prior and likelihood and is more peaked than both." width="960"></section>
 <section id="comparison" class="slide level2">
 <h2>Comparison</h2>
 
-<img data-src="6b-beta-binomial_files/figure-revealjs/comparison-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1440"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/comparison-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="The last three plots provided next to one another" width="1440"></section>
 <section id="your-posterior" class="slide level2">
 <h2>Your Posterior</h2>
 <p>Utilize <code>summarize_beta_binomial()</code> and <code>plot_beta_binomial()</code> functions to examine your own posterior model.</p>
@@ -404,7 +404,7 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <section id="balancing-act-of-bayesian-analysis" class="slide level2">
 <h2>Balancing Act of Bayesian Analysis</h2>
 
-<img data-src="img/bayes-balance-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>In Bayesian methodology, the prior model and the data both contribute to our posterior model.</p>
+<img data-src="img/bayes-balance-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%" alt="Three weighing scales, each holding the prior on one side and data on the other. The left scale is tipped toward the prior, the middle is balanced, and the right is tipped toward the data."><p>In Bayesian methodology, the prior model and the data both contribute to our posterior model.</p>
 </section>
 <section id="different-data-different-posteriors" class="slide level2">
 <h2>Different Data, Different Posteriors</h2>
@@ -444,7 +444,7 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">n =</span> <span class="dv">13</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/morteza-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/morteza-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="The prior curve mostly has high values of pi as highly plausible with a peak at pi at 1. The likelihood has a wide range with a peak near 0.46. Posterior is in the middle with a peak around 0.72." width="960"></section>
 <section id="nadides-analysis" class="slide level2">
 <h2>Nadide’s analysis</h2>
 <div class="cell">
@@ -479,7 +479,7 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">29</span>, <span class="at">n =</span> <span class="dv">63</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/plot-nadide-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/plot-nadide-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="The prior curve mostly has high values of pi as highly plausible with a peak at pi at 1. The likelihood has a narrower range compared to Morteza's plot with a peak near 0.46. Posterior is in the middle but this time closer to the likelihood with a peak around 0.55." width="960"></section>
 <section id="ursulas-analysis" class="slide level2">
 <h2>Ursula’s analysis</h2>
 <div class="cell">
@@ -514,7 +514,7 @@ $ binary &lt;chr&gt; "FAIL", "PASS", "FAIL", "FAIL", "PASS", "FAIL", "FAIL", "PA
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">46</span>, <span class="at">n =</span> <span class="dv">99</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="6b-beta-binomial_files/figure-revealjs/plot-ursula-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="6b-beta-binomial_files/figure-revealjs/plot-ursula-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="The prior curve mostly has high values of pi as highly plausible with a peak at pi at 1. The likelihood has even a narrower range compared to Nadide's plot with a peak near 0.46. Posterior is in the middle but this time much closer to the likelihood with a peak around 0.52." width="960"></section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 
