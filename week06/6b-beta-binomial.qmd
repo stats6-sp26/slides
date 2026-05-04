@@ -427,7 +427,6 @@ plot_beta_binomial(14, 1, y = 46, n = 99)
 #| echo: false
 #| message: false
 #| label: summary-beta-binomial-function
-#| fig-alt: A summary plot with 3 by 3 totaling 9 plots. Columns represent three different data scenarios previously shown on these slides as Y=6 of n = 13, Y=29 of n=63, and Y=46 of n=99. Rows represent three different priors from top to bottom Beta(14,1), Beta(5,11), and Beta(1,1). When the number of observations increase for data then posterior is closer to the likelihood. When the prior is highly informative (extreme) then posterior is also more influenced by the prior compared to a less informative prior. In fact for a flat prior there is no impact of the prior.
 ## Remove
 ## Code for facet_wrapped Beta-Binomial plots
 ### Plotting function
@@ -498,6 +497,7 @@ plot_dat <- make_plot_data(
 #| echo: false
 #| fig-align: center
 #| label: summary-beta-binomial
+#| fig-alt: A summary plot with 3 by 3 totaling 9 plots. Columns represent three different data scenarios previously shown on these slides as Y=6 of n = 13, Y=29 of n=63, and Y=46 of n=99. Rows represent three different priors from top to bottom Beta(14,1), Beta(5,11), and Beta(1,1). When the number of observations increase for data then posterior is closer to the likelihood. When the prior is highly informative (extreme) then posterior is also more influenced by the prior compared to a less informative prior. In fact for a flat prior there is no impact of the prior.
 plot_dat_new <- plot_dat |> 
   mutate(setting_prior = factor(setting_prior, 
                                 levels = c("prior: Beta(14,1)", "prior: Beta(5,11)", "prior: Beta(1,1)")))
