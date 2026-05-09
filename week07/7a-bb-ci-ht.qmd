@@ -168,6 +168,7 @@ After having observed the data, optimist's posterior model indicates that with 9
 
 ```{r}
 #| fig-align: center
+#| fig-alt: A single plot of three curves. Prior peaks around when pi is 0.3, likelihood peaks around when pi is 0.45 and posterior is between the prior and likelihood and is more peaked than both.
 summarize_beta_binomial(5, 11, y = 9, n = 20)
 
 plot_beta_binomial(5, 11, y = 9, n = 20) 
