@@ -21,7 +21,7 @@ format:
       include-after-body: "../templates/access.html"
 ---
 
-## 
+## Packages
 
 ```{r}
 library(bayesrules)
@@ -35,8 +35,12 @@ set.seed(84735)
 theme_set(theme_gray(base_size = 18))
 ```
 
-##
-:::{.pull-left}
+## Bayesian vs. Frequentist Inference
+
+::::{.columns}
+
+
+:::{.column width=50%}
 
 **Bayesian**
 
@@ -46,7 +50,7 @@ Hypotheses have probabilities in light of the observed data
 :::
 
 
-:::{.pull-right}
+:::{.column}
 
 **Frequentist**
 
@@ -55,28 +59,32 @@ P (Data | Hypotheses)
 Data have probability considering the conditions of the hypotheses
 :::
 
-<br>
-<br>
+
+::::
 
 . . .
 
 <hr>
 
 
-:::{.pull-left}
+::::{.columns}
 
+
+:::{.column width=50%}
 
 Credible Intervals
 
 :::
 
 
-:::{.pull-right}
+:::{.column}
 
 
 Confidence Intervals
 
 :::
+
+::::
 
 # Hypotheses Testing
 
@@ -154,9 +162,13 @@ Are there any black cows in the world?
 
 **Alternative** hypothesis: There is a black cow in the world.
 
-##
+## Conclusion
 
-```{r echo = FALSE, fig.align = 'center', out.width="40%"}
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 40%
+#| fig-alt: a large emoji of a cow with a black font
 library(emojifont)
 library(ggplot2)
 
@@ -250,7 +262,7 @@ No problems were detected.
 
 # Writing Hypotheses with Notation
 
-##
+## Varince in Statistics
 
 ::: {.font75}
 
@@ -266,28 +278,26 @@ If there was no variance there would be no need for statistics.
 
 - We want to predict who will graduate college. What if everyone graduated college? (`graduate` = {TRUE, TRUE,..., TRUE})
 
-##
+## What if?
 
 - We want to understand if Android users spend more time on their phones when compared to iOS users. What if everyone spent 3 hours per day on their phones? (`time` = {3, 3,..., 3}, `os` = {Android, Android, .... iOS})
 
 
 - We want to understand, if birth height and weight are positively associated in babies. What if every baby was 7.5 lbs? (`weight` = {7.5, 7.5,..., 7.5}, `height` = {20, 22,..., 18})
 
-##
+## Variance
 
 In all these fake scenarios there would be no **variance** in `sleep`, `graduate`, `time`, `weight`. These variables would all be constants thus would not even be a **vari**able.
 
-:::{.font50}
+. . .
 
 Things vary. We use statistics in research studies to understand **how** variables vary and often we want to know **how** they **covary** with other variables. 
 
-:::
-
-##
+. . .
 
 To make the connection between research questions of studies and statistics, we will take small steps and begin with writing hypotheses using notation.
 
-##
+## Example 1
 
 `r fontawesome::fa(name = "search", fill = "#e56646")` **Research Question** Do UCI students sleep on average 8 hours on a typical night? 
 
@@ -319,7 +329,7 @@ $H_A : \mu - 8 \neq 0$
 
 The parameter we want to infer about is **a single mean**.
 
-##
+## Notation in Quarto
 
 ::: {.callout-tip }
 
@@ -335,7 +345,7 @@ The double dollar signs at the beginning and at the end let Gradescope know that
 
 :::
 
-##
+## Example 2
 
 `r fontawesome::fa(name = "search", fill = "#e56646")` **Research Question** Do the majority of Americans approve allowing DACA immigrants to become citizens?
 
@@ -358,7 +368,7 @@ $H_A: \pi > 0.5$
 
 The parameter we want to infer about is **a single proportion**.
 
-##
+## Example 3
 
 `r fontawesome::fa(name = "search", fill = "#e56646")` **Research Question** Is California March 2020 unemployment rate different than US March 2020 unemployment rate which is at 4.4%?
 
@@ -381,7 +391,7 @@ $$H_0:\pi= 0.044$$  $$H_A: \pi \neq 0.044$$
 
 The parameter we want to infer about is **a single proportion**.
 
-## 
+## Example 4
 
 `r fontawesome::fa(name = "search", fill = "#e56646")` **Research Question** Are there more STEM majors at UCI than non-STEM majors?
 
@@ -403,7 +413,7 @@ $$H_0: \pi \leq 0.5$$ $$H_A: \pi > 0.5$$
 
 The parameter we want to infer about is **a single proportion**.
 
-##
+## Example 5
 
 `r fontawesome::fa(name = "search", fill = "#e56646")` **RQ** Do STEM (s) majors have higher or lower (different) income after graduation when compared to non-STEM (n) majors?
 
@@ -432,7 +442,7 @@ $$H_0:\mu_{s} - \mu_{n} = 0$$  $$H_A:\mu_{s} - \mu_{n} \neq 0$$
 
 We want to infer about **difference of two means**.
 
-##
+## Example 6
 
 `r fontawesome::fa(name = "search", fill = "#e56646")` **RQ** Do Democrats and Republicans approve legal abortion at same rates?
 
@@ -456,7 +466,7 @@ $H_A:\pi_{d} \neq \pi_{r}$
 We want to infer about **difference of two proportions**.
 
 
-##
+## Summary
 
 
 <div align="center">
@@ -470,9 +480,8 @@ We want to infer about **difference of two proportions**.
 
 </div>
 
-A categorical variable with two levels is called a __binary__ variable.
 
-##
+## More parameters
 
 Later on we will also learn
 
@@ -486,10 +495,13 @@ Later on we will also learn
 
 # Central Limit Theorem
 
-## Parameters of a normal distribution $N(\mu, \sigma^2)$
+## $N(\mu, \sigma^2)$
 
 
-```{r echo = FALSE, fig.align='center'}
+```{r}
+#| fig-alt: "A 2x2 grid of four line graphs, each showing a bell-shaped curve with different centers and widths.Top-left graph: Titled N(100, 15^2). The curve is tall and narrow, centered exactly at 100 on the x-axis. The y-axis goes up to 0.02.Top-right graph: Titled N(100, 30^2). The curve is also centered at 100, but it is much wider and shorter than the first graph. The y-axis peak is just above 0.010.Bottom-left graph: Titled N(90, 15^2). This curve has the same tall, narrow shape as the top-left graph but is shifted to the left, centered at 90 on the x-axis.Bottom-right graph: Titled N(90, 30^2). This curve is wide and short, centered at 90 on the x-axis"
+#| echo: false
+#| fig-align: center
 p1 <- 
   ggplot(data = data.frame(x = c(0, 200)), 
          aes(x)) +
@@ -568,7 +580,7 @@ We can calculate the population standard deviation ( $\sigma$ ).
 summarize(lapd, sd(base_pay))
 ```
 
-##
+## Sampling
 
 What if we did not have access to all this data? What would we do?
 
@@ -576,18 +588,18 @@ What if we did not have access to all this data? What would we do?
 
 Rely on a sample!
 
-##
+## Population parameter vs. sample statistic
 
 ```{r}
 #| echo: false
 pop_mean <-  mean(lapd$base_pay)
 ```
 
-##
 
 Let's assume we went ahead and took a (random) sample of LAPD staff and asked their salary information (and they report to us truthfully) and calculated a mean, would we find a mean of 85149.05? Why, why not?
 
-##
+## Population parameter vs. point estimate of the parameter
+
 
 Let's pretend we have never seen the data and we do not know the population parameter $\mu$. In fact this is usually what happens in real life. We do not have the population information but we do want to know a population __parameter__ (does not necessarily have to be the mean).
 
@@ -596,7 +608,7 @@ Let's pretend we have never seen the data and we do not know the population para
 If we took a sample and calculated the sample mean, we would name this __point estimate__ of the parameter. 
 
 
-##
+## Summary
 
 |                               | Parameter of Interest | Point Estimate / Sample Statistic |
 |-------------------------------|-----------------------|-----------------------------------|
@@ -653,14 +665,21 @@ sample_3 <- lapd |>
 mean(sample_3$base_pay)
 ```
 
-## 
+## Means of 10,000 samples
+
 We could do this over and over again. Don't you worry! I did it.
 
 I have taken 10,000 samples of size 200 (sample size of 20 is just too small) and calculated their mean. The following slide shows the distribution of the **sample means**.
 
 ## Sampling Distribution of the Mean
 
-```{r warning = FALSE, cache = TRUE}
+```{r}
+#| echo: false
+#| warning: false
+#| cache: true
+#| fig-align: center
+#| fig-alt: Histogram that looks symmetric and bell-shaped centered around about 85,000. The x axis reads Sample Means and y axis reads count. In the center of the x axis the the count in the y-axis reaches close to 1000. The sample means below 80,000 and above 90,000 do not even reach counts of 100.
+
 set.seed(123)
 sample_means <-vector()
 
@@ -670,9 +689,7 @@ for (i in 1:10000){
 
 sample_means_data <- data.frame(sample_means = sample_means)
 
-```
 
-```{r warning = FALSE, message = FALSE}
 sample_means_data |>  
   ggplot(aes(x = sample_means)) +
   geom_histogram() +
@@ -684,7 +701,12 @@ sample_means_data |>
 
 ## Sampling Distribution of the Mean
 
-```{r warning = FALSE, message = FALSE}
+```{r}
+#| echo: false
+#| warning: false
+#| cache: true
+#| fig-align: center
+#| fig-alt: Same plot as the previous histogram with a vertical line passing through about 85000 on the x axis.
 population_mean <- mean(lapd$base_pay)
 
 sample_means_data |>  
@@ -697,7 +719,7 @@ sample_means_data |>
   geom_vline(xintercept = population_mean)
 ```
 
-##
+## Central Limit Theorem (CLT)
 
 When certain conditions are met then:
 
@@ -708,13 +730,16 @@ $$\bar x \sim \text{approximately }N( \mu, \frac{\sigma^2}{n})$$
 
 $$(\bar x_1 - \bar x_2) \sim \text{approximately } N(\mu_1 - \mu_2, \frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2})$$
 
-. . .
+## Central Limit Theorem (CLT)
+
+When certain conditions are met then:
 
 $$p \sim  \text{approximately } N(\pi,  \frac{\pi(1-\pi)}{n})$$
 
 . . .
 
-$$(p_1 - p_2) \sim \text{approximately } N((\pi_1 - \pi_2),  {\frac{\pi_1(1-\pi_1)}{n_1} + \frac{\pi_2(1-\pi_2)}{n_2}})$$
+$$(p_1 - p_2) \sim \text{approximately } N((\pi_1 - \pi_2),$$
+$${\frac{\pi_1(1-\pi_1)}{n_1} + \frac{\pi_2(1-\pi_2)}{n_2}})$$
 
 
 ## Central Limit Theorem (CLT)

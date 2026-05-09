@@ -207,8 +207,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="packages" class="slide level2">
+<h2>Packages</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bayesrules)</span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -216,26 +216,25 @@ Dr.&nbsp;Mine Dogucu
 <span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">84735</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div class="pull-left">
+<section id="bayesian-vs.-frequentist-inference" class="slide level2">
+<h2>Bayesian vs.&nbsp;Frequentist Inference</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Bayesian</strong></p>
 <p>P (Hypotheses | Data) Hypotheses have probabilities in light of the observed data</p>
-</div>
-<div class="pull-right">
+</div><div class="column">
 <p><strong>Frequentist</strong></p>
 <p>P (Data | Hypotheses)</p>
 <p>Data have probability considering the conditions of the hypotheses</p>
-</div>
-<p><br> <br></p>
+</div></div>
 <div class="fragment">
 <hr>
-<div class="pull-left">
+<div class="columns">
+<div class="column" style="width:50%;">
 <p>Credible Intervals</p>
-</div>
-<div class="pull-right">
+</div><div class="column">
 <p>Confidence Intervals</p>
-</div>
+</div></div>
 </div>
 </section>
 <section>
@@ -328,10 +327,10 @@ p
 <p><strong>Null</strong> hypothesis: There are <strong>no</strong> black cows in the world.</p>
 <p><strong>Alternative</strong> hypothesis: There is a black cow in the world.</p>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
 
-<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"><p>When we see a black cow, we <strong>reject</strong> the null hypothesis and conclude that there is a black cow in the world.</p>
+<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%" alt="a large emoji of a cow with a black font"><p>When we see a black cow, we <strong>reject</strong> the null hypothesis and conclude that there is a black cow in the world.</p>
 </section>
 <section id="research-question-2" class="slide level2">
 <h2>Research Question</h2>
@@ -418,8 +417,8 @@ p
 <h1>Writing Hypotheses with Notation</h1>
 
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="varince-in-statistics" class="slide level2">
+<h2>Varince in Statistics</h2>
 <div class="font75">
 <p>If there was no variance there would be no need for statistics.</p>
 </div>
@@ -431,26 +430,25 @@ p
 <li><p>We want to predict who will graduate college. What if everyone graduated college? (<code>graduate</code> = {TRUE, TRUE,…, TRUE})</p></li>
 </ul>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
+<section id="what-if-1" class="slide level2">
+<h2>What if?</h2>
 <ul>
 <li><p>We want to understand if Android users spend more time on their phones when compared to iOS users. What if everyone spent 3 hours per day on their phones? (<code>time</code> = {3, 3,…, 3}, <code>os</code> = {Android, Android, …. iOS})</p></li>
 <li><p>We want to understand, if birth height and weight are positively associated in babies. What if every baby was 7.5 lbs? (<code>weight</code> = {7.5, 7.5,…, 7.5}, <code>height</code> = {20, 22,…, 18})</p></li>
 </ul>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
+<section id="variance" class="slide level2">
+<h2>Variance</h2>
 <p>In all these fake scenarios there would be no <strong>variance</strong> in <code>sleep</code>, <code>graduate</code>, <code>time</code>, <code>weight</code>. These variables would all be constants thus would not even be a <strong>vari</strong>able.</p>
-<div class="font50">
+<div class="fragment">
 <p>Things vary. We use statistics in research studies to understand <strong>how</strong> variables vary and often we want to know <strong>how</strong> they <strong>covary</strong> with other variables.</p>
 </div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
+<div class="fragment">
 <p>To make the connection between research questions of studies and statistics, we will take small steps and begin with writing hypotheses using notation.</p>
+</div>
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <strong>Research Question</strong> Do UCI students sleep on average 8 hours on a typical night?</p>
 <div class="fragment">
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <strong>Variable</strong> <code>sleep</code> (8,7,9,7.5, …)</p>
@@ -473,8 +471,8 @@ p
 <p>The parameter we want to infer about is <strong>a single mean</strong>.</p>
 </div>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
+<section id="notation-in-quarto" class="slide level2">
+<h2>Notation in Quarto</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -493,8 +491,8 @@ p
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
-<h2></h2>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <strong>Research Question</strong> Do the majority of Americans approve allowing DACA immigrants to become citizens?</p>
 <div class="fragment">
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <strong>Variable</strong> <code>approve</code> (yes, yes, yes, no, yes, no, no)</p>
@@ -511,8 +509,8 @@ p
 <p>The parameter we want to infer about is <strong>a single proportion</strong>.</p>
 </div>
 </section>
-<section id="section-10" class="slide level2">
-<h2></h2>
+<section id="example-3" class="slide level2">
+<h2>Example 3</h2>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <strong>Research Question</strong> Is California March 2020 unemployment rate different than US March 2020 unemployment rate which is at 4.4%?</p>
 <div class="fragment">
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <strong>Variable</strong> <code>unemployed_CA</code> (no, no, yes, no, yes, no, no…)</p>
@@ -528,8 +526,8 @@ p
 <p>The parameter we want to infer about is <strong>a single proportion</strong>.</p>
 </div>
 </section>
-<section id="section-11" class="slide level2">
-<h2></h2>
+<section id="example-4" class="slide level2">
+<h2>Example 4</h2>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <strong>Research Question</strong> Are there more STEM majors at UCI than non-STEM majors?</p>
 <div class="fragment">
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <strong>Variable</strong> <code>STEM</code> (TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE…)</p>
@@ -545,8 +543,8 @@ p
 <p>The parameter we want to infer about is <strong>a single proportion</strong>.</p>
 </div>
 </section>
-<section id="section-12" class="slide level2">
-<h2></h2>
+<section id="example-5" class="slide level2">
+<h2>Example 5</h2>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <strong>RQ</strong> Do STEM (s) majors have higher or lower (different) income after graduation when compared to non-STEM (n) majors?</p>
 <div class="fragment">
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <strong>Variables</strong> explanatory: <code>STEM</code> (TRUE, FALSE, FALSE, TRUE,…)<br>
@@ -568,8 +566,8 @@ response: <code>income</code>(40000, 20000, 65490, 115000,…)</p>
 <p>We want to infer about <strong>difference of two means</strong>.</p>
 </div>
 </section>
-<section id="section-13" class="slide level2">
-<h2></h2>
+<section id="example-6" class="slide level2">
+<h2>Example 6</h2>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <strong>RQ</strong> Do Democrats and Republicans approve legal abortion at same rates?</p>
 <div class="fragment">
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e56646;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <strong>Variables</strong> explanatory: <code>party</code> (D, D, R, R,…)<br>
@@ -585,8 +583,8 @@ response: <code>approve</code>(TRUE, FALSE, FALSE, TRUE,…)</p>
 <p>We want to infer about <strong>difference of two proportions</strong>.</p>
 </div>
 </section>
-<section id="section-14" class="slide level2">
-<h2></h2>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
 <div data-align="center">
 <table class="caption-top">
 <colgroup>
@@ -631,10 +629,9 @@ response: <code>approve</code>(TRUE, FALSE, FALSE, TRUE,…)</p>
 </tbody>
 </table>
 </div>
-<p>A categorical variable with two levels is called a <strong>binary</strong> variable.</p>
 </section>
-<section id="section-15" class="slide level2">
-<h2></h2>
+<section id="more-parameters" class="slide level2">
+<h2>More parameters</h2>
 <p>Later on we will also learn</p>
 <div data-align="center">
 <table class="caption-top">
@@ -665,10 +662,10 @@ response: <code>approve</code>(TRUE, FALSE, FALSE, TRUE,…)</p>
 <h1>Central Limit Theorem</h1>
 
 </section>
-<section id="parameters-of-a-normal-distribution-nmu-sigma2" class="slide level2">
-<h2>Parameters of a normal distribution <span class="math inline">\(N(\mu, \sigma^2)\)</span></h2>
+<section id="nmu-sigma2" class="slide level2">
+<h2><span class="math inline">\(N(\mu, \sigma^2)\)</span></h2>
 
-<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A 2x2 grid of four line graphs, each showing a bell-shaped curve with different centers and widths.Top-left graph: Titled N(100, 15^2). The curve is tall and narrow, centered exactly at 100 on the x-axis. The y-axis goes up to 0.02.Top-right graph: Titled N(100, 30^2). The curve is also centered at 100, but it is much wider and shorter than the first graph. The y-axis peak is just above 0.010.Bottom-left graph: Titled N(90, 15^2). This curve has the same tall, narrow shape as the top-left graph but is shifted to the left, centered at 90 on the x-axis.Bottom-right graph: Titled N(90, 30^2). This curve is wide and short, centered at 90 on the x-axis" width="960"></section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
 <p>We will be using payroll data from Los Angeles Police Department (LAPD) from 2018.</p>
@@ -711,29 +708,26 @@ $ base_pay &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.63, 950
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2">
-<h2></h2>
+<section id="sampling" class="slide level2">
+<h2>Sampling</h2>
 <p>What if we did not have access to all this data? What would we do?</p>
 <div class="fragment">
 <p>Rely on a sample!</p>
 </div>
 </section>
-<section id="section-17" class="slide level2">
-<h2></h2>
-</section>
-<section id="section-18" class="slide level2">
-<h2></h2>
+<section id="population-parameter-vs.-sample-statistic" class="slide level2">
+<h2>Population parameter vs.&nbsp;sample statistic</h2>
 <p>Let’s assume we went ahead and took a (random) sample of LAPD staff and asked their salary information (and they report to us truthfully) and calculated a mean, would we find a mean of 85149.05? Why, why not?</p>
 </section>
-<section id="section-19" class="slide level2">
-<h2></h2>
+<section id="population-parameter-vs.-point-estimate-of-the-parameter" class="slide level2">
+<h2>Population parameter vs.&nbsp;point estimate of the parameter</h2>
 <p>Let’s pretend we have never seen the data and we do not know the population parameter <span class="math inline">\(\mu\)</span>. In fact this is usually what happens in real life. We do not have the population information but we do want to know a population <strong>parameter</strong> (does not necessarily have to be the mean).</p>
 <div class="fragment">
 <p>If we took a sample and calculated the sample mean, we would name this <strong>point estimate</strong> of the parameter.</p>
 </div>
 </section>
-<section id="section-20" class="slide level2">
-<h2></h2>
+<section id="summary-1" class="slide level2">
+<h2>Summary</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 34%">
@@ -825,65 +819,36 @@ $ base_pay &lt;dbl&gt; 119321.60, 113270.70, 148116.00, 78676.87, 109373.63, 950
 </div>
 </div>
 </section>
-<section id="section-21" class="slide level2">
-<h2></h2>
+<section id="means-of-10000-samples" class="slide level2">
+<h2>Means of 10,000 samples</h2>
 <p>We could do this over and over again. Don’t you worry! I did it.</p>
 <p>I have taken 10,000 samples of size 200 (sample size of 20 is just too small) and calculated their mean. The following slide shows the distribution of the <strong>sample means</strong>.</p>
 </section>
 <section id="sampling-distribution-of-the-mean" class="slide level2">
 <h2>Sampling Distribution of the Mean</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb17-2"><a href="" aria-hidden="true" tabindex="-1"></a>sample_means <span class="ot">&lt;-</span><span class="fu">vector</span>()</span>
-<span id="cb17-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>){</span>
-<span id="cb17-5"><a href="" aria-hidden="true" tabindex="-1"></a>    sample_means <span class="ot">&lt;-</span> <span class="fu">c</span>(sample_means, <span class="fu">mean</span>(<span class="fu">sample_n</span>(lapd, <span class="dv">200</span>)<span class="sc">$</span>base_pay))</span>
-<span id="cb17-6"><a href="" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-7"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-8"><a href="" aria-hidden="true" tabindex="-1"></a>sample_means_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sample_means =</span> sample_means)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="" aria-hidden="true" tabindex="-1"></a>sample_means_data <span class="sc">|&gt;</span>  </span>
-<span id="cb18-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sample_means)) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb18-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Sample Means"</span>) <span class="sc">+</span></span>
-<span id="cb18-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> comma) <span class="sc">+</span></span>
-<span id="cb18-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
-<span id="cb18-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"bar(x)"</span>, <span class="at">parse=</span>T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
-</div>
-<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="Histogram that looks symmetric and bell-shaped centered around about 85,000. The x axis reads Sample Means and y axis reads count. In the center of the x axis the the count in the y-axis reaches close to 1000. The sample means below 80,000 and above 90,000 do not even reach counts of 100." width="960"></section>
 <section id="sampling-distribution-of-the-mean-1" class="slide level2">
 <h2>Sampling Distribution of the Mean</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a>population_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(lapd<span class="sc">$</span>base_pay)</span>
-<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a>sample_means_data <span class="sc">|&gt;</span>  </span>
-<span id="cb19-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sample_means)) <span class="sc">+</span></span>
-<span id="cb19-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb19-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Sample Means"</span>) <span class="sc">+</span></span>
-<span id="cb19-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> comma) <span class="sc">+</span></span>
-<span id="cb19-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>))  <span class="sc">+</span></span>
-<span id="cb19-9"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"bar(x)"</span>, <span class="at">parse=</span>T) <span class="sc">+</span></span>
-<span id="cb19-10"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> population_mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
-</div>
-<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
-<section id="section-22" class="slide level2">
-<h2></h2>
+<img data-src="7b-freq-inference_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="Same plot as the previous histogram with a vertical line passing through about 85000 on the x axis." width="960"></section>
+<section id="central-limit-theorem-clt" class="slide level2">
+<h2>Central Limit Theorem (CLT)</h2>
 <p>When certain conditions are met then:</p>
 <p><span class="math display">\[\bar x \sim \text{approximately }N( \mu, \frac{\sigma^2}{n})\]</span></p>
 <div class="fragment">
 <p><span class="math display">\[(\bar x_1 - \bar x_2) \sim \text{approximately } N(\mu_1 - \mu_2, \frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2})\]</span></p>
 </div>
-<div class="fragment">
+</section>
+<section id="central-limit-theorem-clt-1" class="slide level2">
+<h2>Central Limit Theorem (CLT)</h2>
+<p>When certain conditions are met then:</p>
 <p><span class="math display">\[p \sim  \text{approximately } N(\pi,  \frac{\pi(1-\pi)}{n})\]</span></p>
-</div>
 <div class="fragment">
-<p><span class="math display">\[(p_1 - p_2) \sim \text{approximately } N((\pi_1 - \pi_2),  {\frac{\pi_1(1-\pi_1)}{n_1} + \frac{\pi_2(1-\pi_2)}{n_2}})\]</span></p>
+<p><span class="math display">\[(p_1 - p_2) \sim \text{approximately } N((\pi_1 - \pi_2),\]</span> <span class="math display">\[{\frac{\pi_1(1-\pi_1)}{n_1} + \frac{\pi_2(1-\pi_2)}{n_2}})\]</span></p>
 </div>
 </section>
-<section id="central-limit-theorem-clt" class="slide level2">
+<section id="central-limit-theorem-clt-2" class="slide level2">
 <h2>Central Limit Theorem (CLT)</h2>
 <p>If certain conditions are met, the sampling distribution will be normally distributed with a mean equal to the population parameter. The standard deviation will be inversely proportional to the square root of the sample size.</p>
 <div class="fragment">
