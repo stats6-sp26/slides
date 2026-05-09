@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Bayesian Inference:"
+title: "Introduction to Bayesian Inference"
 subtitle: "Credible Intervals and Hypothesis Testing"
 author: "Dr. Mine Dogucu"
 execute:
@@ -22,7 +22,7 @@ format:
       include-after-body: "../templates/access.html"
 ---
 
-## 
+## Packages
 
 ```{r}
 library(bayesrules)
@@ -56,15 +56,16 @@ Posterior model: $\pi|Y \sim \text{Beta}(23, 12)$
 
 We can read this as $\pi$ given $Y$ (i.e., the data) follows a Beta model with parameters 23 and 12.
 
-## 
+## Recall
 
 ```{r}
+#| fig-alt: 'A single plot showing three overlaid curves on the interval 0 to 1 (x-axis labeled π, y-axis labeled density). A yellow curve labeled “prior” is heavily skewed toward 1, rising sharply near π = 1. A blue curve labeled “(scaled) likelihood” is centered around π ≈ 0.5 with a moderate spread. A green curve labeled “posterior” is shifted to the right of the likelihood, peaking around π ≈ 0.65 and narrower than the likelihood. The posterior lies between the prior and likelihood, reflecting an update toward higher values of π.'
 plot_beta_binomial(14, 1, y = 9, n = 20)
 ```
 
 # Credible Intervals
 
-## 
+## Understanding Change of Beliefs
 
 We are often interested in how our ideas change from prior to posterior. 
 
@@ -82,10 +83,11 @@ According to optimist's prior model the probability that $\pi$ is between
 `r ci_prior[1]` and `r ci_prior[2]` is 95%. 
 
 
-## 
+## 95% prior credible interval
 
 
 ```{r}
+#| fig-alt: 'Curve showing how plausible different values of π are, with the highest point around 1. Values close to 0 are much less plausible. The curve starts rising from near 0.75, peaks around 1. The middle 95% under the curve is shaded red.'
 #| echo: false
 pi <- seq(0, 1, by = 0.01)
 y <- dbeta(pi, 14,1)
@@ -102,9 +104,11 @@ qplot(pi, y, data = data,
                   alpha = 0.5) +
   annotate(geom = "text", x = 0.9, y = 1.5, label = "95%")
 ```
-##
+
+## 95% prior credible interval
 
 ```{r}
+#| fig-alt: 'Curve showing how plausible different values of π are, with the highest point around 1. Values close to 0 are much less plausible. The curve starts rising from near 0.75, peaks around 1. The middle 95% under the curve is shaded red and labeled as 95%. On the left edge of the shaded area there is an arrow that is labeled as 2.5th percentile and on the right edge the label reads 97.5th percentile.'
 #| echo: false
 pi <- seq(0, 1, by = 0.01)
 y <- dbeta(pi, 14,1)
@@ -208,9 +212,10 @@ posterior_prob <- pbeta(0.33, 14 , 22)
 posterior_prob
 ```
 
-##
+## Prior Model
 
 ```{r}
+#| fig-alt: In the prior distribution of Beta(5,11) the area under the curve where pi is less than 0.33 is shaded with lightblue. The area corresponds to about 58% of the area under the curve.
 #| echo: false
 #| fig-align: center
 plot_prob_plot <- function(a,b,cutoff){
@@ -226,9 +231,10 @@ plot_prob_plot(5, 11, cutoff = 0.33) +
   labs(title = "Prior")
 ```
 
-##
+## Posterior Model
 
 ```{r}
+#| fig-alt: In the posterior distribution of Beta(14,22) the area under the curve where pi is less than 0.33 is shaded with lightblue. The area corresponds to about 24% of the area under the curve.
 #| echo: false
 #| fig-align: center
 plot_prob_plot(14, 22, cutoff = 0.33) + 
@@ -237,7 +243,7 @@ plot_prob_plot(14, 22, cutoff = 0.33) +
 ```
 
 
-## 
+## Prior odds
 
 $$P(\pi<0.33)$$
 
@@ -262,7 +268,7 @@ prior_odds <- prior_prob / (1 - prior_prob)
 prior_odds
 ```
 
-## 
+## Posterior odds
 
 $$P(\pi | Y <0.33)$$
 
@@ -287,7 +293,7 @@ posterior_odds <- posterior_prob / (1 - posterior_prob)
 posterior_odds
 ```
 
-## 
+## Bayes Factor
 
 The __Bayes Factor (BF)__ compares the posterior odds to the prior odds, hence provides insight into just how much the feminist's understanding about movies passing the Bechdel test _evolved_ upon observing the sample data:
 
@@ -311,7 +317,7 @@ $$\text{Bayes Factor}
  \; .$$
 
 
-##
+## Interpretation of BF
 
 As a ratio, it's meaningful to compare the Bayes Factor (BF)\ to 1.  To this end, consider three possible scenarios:
 

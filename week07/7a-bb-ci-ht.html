@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
-  <title>Introduction to Bayesian Inference:</title>
+  <title>Introduction to Bayesian Inference</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -196,7 +196,7 @@
     <div class="slides">
 
 <section id="title-slide" data-aria-label="Intro to Data Science course logo" data-background-image="https://www.introdata.science/img/logo.png" data-background-position="50% 85%" data-background-size="5%" include-after-body="../templates/access.html" class="quarto-title-block center">
-  <h1 class="title">Introduction to Bayesian Inference:</h1>
+  <h1 class="title">Introduction to Bayesian Inference</h1>
   <p class="subtitle">Credible Intervals and Hypothesis Testing</p>
 
 <div class="quarto-title-authors">
@@ -208,8 +208,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="packages" class="slide level2">
+<h2>Packages</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bayesrules)</span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -236,20 +236,20 @@ Dr.&nbsp;Mine Dogucu
 <p>We can read this as <span class="math inline">\(\pi\)</span> given <span class="math inline">\(Y\)</span> (i.e., the data) follows a Beta model with parameters 23 and 12.</p>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="recall-1" class="slide level2">
+<h2>Recall</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_beta_binomial</span>(<span class="dv">14</span>, <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">9</span>, <span class="at">n =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-4-1.png" alt="A single plot showing three overlaid curves on the interval 0 to 1 (x-axis labeled π, y-axis labeled density). A yellow curve labeled “prior” is heavily skewed toward 1, rising sharply near π = 1. A blue curve labeled “(scaled) likelihood” is centered around π ≈ 0.5 with a moderate spread. A green curve labeled “posterior” is shifted to the right of the likelihood, peaking around π ≈ 0.65 and narrower than the likelihood. The posterior lies between the prior and likelihood, reflecting an update toward higher values of π." width="960" class="r-stretch"></section>
 <section>
 <section id="credible-intervals" class="title-slide slide level1 center">
 <h1>Credible Intervals</h1>
 
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="understanding-change-of-beliefs" class="slide level2">
+<h2>Understanding Change of Beliefs</h2>
 <p>We are often interested in how our ideas change from prior to posterior.</p>
 <p>One measure that can capture this change is the credible interval.</p>
 </section>
@@ -257,15 +257,15 @@ Dr.&nbsp;Mine Dogucu
 <h2>Prior credible interval</h2>
 <p>According to optimist’s prior model the probability that <span class="math inline">\(\pi\)</span> is between 0.7683642 and 0.9981932 is 95%.</p>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-
-<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-
-<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="prior-credible-interval-1" class="slide level2">
+<h2>95% prior credible interval</h2>
+
+<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-6-1.png" alt="Curve showing how plausible different values of π are, with the highest point around 1. Values close to 0 are much less plausible. The curve starts rising from near 0.75, peaks around 1. The middle 95% under the curve is shaded red." width="960" class="r-stretch"></section>
+<section id="prior-credible-interval-2" class="slide level2">
+<h2>95% prior credible interval</h2>
+
+<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-7-1.png" alt="Curve showing how plausible different values of π are, with the highest point around 1. Values close to 0 are much less plausible. The curve starts rising from near 0.75, peaks around 1. The middle 95% under the curve is shaded red and labeled as 95%. On the left edge of the shaded area there is an arrow that is labeled as 2.5th percentile and on the right edge the label reads 97.5th percentile." width="960" class="r-stretch"></section>
+<section id="prior-credible-interval-3" class="slide level2">
 <h2>Prior Credible Interval</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">qbeta</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="dv">14</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -343,16 +343,16 @@ Dr.&nbsp;Mine Dogucu
 </div>
 </div>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
+<section id="prior-model" class="slide level2">
+<h2>Prior Model</h2>
 
-<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="section-6" class="slide level2">
-<h2></h2>
+<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="In the prior distribution of Beta(5,11) the area under the curve where pi is less than 0.33 is shaded with lightblue. The area corresponds to about 58% of the area under the curve." width="960"></section>
+<section id="posterior-model" class="slide level2">
+<h2>Posterior Model</h2>
 
-<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="section-7" class="slide level2">
-<h2></h2>
+<img data-src="7a-bb-ci-ht_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="In the posterior distribution of Beta(14,22) the area under the curve where pi is less than 0.33 is shaded with lightblue. The area corresponds to about 24% of the area under the curve." width="960"></section>
+<section id="prior-odds" class="slide level2">
+<h2>Prior odds</h2>
 <p><span class="math display">\[P(\pi&lt;0.33)\]</span></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="" aria-hidden="true" tabindex="-1"></a>prior_prob <span class="ot">&lt;-</span> <span class="fu">pbeta</span>(<span class="fl">0.33</span>, <span class="dv">5</span>, <span class="dv">11</span>)</span>
@@ -372,8 +372,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
+<section id="posterior-odds" class="slide level2">
+<h2>Posterior odds</h2>
 <p><span class="math display">\[P(\pi | Y &lt;0.33)\]</span></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="" aria-hidden="true" tabindex="-1"></a>posterior_prob <span class="ot">&lt;-</span> <span class="fu">pbeta</span>(<span class="fl">0.33</span>, <span class="dv">14</span>, <span class="dv">22</span>)</span>
@@ -393,8 +393,8 @@ Dr.&nbsp;Mine Dogucu
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
-<h2></h2>
+<section id="bayes-factor" class="slide level2">
+<h2>Bayes Factor</h2>
 <p>The <strong>Bayes Factor (BF)</strong> compares the posterior odds to the prior odds, hence provides insight into just how much the feminist’s understanding about movies passing the Bechdel test <em>evolved</em> upon observing the sample data:</p>
 <p><span class="math display">\[\text{Bayes Factor} = \frac{\text{Posterior odds }}{\text{Prior odds }}\]</span></p>
 <div class="cell">
@@ -405,7 +405,7 @@ Dr.&nbsp;Mine Dogucu
 </div>
 </div>
 </section>
-<section id="bayes-factor" class="slide level2">
+<section id="bayes-factor-1" class="slide level2">
 <h2>Bayes Factor</h2>
 <p>In a hypothesis test of two competing hypotheses, <span class="math inline">\(H_a\)</span> vs <span class="math inline">\(H_0\)</span>, the Bayes Factor is an odds ratio for <span class="math inline">\(H_a\)</span>:</p>
 <p><span class="math display">\[\text{Bayes Factor}
@@ -413,8 +413,8 @@ Dr.&nbsp;Mine Dogucu
 = \frac{P(H_a | Y) / P(H_0 | Y)}{P(H_a) / P(H_0)}
 \; .\]</span></p>
 </section>
-<section id="section-10" class="slide level2">
-<h2></h2>
+<section id="interpretation-of-bf" class="slide level2">
+<h2>Interpretation of BF</h2>
 <p>As a ratio, it’s meaningful to compare the Bayes Factor (BF)&nbsp;to 1. To this end, consider three possible scenarios:</p>
 <ol type="1">
 <li>BF = 1: The plausibility of <span class="math inline">\(H_a\)</span> <em>didn’t change</em> in light of the observed data.</li>
