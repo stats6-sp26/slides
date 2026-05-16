@@ -182,10 +182,10 @@ knitr::include_graphics("img/initial-drawing-pixelated.png")
 Use your drawing as well as the drawings of your teammates (only your teammates) to come up with an algorithm (a set of rules) that can identify an open book. In other words, the algorithm should should identify whether the drawn book is open or closed.
 
 
-## 
+## MY CLASSIFICATION ALGORITHM  
 
 
-MY CLASSIFICATION ALGORITHM   
+ 
 Algorithm Name: _______________________
 
 My Rule (write it step-by-step):  
@@ -215,7 +215,7 @@ My Rule (write it step-by-step):
   `if` `gap_row_count` >= 1 `then` predict "open".  
    `else` predict "closed". 
 
-##
+## The Vertical Gap Scanner
 
 Step 5: Test your model
 
@@ -561,7 +561,7 @@ knitr::include_graphics("img/tilted-open-pixelated.png")
 
 ## Model Evaluation
 
-| | **Predicted: OPEN** | **Predicted: CLOSED** |
+|Criteria | **Predicted: OPEN** | **Predicted: CLOSED** |
 | :--- | :--- | :--- |
 | **Actual: OPEN** | <span style="color:green; font-weight:bold;">_________</span><br/>**(True Positive)** | <span style="color:orange; font-weight:bold;">________</span><br/>**(False Negative)** |
 | **Actual: CLOSED**| <span style="color:red; font-weight:bold;">_______</span><br/>**(False Positive)** | <span style="color:green; font-weight:bold;">________</span><br/>**(True Negative)** |
