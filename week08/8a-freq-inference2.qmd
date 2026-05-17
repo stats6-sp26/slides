@@ -202,11 +202,34 @@ Babies are making a random choice
 
 Babies are not making a random choice
 
+
+## Hypotheses To Test
+
+
+$H_0$: Babies are making a random choice
+
+$H_a$: Babies are not making a random choice
+
+## Hypotheses To Test
+
+
+$H_0$: Babies are making a random choice
+
+$H_a$: Babies are not making a random choice
+
 . . .
 
 <hr>
 
-Which of these is easier to model right now? 
+Which of these is easier to model right now? 
+
+## Hypotheses To Test
+
+
+$H_0$: Babies are making a random choice ($\pi = 0.5$)
+
+$H_a$: Babies are not making a random choice ($\pi \neq 0.5$)
+
 
 
 ## Assumption
@@ -227,6 +250,7 @@ What is your surprise threshold? Below and above which number would you start ge
 
 ```{r}
 #| echo: false
+#| fig-align: center
 #| fig-alt: number line starting from 0 and ending at 16 with integers only
 library(ggplot2)
 library(ggforce) # Required for drawing the perfect ellipse around '8'
@@ -304,6 +328,7 @@ What is your surprise threshold? Below and above which number would you start ge
 
 ```{r}
 #| echo: false
+#| fig-align: center
 #| fig-alt: in the number line, number is circled
 p2
 ```
@@ -314,6 +339,7 @@ What is your surprise threshold? Below and above which number would you start ge
 
 ```{r}
 #| echo: false
+#| fig-align: center
 #| fig-alt: in the number line, number is circled, numbers 10 through 16 are highlighted with pink and numbers 0 to 6 are highlighted in pink. 0, 6, 10, and 16 are highlighted.
 p3
 ```
@@ -342,7 +368,14 @@ Do the findings generalize to all infants?
 
 - If the sample observation is in the 0.05 highlighted region, then we would be “surprised”. In other words, if the sample is in the 0.05 highlighted region, then we would conclude that there is a low probability of observing a surprising sample like this one or something more extreme if the randomness model were true. 
 
-- If the randomness model were true, there would be a low probability (less than 0.05) of observing a sample value like the one we have observed or something more extreme. So, we reject the randomness model and conclude the alternative model.
+## Surprise (extreme threshold)
+
+
+- If the randomness model were true, there would be a low probability (less than 0.05) of observing a sample value like the one we have observed or something more extreme. So, we reject the randomness model (null hypothesis) and conclude the alternative model.
+
+## p-value
+
+A p-value is the probability of obtaining your observed results or something even more extreme assuming that the null hypothesis is correct.
 
 ## Error
 

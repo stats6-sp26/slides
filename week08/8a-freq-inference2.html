@@ -239,10 +239,25 @@ Dr.&nbsp;Mine Dogucu
 <h2>Hypotheses To Test</h2>
 <p>Babies are making a random choice</p>
 <p>Babies are not making a random choice</p>
+</section>
+<section id="hypotheses-to-test-1" class="slide level2">
+<h2>Hypotheses To Test</h2>
+<p><span class="math inline">\(H_0\)</span>: Babies are making a random choice</p>
+<p><span class="math inline">\(H_a\)</span>: Babies are not making a random choice</p>
+</section>
+<section id="hypotheses-to-test-2" class="slide level2">
+<h2>Hypotheses To Test</h2>
+<p><span class="math inline">\(H_0\)</span>: Babies are making a random choice</p>
+<p><span class="math inline">\(H_a\)</span>: Babies are not making a random choice</p>
 <div class="fragment">
 <hr>
-<p>Which of these is easier to model right now?</p>
+<p>Which of these is easier to model right now?</p>
 </div>
+</section>
+<section id="hypotheses-to-test-3" class="slide level2">
+<h2>Hypotheses To Test</h2>
+<p><span class="math inline">\(H_0\)</span>: Babies are making a random choice (<span class="math inline">\(\pi = 0.5\)</span>)</p>
+<p><span class="math inline">\(H_a\)</span>: Babies are not making a random choice (<span class="math inline">\(\pi \neq 0.5\)</span>)</p>
 </section>
 <section id="assumption" class="slide level2">
 <h2>Assumption</h2>
@@ -261,17 +276,17 @@ Dr.&nbsp;Mine Dogucu
 <h2>Surprise threshold</h2>
 <p>What is your surprise threshold? Below and above which number would you start getting surprised?</p>
 
-<img data-src="8a-freq-inference2_files/figure-revealjs/unnamed-chunk-5-1.png" alt="number line starting from 0 and ending at 16 with integers only" width="960" class="r-stretch"></section>
+<img data-src="8a-freq-inference2_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="number line starting from 0 and ending at 16 with integers only" width="960"></section>
 <section id="surprise-threshold-1" class="slide level2">
 <h2>Surprise threshold</h2>
 <p>What is your surprise threshold? Below and above which number would you start getting surprised?</p>
 
-<img data-src="8a-freq-inference2_files/figure-revealjs/unnamed-chunk-6-1.png" alt="in the number line, number is circled" width="960" class="r-stretch"></section>
+<img data-src="8a-freq-inference2_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="in the number line, number is circled" width="960"></section>
 <section id="surprise-threshold-2" class="slide level2">
 <h2>Surprise threshold</h2>
 <p>What is your surprise threshold? Below and above which number would you start getting surprised?</p>
 
-<img data-src="8a-freq-inference2_files/figure-revealjs/unnamed-chunk-7-1.png" alt="in the number line, number is circled, numbers 10 through 16 are highlighted with pink and numbers 0 to 6 are highlighted in pink. 0, 6, 10, and 16 are highlighted." width="960" class="r-stretch"></section>
+<img data-src="8a-freq-inference2_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="in the number line, number is circled, numbers 10 through 16 are highlighted with pink and numbers 0 to 6 are highlighted in pink. 0, 6, 10, and 16 are highlighted." width="960"></section>
 <section id="simulate-data" class="slide level2">
 <h2>Simulate data</h2>
 <p>With your neighbor, flip a coin 16 times and record the number of heads that you observe. In other words, each group is a set of researchers observing the behavior of 16 babies from Randomville.</p>
@@ -289,8 +304,17 @@ Dr.&nbsp;Mine Dogucu
 <ul>
 <li><p>Instead of count of babies, we will often see surprise threshold set at 0.05 probability. This is a debatable topic what the surprise threshold should be.</p></li>
 <li><p>If the sample observation is in the 0.05 highlighted region, then we would be “surprised”. In other words, if the sample is in the 0.05 highlighted region, then we would conclude that there is a low probability of observing a surprising sample like this one or something more extreme if the randomness model were true.</p></li>
-<li><p>If the randomness model were true, there would be a low probability (less than 0.05) of observing a sample value like the one we have observed or something more extreme. So, we reject the randomness model and conclude the alternative model.</p></li>
 </ul>
+</section>
+<section id="surprise-extreme-threshold-1" class="slide level2">
+<h2>Surprise (extreme threshold)</h2>
+<ul>
+<li>If the randomness model were true, there would be a low probability (less than 0.05) of observing a sample value like the one we have observed or something more extreme. So, we reject the randomness model (null hypothesis) and conclude the alternative model.</li>
+</ul>
+</section>
+<section id="p-value" class="slide level2">
+<h2>p-value</h2>
+<p>A p-value is the probability of obtaining your observed results or something even more extreme assuming that the null hypothesis is correct.</p>
 </section>
 <section id="error" class="slide level2">
 <h2>Error</h2>
