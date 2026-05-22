@@ -59,7 +59,7 @@ ggplot(babies,
 
 ```{r}
 #| output-location: column
-#| fig-alt: "A prominent blue lineis drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age."
+#| fig-alt: "A prominent blue line is drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age."
 ggplot(babies,
        aes(x = gestation, y = bwt)) +
   geom_point() +
