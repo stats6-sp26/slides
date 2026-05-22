@@ -1,0 +1,689 @@
+---
+title: "Simple Linear Regression"
+author: "Dr. Mine Dogucu"
+execute:
+  echo: true
+format: 
+  revealjs:
+    menu:
+      openButton: false
+    footer: |
+      <span id="menu-toggle-box"></span> [introdata.science](https://introdata.science)
+    code-line-numbers: false 
+    slide-number: true
+    incremental: false
+    theme: ["../templates/slide-style.scss"]
+    title-slide-attributes: 
+      data-background-image: "https://www.introdata.science/img/logo.png"
+      data-background-size: 5%
+      data-background-position: 50% 85%
+      data-aria-label: "Intro to Data Science course logo"
+      include-after-body: "../templates/access.html"
+---
+
+
+
+```{r}
+#| echo: false
+options(scipen=999)
+library(tidyverse)
+library(openintro)
+library(broom)
+theme_set(theme_bw(base_size = 26))
+```
+
+## Data `babies` in `openintro` package
+
+```{r}
+#| echo: false
+glimpse(babies)
+
+```
+
+##  Baby Weights
+
+
+```{r}
+#| output-location: column
+#| fig-alt: "A scatter plot displays birth weight (bwt) on the y-axis, ranging from approximately 50 to 175, against gestational age (gestation) on the x-axis, ranging from approximately 150 to 350. There is a moderate positive relationship, indicating that birth weight generally increases with gestational age. The majority of data points form a dense cluster between 250-300 for gestation and 100-150 for bwt. Scattered points exist across the range, including some with lower birth weights for both very short and very long gestations."
+
+ggplot(babies, 
+       aes(x = gestation, y = bwt)) +
+  geom_point()
+
+```
+
+
+##  Baby Weights
+
+
+```{r}
+#| output-location: column
+#| fig-alt: "A prominent blue lineis drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age."
+ggplot(babies,
+       aes(x = gestation, y = bwt)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) 
+
+```
+
+`lm` stands for linear model  
+`se` stands for standard error
+
+
+## Variables
+
+<center>
+
+
+
+| y | Response    | Birth weight | Numeric |
+|---|-------------|-----------------|---------|
+| x | Explanatory | Gestation           | Numeric |
+
+</center>
+
+
+## Linear Equations Review
+
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+Recall from your previous math classes $y = mx + b$
+
+where $m$ is the slope and $b$ is the y-intercept
+
+e.g. $y = 2x -1$
+:::
+
+
+
+
+:::{.column width=50%}
+
+```{r}
+#| fig-alt: "A line plot displays a perfectly linear relationship between x and y. The x-axis ranges from 0 to 5, and the y-axis from -1 to 9. Black data points are plotted at integer x-values: (0, -1), (1, 1), (2, 3), (3, 5), (4, 7), and (5, 9). A straight blue line connects these points, indicating a consistent positive slope where y increases by 2 for every unit increase in x."
+#| echo: false
+#| fig-height: 5
+#| message: false
+x <- c(0, 1, 2, 3, 4, 5)
+y <- c(-1, 1, 3, 5, 7, 9)
+
+as.data.frame(x = x, y = y) |> 
+  ggplot() +
+  aes(x = x, y = y) +
+  geom_point() +
+  scale_y_continuous(breaks = c(-1, 1, 3, 5, 7, 9)) +
+  scale_x_continuous(breaks = c(0, 1, 2, 3, 4, 5)) +
+  geom_smooth(method = "lm", se = FALSE)
+
+```
+
+Notice anything different between baby weights plot and this one?
+:::
+::::
+
+## Linear Equation
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+**Math** class
+
+$y = b + mx$
+
+$b$ is y-intercept  
+$m$ is slope  
+:::
+
+
+
+:::{.column width=50%}
+
+**Stats** class
+
+$y_i = \beta_0 +\beta_1x_i + \epsilon_i$
+
+$\beta_0$ is y-intercept  
+$\beta_1$ is slope  
+$\epsilon_i$ is error/residual  
+$i = 1, 2, ...n$ identifier for each point
+:::
+
+::::
+
+## Linear Model in R
+
+```{r}
+model_g <- lm(bwt ~ gestation, data = babies)
+
+```
+
+`lm` stands for linear model. We are fitting a linear regression model.   
+Note that the variables are entered in `y ~ x` order. This is also the same order of variables in the linear equation $y_i = \beta_0 +\beta_1x_i + \epsilon_i$.
+
+
+
+
+
+## Model Results
+
+```{r}
+broom::tidy(model_g)
+```
+
+. . .
+
+$\hat {y}_i = b_0 + b_1 x_i$
+
+$\hat {\text{bwt}_i} = b_0 + b_1 \text{ gestation}_i$
+
+$\hat {\text{bwt}_i} = -10.1 + 0.464\text{ gestation}_i$
+
+
+## Expected bwt for a baby with 300 days of gestation
+
+$\hat {\text{bwt}_i} = -10.1 + 0.464\text{ gestation}_i$
+
+$\hat {\text{bwt}} = -10.1 + 0.464 \times 300$
+
+$\hat {\text{bwt}} =$ `r -10.1 + 0.464*300`
+
+
+For a baby with 300 days of gestation the expected birth weight is `r -10.1 + 0.464*300` ounces.
+
+
+
+## Interpretation of estimates
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| message: false
+#| warning: false
+#| fig-height: 4
+#| fig-alt: The scatter plot with the blue line that was aforementioned is shown on the left column.
+babies |> 
+  ggplot() +
+  aes(x = gestation, y = bwt) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) 
+    
+```
+
+$b_1 = 0.464$ which means for one unit(day) increase in gestation period the expected increase in birth weight is 0.464 ounces.
+
+:::
+
+
+:::{.column width=50%}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| message: false
+#| warning: false
+#| fig-height: 4
+#| fig-alt: The left column's scatterplot is only extended to about 150 days of gestation but this scatterplot shows 0 days of gestation and the line is also extended to show the y intercept on the right column.
+
+babies |> 
+  ggplot() +
+  aes(x = gestation, y = bwt) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  xlim(0, 360) +
+  ylim(-10, 180) +
+  geom_abline(slope = 0.459, intercept = -8.76)
+  
+  
+```
+
+$b_0 = -10.1$ which means for gestation period of 0 days the expected birth weight is -10.1 ounces!!!!!!!!
+(does NOT make sense)
+:::
+
+::::
+
+## Extrapolation
+
+- There is no such thing as 0 days of gestation.
+
+. . .
+
+- Birth weight cannot possibly be -10.1 ounces.
+
+. . .
+
+- Extrapolation happens when we use a model outside the range of the x-values that are observed. After all, we cannot really know how the model behaves (e.g. may be non-linear) outside of the scope of what we have observed. 
+
+
+## Baby number 148
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+```{r}
+babies |> 
+  filter(case == 148) |> 
+  select(bwt, gestation)
+
+```
+
+:::
+
+
+:::{.column width=50%}
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-height: 5
+#| warning: false
+#| fig-alt: The regular scatter plot of the birth weight data with the line. A specific point with coordinates 160 and 300 are highlighted in red. This point is above the blue line.
+baby_148 <- subset(babies, case == 148)
+
+babies |> 
+  ggplot() +
+  aes(x = gestation, y = bwt) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_point(data = baby_148, color = "red")
+```
+
+
+:::
+
+::::
+
+## Baby #148
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+**Expected**
+
+$\hat y_{148} = b_0 +b_1x_{148}$
+
+$\hat y_{148} = -10.1 + 0.464\times300$
+
+$\hat y_{148}$ = `r -10.1 + 0.464*300`
+
+
+:::
+
+
+:::{.column width=50%}
+
+**Observed**
+
+$y_{148} =$ 160
+
+:::
+
+::::
+
+
+## Residual for `i = 148`
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| message: false
+#| warning: false
+#| fig-height: 4
+#| fig-alt: There is a red vertical line with end points of the aforementioned red point and blue line below it.
+babies |> 
+  ggplot() +
+  aes(x = gestation, y = bwt) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_point(data = baby_148, color = "red") +
+  geom_segment(x = 300, xend = 300, y = 128.94, yend = 160, color = "red")
+```
+
+:::
+
+
+:::{.column width=50%}
+
+$y_{148} = 160$
+
+$\hat y_{148}$ = `r -10.1 + 0.464*300`
+
+$e_{148} = y_{148} - \hat y_{148}$
+
+$e_{148} =$ `r 160 -(-10.1 + 0.464*300)`
+
+
+:::
+
+::::
+
+## Least Squares Regression 
+
+The goal is to minimize 
+
+$$e_1^2 + e_2^2 + ... + e_n^2$$
+
+. . .
+
+which can be rewritten as 
+
+$$\sum_{i = 1}^n e_i^2$$
+
+
+
+## Conditions for Least Squares Regression
+
+- Linearity
+
+- Independence
+
+- Normality of Residuals 
+
+- Equality of Variance (Constant Variance)
+
+Look at the first letters of each point: LINE
+
+## Linearity
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+**Linear**
+```{r}
+#| echo: false
+#| message: false
+#| fig-alt: A scatter plot displays a strong positive linear relationship between x and y. The x-axis ranges from -2 to 2, and the y-axis from -1 to 15. Numerous black data points generally increase in y-value as x increases. A prominent blue regression line passes through the center of the data, sloping upwards from approximately (-2, -2) to (2, 13), indicating a clear linear trend despite some moderate scatter of points around the line.
+
+set.seed(84735)
+x <- seq(-2, 2, by = 0.01)
+y <- 4*x + 5 + rnorm(length(x), 0 , 1.5)
+
+data_good <- data.frame(x = x, y = y) |>   sample_n(50)
+
+data_good |> 
+  ggplot() +
+  aes(x = x, y = y) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+:::
+
+
+:::{.column width=50%}
+
+**Non-linear**
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-alt: "A scatter plot displays data points with x-values from -2 to 2 and y-values from 0 to 20. Numerous black data points show a clear quadratic, U-shaped pattern, with y-values high at x=-2, decreasing to a minimum around x=0  (y-value approximately 5), and then increasing again to high y-values at x=2. A blue linear regression line, sloping slightly upwards, is shown, but it does not fit the U-shaped data well. A black curved line, representing a quadratic fit, accurately follows the U-shaped distribution of the data points, indicating a much better fit than the linear line."
+
+set.seed(84735)
+x <- seq(-2, 2, by = 0.01)
+y <- 3*x^2 + x + 5 + rnorm(length(x), 0 , 2)
+
+data_bad<- data.frame(x = x, y = y) |> sample_n(50)
+
+data_bad |> 
+  ggplot() +
+  aes(x = x, y = y) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  stat_function(fun = function(x)3*x^2 + x + 5 )
+```
+
+:::
+
+::::
+
+## Independence
+
+Harder to check because we need to know how the data were collected.
+
+. . .
+
+In the description of the dataset it says _[a study]considered all pregnancies between 1960 and 1967 among women in the Kaiser Foundation Health Plan in the San Francisco East Bay area._
+
+. . .
+
+It is possible that babies born in the same hospital may have similar birth weight. 
+
+
+## Correlated data (not independent)
+
+Correlated data examples: patients within hospitals, students within schools, people within neighborhoods, time-series data. 
+
+
+
+
+## Normality
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+**Nearly normal**
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-alt: 'A density plot shows the distribution of "resid" (residuals) on the x-axis, ranging from approximately -3 to 4. The y-axis represents density, from 0 to 0.4. A black curve illustrates the distribution, which is unimodal with a sharp peak slightly above 0, reaching a density of over 0.4. The distribution is right-skewed, showing a longer tail of positive residuals, and also has a small secondary hump or flattening around "resid" values of 3 to 4.'
+
+model_good <- lm(y ~ x, data = data_good)
+
+data_good <- 
+  data_good |>
+  sample_n(50) |> 
+  modelr::add_residuals(model_good) 
+
+data_good |> 
+  ggplot(aes(x = resid)) +
+  geom_density()
+
+```
+
+:::
+
+
+:::{.column width=50%}
+
+**Not normal**
+
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-alt: 'A density plot shows the distribution of "resid" (residuals) on the x-axis, ranging from approximately -7 to 10, with density on the y-axis, ranging from 0 to 0.08. The black curve indicates a bimodal distribution with two main peaks  of similar height, both reaching a density of approximately 0.08. The distribution appears right-skewed, with a longer tail extending towards positive "resid" values.'
+model_bad <- lm(y ~ x, data = data_bad)
+
+data_bad <- 
+  data_bad |> 
+  modelr::add_residuals(model_bad) 
+
+data_bad |> 
+  ggplot(aes(x = resid)) +
+  geom_density()
+
+```
+
+:::
+
+::::
+
+## Equal Variance
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+**Equal Variance**
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-alt: 'A scatter plot displays residuals ("resid") on the y-axis, ranging from -2 to 4, against "x" on the x-axis, ranging from -2 to 2. A horizontal black line is present at "resid" equals 0. Numerous black data points are scattered seemingly randomly above and below this zero line, without any discernible pattern, trend, or systematic curvature. The distribution of residuals appears fairly even across the range of x-values.'
+data_good |> 
+  ggplot(aes(x = x, y = resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0)
+
+```
+
+:::
+
+
+:::{.column width=50%}
+
+**Not-equal variance**
+
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-alt: 'A scatter plot displays residuals ("resid") on the y-axis, ranging from  approximately -12 to 10, against "x" on the x-axis, ranging from approximately 0.5 to 4. A horizontal black line is present at "resid" equals 0. The black data points show a clear pattern of increasing spread (heteroscedasticity) as x increases. For smaller x-values (e.g., below 2), residuals are tightly clustered around 0. As x increases towards 4, the residuals fan out, showing  greater variability with both larger positive and larger negative values, moving further away from the zero line.'
+
+# Set seed for reproducibility
+set.seed(84735)
+
+# 1. Generate x values
+x <- seq(0.5, 4, by = 0.05)
+
+# 2. Generate non-constant variance errors 
+# Notice how the standard deviation (1.5 * x) scales with x
+errors <- rnorm(length(x), mean = 0, sd = 1.5 * x)
+
+# 3. Create a truly linear relationship but with heteroscedastic errors
+y <- 3 * x + 5 + errors
+
+# 4. Save to dataframe and take a sample
+data_bad <- data.frame(x = x, y = y)
+
+# 5. Fit the linear model
+model_bad <- lm(y ~ x, data = data_bad)
+
+# 6. Add residuals and plot the non-equal variance
+data_bad <- data_bad |> 
+  modelr::add_residuals(model_bad) 
+
+data_bad |> 
+  ggplot(aes(x = x, y = resid)) +
+  geom_point(size = 3) +
+  geom_hline(yintercept = 0) +
+  theme_bw(base_size = 26)
+
+```
+
+:::
+
+
+::::
+
+## Inference: Confidence Interval (theoretical)
+
+```{r}
+confint(model_g)
+```
+
+Note that the 95% confidence interval for the slope does not contain zero and all the values in the interval are positive indicating a significant positive relationship between gestation and birth weight.
+
+## Variables
+
+| y | Response    | Birth weight | Numeric |
+|---|-------------|-----------------|---------|
+| x | Explanatory | Smoke           | Categorical |
+
+
+
+
+## Notation
+
+$y_i = \beta_0 +\beta_1x_i + \epsilon_i$
+
+$\beta_0$ is y-intercept  
+$\beta_1$ is slope  
+$\epsilon_i$ is error/residual  
+$i = 1, 2, ...n$ identifier for each point
+
+
+## Linear Model in R
+
+```{r}
+model_s <- lm(bwt ~ smoke, data = babies)
+tidy(model_s)
+```
+
+
+
+
+$\hat {y}_i = b_0 + b_1 x_i$
+
+$\hat {\text{bwt}_i} = b_0 + b_1 \text{ smoke}_i$
+
+$\hat {\text{bwt}_i} = 123 + (-8.94\text{ smoke}_i)$
+
+## Understanding Slope
+
+$$\hat {\text{bwt}_i} = 123 + (-8.94\text{ smoke}_i)$$
+
+
+<hr>
+
+
+Expected bwt for a baby with a non-smoker mother
+
+
+$\hat {\text{bwt}_i} = 123 + (-8.94\times 0)$
+
+$\hat {\text{bwt}_i} = 123$
+
+$E[bwt_i | smoke_i = 0] = b_0$
+
+
+<hr>
+
+Expected bwt for a baby with a smoker mother
+
+$\hat {\text{bwt}_i} = 123 + (-8.94\times 1)$
+
+$\hat {\text{bwt}_i} = 114.06$
+
+$E[bwt_i | smoke_i = 1] = b_0 + b_1$
+
+
+
+## Confidence Interval
+
+```{r}
+confint(model_s)
+```
+
+Note that the confidence interval for the "slope" does not contain 0 and all the values in the interval are negative. 
+
+We are confident that the parameter $\beta_1$ is negative. In other words, for the smoke group the expected baby weight is lower than the nonsmoke group.
+
+## Understanding Relationships
+
+- Just because we observe a significant relationship between $x$ and $y$, it does not mean that $x$ causes $y$. We need rigorously designed randomized experiments to establish causality. [spurious correlations](https://www.tylervigen.com/spurious-correlations)
+
+- Just because we observe a significant relationship in a sample that does not mean the findings will generalize to the population. We need samples that are representative of the population to generalize the findings. 
+
+
+
+
