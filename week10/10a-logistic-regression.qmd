@@ -1,0 +1,552 @@
+---
+title: "Logistic Regression"
+author: "Dr. Mine Dogucu"
+execute:
+  echo: true
+format: 
+  revealjs:
+    menu:
+      openButton: false
+    footer: |
+      <span id="menu-toggle-box"></span> [introdata.science](https://introdata.science)
+    code-line-numbers: false 
+    slide-number: true
+    incremental: false
+    theme: ["../templates/slide-style.scss"]
+    title-slide-attributes: 
+      data-background-image: "https://www.introdata.science/img/logo.png"
+      data-background-size: 5%
+      data-background-position: 50% 85%
+      data-aria-label: "Intro to Data Science course logo"
+      include-after-body: "../templates/access.html"
+---
+
+## GitHub repos
+
+No repo this week. Time for you to create your own repos under your own username. Make sure to set them to be private.
+
+## (Normal) Linear Regression Response Variables
+
+- Birth weight of Babies (55 - 176 ounces) 
+- Sale Prices ($12789 - $755,000)
+- Number of Species (6 - 129 mammals)
+
+
+## Logistic Regression Response Variables
+
+- Will it rain tomorrow? (Yes/No) 
+- Is email spam? (Yes/No)
+- Does the candidate receive a callback? (Yes/No)
+
+. . .
+
+When the response variable is binary a logistic regression model can be utilized.
+
+## Data source
+
+```{r echo = FALSE, message = FALSE}
+library(tidyverse)
+library(broom)
+library(openintro)
+library(modelr)
+theme_set(theme_gray(base_size = 26))
+```
+
+
+[Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination](https://www.nber.org/papers/w9873). 
+
+## Data source
+
+- Researchers respond to help-wanted ads in Boston and Chicago newspapers with fictitious resumes.
+
+. . .
+
+- They randomly assign White sounding names to half the resumes and African American sounding names to the other half.
+
+. . .
+
+- They create high quality resumes (more experience, likely to have an email address etc.) and low quality resumes. 
+
+- For each job ad they send four resumes (two high quality and two low quality.)
+
+## Data
+
+```{r}
+#| echo: false
+#| message: false
+data(resume)
+resume <- resume |> 
+  mutate(received_callback = as.logical(received_callback))
+```
+
+```{r}
+resume <- resume |> 
+  select(received_callback, race, years_experience, 
+         job_city)
+
+glimpse(resume)
+```
+
+
+## Response variable: `received_callback`
+
+:::: {.columns}
+
+:::{.column width=50%}
+
+```{r}
+count(resume, received_callback) |> 
+  mutate(prop = n / sum(n))
+```
+
+:::
+
+:::{.column width=50%}
+
+```{r fig.height=6, echo = FALSE}
+ggplot(resume, aes(x = received_callback)) +
+  geom_bar()
+```
+
+:::
+
+::::
+
+## Notation
+
+$y_i$ = whether a (fictitious) job candidate receives a call back.
+
+$\pi_i$ = probability that the $i$th job candidate will receive a call back.
+
+$1-\pi_i$ = probability that the $i$th job candidate will **not** receive a call back.
+
+
+## Where is the line?
+
+```{r fig.align='center', fig.height=4}
+ggplot(resume, aes(x = race, y = received_callback)) +
+  geom_point()
+```
+
+
+## The Linear Model
+
+We can model the probability of receiving a callback with a linear model.
+
+$\text{transformation}(\pi_i) = \beta_0 + \beta_1x_{1i}+\beta_2x_{2i} +.... \beta_kx_{ki}$
+
+
+. . .
+
+$logit(\pi_i) = \beta_0 + \beta_1x_{1i}+\beta_2x_{2i} +.... \beta_kx_{ki}$
+
+. . .
+
+$logit(\pi_i) = log(\frac{\pi_i}{1-\pi_i})$
+
+
+. . .
+
+Note that log is natural log and not base 10. This is also the case for the `log()` function in R.
+
+## Probability, Odds, and Logit
+
+**Probability** $\pi_i$ Probability of receiving a callback.
+
+. . .
+
+**Odds** $\frac{\pi_i}{1-\pi_i}$ Odds of receiving a callback.
+
+. . .
+
+**Logit** $log(\frac{\pi_i}{1-\pi_i})$ Logit of receiving a callback.
+
+## Proportion as outcome
+
+```{r fig.height=6, echo=FALSE, fig.align='center'}
+ggplot(resume, aes(x = race, fill = received_callback)) +
+  geom_bar(position = "fill") +
+  ylab("proportion")
+```
+
+
+
+## When race is black (0)
+
+```{r}
+resume |> 
+  filter(race == "black") |> 
+  count(received_callback) |> 
+  mutate(prop = n / sum(n))
+```
+
+Note that R assigns 0 an 1 to levels of categorical variables in alphabetical order. In this case black (0) and white(1)
+
+
+
+## When race is black (0)
+
+```{r}
+p_b <- resume |> 
+  filter(race == "black") |> 
+  count(received_callback) |> 
+  mutate(prop = n / sum(n)) |> 
+  filter(received_callback == TRUE) |> 
+  select(prop) |> 
+  pull()
+  
+```
+
+Probability of receiving a callback when the candidate has a Black sounding name is `r p_b`.
+
+
+## When race is white (1)
+
+```{r}
+p_w <- resume |> 
+  filter(race == "white") |> 
+  count(received_callback) |> 
+  mutate(prop = n / sum(n)) |> 
+  filter(received_callback == TRUE) |> 
+  select(prop) |> 
+  pull()
+```
+
+Probability of receiving a callback when the candidate has a white sounding name is `r p_w`.
+
+## Probability, Odds, and Logit
+
+::::{.columns}
+
+:::{.column width=50%}
+
+```{r}
+p_b
+## Odds
+odds_b <- p_b / (1 - p_b)
+odds_b
+
+## Logit
+logit_b <- log(odds_b)
+logit_b
+```
+
+:::
+
+:::{.column width=50%}
+
+:::
+
+::::
+
+## Probability, Odds, and Logit
+
+::::{.columns}
+
+:::{.column width=50%}
+
+```{r}
+p_b
+## Odds
+odds_b <- p_b / (1 - p_b)
+odds_b
+
+## Logit
+logit_b <- log(odds_b)
+logit_b
+```
+
+:::
+
+
+:::{.column width=50%}
+
+```{r}
+p_w
+## Odds
+odds_w <- p_w / (1 - p_w)
+odds_w
+
+## Logit
+logit_w <- log(odds_w)
+logit_w
+```
+
+:::
+
+::::
+
+## Estimates
+
+::::{.columns}
+
+:::{.column width=50%}
+
+```{r echo = FALSE, message=FALSE, fig.align='center', fig.height=4}
+result_data <- tibble(
+  race = c(0, 1),
+  logit = c(logit_b, logit_w)
+)
+
+coords <- paste(result_data$race, round(result_data$logit,2), sep = ", ")
+ggplot(result_data,
+       aes(x = race,
+           y = logit)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_x_continuous(breaks=c(0,1)) +
+  geom_label(aes(race + .1, logit,
+                 label = coords)) +
+  xlim(-0.05,1.2)
+
+```
+
+This is THE LINE of the linear model. As x increases by 1 unit, the expected change in the logit of receiving call back is `r logit_w - logit_b`. 
+
+:::
+
+:::{.column width=50%}
+The slope of the line is:
+
+```{r}
+logit_w - logit_b
+```
+
+The slope is  the difference between logit for the white group and the black group. 
+
+The intercept is 
+
+```{r}
+logit_b
+```
+
+:::
+
+::::
+
+## Linear Equation
+
+```{r}
+model_r <- glm(received_callback ~ race,
+               data = resume,
+               family = binomial)
+```
+
+```{r}
+tidy(model_r)
+```
+
+$log(\frac{\hat \pi_i}{1-\hat \pi_i}) = -2.67 + 0.438\times racewhite_i$
+
+## Conversion
+
+| Scale       | Range                  |
+|-------------|------------------------|
+| Probability | 0 to 1                 |
+| Odds        | 0 to $\infty$          |
+| Logit       | - $\infty$ to $\infty$ |
+
+## Generalized Linear Model in R
+
+We will consider years of experience as an explanatory variable. Normally, we would also include race in the model and have multiple explanatory variables, however, for learning purposes, we will keep the model simple.
+
+```{r}
+model_y <- glm(received_callback ~ years_experience,
+               data = resume,
+               family = binomial)
+```
+
+```{r}
+tidy(model_y)
+```
+
+## Model Summary
+
+```{r}
+model_y_summary <- tidy(model_y)
+
+intercept <- model_y_summary |> 
+  filter(term == "(Intercept)") |> 
+  select(estimate) |> 
+  pull()
+
+slope <- model_y_summary |> 
+  filter(term == "years_experience") |> 
+  select(estimate) |> 
+  pull()
+```
+
+
+
+## From logit to odds
+
+Logit for a Candidate with 1 year of experience (rounded equation)
+
+$-2.76 +  0.0391 \times 1$
+
+. . .
+
+Odds for a Candidate with 1 year of experience
+
+$odds = e^{logit}$
+
+$\frac{\pi_i}{1-\pi_i} = e^{log(\frac{\pi_i}{1-\pi_i})}$
+
+$\frac{\hat\pi_i}{1-\hat\pi_i} = e^{-2.76 + 0.0391 \times 1}$
+
+
+
+## From odds to probability
+
+$\pi_i = \frac{odds}{1+odds}$
+
+$\pi_i = \frac{\frac{\pi_i}{1-\pi_i}}{1+\frac{\pi_i}{1-\pi_i}}$
+
+$\hat\pi_i = \frac{e^{-2.76 + 0.0391 \times 1}}{1+e^{-2.76 + 0.0391 \times 1}} = 0.0618$
+
+Note you can use `exp()` function in R for exponentiating number e.
+
+```{r}
+exp(1)
+```
+
+
+## Logit form 
+
+$log(\frac{\pi_i}{1-\pi_i}) = \beta_0 + \beta_1x_{1i}+\beta_2x_{2i} +.... \beta_kx_{ki}$
+
+## Probability form
+
+$$\large{\pi_i = \frac{e^{\beta_0 + \beta_1x_{1i}+\beta_2x_{2i} +.... \beta_kx_{ki}}}{1+e^{\beta_0 + \beta_1x_{1i}+\beta_2x_{2i} +.... \beta_kx_{ki}}}}$$
+
+
+Estimated probability of a candidate with 0 years of experience receiving a callback
+
+$\hat\pi_i = \frac{e^{-2.76 + 0.0391 \times 0}}{1+e^{-2.76 + 0.0391 \times 0}} = 0.0595$
+
+<hr>
+
+Estimated probability of a candidate with 1 year of experience receiving a callback
+
+$\hat\pi_i = \frac{e^{-2.76 + 0.0391 \times 1}}{1+e^{-2.76 + 0.0391 \times 1}} = 0.0618$
+
+
+
+## 3 predictors
+
+
+```{r}
+model_ryc <- glm(received_callback ~ race + 
+                  years_experience + job_city,
+               data = resume,
+               family = binomial)
+```
+
+## Model results
+
+
+```{r}
+tidy(model_ryc)
+```
+
+## Interpretation
+
+The estimated probability that a Black candidate with 10 years of experience, residing in Boston, would receive a callback.
+
+$\large{\hat\pi_i = \frac{e^{-2.78 + (0.0440 \times 0) + (0.0332\times10) + (-0.0329\times 0)}}{1+e^{-2.78 + (0.0440 \times 0) + (0.0332\times10) + (-0.0329\times 0)}}}$
+
+$= 0.0796$
+
+## Interpretation
+
+
+We have used the data for educational purposes. 
+The original study considers many other variables that may influence whether someone receives a callback or not. Read the original study for other considerations.
+
+[Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination](https://www.nber.org/papers/w9873). 
+
+## Model Evaluation
+
+```{r}
+babies <- babies |> 
+  mutate(low_bwt = case_when(bwt < 88 ~ TRUE,
+                             bwt >= 88~ FALSE)) |> 
+  drop_na(gestation)
+```
+
+## Model Gestation
+
+```{r}
+model_g <- glm(low_bwt ~ gestation, 
+               data = babies,
+               family = "binomial")
+```
+
+## Model Results
+
+```{r}
+tidy(model_g)
+```
+
+$\hat p = \frac{\exp(b_0 +b_1x)}{1+\exp(b_0 + b_1x)}$
+
+$\hat p$ when gestation is 284 = $\frac{\exp(17.5 -0.0758 \cdot 284)}{1+\exp(17.5 -0.0758 \cdot 284)} = \frac{\exp(-4.0272)}{1+ \exp(-4.0272)} = 0.01751203$
+
+## Add predictions
+
+```{r}
+babies <- babies |> 
+  add_predictions(model_g) 
+select(babies, pred) 
+```
+
+## Predictions in probability scale
+
+```{r}
+babies <- babies |> 
+  mutate(pred_p = exp(pred)/(1+exp(pred)))
+select(babies, pred, pred_p)
+```
+
+
+## Cutoff 
+
+The cutoff (or threshold) in logistic regression is the probability value used to convert a continuous prediction (a number between 0 and 1) into a discrete classification (e.g., TRUE or FALSE)
+
+```{r}
+babies <- babies |> 
+  mutate(pred_y = case_when(pred_p < 0.5 ~ FALSE, 
+                           pred_p >= 0.5 ~ TRUE))
+select(babies, low_bwt, pred, pred_p, pred_y) |> 
+  head(3)
+```
+
+
+
+
+## Confusion Matrix
+
+```{r}
+#| echo: false
+confusion <- 
+  janitor::tabyl(babies, low_bwt, pred_y) |> 
+  janitor::adorn_totals(c("row", "col"))
+
+true_positive <- confusion[2, 3]
+true_negative <- confusion[1, 2]
+total_positive <- confusion[2, 4]
+total_negative <- confusion[1, 4]
+total <- confusion[3, 4]
+```
+
+
+```{r}
+janitor::tabyl(babies, low_bwt, pred_y) |> 
+  janitor::adorn_totals(c("row", "col"))
+```
+
+The rows show the observed data and the columns show the predicted data.
+
+**Sensitivity** (true-positive rate): $\frac{`r true_positive`}{`r total_positive`} = `r true_positive/total_positive`$  
+**Specificity** (true-negative rate): $\frac{`r true_negative`}{`r total_negative`} = `r true_negative/total_negative`$  
+**Accuracy**: $\frac{`r true_positive` + `r true_negative`}{`r total`} = `r (true_positive + true_negative)/total`$

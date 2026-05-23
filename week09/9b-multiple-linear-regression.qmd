@@ -36,7 +36,8 @@ theme_set(theme_bw(base_size = 22))
 
 ## Data `babies` in `openintro` package
 
-```{r echo = FALSE}
+```{r}
+#| echo: false
 glimpse(babies)
 ```
 
@@ -106,7 +107,7 @@ glimpse(ames_raw)
 
 ## Visual inspection
 
-```{r fig.align='center', echo=FALSE, message=FALSE}
+```{r}
 #| echo: false
 #| message: false
 #| fig-align: center
@@ -309,7 +310,8 @@ Can we keep adding all the variables and try to get an EXCELLENT model fit?
 
 ## Splitting the Data (Train vs. Test)
 
-```{r message=FALSE}
+```{r}
+#| message: false
 set.seed(12345)
 babies_split <- rsample::initial_split(babies) ## 75% to 25% split
 ```
