@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="9a-simple-linear-regression_files/libs/clipboard/clipboard.min.js"></script>
-<script src="9a-simple-linear-regression_files/libs/quarto-html/tabby.min.js"></script>
-<script src="9a-simple-linear-regression_files/libs/quarto-html/popper.min.js"></script>
-<script src="9a-simple-linear-regression_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="9a-simple-linear-regression_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="9a-simple-linear-regression_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="9a-simple-linear-regression_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="9b-simple-linear-regression_files/libs/clipboard/clipboard.min.js"></script>
+<script src="9b-simple-linear-regression_files/libs/quarto-html/tabby.min.js"></script>
+<script src="9b-simple-linear-regression_files/libs/quarto-html/popper.min.js"></script>
+<script src="9b-simple-linear-regression_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="9b-simple-linear-regression_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="9b-simple-linear-regression_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="9b-simple-linear-regression_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="9a-simple-linear-regression_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="9a-simple-linear-regression_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="9b-simple-linear-regression_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="9b-simple-linear-regression_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -98,11 +98,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="9a-simple-linear-regression_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
-  <link href="9a-simple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="9a-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="9a-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="9a-simple-linear-regression_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="9b-simple-linear-regression_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
+  <link href="9b-simple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="9b-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="9b-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="9b-simple-linear-regression_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -235,7 +235,7 @@ $ smoke     &lt;int&gt; 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-3-1.png" alt="A scatter plot displays birth weight (bwt) on the y-axis, ranging from approximately 50 to 175, against gestational age (gestation) on the x-axis, ranging from approximately 150 to 350. There is a moderate positive relationship, indicating that birth weight generally increases with gestational age. The majority of data points form a dense cluster between 250-300 for gestation and 100-150 for bwt. Scattered points exist across the range, including some with lower birth weights for both very short and very long gestations." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-3-1.png" alt="A scatter plot displays birth weight (bwt) on the y-axis, ranging from approximately 50 to 175, against gestational age (gestation) on the x-axis, ranging from approximately 150 to 350. There is a moderate positive relationship, indicating that birth weight generally increases with gestational age. The majority of data points form a dense cluster between 250-300 for gestation and 100-150 for bwt. Scattered points exist across the range, including some with lower birth weights for both very short and very long gestations." width="960"></p>
 </figure>
 </div>
 </div>
@@ -253,7 +253,7 @@ $ smoke     &lt;int&gt; 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-4-1.png" alt="A prominent blue line is drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-4-1.png" alt="A prominent blue line is drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age." width="960"></p>
 </figure>
 </div>
 </div>
@@ -296,7 +296,7 @@ $ smoke     &lt;int&gt; 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-5-1.png" alt="A line plot displays a perfectly linear relationship between x and y. The x-axis ranges from 0 to 5, and the y-axis from -1 to 9. Black data points are plotted at integer x-values: (0, -1), (1, 1), (2, 3), (3, 5), (4, 7), and (5, 9). A straight blue line connects these points, indicating a consistent positive slope where y increases by 2 for every unit increase in x." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-5-1.png" alt="A line plot displays a perfectly linear relationship between x and y. The x-axis ranges from 0 to 5, and the y-axis from -1 to 9. Black data points are plotted at integer x-values: (0, -1), (1, 1), (2, 3), (3, 5), (4, 7), and (5, 9). A straight blue line connects these points, indicating a consistent positive slope where y increases by 2 for every unit increase in x." width="960"></p>
 </figure>
 </div>
 </div>
@@ -362,7 +362,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" alt="The scatter plot with the blue line that was aforementioned is shown on the left column." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" alt="The scatter plot with the blue line that was aforementioned is shown on the left column." width="960"></p>
 </figure>
 </div>
 </div>
@@ -373,7 +373,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" alt="The left column's scatterplot is only extended to about 150 days of gestation but this scatterplot shows 0 days of gestation and the line is also extended to show the y intercept on the right column." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" alt="The left column's scatterplot is only extended to about 150 days of gestation but this scatterplot shows 0 days of gestation and the line is also extended to show the y intercept on the right column." width="960"></p>
 </figure>
 </div>
 </div>
@@ -417,7 +417,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-11-1.png" alt="The regular scatter plot of the birth weight data with the line. A specific point with coordinates 160 and 300 are highlighted in red. This point is above the blue line." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-11-1.png" alt="The regular scatter plot of the birth weight data with the line. A specific point with coordinates 160 and 300 are highlighted in red. This point is above the blue line." width="960"></p>
 </figure>
 </div>
 </div>
@@ -445,7 +445,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" alt="There is a red vertical line with end points of the aforementioned red point and blue line below it." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" alt="There is a red vertical line with end points of the aforementioned red point and blue line below it." width="960"></p>
 </figure>
 </div>
 </div>
@@ -485,7 +485,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-13-1.png" alt="A scatter plot displays a strong positive linear relationship between x and y. The x-axis ranges from -2 to 2, and the y-axis from -1 to 15. Numerous black data points generally increase in y-value as x increases. A prominent blue regression line passes through the center of the data, sloping upwards from approximately (-2, -2) to (2, 13), indicating a clear linear trend despite some moderate scatter of points around the line." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-13-1.png" alt="A scatter plot displays a strong positive linear relationship between x and y. The x-axis ranges from -2 to 2, and the y-axis from -1 to 15. Numerous black data points generally increase in y-value as x increases. A prominent blue regression line passes through the center of the data, sloping upwards from approximately (-2, -2) to (2, 13), indicating a clear linear trend despite some moderate scatter of points around the line." width="960"></p>
 </figure>
 </div>
 </div>
@@ -496,7 +496,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-14-1.png" alt="A scatter plot displays data points with x-values from -2 to 2 and y-values from 0 to 20. Numerous black data points show a clear quadratic, U-shaped pattern, with y-values high at x=-2, decreasing to a minimum around x=0  (y-value approximately 5), and then increasing again to high y-values at x=2. A blue linear regression line, sloping slightly upwards, is shown, but it does not fit the U-shaped data well. A black curved line, representing a quadratic fit, accurately follows the U-shaped distribution of the data points, indicating a much better fit than the linear line." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-14-1.png" alt="A scatter plot displays data points with x-values from -2 to 2 and y-values from 0 to 20. Numerous black data points show a clear quadratic, U-shaped pattern, with y-values high at x=-2, decreasing to a minimum around x=0  (y-value approximately 5), and then increasing again to high y-values at x=2. A blue linear regression line, sloping slightly upwards, is shown, but it does not fit the U-shaped data well. A black curved line, representing a quadratic fit, accurately follows the U-shaped distribution of the data points, indicating a much better fit than the linear line." width="960"></p>
 </figure>
 </div>
 </div>
@@ -526,7 +526,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-15-1.png" alt="A density plot shows the distribution of &quot;resid&quot; (residuals) on the x-axis, ranging from approximately -3 to 4. The y-axis represents density, from 0 to 0.4. A black curve illustrates the distribution, which is unimodal with a sharp peak slightly above 0, reaching a density of over 0.4. The distribution is right-skewed, showing a longer tail of positive residuals, and also has a small secondary hump or flattening around &quot;resid&quot; values of 3 to 4." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-15-1.png" alt="A density plot shows the distribution of &quot;resid&quot; (residuals) on the x-axis, ranging from approximately -3 to 4. The y-axis represents density, from 0 to 0.4. A black curve illustrates the distribution, which is unimodal with a sharp peak slightly above 0, reaching a density of over 0.4. The distribution is right-skewed, showing a longer tail of positive residuals, and also has a small secondary hump or flattening around &quot;resid&quot; values of 3 to 4." width="960"></p>
 </figure>
 </div>
 </div>
@@ -537,7 +537,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-16-1.png" alt="A density plot shows the distribution of &quot;resid&quot; (residuals) on the x-axis, ranging from approximately -7 to 10, with density on the y-axis, ranging from 0 to 0.08. The black curve indicates a bimodal distribution with two main peaks  of similar height, both reaching a density of approximately 0.08. The distribution appears right-skewed, with a longer tail extending towards positive &quot;resid&quot; values." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-16-1.png" alt="A density plot shows the distribution of &quot;resid&quot; (residuals) on the x-axis, ranging from approximately -7 to 10, with density on the y-axis, ranging from 0 to 0.08. The black curve indicates a bimodal distribution with two main peaks  of similar height, both reaching a density of approximately 0.08. The distribution appears right-skewed, with a longer tail extending towards positive &quot;resid&quot; values." width="960"></p>
 </figure>
 </div>
 </div>
@@ -553,7 +553,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-17-1.png" alt="A scatter plot displays residuals (&quot;resid&quot;) on the y-axis, ranging from -2 to 4, against &quot;x&quot; on the x-axis, ranging from -2 to 2. A horizontal black line is present at &quot;resid&quot; equals 0. Numerous black data points are scattered seemingly randomly above and below this zero line, without any discernible pattern, trend, or systematic curvature. The distribution of residuals appears fairly even across the range of x-values." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-17-1.png" alt="A scatter plot displays residuals (&quot;resid&quot;) on the y-axis, ranging from -2 to 4, against &quot;x&quot; on the x-axis, ranging from -2 to 2. A horizontal black line is present at &quot;resid&quot; equals 0. Numerous black data points are scattered seemingly randomly above and below this zero line, without any discernible pattern, trend, or systematic curvature. The distribution of residuals appears fairly even across the range of x-values." width="960"></p>
 </figure>
 </div>
 </div>
@@ -564,7 +564,7 @@ Note that the variables are entered in <code>y ~ x</code> order. This is also th
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="9a-simple-linear-regression_files/figure-revealjs/unnamed-chunk-18-1.png" alt="A scatter plot displays residuals (&quot;resid&quot;) on the y-axis, ranging from  approximately -12 to 10, against &quot;x&quot; on the x-axis, ranging from approximately 0.5 to 4. A horizontal black line is present at &quot;resid&quot; equals 0. The black data points show a clear pattern of increasing spread (heteroscedasticity) as x increases. For smaller x-values (e.g., below 2), residuals are tightly clustered around 0. As x increases towards 4, the residuals fan out, showing  greater variability with both larger positive and larger negative values, moving further away from the zero line." width="960"></p>
+<p><img data-src="9b-simple-linear-regression_files/figure-revealjs/unnamed-chunk-18-1.png" alt="A scatter plot displays residuals (&quot;resid&quot;) on the y-axis, ranging from  approximately -12 to 10, against &quot;x&quot; on the x-axis, ranging from approximately 0.5 to 4. A horizontal black line is present at &quot;resid&quot; equals 0. The black data points show a clear pattern of increasing spread (heteroscedasticity) as x increases. For smaller x-values (e.g., below 2), residuals are tightly clustered around 0. As x increases towards 4, the residuals fan out, showing  greater variability with both larger positive and larger negative values, moving further away from the zero line." width="960"></p>
 </figure>
 </div>
 </div>
@@ -672,19 +672,19 @@ smoke       -10.96413  -6.911199</code></pre>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="9a-simple-linear-regression_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="9b-simple-linear-regression_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

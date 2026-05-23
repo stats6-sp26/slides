@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="9b-multiple-linear-regression_files/libs/clipboard/clipboard.min.js"></script>
-<script src="9b-multiple-linear-regression_files/libs/quarto-html/tabby.min.js"></script>
-<script src="9b-multiple-linear-regression_files/libs/quarto-html/popper.min.js"></script>
-<script src="9b-multiple-linear-regression_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="9b-multiple-linear-regression_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="9b-multiple-linear-regression_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="9b-multiple-linear-regression_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="10a-multiple-linear-regression_files/libs/clipboard/clipboard.min.js"></script>
+<script src="10a-multiple-linear-regression_files/libs/quarto-html/tabby.min.js"></script>
+<script src="10a-multiple-linear-regression_files/libs/quarto-html/popper.min.js"></script>
+<script src="10a-multiple-linear-regression_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="10a-multiple-linear-regression_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="10a-multiple-linear-regression_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="10a-multiple-linear-regression_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="9b-multiple-linear-regression_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="9b-multiple-linear-regression_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="10a-multiple-linear-regression_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="10a-multiple-linear-regression_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -98,11 +98,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="9b-multiple-linear-regression_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
-  <link href="9b-multiple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="9b-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="9b-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="9b-multiple-linear-regression_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="10a-multiple-linear-regression_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
+  <link href="10a-multiple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="10a-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="10a-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="10a-multiple-linear-regression_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -434,11 +434,11 @@ $ sale_price      &lt;int&gt; 215000, 105000, 172000, 244000, 189900, 195500, 21
 <section id="visual-inspection" class="slide level2">
 <h2>Visual inspection</h2>
 
-<img data-src="9b-multiple-linear-regression_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A scatter plot displays &quot;sale_price&quot; on the y-axis, ranging from 0 to over 600,000, against &quot;year_built&quot; on the x-axis, ranging from approximately 1860 to 2000. Numerous black data points illustrate a general positive trend, with sale prices tending to increase for more recently built properties. The density of data points is higher for houses built after 1980, and the variability in sale prices also visibly increases for more recent build years, showing a clear pattern of unequal variance." width="960"></section>
+<img data-src="10a-multiple-linear-regression_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A scatter plot displays &quot;sale_price&quot; on the y-axis, ranging from 0 to over 600,000, against &quot;year_built&quot; on the x-axis, ranging from approximately 1860 to 2000. Numerous black data points illustrate a general positive trend, with sale prices tending to increase for more recently built properties. The density of data points is higher for houses built after 1980, and the variability in sale prices also visibly increases for more recent build years, showing a clear pattern of unequal variance." width="960"></section>
 <section id="visual-inspection-with-transformation" class="slide level2">
 <h2>Visual inspection with transformation</h2>
 
-<img data-src="9b-multiple-linear-regression_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A scatter plot displays the logarithm of sale price (log(sale_price)) on the y-axis, ranging from approximately 9.5 to 13, against year built on the x-axis, ranging from approximately 1860 to 2000. Numerous black data points illustrate a general positive trend, with log sale prices tending to increase for more recently built properties. The vertical spread of the data points appears relatively constant across the range of years built, suggesting a more consistent variability after the logarithmic transformation." width="960"><p>Note that log is natural log in R.</p>
+<img data-src="10a-multiple-linear-regression_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A scatter plot displays the logarithm of sale price (log(sale_price)) on the y-axis, ranging from approximately 9.5 to 13, against year built on the x-axis, ranging from approximately 1860 to 2000. Numerous black data points illustrate a general positive trend, with log sale prices tending to increase for more recently built properties. The vertical spread of the data points appears relatively constant across the range of years built, suggesting a more consistent variability after the logarithmic transformation." width="960"><p>Note that log is natural log in R.</p>
 </section>
 <section id="model-with-logy" class="slide level2">
 <h2>Model with log(y)</h2>
@@ -538,7 +538,7 @@ $ smoke     &lt;int&gt; 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
 </div>
 <p>16% of the variation in birth weight is explained by gestation. Higher values of R squared is preferred.</p>
 
-<img data-src="9b-multiple-linear-regression_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A scatter plot displays birth weight (bwt) on the y-axis, ranging from approximately 50 to 175, against gestational age (gestation) on the x-axis, ranging from approximately 150 to 350. There is a moderate positive relationship, indicating that birth weight generally increases with gestational age. The majority of data points form a dense cluster between 250-300 for gestation and 100-150 for bwt. Scattered points exist across the range, including some with lower birth weights for both very short and very long gestations. A prominent blue line is drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age." width="960"></section>
+<img data-src="10a-multiple-linear-regression_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A scatter plot displays birth weight (bwt) on the y-axis, ranging from approximately 50 to 175, against gestational age (gestation) on the x-axis, ranging from approximately 150 to 350. There is a moderate positive relationship, indicating that birth weight generally increases with gestational age. The majority of data points form a dense cluster between 250-300 for gestation and 100-150 for bwt. Scattered points exist across the range, including some with lower birth weights for both very short and very long gestations. A prominent blue line is drawn through the data. This line slopes upwards, from approximately (150, 60) to (350, 155), visually summarizing the positive relationship. While the line indicates an average trend, the data points show considerable scatter around it, implying variability in birth weight for a given gestational age." width="960"></section>
 <section id="model-with-gestation-smoke-and-age" class="slide level2">
 <h2>Model with gestation, smoke, and age</h2>
 <div class="cell">
@@ -752,19 +752,19 @@ $ smoke     &lt;int&gt; 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="9b-multiple-linear-regression_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="10a-multiple-linear-regression_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

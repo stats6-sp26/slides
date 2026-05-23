@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="10a-logistic-regression_files/libs/clipboard/clipboard.min.js"></script>
-<script src="10a-logistic-regression_files/libs/quarto-html/tabby.min.js"></script>
-<script src="10a-logistic-regression_files/libs/quarto-html/popper.min.js"></script>
-<script src="10a-logistic-regression_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="10a-logistic-regression_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="10a-logistic-regression_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="10a-logistic-regression_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="10b-logistic-regression_files/libs/clipboard/clipboard.min.js"></script>
+<script src="10b-logistic-regression_files/libs/quarto-html/tabby.min.js"></script>
+<script src="10b-logistic-regression_files/libs/quarto-html/popper.min.js"></script>
+<script src="10b-logistic-regression_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="10b-logistic-regression_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="10b-logistic-regression_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="10b-logistic-regression_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Dr.&nbsp;Mine Dogucu">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="10a-logistic-regression_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="10a-logistic-regression_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="10b-logistic-regression_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="10b-logistic-regression_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -98,11 +98,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="10a-logistic-regression_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
-  <link href="10a-logistic-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="10a-logistic-regression_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="10a-logistic-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="10a-logistic-regression_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="10b-logistic-regression_files/libs/revealjs/dist/theme/quarto-db48c4518fadd6b22197b819f0d59ebd.css">
+  <link href="10b-logistic-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="10b-logistic-regression_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="10b-logistic-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="10b-logistic-regression_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -289,7 +289,7 @@ $ job_city          &lt;chr&gt; "Chicago", "Chicago", "Chicago", "Chicago", "Chi
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="10a-logistic-regression_files/figure-revealjs/unnamed-chunk-5-1.png" alt="A bar chart titled &quot;received_callback&quot; displays the count of two categories on the y-axis, ranging from 0 to 4500. The x-axis shows two categories: &quot;FALSE&quot; and &quot;TRUE&quot;. The bar for &quot;FALSE&quot; is significantly taller, reaching a count of approximately 4500. The bar for &quot;TRUE&quot; is much shorter, reaching a count of approximately 400. This indicates a large imbalance, with far fewer instances of &quot;TRUE&quot; compared to &quot;FALSE&quot;." width="960"></p>
+<p><img data-src="10b-logistic-regression_files/figure-revealjs/unnamed-chunk-5-1.png" alt="A bar chart titled &quot;received_callback&quot; displays the count of two categories on the y-axis, ranging from 0 to 4500. The x-axis shows two categories: &quot;FALSE&quot; and &quot;TRUE&quot;. The bar for &quot;FALSE&quot; is significantly taller, reaching a count of approximately 4500. The bar for &quot;TRUE&quot; is much shorter, reaching a count of approximately 400. This indicates a large imbalance, with far fewer instances of &quot;TRUE&quot; compared to &quot;FALSE&quot;." width="960"></p>
 </figure>
 </div>
 </div>
@@ -309,7 +309,7 @@ $ job_city          &lt;chr&gt; "Chicago", "Chicago", "Chicago", "Chicago", "Chi
 <span id="cb5-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="10a-logistic-regression_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A dot plot shows two categorical variables: &quot;received_callback&quot; on the y-axis (with categories FALSE and TRUE) and &quot;race&quot; on the x-axis (with categories black and white). A black dot is present for each combination of these categories: (black, FALSE), (black, TRUE), (white, FALSE), and (white, TRUE), indicating that data exists for all four combinations." width="960"></section>
+<img data-src="10b-logistic-regression_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A dot plot shows two categorical variables: &quot;received_callback&quot; on the y-axis (with categories FALSE and TRUE) and &quot;race&quot; on the x-axis (with categories black and white). A black dot is present for each combination of these categories: (black, FALSE), (black, TRUE), (white, FALSE), and (white, TRUE), indicating that data exists for all four combinations." width="960"></section>
 <section id="the-linear-model" class="slide level2">
 <h2>The Linear Model</h2>
 <p>We can model the probability of receiving a callback with a linear model.</p>
@@ -337,7 +337,7 @@ $ job_city          &lt;chr&gt; "Chicago", "Chicago", "Chicago", "Chicago", "Chi
 <section id="proportion-as-outcome" class="slide level2">
 <h2>Proportion as outcome</h2>
 
-<img data-src="10a-logistic-regression_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A 100% stacked bar chart displays the proportion of &quot;received_callback&quot; (FALSE in red, TRUE in teal) for two &quot;race&quot; categories: &quot;black&quot; and &quot;white&quot;. The y-axis represents proportion from 0 to 1.00. For both &quot;black&quot; and &quot;white&quot; categories, the vast majority of the bar is colored red, representing &quot;FALSE&quot;, while a small teal segment at the bottom represents &quot;TRUE&quot;. The teal &quot;TRUE&quot; segment for &quot;white&quot; appears slightly larger than for &quot;black,&quot; indicating that a slightly higher proportion of &quot;white&quot; individuals received a callback compared to &quot;black&quot; individuals, though callbacks remain a small proportion for both groups." width="960"></section>
+<img data-src="10b-logistic-regression_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" alt="A 100% stacked bar chart displays the proportion of &quot;received_callback&quot; (FALSE in red, TRUE in teal) for two &quot;race&quot; categories: &quot;black&quot; and &quot;white&quot;. The y-axis represents proportion from 0 to 1.00. For both &quot;black&quot; and &quot;white&quot; categories, the vast majority of the bar is colored red, representing &quot;FALSE&quot;, while a small teal segment at the bottom represents &quot;TRUE&quot;. The teal &quot;TRUE&quot; segment for &quot;white&quot; appears slightly larger than for &quot;black,&quot; indicating that a slightly higher proportion of &quot;white&quot; individuals received a callback compared to &quot;black&quot; individuals, though callbacks remain a small proportion for both groups." width="960"></section>
 <section id="when-race-is-black-0" class="slide level2">
 <h2>When race is black (0)</h2>
 <div class="cell">
@@ -458,7 +458,7 @@ $ job_city          &lt;chr&gt; "Chicago", "Chicago", "Chicago", "Chicago", "Chi
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="10a-logistic-regression_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" alt="A line plot displays &quot;logit&quot; on the y-axis, ranging from -2.6 to -2.2, against &quot;race&quot; on the x-axis, ranging from 0.0 to 1.2. A straight blue line connects two data points. The first point is at (0, -2.67), labeled as &quot;0, -2.67&quot;. The second point is at (1, -2.24), labeled as &quot;1, -2.24&quot;. The line shows a positive linear relationship, indicating that the logit value increases as &quot;race&quot; increases from 0 to 1." width="960"></p>
+<p><img data-src="10b-logistic-regression_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" alt="A line plot displays &quot;logit&quot; on the y-axis, ranging from -2.6 to -2.2, against &quot;race&quot; on the x-axis, ranging from 0.0 to 1.2. A straight blue line connects two data points. The first point is at (0, -2.67), labeled as &quot;0, -2.67&quot;. The second point is at (1, -2.24), labeled as &quot;1, -2.24&quot;. The line shows a positive linear relationship, indicating that the logit value increases as &quot;race&quot; increases from 0 to 1." width="960"></p>
 </figure>
 </div>
 </div>
@@ -758,19 +758,19 @@ $ job_city          &lt;chr&gt; "Chicago", "Chicago", "Chicago", "Chicago", "Chi
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="10a-logistic-regression_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="10a-logistic-regression_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="10b-logistic-regression_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
