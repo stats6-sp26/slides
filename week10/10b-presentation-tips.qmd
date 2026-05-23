@@ -1,0 +1,30 @@
+---
+title: "Quarto Presentation Basics"
+author: "Dr. Mine Dogucu"
+execute:
+  echo: false
+format: 
+  revealjs:
+    footer: "[introdata.science](https://introdata.science)"
+    slide-number: true
+    incremental: true
+    theme: ["../templates/slide-style.scss"]
+    logo: "https://www.introdata.science/img/logo.png"
+    title-slide-attributes: 
+      data-background-image: "https://www.introdata.science/img/logo.png"
+      data-background-size: 5%
+      data-background-position: 50% 85%
+    include-after-body: "../templates/clean_title_page.html"
+---
+
+[Code chunk options]() 
+[Themes](https://quarto.org/docs/output-formats/html-themes.html) 
+[knitr::include_graphics]()
+[Multiple columns](https://quarto.org/docs/presentations/#multiple-columns)
+[knitr::kable()]()
+[KableExtra]()
+
+If tables are coming from data then use kable() or kableExtra()
+
+If not then use [markdown table generator](https://www.tablesgenerator.com/markdown_tables) 
+
